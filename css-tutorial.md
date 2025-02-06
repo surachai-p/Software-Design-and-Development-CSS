@@ -232,8 +232,65 @@ div > p {
 
 ### ผลการทดลอง
 ```html
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
+//////////
+/* การใช้ Element Selector */
+nav {
+    background-color: #444; /* เปลี่ยนสีพื้นหลังของแถบเมนู */
+    padding: 15px;
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+
+nav > ul > li {
+    margin: 0 10px;
+}
+
+
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+
+.menu-item:hover {
+    background-color: #666; 
+    border-radius: 3px;
+}
+
+
+#active {
+    background-color: #ff5733; /* สีพื้นหลังของเมนูที่ถูกเลือก */
+    border-radius: 3px;
+}
+
 [วางโค้ดที่นี่]
 ```
+![image](https://github.com/user-attachments/assets/8f941f91-1245-4e1a-a707-fdf7c7e340ff)
+
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
 
 
@@ -338,8 +395,80 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การ์ดสินค้า</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product1.jpg');"></div>
+            <div class="product-info">
+                <h2 class="product-title">สินค้าตัวอย่าง 1</h2>
+                <p class="product-price">฿12,990</p>
+                <p class="product-description">รายละเอียดสินค้าตัวอย่าง 1
+                    <br>ชื่อสินค้า: โซฟา 3 ที่นั่ง รุ่น Comfort Cozy
+                    ราคา: ฿12,990
+                    คำอธิบาย: โซฟาดีไซน์มินิมอล บุผ้ากำมะหยี่นุ่มสบาย โครงไม้เนื้อแข็ง ทนทาน รองรับน้ำหนักได้ดี เหมาะสำหรับห้องนั่งเล่นทุกขนาด
+                    รูปสินค้า: โซฟาสีเทาอ่อน หรือครีม</br>
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product2.jpg');"></div>
+            <div class="product-info">
+                <h2 class="product-title">สินค้าตัวอย่าง 2</h2>
+                <p class="product-price">฿2,499</p>
+                <p class="product-description">รายละเอียดสินค้าตัวอย่าง 2
+                    <br>ชื่อสินค้า: โต๊ะทำงานไม้ รุ่น Modern Desk
+                    ราคา: ฿2,499
+                    คำอธิบาย: โต๊ะทำงานไม้ดีไซน์โมเดิร์น ขนาดกะทัดรัด พร้อมลิ้นชักเก็บของ วัสดุไม้ MDF เคลือบผิวกันน้ำ ตอบโจทย์ทุกการใช้งานในบ้านและออฟฟิศ
+                    รูปสินค้า: โต๊ะไม้สีอ่อน พร้อมโคมไฟตั้งโต๊ะ</br>
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product3.jpg');"></div>
+            <div class="product-info">
+                <h2 class="product-title">สินค้าตัวอย่าง 3</h2>
+                <p class="product-price">฿9,999</p>
+                <p class="product-description">รายละเอียดสินค้าตัวอย่าง 3
+                    <br>ชื่อสินค้า: เก้าอี้พนักพิงสูง รุ่น RelaxPro
+                    ราคา: ฿9,999
+                    คำอธิบาย: เก้าอี้พนักพิงสูง นั่งเล่นเกมโหดๆ บุผ้านุ่ม รองรับแผ่นหลังอย่างดี ดีไซน์ทันสมัย น้ำหนักเบา เคลื่อนย้ายสะดวก เหมาะสำหรับห้องทำงานหรือห้องนั่งเล่น
+                    รูปสินค้า: เก้าอี้แดง เล่นเกมโหด</br>
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product4.jpg');"></div>
+            <div class="product-info">
+                <h2 class="product-title">สินค้าตัวอย่าง 4</h2>
+                <p class="product-price">฿1,899</p>
+                <p class="product-description">รายละเอียดสินค้าตัวอย่าง 4
+                    <br>ชื่อสินค้า: ตู้ลิ้นชัก รุ่น Minimal Drawer
+                    ราคา: ฿1,899
+                    คำอธิบาย: ตู้ลิ้น 2 ชั้น ดีไซน์เรียบง่าย จุของได้เยอะ พร้อมระบบรางเลื่อนคุณภาพสูง เพิ่มความเป็นระเบียบให้ห้องของคุณ
+                    รูปสินค้า: ตู้ไม้สีขาวล้วน </br>
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
 [วางโค้ดที่นี่]
 ```
+![image](https://github.com/user-attachments/assets/12515fe5-2504-473b-9e36-91d2474ab92d)
+
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
@@ -436,12 +565,99 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สถิติการใช้งาน</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stats-container">
+        <div class="stat-box">
+            <div class="stat-number">1,234</div>
+            <div class="stat-label">ผู้ใช้งาน</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">5.6K</div>
+            <div class="stat-label">ยอดขาย</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">ความพึงพอใจ</div>
+        </div>
+    </div>
+</body>
+</html>
+]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+
+.stat-box {
+    flex: 1;
+    margin: 0 20px;
+    padding: 2.5rem;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff5733;
+    margin-bottom: 0.75rem;
+}
+
+
+.stat-label {
+    font-size: 1.2rem;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-box {
+        margin: 1.5rem 0;
+        width: 80%;
+    }
+}
+]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![image](https://github.com/user-attachments/assets/89394eb3-6a9e-464e-900b-cef3e0b6bf46)
+]
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
@@ -554,12 +770,105 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>วิธีเขียนบทความแบบเข้าใจง่าย</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <article class="blog-post">
+        <header class="post-header">
+            <h1 class="post-title">วิธีเขียนบทความแบบเข้าใจง่าย</h1>
+            <div class="post-meta">โพสต์เมื่อ 1 มกราคม 2025 | โดย นักศึกษา</div>
+        </header>
+        
+        <div class="post-content">
+            <p>การเขียนบทความให้อ่านง่าย ไม่จำเป็นต้องซับซ้อน แค่ทำให้คนอ่านเข้าใจและไม่รู้สึกเบื่อ</p>
+
+            <h2>1. หัวข้อควรชัดเจน</h2>
+            <p>เลือกหัวข้อที่ไม่ซับซ้อน คนอ่านรู้ได้ทันทีว่าบทความพูดถึงเรื่องอะไร</p>
+
+            <blockquote>
+                "บทความที่ดีคือบทความที่อ่านแล้วเข้าใจง่าย"
+            </blockquote>
+
+            <h2>2. ใช้ภาษาง่าย ๆ</h2>
+            <p>ไม่ต้องใช้คำศัพท์ยากเกินไป คิดว่าเรากำลังคุยกับเพื่อน</p>
+        </div>
+    </article>
+</body>
+</html>
+]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[body {
+    font-family: 'Sarabun', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.blog-post {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.post-title {
+    font-size: 24px;
+    color: #333;
+}
+
+.post-meta {
+    font-size: 14px;
+    color: #666;
+}
+
+.post-content {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.post-content h2 {
+    font-size: 20px;
+    color: #007bff;
+    margin-top: 20px;
+}
+
+blockquote {
+    border-left: 4px solid #007bff;
+    padding-left: 10px;
+    font-style: italic;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .blog-post {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .post-title {
+        font-size: 22px;
+    }
+}
+]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![image](https://github.com/user-attachments/assets/8f68e942-b660-45ed-8586-3370f2200b86)
+]
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
@@ -701,12 +1010,125 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ร้านค้าออนไลน์</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product1.jpg')"></div>
+            <div class="product-details">
+                <h3 class="product-title">กระเป๋าสะพายข้าง</h3>
+                <div class="product-price">฿899</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product2.jpg')"></div>
+            <div class="product-details">
+                <h3 class="product-title">รองเท้าผ้าใบ</h3>
+                <div class="product-price">฿1,299</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product3.jpg')"></div>
+            <div class="product-details">
+                <h3 class="product-title">นาฬิกาข้อมือ</h3>
+                <div class="product-price">฿1,799</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product4.png')"></div>
+            <div class="product-details">
+                <h3 class="product-title">หูฟังบลูทูธ</h3>
+                <div class="product-price">฿699</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ร้านค้าออนไลน์</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product1.jpg')"></div>
+            <div class="product-details">
+                <h3 class="product-title">กระเป๋าสะพายข้าง</h3>
+                <div class="product-price">฿899</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product2.jpg')"></div>
+            <div class="product-details">
+                <h3 class="product-title">รองเท้าผ้าใบ</h3>
+                <div class="product-price">฿1,299</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product3.jpg')"></div>
+            <div class="product-details">
+                <h3 class="product-title">นาฬิกาข้อมือ</h3>
+                <div class="product-price">฿1,799</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product4.png')"></div>
+            <div class="product-details">
+                <h3 class="product-title">หูฟังบลูทูธ</h3>
+                <div class="product-price">฿699</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![image](https://github.com/user-attachments/assets/a5f10c14-5e39-4874-b8c2-f5bbd6cd9f35)
+]
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
@@ -854,10 +1276,193 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <h1>แดชบอร์ด</h1>
+            <nav>
+                <button class="btn">โปรไฟล์</button>
+                <button class="btn logout">ออกจากระบบ</button>
+            </nav>
+        </header>
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#">หน้าแรก</a></li>
+                <li><a href="#">รายงาน</a></li>
+                <li><a href="#">การตั้งค่า</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card"><h3>ยอดขายรวม</h3><p>฿150,000</p></div>
+                <div class="stat-card"><h3>จำนวนออเดอร์</h3><p>1,234</p></div>
+                <div class="stat-card"><h3>ลูกค้าใหม่</h3><p>45</p></div>
+            </div>
+            <div class="chart-container">
+                <div class="chart"><h3>กราฟแสดงยอดขาย</h3></div>
+                <div class="chart"><h3>สัดส่วนสินค้าขายดี</h3></div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sarabun', sans-serif;
+}
+
+
+.dashboard {
+    display: grid;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+
+.header {
+    grid-area: header;
+    background: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.logout {
+    background: #dc3545;
+}
+
+.logout:hover {
+    background: #b52b3a;
+}
+
+
+.sidebar {
+    grid-area: sidebar;
+    background: #2c3e50;
+    color: white;
+    padding: 1.5rem;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 1rem;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #1abc9c;
+}
+
+
+.main-content {
+    grid-area: main;
+    padding: 2rem;
+    background: #f5f7fa;
+}
+
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.stat-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+
+.chart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+}
+
+.chart {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-areas: 
+            "header"
+            "main";
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .chart-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![image](https://github.com/user-attachments/assets/af3ae06d-3fea-4f8b-8da1-c712e519c670)
+]
 
