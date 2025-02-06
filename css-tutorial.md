@@ -395,8 +395,80 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การ์ดสินค้า</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product1.jpg');"></div>
+            <div class="product-info">
+                <h2 class="product-title">สินค้าตัวอย่าง 1</h2>
+                <p class="product-price">฿12,990</p>
+                <p class="product-description">รายละเอียดสินค้าตัวอย่าง 1
+                    <br>ชื่อสินค้า: โซฟา 3 ที่นั่ง รุ่น Comfort Cozy
+                    ราคา: ฿12,990
+                    คำอธิบาย: โซฟาดีไซน์มินิมอล บุผ้ากำมะหยี่นุ่มสบาย โครงไม้เนื้อแข็ง ทนทาน รองรับน้ำหนักได้ดี เหมาะสำหรับห้องนั่งเล่นทุกขนาด
+                    รูปสินค้า: โซฟาสีเทาอ่อน หรือครีม</br>
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product2.jpg');"></div>
+            <div class="product-info">
+                <h2 class="product-title">สินค้าตัวอย่าง 2</h2>
+                <p class="product-price">฿2,499</p>
+                <p class="product-description">รายละเอียดสินค้าตัวอย่าง 2
+                    <br>ชื่อสินค้า: โต๊ะทำงานไม้ รุ่น Modern Desk
+                    ราคา: ฿2,499
+                    คำอธิบาย: โต๊ะทำงานไม้ดีไซน์โมเดิร์น ขนาดกะทัดรัด พร้อมลิ้นชักเก็บของ วัสดุไม้ MDF เคลือบผิวกันน้ำ ตอบโจทย์ทุกการใช้งานในบ้านและออฟฟิศ
+                    รูปสินค้า: โต๊ะไม้สีอ่อน พร้อมโคมไฟตั้งโต๊ะ</br>
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product3.jpg');"></div>
+            <div class="product-info">
+                <h2 class="product-title">สินค้าตัวอย่าง 3</h2>
+                <p class="product-price">฿9,999</p>
+                <p class="product-description">รายละเอียดสินค้าตัวอย่าง 3
+                    <br>ชื่อสินค้า: เก้าอี้พนักพิงสูง รุ่น RelaxPro
+                    ราคา: ฿9,999
+                    คำอธิบาย: เก้าอี้พนักพิงสูง นั่งเล่นเกมโหดๆ บุผ้านุ่ม รองรับแผ่นหลังอย่างดี ดีไซน์ทันสมัย น้ำหนักเบา เคลื่อนย้ายสะดวก เหมาะสำหรับห้องทำงานหรือห้องนั่งเล่น
+                    รูปสินค้า: เก้าอี้แดง เล่นเกมโหด</br>
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product4.jpg');"></div>
+            <div class="product-info">
+                <h2 class="product-title">สินค้าตัวอย่าง 4</h2>
+                <p class="product-price">฿1,899</p>
+                <p class="product-description">รายละเอียดสินค้าตัวอย่าง 4
+                    <br>ชื่อสินค้า: ตู้ลิ้นชัก รุ่น Minimal Drawer
+                    ราคา: ฿1,899
+                    คำอธิบาย: ตู้ลิ้น 2 ชั้น ดีไซน์เรียบง่าย จุของได้เยอะ พร้อมระบบรางเลื่อนคุณภาพสูง เพิ่มความเป็นระเบียบให้ห้องของคุณ
+                    รูปสินค้า: ตู้ไม้สีขาวล้วน </br>
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
 [วางโค้ดที่นี่]
 ```
+![image](https://github.com/user-attachments/assets/12515fe5-2504-473b-9e36-91d2474ab92d)
+
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
