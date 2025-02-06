@@ -1250,6 +1250,7 @@ blockquote {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>แดชบอร์ด</title>
     <link rel="stylesheet" href="runnn.css"> <!-- ลิงก์ไฟล์ CSS ภายนอก -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- ลิงก์ไลบรารี Chart.js -->
 </head>
 <body>
     <div class="dashboard">
@@ -1290,15 +1291,95 @@ blockquote {
             <div class="chart-container">
                 <div class="chart">
                     <h3>กราฟแสดงยอดขาย</h3>
-                    <!-- เพิ่มกราฟตามต้องการ -->
+                    <canvas id="salesChart" width="400" height="200"></canvas>
                 </div>
                 <div class="chart">
                     <h3>สัดส่วนสินค้าขายดี</h3>
-                    <!-- เพิ่มกราฟตามต้องการ -->
+                    <canvas id="topProductsChart" width="400" height="200"></canvas>
                 </div>
             </div>
         </main>
     </div>
+
+    <script>
+        // ข้อมูลสำหรับกราฟแสดงยอดขาย
+        const salesData = {
+            labels: ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.'],  // เดือน
+            datasets: [{
+                label: 'ยอดขาย (บาท)',
+                data: [25000, 30000, 20000, 18000, 27000, 20000],  // ยอดขายในแต่ละเดือน
+                borderColor: 'rgba(75, 192, 192, 1)',
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderWidth: 1
+            }]
+        };
+
+        // กำหนดค่าการตั้งกราฟแสดงยอดขาย
+        const salesConfig = {
+            type: 'line',  // ประเภทกราฟ
+            data: salesData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        // สร้างกราฟแสดงยอดขาย
+        const salesChart = new Chart(
+            document.getElementById('salesChart'),
+            salesConfig
+        );
+
+        // ข้อมูลสำหรับกราฟแสดงสินค้าขายดี
+        const topProductsData = {
+            labels: ['ชานมไข่มุก', 'โกโก้', 'มิ้นท์ช็อก ', 'กาแฟ', 'ชาเขียว'],  
+            datasets: [{
+                label: 'จำนวนขาย',
+                data: [250, 200, 300, 180, 284],  
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)', 
+                    'rgba(54, 162, 235, 0.2)', 
+                    'rgba(255, 206, 86, 0.2)', 
+                    'rgba(75, 192, 192, 0.2)', 
+                    'rgba(153, 102, 255, 0.2)'
+                ], 
+                borderColor: [
+                    'rgba(255, 99, 132, 1)', 
+                    'rgba(54, 162, 235, 1)', 
+                    'rgba(255, 206, 86, 1)', 
+                    'rgba(75, 192, 192, 1)', 
+                    'rgba(153, 102, 255, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        // กำหนดค่าการตั้งกราฟแสดงสินค้าขายดี
+        const topProductsConfig = {
+            type: 'bar',  // ประเภทกราฟ
+            data: topProductsData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        // สร้างกราฟแสดงสินค้าขายดี
+        const topProductsChart = new Chart(
+            document.getElementById('topProductsChart'),
+            topProductsConfig
+        );
+    </script>
+
+</body>
+</html>
+
 </body>
 </html>
 ```
@@ -1440,6 +1521,8 @@ nav button:hover {
 }
 
 ```
-![image](https://github.com/user-attachments/assets/29e66c33-3451-41fd-a12a-18eb66777fa9)
+![image](https://github.com/user-attachments/assets/25a7b992-2391-427c-8342-6ea64fdaebc7)
+![image](https://github.com/user-attachments/assets/5ab6bcec-9da9-4b75-9dd9-b5fa16c7d218)
+![image](https://github.com/user-attachments/assets/1740224a-6915-40bc-84c8-53f316237b05)
 
 
