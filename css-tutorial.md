@@ -1276,10 +1276,193 @@ blockquote {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <h1>แดชบอร์ด</h1>
+            <nav>
+                <button class="btn">โปรไฟล์</button>
+                <button class="btn logout">ออกจากระบบ</button>
+            </nav>
+        </header>
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#">หน้าแรก</a></li>
+                <li><a href="#">รายงาน</a></li>
+                <li><a href="#">การตั้งค่า</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card"><h3>ยอดขายรวม</h3><p>฿150,000</p></div>
+                <div class="stat-card"><h3>จำนวนออเดอร์</h3><p>1,234</p></div>
+                <div class="stat-card"><h3>ลูกค้าใหม่</h3><p>45</p></div>
+            </div>
+            <div class="chart-container">
+                <div class="chart"><h3>กราฟแสดงยอดขาย</h3></div>
+                <div class="chart"><h3>สัดส่วนสินค้าขายดี</h3></div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sarabun', sans-serif;
+}
+
+
+.dashboard {
+    display: grid;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+
+.header {
+    grid-area: header;
+    background: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.logout {
+    background: #dc3545;
+}
+
+.logout:hover {
+    background: #b52b3a;
+}
+
+
+.sidebar {
+    grid-area: sidebar;
+    background: #2c3e50;
+    color: white;
+    padding: 1.5rem;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 1rem;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #1abc9c;
+}
+
+
+.main-content {
+    grid-area: main;
+    padding: 2rem;
+    background: #f5f7fa;
+}
+
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.stat-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+
+.chart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+}
+
+.chart {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-areas: 
+            "header"
+            "main";
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .chart-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![image](https://github.com/user-attachments/assets/af3ae06d-3fea-4f8b-8da1-c712e519c670)
+]
 
