@@ -770,12 +770,105 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>วิธีเขียนบทความแบบเข้าใจง่าย</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <article class="blog-post">
+        <header class="post-header">
+            <h1 class="post-title">วิธีเขียนบทความแบบเข้าใจง่าย</h1>
+            <div class="post-meta">โพสต์เมื่อ 1 มกราคม 2025 | โดย นักศึกษา</div>
+        </header>
+        
+        <div class="post-content">
+            <p>การเขียนบทความให้อ่านง่าย ไม่จำเป็นต้องซับซ้อน แค่ทำให้คนอ่านเข้าใจและไม่รู้สึกเบื่อ</p>
+
+            <h2>1. หัวข้อควรชัดเจน</h2>
+            <p>เลือกหัวข้อที่ไม่ซับซ้อน คนอ่านรู้ได้ทันทีว่าบทความพูดถึงเรื่องอะไร</p>
+
+            <blockquote>
+                "บทความที่ดีคือบทความที่อ่านแล้วเข้าใจง่าย"
+            </blockquote>
+
+            <h2>2. ใช้ภาษาง่าย ๆ</h2>
+            <p>ไม่ต้องใช้คำศัพท์ยากเกินไป คิดว่าเรากำลังคุยกับเพื่อน</p>
+        </div>
+    </article>
+</body>
+</html>
+]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[body {
+    font-family: 'Sarabun', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.blog-post {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.post-title {
+    font-size: 24px;
+    color: #333;
+}
+
+.post-meta {
+    font-size: 14px;
+    color: #666;
+}
+
+.post-content {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.post-content h2 {
+    font-size: 20px;
+    color: #007bff;
+    margin-top: 20px;
+}
+
+blockquote {
+    border-left: 4px solid #007bff;
+    padding-left: 10px;
+    font-style: italic;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .blog-post {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .post-title {
+        font-size: 22px;
+    }
+}
+]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![image](https://github.com/user-attachments/assets/8f68e942-b660-45ed-8586-3370f2200b86)
+]
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
