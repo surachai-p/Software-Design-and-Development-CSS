@@ -234,7 +234,61 @@ div > p {
 ```html
 [วางโค้ดที่นี่]
 ```
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/buttons.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item" >หน้าแรก</a></li>
+            <li><a href="#" class="menu-item"id="active" >สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
+css
+nav {
+    background-color: rgb(62, 189, 115);
+    padding: 15px;
+}
+
+/* การใช้ Descendant Selector */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* การใช้ Child Selector */
+nav > ul > li {
+    margin: 0 10px;
+}
+
+/* การใช้ Class Selector */
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+/* การใช้ Pseudo-class */
+.menu-item:hover {
+    background-color: #555;
+    border-radius: 3px;
+}
+
+/* การใช้ ID Selector */
+#active {
+    background-color: #007bff;
+    border-radius: 3px;
+}
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![selector](https://github.com/user-attachments/assets/2fd0ad4f-129a-4591-9c1a-5bce5a923267)
 
 
 [](#การทดลองที่-3-การจัดการสีและพื้นหลัง)
@@ -338,9 +392,182 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/ground.css">
+</head>
+<body>
+    
+    <div class="product-card">
+        <div class="product-image" style="background-image: url('images/love1.gif');"></div>
+        <div class="product-info">
+            <h2 class="product-title">กลิ่นหอมความรัก</h2>
+            <p class="product-price">549 บาท</p>
+            <p class="product-description">
+                จอมเป็นสถาปนิกผู้รับผิดชอบการรีโนเวตเรือนโบราณริมแม่น้ำปิง
+ที่นั่นเขาพบหีบไม้อัดแน่นไปด้วยรูปวาดเก่าๆ ซึ่งดูคุ้นตาอย่างน่าประหลาด
+ถึงจะนึกสงสัยแต่จอมก็ไม่มีเวลากับเรื่องพวกนั้นมากนัก
+เขาต้องกลับกรุงเทพฯ ชั่วคราวเพื่อไปรับคนรักซึ่งเพิ่งเรียนจบกลับมา
+จอมเฝ้านับวันที่จะได้พบกับแฟนหนุ่มมาตลอดหลังต้องห่างกันนานหลายปี
+เพื่อจะพบว่าอีกฝ่ายกำลังจะแต่งงานกับผู้หญิงคนหนึ่งที่ดูเหมาะสมกันดี...
+แม้ลึกๆ ในใจอยากได้คำอธิบาย แต่ในเมื่ออีกฝ่ายเลือกแล้ว จอมก็จะรับมันไว้
+เขาเดินทางกลับเชียงใหม่ทันที แต่ความเสียใจกลับนำไปสู่เหตุการณ์ไม่คาดคิด
+ขณะที่รถของเขากำลังจมดิ่งลงสู่ก้นแม่น้ำ ท่ามกลางความมืดมิดอันเย็นเยียบ
+จอมได้กลิ่นดอกลั่นทมหอมจรุงมากับสายน้ำ
+และแว่วเสียงทุ้มเจือความอ่อนหวานที่เอ่ยคำหนักแน่น
+‘พ่อจอม...’
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image" style="background-image: url('images/love2.gif');"></div>
+        <div class="product-info">
+            <h2 class="product-title">ปลาบนฟ้า</h2>
+            <p class="product-price">399 บาท</p>
+            <p class="product-description">
+                สำหรับผม เมืองน่านคนนั้นก็เหมือน ‘ปลาบนฟ้า’
+                อยู่ไกลเกินเอื้อมเสียจนควรจะตัดใจซะถ้าไม่อยากเจ็บ
+                เพราะผู้ชายอย่างไอ้ปีคนนี้มันดันฉลาดแต่เรื่องวิชาการ สอบตกเรื่องความรัก
+                ผมเลยทำได้แค่แอบมองเขาอยู่ห่างๆ มาเป็นปี
+                
+                ทว่าทันทีที่ผมตัดสินใจเป็นไงเป็นกันจะจีบเมืองน่านให้ได้
+                กลับมีผู้ชายคนหนึ่งมาตามเกาะปลาบนฟ้าของผมราวกับปลิง
+                ซึ่งคนคนนั้นก็แค่หล่อ เท่ ฉลาด แฟนคลับเพียบ... เท่านั้นเอ๊งงง
+                แต่ไอ้ปีคนนี้ไม่ยอมแพ้หรอก!
+                ก่อนอื่นก็แค่ต้องกำจัดศัตรูหัวใจนี่ไปให้ไกลๆ
+                แต่ไหงกำจัดไปกำจัดมา... กลายเป็นมีคนมาสารภาพรักกับผมไปได้!
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="product-image" style="background-image: url('images/love3.gif');"></div>
+        <div class="product-info">
+            <h2 class="product-title">หลวงตาบอกแล้วอย่าออกแว้นตอนตีสาม...เปรตมัน</h2>
+            <p class="product-price">549 บาท</p>
+            <p class="product-description">
+                'พารัก' เด็กหนุ่มเลือดร้อนผู้สดใสที่ใครๆ ต่างรู้จักเขากันดีในฐานะเด็กแว้นประจำซอย แม้พื้นเพนิสัยจะเป็นเด็กดีไม่น้อย แต่อีกด้านหนึ่งก็เป็นภาระสังคมอยู่พอสมควร แว้นรถเสียงดังจนใครๆ ก็ส่ายหน้า
+จนกระทั่งวันหนึ่งเพื่อนในแก๊งดันแหกโค้งดับคาที่ งานซิ่งรอบเมรุส่งท้ายให้เพื่อนผู้ล่วงลับจึงต้องมา เบิ้ลเครื่องกันตึงๆ ตอนตีสาม ทว่าคราวนี้ขากลับดันมีคนซ้อนท้ายกลับบ้านไปด้วย แต่ไอ้คนซ้อนท้ายมันดันไม่ใช่มนุษย์เนี่ยสิ...
+
+หลวงตาบอกแล้วอย่าออกแว้นตอนตีสาม ถ้ามันไม่ฟัง ให้เจอผีสักทีก็ดีเหมือนกัน!
+
+---
+หนังสือเล่มเดียวจบ
+---
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+</div>
+<div class="product-card">
+    <div class="product-image" style="background-image: url('images/love4.gif');"></div>
+    <div class="product-info">
+        <h2 class="product-title">บทกวีของปีแสง</h2>
+        <p class="product-price">299 บาท</p>
+        <p class="product-description">
+            มีใครคนหนึ่งถามผมว่าหากย้อนเวลาได้ อยากกลับไปแก้ไขอะไรมากที่สุด
+คำตอบก็คือ... ผมอยากกลับไปเรียนมหา’ลัยอีกครั้ง
+และรวบรวมความกล้าเข้าไปทำความรู้จักกับเธอ
+แต่ใครจะคิดดดดด ว่าพอย้อนเวลากลับไปจริงๆ แล้ว
+ไอ้ที่หวังว่าจะได้พูดคุยกับรักแรกอย่างแพรไหมก็เป็นจริงอยู่แหละ
+แต่ที่แถมมาแบบไม่ต้องการก็คือมารหัวใจที่ชื่อปีแสง!
+ให้ตายเถอะ ปัจจุบันมันได้แต่งงานกับไหม
+พอมีปาฏิหาริย์ย้อนเวลา มันยังจะมาขัดขวางทางรักของผมอีกเหรอ
+คงจะจริงอย่างที่เขาว่ากันแหละครับ
+กับคนบางคน ต่อให้ย้อนเวลากลับไปแก้ไขอีกสักกี่ครั้ง
+เขาก็ไม่มีทางเป็นของเราอยู่วันยังค่ำ
+        </p>
+        <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+    </div>
+</div>
+
+</body>
+</html>
 ```
+css
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.product-card {
+    width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(39, 27, 146, 0.1);
+    background-color: rgb(58, 50, 50);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.product-image {
+    width: 100%;
+    height: 500px;
+    background-image: url('product.jpg');
+    background-size: cover;
+    background-position: center;
+   
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-title {
+    color: #f3eded;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: #db7500;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-description {
+    color: #8dbd41;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.product-button {
+    display: block;
+    background: linear-gradient(to right, #1860ad, #0056b3);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.product-button:hover {
+    background: linear-gradient(to right, #0056b3, #003980);
+}
+
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![g2](https://github.com/user-attachments/assets/d6c18981-378d-4025-ab05-f03ceeece21d)
+![g1](https://github.com/user-attachments/assets/d0520aaf-e595-4c28-8cc4-a32fef57de4b)
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
