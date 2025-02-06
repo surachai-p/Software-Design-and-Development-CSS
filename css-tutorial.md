@@ -232,8 +232,65 @@ div > p {
 
 ### ผลการทดลอง
 ```html
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
+//////////
+/* การใช้ Element Selector */
+nav {
+    background-color: #444; /* เปลี่ยนสีพื้นหลังของแถบเมนู */
+    padding: 15px;
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+
+nav > ul > li {
+    margin: 0 10px;
+}
+
+
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+
+.menu-item:hover {
+    background-color: #666; 
+    border-radius: 3px;
+}
+
+
+#active {
+    background-color: #ff5733; /* สีพื้นหลังของเมนูที่ถูกเลือก */
+    border-radius: 3px;
+}
+
 [วางโค้ดที่นี่]
 ```
+![image](https://github.com/user-attachments/assets/8f941f91-1245-4e1a-a707-fdf7c7e340ff)
+
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
 
 
