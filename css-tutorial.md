@@ -232,8 +232,6 @@ div > p {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
-```
 <!DOCTYPE html>
 <html>
 <head>
@@ -287,6 +285,8 @@ nav > ul > li {
     background-color: #007bff;
     border-radius: 3px;
 }
+```
+
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
 ![selector](https://github.com/user-attachments/assets/2fd0ad4f-129a-4591-9c1a-5bce5a923267)
 
@@ -486,7 +486,7 @@ background-size: cover;
 
 </body>
 </html>
-```
+
 css
 
 body {
@@ -564,6 +564,8 @@ body {
 .product-button:hover {
     background: linear-gradient(to right, #0056b3, #003980);
 }
+
+```
 
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
 ![g2](https://github.com/user-attachments/assets/d6c18981-378d-4025-ab05-f03ceeece21d)
