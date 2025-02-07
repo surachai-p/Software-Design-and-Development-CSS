@@ -1269,7 +1269,8 @@ body {
 
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-![f1](https://github.com/user-attachments/assets/d988030c-df2f-4974-b5d2-58aed1c0e32f)
+
+![f1](https://github.com/user-attachments/assets/c08dbb81-6a74-4ebb-a861-61da5b2979d4)
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
