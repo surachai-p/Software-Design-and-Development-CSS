@@ -232,9 +232,64 @@ div > p {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แกลเลอรีสินค้า</title>
+    <link rel="stylesheet" href="styles.css"> <!-- ใช้ CSS ภายนอก -->
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <h1>แกลเลอรีสินค้า</h1>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <a href="image/gallery/robot1.jpg">
+                <img src="image/gallery/robot1.jpg" alt="คลิกเพื่อดูรูปขนาดใหญ่">
+            </a>
+            <figcaption>คำอธิบายสินค้า 1 <br> ชุดเรียนรู้วิทยาการคำนวณเชิงปฏิบัติการด้วยหุ่นยนต์ </figcaption>
+        </div>
+
+        <div class="gallery-item">
+            <a href="image/gallery/robot2.jpg">
+                <img src="image/gallery/robot2.jpg" alt="คลิกเพื่อดูรูปขนาดใหญ่">
+            </a>
+            <figcaption>คำอธิบายสินค้า 2 <br> ชุดอุปกรณ์เรียนรู้และพัฒนาโปรแกรมภาษา C/C++ ควบคุมหุ่นยนต์รุ่นพื้นฐานพิเศษด้วยบอร์ด POP32i</figcaption>
+        </div>
+
+        <div class="gallery-item">
+            <a href="image/gallery/robot3.jpg">
+                <img src="image/gallery/robot3.jpg" alt="คลิกเพื่อดูรูปขนาดใหญ่">
+            </a>
+            <figcaption>คำอธิบายสินค้า 3 <br> ชุดอุปกรณ์เรียนรู้และพัฒนาโปรแกรมภาษา C/C++ ควบคุมหุ่นยนต์รุ่นพื้นฐานด้วยบอร์ด POP32i</figcaption>
+        </div>
+
+        <div class="gallery-item">
+            <a href="image/gallery/robot4.jpg">
+                <img src="image/gallery/robot4.jpg" alt="คลิกเพื่อดูรูปขนาดใหญ่">
+            </a>
+            <figcaption>คำอธิบายสินค้า 4 <br> หุ่นยนต์เคลื่อนที่ตามเส้นอัตโนมัติแบบไม่ต้องเขียนโปรแกรมพร้อมสนามแผ่นยาง EVA</figcaption>
+        </div>
+    </div>
+
+    <a href="#" class="back-to-top">กลับไปข้างบน</a>
+
+</body>
+</html>
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![image](https://github.com/user-attachments/assets/7c7e40a7-dba7-4afd-8b5d-1fbdc8467609)
 
 
 [](#การทดลองที่-3-การจัดการสีและพื้นหลัง)
