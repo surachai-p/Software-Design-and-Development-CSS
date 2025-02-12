@@ -555,11 +555,92 @@ font-weight: bold;
 ### ผลการทดลอง
 ```html
 [วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+<article class="blog-post">
+<header class="post-header">
+<h1 class="post-title">วิธีการเขียนบทความที่น่าสนใจ</h1>
+<div class="post-meta">โพสต์เมื่อ 1 มกราคม 2025 | โดย ผู้เขียน</div>
+</header>
+<div class="post-content">
+<p>เนื้อหาบทความที่ดีควรมีความน่าสนใจและเป็นประโยชน์ต่อผู้อ่าน การเขียนบทความให้น่าอ่านนั้นมีหลักการสำคัญหลายประการ</p>
+<h2>1. การเลือกหัวข้อที่น่าสนใจ</h2>
+<p>หัวข้อที่ดีควรตรงกับความสนใจของกลุ่มเป้าหมาย และมีประโยชน์ต่อผู้อ่าน</p>
+<blockquote>
+
+                "การเขียนที่ดีไม่ได้เกิดจากพรสวรรค์เพียงอย่างเดียว แต่เกิดจากการฝึกฝนอย่างสม่ำเสมอ"
+</blockquote>
+<h2>2. การจัดโครงสร้างเนื้อหา</h2>
+<p>เนื้อหาที่ดีควรมีการจัดลำดับที่เป็นระบบ เข้าใจง่าย และมีความต่อเนื่อง</p>
+</div>
+</article>
+</body>
+</html>
 ```
 ```css
 [วางโค้ด CSS ที่นี่]
+<style>
+ body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+ }
+ .post-title {
+    font-size: 2.5rem;
+    color: #060c06;    
+    text-align: center;
+    margin-top: 20px;
+ }
+ .post-meta {
+    font-size: 1rem;
+    color: #888;
+    text-align: center;
+    margin-top: 5px;
+ }
+ .post-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+ h2 {
+    font-size: 1.8rem;
+    color: #ff0000;
+    margin-top: 20px;
+ }
+ p {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 15px;
+ }
+ blockquote {
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #555;
+    border-left: 4px solid #bfcf0b;
+    padding-left: 15px;
+    margin: 20px 0;
+ }
+        @media (max-width: 768px) {
+            .post-title {
+                font-size: 2rem;
+            }
+        }
+    
+</style>
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![g5](https://github.com/user-attachments/assets/7c8dc544-b686-46a6-b5e3-ae329d4ffba7)
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
