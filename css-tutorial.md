@@ -612,12 +612,79 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+    <html lang="th">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>สินค้า Rolex</title>
+            <link rel="stylesheet" href="styles.css"> <!-- ลิงก์ไปยังไฟล์ CSS -->
+        </head>
+</head>
+<body>
+    <div class="stats-container">
+        <div class="stat-box">
+            <div class="stat-number">1,234</div>
+            <div class="stat-label">ผู้ใช้งาน</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">5.6K</div>
+            <div class="stat-label">ยอดขาย</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">ความพึงพอใจ</div>
+        </div>
+    </div>
+</body>
+</html>]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[.stats-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.stat-box {
+    flex: 1;
+    margin: 0 15px;
+    padding: 5rem;
+    text-align: center;
+    background-color: rgb(233, 218, 218);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+    font-size: 5rem;
+    font-weight: normal;
+    color: #010b14;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #ff0505;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+    .stats-container {
+        flex-direction: column;
+    }
+
+    .stat-box {
+        margin: 1rem 0;
+    }
+}]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![{4829E251-2E3B-4848-B496-3BDB0A2D742A}](https://github.com/user-attachments/assets/1902f19d-9f23-4fa9-b9a6-25313fd0f124)
+]
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
