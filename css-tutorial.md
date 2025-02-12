@@ -670,12 +670,68 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa; /* Changed background color */
+    margin: 0;
+    padding: 0;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.stat-box {
+    flex: 1;
+    margin: 0 20px;
+    padding: 2.5rem;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #00796b; /* Changed primary color */
+    margin-bottom: 0.75rem;
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-box {
+        margin: 1.5rem 0;
+        width: 80%;
+    }
+}
+
+]
+
+
 ```
-```css
-[วางโค้ด CSS ที่นี่]
-```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![image](https://github.com/user-attachments/assets/bb1e047b-2838-4e30-bb80-7d71cd6fa258)
+
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
