@@ -1072,12 +1072,185 @@ blockquote {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ร้านค้าออนไลน์</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <h1>สินค้าจากโค้ก</h1>
+
+    <div class="product-card">
+        <div class="product-image">
+            <img src="images/products/1c.jpg" alt="Coke Classic">
+        </div>
+        <div class="product-info">
+            <h2 class="product-title">Coke Classic</h2>
+            <p class="product-price">฿20</p>
+            <p class="product-description">
+                โค้กคลาสสิค รสชาติที่คลาสสิคของโค้กที่คุณรู้จักและชื่นชอบ
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="product-image">
+            <img src="images/products/2c.jpg" alt="Coke Zero">
+        </div>
+        <div class="product-info">
+            <h2 class="product-title">Coke Zero</h2>
+            <p class="product-price">฿20</p>
+            <p class="product-description">
+                โค้กซีโร่ โค้กที่ไม่มีน้ำตาลแต่ยังคงรสชาติอร่อย
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="product-image">
+            <img src="images/products/3c.jpg" alt="Coke Light">
+        </div>
+        <div class="product-info">
+            <h2 class="product-title">Coke Light</h2>
+            <p class="product-price">฿20</p>
+            <p class="product-description">
+                โค้กไลท์ โค้กที่เบากว่า แต่ยังคงรสชาติอร่อย
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="product-image">
+            <img src="images/products/4c.jpg" alt="Coke Cherry">
+        </div>
+        <div class="product-info">
+            <h2 class="product-title">Coke Cherry</h2>
+            <p class="product-price">฿20</p>
+            <p class="product-description">
+                โค้กเชอร์รี่ รสชาติสดชื่นของเชอร์รี่ในโค้ก
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+</body>
+</html>
+]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a#active {
+    color: #0a0000;
+}
+
+nav ul li a:hover {
+    color: #25ee3d;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 1em;
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-image img {
+    max-width: 6%; /* ปรับขนาดรูปภาพ */
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-info {
+    padding: 1em;
+}
+
+.product-title {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.product-price {
+    font-size: 1.2em;
+    color: #ff6347;
+}
+
+.product-description {
+    font-size: 1em;
+    color: #666;
+}
+
+.product-button {
+    display: inline-block;
+    background-color: #ff6347;
+    color: #fff;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1em;
+}
+
+.product-button:hover {
+    background-color: #3ea7f1;
+}
+]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![image](https://github.com/user-attachments/assets/a8cd8116-fea5-4207-9888-c2ebeac71e88)
+]
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
