@@ -394,9 +394,187 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KEYBOARD PRODUCTS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Sarabun', sans-serif;
+        }
+
+        nav {
+            background-color: #2c3e50;;
+            padding: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav > ul > li {
+            margin: 0 10px;
+        }
+
+        .menu-item {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        .menu-item:hover {
+            background-color: #555;
+            border-radius: 3px;
+        }
+        
+        #active {
+            background-color: #007bff;
+            border-radius: 3px;
+        }
+
+        .product-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .product-card {
+            width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: white;
+            margin-bottom: 20px;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-title {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            color: #007bff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .product-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .product-button {
+            display: block;
+            background: linear-gradient(to right, #28a745, #218838); /* Change this to your desired gradient */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+
+        .product-button:hover {
+            background: linear-gradient(to right, #218838, #1e7e34); /* Change this to a slightly darker gradient */
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <h1>KEYBOARD</h1>
+
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/products/product1.jpg" alt="Keyboard">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">KEYBOARD</h2>
+                <p class="product-price">฿500</p>
+                <p class="product-description">
+                    The Cheapest KEYBOARD in We Store
+                </p>
+                <a href="#" class="product-button">Add to Cart</a>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/products/product2.jpg" alt="KEYBOARD">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">KEYBOARD 2</h2>
+                <p class="product-price">฿800</p>
+                <p class="product-description">
+                    THE Better Keyboard in We Store this Keyboard is wireless
+                </p>
+                <a href="#" class="product-button">Add to Cart</a>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/products/product3.jpg" alt="KEYBOARD 3">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">KEYBOARD 3</h2>
+                <p class="product-price">฿1,500</p>
+                <p class="product-description">
+                    The BEST KEYBOARD(WIRELESS) 
+                </p>
+                <a href="#" class="product-button">Add to Cart</a>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/products/product4.jpg" alt="KEYBOARD">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">KEYBOARD 4</h2>
+                <p class="product-price">฿1,200</p>
+                <p class="product-description">
+                    The BEST  KEYBOARD(WIRE)
+                </p>
+                <a href="#" class="product-button">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![image](https://github.com/user-attachments/assets/e54c4bd0-0005-4feb-84bb-b845ebb92f1e)
+
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
