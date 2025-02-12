@@ -670,64 +670,71 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
-[body {
-    font-family: 'Arial', sans-serif;
-    background-color: #e0f7fa; /* Changed background color */
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
 
-.stats-container {
-    display: flex;
-    justify-content: space-around;
-    max-width: 1200px;
-    margin: 3rem auto;
-    padding: 0 1.5rem;
-}
+        .stat-box {
+            flex: 1;
+            margin: 0 15px;
+            padding: 2rem;
+            text-align: center;
+            background-color: whitesmoke;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
 
-.stat-box {
-    flex: 1;
-    margin: 0 20px;
-    padding: 2.5rem;
-    text-align: center;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease-in-out;
-}
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 0.5rem;
+        }
 
-.stat-box:hover {
-    transform: translateY(-5px);
-}
+        .stat-label {
+            font-size: 1rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-.stat-number {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #00796b; /* Changed primary color */
-    margin-bottom: 0.75rem;
-}
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .stats-container {
+                flex-direction: column;
+            }
 
-.stat-label {
-    font-size: 1.2rem;
-    color: #555;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-}
-
-@media (max-width: 768px) {
-    .stats-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .stat-box {
-        margin: 1.5rem 0;
-        width: 80%;
-    }
-}
-
-]
-
+            .stat-box {
+                margin: 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stats-container">
+        <div class="stat-box">
+            <div class="stat-number">1,234</div>
+            <div class="stat-label">ผู้ใช้งาน</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">5.6K</div>
+            <div class="stat-label">ยอดขาย</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">ความพึงพอใจ</div>
+        </div>
+    </div>
+</body>
+</html>
 
 ```
 ![image](https://github.com/user-attachments/assets/bb1e047b-2838-4e30-bb80-7d71cd6fa258)
