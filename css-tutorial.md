@@ -1081,12 +1081,101 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .product-card {
+            width: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 20px;
+            background-image: url('product.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-title {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            color: #007bff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .product-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .product-button {
+            display: block;
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+
+        .product-button:hover {
+            background: linear-gradient(to right, #0056b3, #003980);
+        }
+    </style>
+</head>
+<body>
+    <div class="product-card">
+        <div class="product-image"></div>
+        <div class="product-info">
+            <img src="Images/Products/product1.jpg" alt="KEYBOARD ZR48"
+            <h2 class="product-title">KEYBOARD ZR48</h2>
+            <p class="product-price">฿1,500</p>
+            <p class="product-description">
+                KEYBOARD WIRELESS (BLUE SWITCH) WITH RGB LIGHTSYNC
+            </p>
+            <a href="#" class="product-button">ADD TO CART</a>
+        </div>
+    </div>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+</style>
+</head>
+<body>
+    <div class="product-card">
+        <div class="product-image"></div>
+        <div class="product-info">
+            <img src="Images/Products/product1.jpg" alt="KEYBOARD ZR48"
+            <h2 class="product-title">KEYBOARD ZR48</h2>
+            <p class="product-price">฿1,500</p>
+            <p class="product-description">
+                KEYBOARD WIRELESS (BLUE SWITCH) WITH RGB LIGHTSYNC
+            </p>
+            <a href="#" class="product-button">ADD TO CART</a>
+        </div>
+    </div>
+</body>
+</html>
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![image](https://github.com/user-attachments/assets/da60f976-089e-47e9-a895-89509c4f517d)
+
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
