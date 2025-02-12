@@ -835,12 +835,217 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แกลเลอรีสินค้า</title>
+    <link rel="stylesheet" href="styles.css"> <!-- ใช้ CSS ภายนอก -->
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <h1>แกลเลอรีสินค้า</h1>
+
+    <div class="gallery">
+        <div class="card">
+            <img src="image/gallery/robot1.jpg" alt="หุ่นยนต์ 1">
+            <div class="card-content">
+                <h3>หุ่นยนต์เรียนรู้ 1</h3>
+                <p>ชุดเรียนรู้วิทยาการคำนวณเชิงปฏิบัติการด้วยหุ่นยนต์</p>
+                <a href="image/gallery/robot1.jpg" class="btn">ดูรายละเอียด</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image/gallery/robot2.jpg" alt="หุ่นยนต์ 2">
+            <div class="card-content">
+                <h3>หุ่นยนต์เรียนรู้ 2</h3>
+                <p>ชุดอุปกรณ์เรียนรู้และพัฒนาโปรแกรมภาษา C/C++</p>
+                <a href="image/gallery/robot2.jpg" class="btn">ดูรายละเอียด</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image/gallery/robot3.jpg" alt="หุ่นยนต์ 3">
+            <div class="card-content">
+                <h3>หุ่นยนต์แข่งขัน</h3>
+                <p>ชุดอุปกรณ์เรียนรู้และพัฒนาโปรแกรมหุ่นยนต์แข่งขัน</p>
+                <a href="image/gallery/robot3.jpg" class="btn">ดูรายละเอียด</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image/gallery/robot4.jpg" alt="หุ่นยนต์ 4">
+            <div class="card-content">
+                <h3>หุ่นยนต์เคลื่อนที่</h3>
+                <p>หุ่นยนต์เคลื่อนที่ตามเส้นอัตโนมัติแบบไม่ต้องเขียนโปรแกรม</p>
+                <a href="image/gallery/robot4.jpg" class="btn">ดูรายละเอียด</a>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="back-to-top">กลับไปข้างบน</a>
+
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
+
+/* รีเซ็ตค่าพื้นฐาน */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', sans-serif; /* ใช้ฟอนต์ Kanit */
+}
+
+/* ตั้งค่าพื้นฐาน */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* --------- เมนูนำทาง --------- */
+nav {
+    background-color: #2c3e50;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+.menu-item {
+    background-color: #34495e;
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #731abc;
+}
+
+#active {
+    background-color: #ad0783;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 20px;
+}
+
+/* --------- กล่องแสดงสินค้า --------- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+/* Card สำหรับสินค้า */
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 20px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* ข้อความภายในการ์ด */
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 12px;
+}
+
+.card-content p {
+    font-size: 17px;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+/* ปุ่ม "ดูรายละเอียด" */
+.card-content a.btn {
+    display: inline-block;
+    background: #ad0783;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.card-content a.btn:hover {
+    background: #731abc;
+    transform: translateY(-3px);
+}
+
+/* --------- ปุ่มกลับไปข้างบน --------- */
+.back-to-top {
+    display: block;
+    text-align: center;
+    margin: 40px 0;
+    color: #e74c3c;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.back-to-top:hover {
+    text-decoration: underline;
+}
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![image](https://github.com/user-attachments/assets/f3b5a0d0-4e2a-45b6-8940-2d82db87c2d7)
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
@@ -982,12 +1187,254 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แกลเลอรีสินค้า</title>
+    <link rel="stylesheet" href="styles.css"> <!-- ใช้ CSS ภายนอก -->
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <h1>แกลเลอรีสินค้า</h1>
+
+    <div class="gallery">
+        <!-- สินค้า 1 -->
+        <div class="card">
+            <a href="image/gallery/robot1.jpg">
+                <img src="image/gallery/robot1.jpg" alt="หุ่นยนต์ 1">
+            </a>
+            <div class="card-content">
+                <h3>IPST WiFi Coding Robotic Kit</h3>
+                <p>ชุดเรียนรู้วิทยาการคำนวณเชิงปฏิบัติการด้วยหุ่นยนต์</p>
+                <a href="#" class="btn">ดูรายละเอียด</a>
+            </div>
+        </div>
+    
+        <!-- สินค้า 2 -->
+        <div class="card">
+            <a href="image/gallery/robot2.jpg">
+                <img src="image/gallery/robot2.jpg" alt="หุ่นยนต์ 2">
+            </a>
+            <div class="card-content">
+                <h3>POP-BOT32i : Rover Kit Plus</h3>
+                <p>ชุดอุปกรณ์เรียนรู้และพัฒนาโปรแกรมภาษา C/C++ ควบคุมหุ่นยนต์รุ่นพื้นฐานพิเศษด้วยบอร์ด POP32i</p>
+                <a href="#" class="btn">ดูรายละเอียด</a>
+            </div>
+        </div>
+    
+        <!-- สินค้า 3 -->
+        <div class="card">
+            <a href="image/gallery/robot3.jpg">
+                <img src="image/gallery/robot3.jpg" alt="หุ่นยนต์ 3">
+            </a>
+            <div class="card-content">
+                <h3>POP-BOT32i : Rover Kit Lite</h3>
+                <p>ชุดอุปกรณ์เรียนรู้และพัฒนาโปรแกรมภาษา C/C++ ควบคุมหุ่นยนต์รุ่นพื้นฐานด้วยบอร์ด POP32i</p>
+                <a href="#" class="btn">ดูรายละเอียด</a>
+            </div>
+        </div>
+    
+        <!-- สินค้า 4 -->
+        <div class="card">
+            <a href="image/gallery/robot4.jpg">
+                <img src="image/gallery/robot4.jpg" alt="หุ่นยนต์ 4">
+            </a>
+            <div class="card-content">
+                <h3>K-BEAM Activity Kit</h3>
+                <p>หุ่นยนต์เคลื่อนที่ตามเส้นอัตโนมัติแบบไม่ต้องเขียนโปรแกรมพร้อมสนามแผ่นยาง EVA</p>
+                <a href="#" class="btn">ดูรายละเอียด</a>
+            </div>
+        </div>
+    
+        <!-- สินค้า 5 (ใหม่) -->
+        <div class="card">
+            <a href="image/gallery/robot5.jpg">
+                <img src="image/gallery/robot5.jpg" alt="หุ่นยนต์ 5">
+            </a>
+            <div class="card-content">
+                <h3>Artec micro:bit Robot Kit Lite</h3>
+                <p>Artec micro:bit Robot Kit Lite ชุดเรียนรู้หุ่นยนต์โปรแกรมได้เชิงสร้างสรรค์ด้วยบล็อกต่อ Artec และ micro:bit (รุ่นพิเศษ)</p>
+                <a href="#" class="btn">ดูรายละเอียด</a>
+            </div>
+        </div>
+    
+        <!-- สินค้า 6 (ใหม่) -->
+        <div class="card">
+            <a href="image/gallery/robot6.jpg">
+                <img src="image/gallery/robot6.jpg" alt="หุ่นยนต์ 6">
+            </a>
+            <div class="card-content">
+                <h3>i-Beam Activity Kit</h3>
+                <p>ชุดเรียนรู้สร้างหุ่นยนต์อย่างง่ายจากวงจรอิเล็กทรอนิกส์พร้อมสนามแผ่นยาง EVA</p>
+                <a href="#" class="btn">ดูรายละเอียด</a>
+            </div>
+        </div>
+    </div>    
+
+    <a href="#" class="back-to-top">กลับไปข้างบน</a>
+
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
+
+/* รีเซ็ตค่าพื้นฐาน */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', sans-serif; /* ใช้ฟอนต์ Kanit */
+}
+
+/* ตั้งค่าพื้นฐาน */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* --------- เมนูนำทาง --------- */
+nav {
+    background-color: #2c3e50;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+.menu-item {
+    background-color: #34495e;
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #731abc;
+}
+
+#active {
+    background-color: #ad0783;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 20px;
+}
+
+/* --------- กล่องแสดงสินค้า --------- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Card สำหรับสินค้า */
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 20px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ข้อความภายในการ์ด */
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 12px;
+}
+
+.card-content p {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+/* ปุ่ม "ดูรายละเอียด" */
+.card-content a.btn {
+    display: inline-block;
+    background: #ad0783;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.card-content a.btn:hover {
+    background: #731abc;
+    transform: translateY(-3px);
+}
+
+/* --------- ปุ่มกลับไปข้างบน --------- */
+.back-to-top {
+    display: block;
+    text-align: center;
+    margin: 40px 0;
+    color: #e74c3c;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.back-to-top:hover {
+    text-decoration: underline;
+}
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![image](https://github.com/user-attachments/assets/bad579c2-5ac8-4f41-8279-35a731f7f0f9)
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
@@ -1135,10 +1582,256 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แกลเลอรีสินค้า</title>
+    <link rel="stylesheet" href="styles.css"> <!-- ใช้ CSS ภายนอก -->
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <h1>แกลเลอรีสินค้า</h1>
+
+    <div class="gallery">
+        <!-- สินค้า 1 -->
+        <div class="card">
+            <a href="image/gallery/robot1.jpg">
+                <img src="image/gallery/robot1.jpg" alt="หุ่นยนต์ 1">
+            </a>
+            <div class="card-content">
+                <h3>IPST WiFi Coding Robotic Kit</h3>
+                <p>ชุดเรียนรู้วิทยาการคำนวณเชิงปฏิบัติการด้วยหุ่นยนต์</p>
+                <a href="#" class="btn">ดูรายละเอียด</a>
+            </div>
+        </div>
+    
+        <!-- สินค้า 2 -->
+        <div class="card">
+            <a href="image/gallery/robot2.jpg">
+                <img src="image/gallery/robot2.jpg" alt="หุ่นยนต์ 2">
+            </a>
+            <div class="card-content">
+                <h3>POP-BOT32i : Rover Kit Plus</h3>
+                <p>ชุดอุปกรณ์เรียนรู้และพัฒนาโปรแกรมภาษา C/C++ ควบคุมหุ่นยนต์รุ่นพื้นฐานพิเศษด้วยบอร์ด POP32i</p>
+                <a href="#" class="btn">ดูรายละเอียด</a>
+            </div>
+        </div>
+    
+        <!-- สินค้า 3 -->
+        <div class="card">
+            <a href="image/gallery/robot3.jpg">
+                <img src="image/gallery/robot3.jpg" alt="หุ่นยนต์ 3">
+            </a>
+            <div class="card-content">
+                <h3>POP-BOT32i : Rover Kit Lite</h3>
+                <p>ชุดอุปกรณ์เรียนรู้และพัฒนาโปรแกรมภาษา C/C++ ควบคุมหุ่นยนต์รุ่นพื้นฐานด้วยบอร์ด POP32i</p>
+                <a href="#" class="btn">ดูรายละเอียด</a>
+            </div>
+        </div>
+    
+        <!-- สินค้า 4 -->
+        <div class="card">
+            <a href="image/gallery/robot4.jpg">
+                <img src="image/gallery/robot4.jpg" alt="หุ่นยนต์ 4">
+            </a>
+            <div class="card-content">
+                <h3>K-BEAM Activity Kit</h3>
+                <p>หุ่นยนต์เคลื่อนที่ตามเส้นอัตโนมัติแบบไม่ต้องเขียนโปรแกรมพร้อมสนามแผ่นยาง EVA</p>
+                <a href="#" class="btn">ดูรายละเอียด</a>
+            </div>
+        </div>
+    
+        <!-- สินค้า 5 (ใหม่) -->
+        <div class="card">
+            <a href="image/gallery/robot5.jpg">
+                <img src="image/gallery/robot5.jpg" alt="หุ่นยนต์ 5">
+            </a>
+            <div class="card-content">
+                <h3>Artec micro:bit Robot Kit Lite</h3>
+                <p>Artec micro:bit Robot Kit Lite ชุดเรียนรู้หุ่นยนต์โปรแกรมได้เชิงสร้างสรรค์ด้วยบล็อกต่อ Artec และ micro:bit (รุ่นพิเศษ)</p>
+                <a href="#" class="btn">ดูรายละเอียด</a>
+            </div>
+        </div>
+    
+        <!-- สินค้า 6 (ใหม่) -->
+        <div class="card">
+            <a href="image/gallery/robot6.jpg">
+                <img src="image/gallery/robot6.jpg" alt="หุ่นยนต์ 6">
+            </a>
+            <div class="card-content">
+                <h3>i-Beam Activity Kit</h3>
+                <p>ชุดเรียนรู้สร้างหุ่นยนต์อย่างง่ายจากวงจรอิเล็กทรอนิกส์พร้อมสนามแผ่นยาง EVA</p>
+                <a href="#" class="btn">ดูรายละเอียด</a>
+            </div>
+        </div>
+    </div>    
+
+    <a href="#" class="back-to-top">กลับไปข้างบน</a>
+
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
+
+/* รีเซ็ตค่าพื้นฐาน */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', sans-serif; /* ใช้ฟอนต์ Kanit */
+}
+
+/* ตั้งค่าพื้นฐาน */
+body {
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* --------- เมนูนำทาง --------- */
+nav {
+    background-color: #1a1a2e;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+.menu-item {
+    background-color: #34495e;
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #731abc;
+}
+
+#active {
+    background-color: #ad0783;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 20px;
+}
+
+/* --------- กล่องแสดงสินค้า --------- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Card สำหรับสินค้า */
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 20px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ข้อความภายในการ์ด */
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ปุ่ม "ดูรายละเอียด" */
+.card-content a.btn {
+    display: inline-block;
+    background: #ad0783;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+}
+
+.card-content a.btn:hover {
+    background: #731abc;
+    transform: translateY(-3px);
+}
+
+/* --------- ปุ่มกลับไปข้างบน --------- */
+.back-to-top {
+    display: block;
+    text-align: center;
+    margin: 30px auto;
+    padding: 10px 15px;
+    background: #1a1a2e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 150px;
+    transition: background 0.3s;
+}
+
+.back-to-top:hover {
+    background: #e94560;
+    text-decoration: underline;
+}
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![image](https://github.com/user-attachments/assets/4b9bfecd-5eac-466f-ac80-4b987c19459f)
 
