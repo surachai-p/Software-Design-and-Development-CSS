@@ -231,7 +231,7 @@ div > p {
 3. เปลี่ยนสีพื้นหลังของเมนู
 
 ### ผลการทดลอง
-<!DOCTYPE html>
+[<!DOCTYPE html>
     <!DOCTYPE html>
     <html>
     <head>
@@ -287,7 +287,7 @@ div > p {
         </ul>
     </nav>
 </body>
-</html> ]
+</html>]
 
 ![image](https://github.com/user-attachments/assets/f8bb92f8-b750-4783-bbbb-4f115e78e01b)
 
