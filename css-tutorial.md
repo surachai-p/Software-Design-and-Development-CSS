@@ -702,11 +702,124 @@ font-weight: bold;
 ### ผลการทดลอง
 ```html
 [วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div class="product-card">
+<div class="product-image"></div>
+<div class="product-info">
+<img src="Images/wagyu1.jpg" alt="Wagyu beef"
+<h2 class="product-title"><h2>Wagyu beef</h2>
+<p class="product-price">฿1,200</p>
+<p class="product-description">
+
+    <p>Wagyu beef</p>
+</p>
+<a href="#" class="product-button">ADD TO CART</a>
+</div>
+</div>
+</body>
+</html>
 ```
 ```css
 [วางโค้ด CSS ที่นี่]
+<style>
+
+    .product-card {
+
+        width: 400px;
+
+        border-radius: 8px;
+
+        overflow: hidden;
+
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+        background-color: white;
+
+    }
+
+    .product-image {
+
+        width: 100%;
+
+        height: 20px;
+
+        background-image: url('product.jpg');
+
+        background-size: cover;
+
+        background-position: center;
+
+    }
+
+    .product-info {
+
+        padding: 15px;
+
+    }
+
+    .product-title {
+
+        color: #030101;
+
+        font-size: 18px;
+
+        margin-bottom: 10px;
+
+    }
+
+    .product-price {
+
+        color: #007bff;
+
+        font-size: 24px;
+
+        font-weight: bold;
+
+    }
+
+    .product-description {
+
+        color: #666;
+
+        font-size: 14px;
+
+        line-height: 1.5;
+
+    }
+
+    .product-button {
+
+        display: block;
+
+        background: linear-gradient(to right, #2f015b, #8d3ab9);
+
+        color: white;
+
+        text-align: center;
+
+        padding: 10px;
+
+        text-decoration: none;
+
+        margin-top: 15px;
+
+        border-radius: 4px;
+
+    }
+
+    .product-button:hover {
+
+        background: linear-gradient(to right, #0056b3, #003980);
+
+    }
+</style> 
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![G6 1](https://github.com/user-attachments/assets/861a9998-be87-4a3d-a5bf-99c18d324eb8)
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
@@ -855,9 +968,278 @@ font-weight: bold;
 ### ผลการทดลอง
 ```html
 [วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="dashboard">
+<header class="header">
+<h1>แดชบอร์ด</h1>
+<nav>
+<button class="btn">โปรไฟล์</button>
+<button class="btn logout">ออกจากระบบ</button>
+</nav>
+</header>
+<aside class="sidebar">
+<ul>
+<li><a href="#">หน้าแรก</a></li>
+<li><a href="#">รายงาน</a></li>
+<li><a href="#">การตั้งค่า</a></li>
+</ul>
+</aside>
+<main class="main-content">
+<div class="stats-grid">
+<div class="stat-card"><h3>ยอดขายรวม</h3><p>฿9,500,000</p></div>
+<div class="stat-card"><h3>จำนวนออเดอร์</h3><p>900,000</p></div>
+<div class="stat-card"><h3>ลูกค้าใหม่</h3><p>759,328</p></div>
+</div>
+<div class="chart-container">
+<div class="chart"><h3>กราฟแสดงยอดขาย</h3></div>
+<div class="chart"><h3>สัดส่วนสินค้าขายดี</h3></div>
+</div>
+</main>
+</div>
+</body>
+</html> 
 ```
 ```css
 [วางโค้ด CSS ที่นี่]
+<style>
+    {
+        margin: 0;
+
+        padding: 0;
+
+        box-sizing: border-box;
+
+        font-family: 'Sarabun', sans-serif;
+
+    }
+
+    .dashboard {
+
+        display: grid;
+
+        grid-template-areas: 
+
+            "sidebar header"
+
+            "sidebar main";
+
+        grid-template-columns: 250px 1fr;
+
+        grid-template-rows: auto 1fr;
+
+        min-height: 100vh;
+
+    }
+
+    .header {
+
+        grid-area: header;
+
+        background: #ffffff;
+
+        padding: 1rem 2rem;
+
+        box-shadow: 0 4px 8px rgb(255, 0, 0);
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+    }
+
+    .btn {
+
+        background: #bfff00;
+
+        color: rgb(0, 0, 0);
+
+        border: none;
+
+        padding: 10px 15px;
+
+        border-radius: 5px;
+
+        cursor: pointer;
+
+        transition: 0.3s;
+
+    }
+
+    .btn:hover {
+
+        background: #1ed93d;
+
+    }
+
+    .logout {
+
+        background: #3bdc35;
+
+    }
+
+    .logout:hover {
+
+        background: #4dda37;
+
+    }
+
+    .sidebar {
+
+        grid-area: sidebar;
+
+        background: #0b024d;
+
+        color: rgb(77, 50, 187);
+
+        padding: 1.5rem;
+
+    }
+
+    .sidebar ul {
+
+        list-style: none;
+
+    }
+
+    .sidebar ul li {
+
+        margin-bottom: 1rem;
+
+    }
+
+    .sidebar ul li a {
+
+        color: white;
+
+        text-decoration: none;
+
+        font-size: 1.1rem;
+
+        transition: 0.3s;
+
+    }
+
+    .sidebar ul li a:hover {
+
+        color: #1abc9c;
+
+    }
+
+    .main-content {
+
+        grid-area: main;
+
+        padding: 2rem;
+
+        background: #f5f7fa;
+
+    }
+
+    .stats-grid {
+
+        display: grid;
+
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+        gap: 1rem;
+
+        margin-bottom: 2rem;
+
+    }
+
+    .stat-card {
+
+        background: white;
+
+        padding: 1.5rem;
+
+        border-radius: 10px;
+
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+        text-align: center;
+
+    }
+
+    .stat-card h3 {
+
+        color: #333;
+
+        margin-bottom: 10px;
+
+    }
+
+    .stat-card p {
+
+        font-size: 1.5rem;
+
+        font-weight: bold;
+
+        color: #db1a1d;
+
+    }
+
+    .chart-container {
+
+        display: grid;
+
+        grid-template-columns: 2fr 1fr;
+
+        gap: 1rem;
+
+    }
+
+    .chart {
+
+        background: white;
+
+        padding: 1.5rem;
+
+        border-radius: 10px;
+
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+    }
+
+    @media (max-width: 768px) {
+
+        .dashboard {
+
+            grid-template-areas: 
+
+                "header"
+
+                "main";
+
+            grid-template-columns: 1fr;
+
+        }
+
+        .sidebar {
+
+            display: none;
+
+        }
+
+        .chart-container {
+
+            grid-template-columns: 1fr;
+
+        }
+
+    } 
+</style>
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![G6 2](https://github.com/user-attachments/assets/43aaf784-a4b0-419a-b6b0-10c5b408271e)
 
