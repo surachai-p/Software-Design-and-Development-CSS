@@ -232,48 +232,7 @@ div > p {
 
 ### ผลการทดลอง
 [<!DOCTYPE html>
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <style>
-            /* การใช้ Element Selector */
-            nav {
-                background-color: #333;
-                padding: 15px;
-            }
-    
-            /* การใช้ Descendant Selector */
-            nav ul {
-                list-style: none;
-                margin: 0;
-                padding: 0;
-                display: flex;
-            }
-    
-            /* การใช้ Child Selector */
-            nav > ul > li {
-                margin: 0 10px;
-            }
-    
-            /* การใช้ Class Selector */
-            .menu-item {
-                color: white;
-                text-decoration: none;
-                padding: 5px 10px;
-            }
-    
-            /* การใช้ Pseudo-class */
-            .menu-item:hover {
-                background-color: #555;
-                border-radius: 3px;
-            }
-    
-            /* การใช้ ID Selector */
-            #active {
-                background-color: #007bff;
-                border-radius: 3px;
-            }
-        </style>
+<html>
 <head>
     <link rel="stylesheet" href="style.css">
 </head>
