@@ -630,190 +630,95 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
-[<!DOCTYPE html>
-<html lang="en">
+[[<!DOCTYPE html>
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COKE PRODUCTS</title>
+    <title>สถิติการใช้งาน</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#" class="menu-item">หน้าแรก</a></li>
-            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
-            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
-            <li><a href="#" class="menu-item">ติดต่อ</a></li>
-        </ul>
-    </nav>
-
-    <h1>COKE PRODUCTS</h1>
-
-    <div class="product-container">
-        <div class="product-card">
-            <div class="product-image">
-                <img src="images/products/1c.jpg" alt="Coke Classic">
-            </div>
-            <div class="product-info">
-                <h2 class="product-title">Coke Classic</h2>
-                <p class="product-price">฿20</p>
-                <p class="product-description">
-                    The original Coca-Cola with its classic flavor.
-                </p>
-                <a href="#" class="product-button">Add to Cart</a>
-            </div>
+    <div class="stats-container">
+        <div class="stat-box">
+            <div class="stat-number">1,234</div>
+            <div class="stat-label">ผู้ใช้งาน</div>
         </div>
-        
-        <div class="product-card">
-            <div class="product-image">
-                <img src="images/products/2c.jpg" alt="Coke Zero">
-            </div>
-            <div class="product-info">
-                <h2 class="product-title">Coke Zero</h2>
-                <p class="product-price">฿20</p>
-                <p class="product-description">
-                    Coca-Cola with zero sugar but great taste.
-                </p>
-                <a href="#" class="product-button">Add to Cart</a>
-            </div>
+        <div class="stat-box">
+            <div class="stat-number">5.6K</div>
+            <div class="stat-label">ยอดขาย</div>
         </div>
-        
-        <div class="product-card">
-            <div class="product-image">
-                <img src="images/products/3c.jpg" alt="Coke Light">
-            </div>
-            <div class="product-info">
-                <h2 class="product-title">Coke Light</h2>
-                <p class="product-price">฿20</p>
-                <p class="product-description">
-                    A lighter version of the classic Coca-Cola.
-                </p>
-                <a href="#" class="product-button">Add to Cart</a>
-            </div>
-        </div>
-        
-        <div class="product-card">
-            <div class="product-image">
-                <img src="images/products/4c.jpg" alt="Coke Cherry">
-            </div>
-            <div class="product-info">
-                <h2 class="product-title">Coke Cherry</h2>
-                <p class="product-price">฿20</p>
-                <p class="product-description">
-                    A refreshing twist of cherry flavor in Coca-Cola.
-                </p>
-                <a href="#" class="product-button">Add to Cart</a>
-            </div>
+        <div class="stat-box">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">ความพึงพอใจ</div>
         </div>
     </div>
 </body>
 </html>
 ]
-```
-```css
-[* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Sarabun', sans-serif;
-}
-
-nav {
-    background-color: #2c3e50;
-    padding: 15px;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav > ul > li {
-    margin: 0 10px;
-}
-
-.menu-item {
-    color: white;
-    text-decoration: none;
-    padding: 5px 10px;
-}
-
-.menu-item:hover {
-    background-color: #555;
-    border-radius: 3px;
-}
-
-#active {
-    background-color: #007bff;
-    border-radius: 3px;
-}
-
-.product-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    padding: 20px;
-    overflow-x: auto;
-}
-
-.product-card {
-    width: 200px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    background-color: white;
-    margin-right: 20px;
-    flex: 0 0 auto;
-}
-
-.product-image img {
-    width: 100%;
-    height: 100px; /* Reduced the height of the images */
-    object-fit: cover;
-}
-
-.product-info {
-    padding: 15px;
-}
-
-.product-title {
-    color: #333;
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.product-price {
-    color: #007bff;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.product-description {
-    color: #666;
-    font-size: 12px;
-    line-height: 1.5;
-}
-
-.product-button {
-    display: block;
-    background: linear-gradient(to right, #28a745, #218838);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    text-decoration: none;
-    margin-top: 10px;
-    border-radius: 4px;
-}
-
-.product-button:hover {
-    background: linear-gradient(to right, #218838, #1e7e34);
-}
 ]
 ```
-[![image](https://github.com/user-attachments/assets/71d247d6-d28a-415d-830c-f074798e5f53)
+```css
+[body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa; /* Changed background color */
+    margin: 0;
+    padding: 0;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.stat-box {
+    flex: 1;
+    margin: 0 20px;
+    padding: 2.5rem;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #00796b; /* Changed primary color */
+    margin-bottom: 0.75rem;
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-box {
+        margin: 1.5rem 0;
+        width: 80%;
+    }
+}
+
+]
+```
+[![image](https://github.com/user-attachments/assets/74095dca-01eb-4c25-ad73-0aef92878ad7)
+
 ]
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
