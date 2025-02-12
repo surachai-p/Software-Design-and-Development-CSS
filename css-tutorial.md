@@ -339,8 +339,172 @@ background-size: cover;
 ### ผลการทดลอง
 ```html
 [วางโค้ดที่นี่]
+<head>
+    <style>
+           p {
+               color: blue;
+               font-size: 16px;
+           }
+    </style>
+    [<!DOCTYPE html>
+    <html>
+    <head>
+    <title>Japan Best Beef</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+           * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+               font-family: 'Sarabun', sans-serif;
+           }
+           nav {
+               background-color: #2c3e50;;
+               padding: 15px;
+           }
+           nav ul {
+               list-style: none;
+               margin: 0;
+               padding: 0;
+               display: flex;
+           }
+           nav > ul > li {
+               margin: 0 10px;
+           }
+           .menu-item {
+               color: white;
+               text-decoration: none;
+               padding: 5px 10px;
+           }
+           .menu-item:hover {
+               background-color: #555;
+               border-radius: 3px;
+           }
+           #active {
+               background-color: #007bff;
+               border-radius: 3px;
+           }
+           .product-container {
+               display: flex;
+               justify-content: space-around;
+               flex-wrap: wrap;
+               padding: 20px;
+           }
+           .product-card {
+               width: 300px;
+               border-radius: 8px;
+               overflow: hidden;
+               box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+               background-color: white;
+               margin-bottom: 20px;
+           }
+           .product-image img {
+               width: 100%;
+               height: 230px;
+               object-fit: cover;
+           }
+           .product-info {
+               padding: 15px;
+           }
+           .product-title {
+               color: #333;
+               font-size: 18px;
+               margin-bottom: 10px;
+           }
+           .product-price {
+               color: #007bff;
+               font-size: 24px;
+               font-weight: bold;
+           }
+           .product-description {
+               color: #666;
+               font-size: 14px;
+               line-height: 1.5;
+           }
+           .product-button {
+               display: block;
+               background: linear-gradient(to right, #28a745, #218838); /* Change this to your desired gradient */
+               color: white;
+               text-align: center;
+               padding: 10px;
+               text-decoration: none;
+               margin-top: 15px;
+               border-radius: 4px;
+           }
+           .product-button:hover {
+               background: linear-gradient(to right, #218838, #1e7e34); /* Change this to a slightly darker gradient */
+           }
+    </style>
+    </head>
+    <body>
+    <nav>
+    <ul>
+    <li><a href="#" class="menu-item">หน้าแรก</a></li>
+    <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+    <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+    <li><a href="#" class="menu-item">ติดต่อ</a></li>
+    </ul>
+    </nav>
+    <h1>Japan Best Beef</h1>
+    <div class="product-container">
+    <div class="product-card">
+    <div class="product-image">
+    <img src="images/product1.jpg" alt="Matsusaka Beef">
+    </div>
+    <div class="product-info">
+    <h2 class="product-title">Matsusaka Beef</h2>
+    <p class="product-price">฿150</p>
+    <p class="product-description">
+    <h2> Matsusaka Beef </h2>
+    </p>
+    <a href="#" class="product-button">Add to Cart</a>
+    </div>
+    </div>
+    <div class="product-card">
+    <div class="product-image">
+    <img src="images/product2.jpg" alt=" Kobe Beef ">
+    </div>
+    <div class="product-info">
+    <h2 class="product-title"> Kobe Beef </h2>
+    <p class="product-price">฿170</p>
+    <p class="product-description">
+    <h2> Kobe Beef </h2>
+    </p>
+    <a href="#" class="product-button">Add to Cart</a>
+    </div>
+    </div>
+    <div class="product-card">
+    <div class="product-image">
+    <img src="images/product3.jpg" alt="Yonezawa Beef">
+    </div>
+    <div class="product-info">
+    <h2 class="product-title">Yonezawa Beef</h2>
+    <p class="product-price">฿200</p>
+    <p class="product-description">
+    <h2>Yonezawa Beef</h2>
+    </p>
+    <a href="#" class="product-button">Add to Cart</a>
+    </div>
+    </div>
+    <div class="product-card">
+    <div class="product-image">
+    <img src="images/product4.jpg" alt="Omi Beef">
+    </div>
+    <div class="product-info">
+    <h2 class="product-title">Omi Beef</h2>
+    <p class="product-price">฿180</p>
+    <p class="product-description">
+    <h2>Omi Beef</h2>
+    </p>
+    <a href="#" class="product-button">Add to Cart</a>
+    </div>
+    </div>
+    </div>
+    </body>
+    </html>
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![G3](https://github.com/user-attachments/assets/93abbb47-2ce4-40f1-b53e-e617b670b3aa)
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
