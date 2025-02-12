@@ -232,9 +232,65 @@ div > p {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* การใช้ Element Selector */
+        nav {
+            background-color: #121111;
+            padding: 15px;
+        }
+
+        /* การใช้ Descendant Selector */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* การใช้ Child Selector */
+        nav > ul > li {
+            margin: 0 10px;
+        }
+
+        /* การใช้ Class Selector */
+        .menu-item {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        /* การใช้ Pseudo-class */
+        .menu-item:hover {
+            background-color: #585656;
+            border-radius: 3px;
+        }
+
+        /* การใช้ ID Selector */
+        #active {
+            background-color: #2bec21;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item" id="active">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
+
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![c1](https://github.com/user-attachments/assets/226daf59-c96b-46e0-8d9f-8948aee79739)
 
 
 [](#การทดลองที่-3-การจัดการสีและพื้นหลัง)
@@ -338,9 +394,187 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+[<!DOCTYPE html>
+<html>
+<head>
+    <title>ART TOY</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Sarabun', sans-serif;
+        }
+
+        nav {
+            background-color: #2c3e50;;
+            padding: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav > ul > li {
+            margin: 0 10px;
+        }
+
+        .menu-item {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        .menu-item:hover {
+            background-color: #555;
+            border-radius: 3px;
+        }
+        
+        #active {
+            background-color: #007bff;
+            border-radius: 3px;
+        }
+
+        .product-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .product-card {
+            width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: white;
+            margin-bottom: 20px;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-title {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            color: #007bff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .product-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .product-button {
+            display: block;
+            background: linear-gradient(to right, #28a745, #218838); /* Change this to your desired gradient */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+
+        .product-button:hover {
+            background: linear-gradient(to right, #218838, #1e7e34); /* Change this to a slightly darker gradient */
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <h1>ART TOY PRODUCTS</h1>
+
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/c1.jpg" alt="MR.Bone-A-Journey-Through-Time-Dongguan">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">Mr.Bone-A-Journey-Through-Time-Dongguan</h2>
+                <p class="product-price">฿450</p>
+                <p class="product-description">
+                    MR.Bone-A-Journey-Through-Time-Dongguan.
+                </p>
+                <a href="#" class="product-button">Add to Cart</a>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/c2.jpg" alt="MR. Bone Large figures">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">MR. Bone Large figures</h2>
+                <p class="product-price">฿450</p>
+                <p class="product-description">
+                    MR. Bone Large figures.
+                </p>
+                <a href="#" class="product-button">Add to Cart</a>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/c3.jpg" alt="MR. Bone Large figures">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">MR. Bone Large figures</h2>
+                <p class="product-price">฿850</p>
+                <p class="product-description">
+                    MR. Bone Large figures.
+                </p>
+                <a href="#" class="product-button">Add to Cart</a>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/c4.jpg" alt="Mr.Bone Summer Breeze">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">Mr.Bone Summer Breeze</h2>
+                <p class="product-price">฿450</p>
+                <p class="product-description">
+                    Mr.Bone Summer Breeze.
+                </p>
+                <a href="#" class="product-button">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+]
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![c2](https://github.com/user-attachments/assets/aeca9e1a-c133-4ae3-994b-3da9f57ee3b1)
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
@@ -436,12 +670,78 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+<body>
+    <div class="stats-container">
+        <div class="stat-box">
+            <div class="stat-number">70K</div>
+            <div class="stat-label">ผู้ใช้งาน</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">800K</div>
+            <div class="stat-label">ยอดขาย</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">95%</div>
+            <div class="stat-label">ความพึงพอใจ</div>
+        </div>
+    </div>
+</body>
+</html>
+
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+<style>
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .stat-box {
+            flex: 1;
+            margin: 0 15px;
+            padding: 2rem;
+            text-align: center;
+            background-color: whitesmoke;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .stats-container {
+                flex-direction: column;
+            }
+
+            .stat-box {
+                margin: 1rem 0;
+            }
+        }
+    </style>
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![o7](https://github.com/user-attachments/assets/05e87bfb-2ebf-4f52-883f-084ec24987db)
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
@@ -554,12 +854,92 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+    </style>
+</head>
+<body>
+    <article class="blog-post">
+        <header class="post-header">
+            <h1 class="post-title">วิธีการเขียนบทความที่น่าสนใจ</h1>
+            <div class="post-meta">โพสต์เมื่อ 1 มกราคม 2025 | โดย ผู้เขียน</div>
+        </header>
+        
+        <div class="post-content">
+            <p>เนื้อหาบทความที่ดีควรมีความน่าสนใจและเป็นประโยชน์ต่อผู้อ่าน การเขียนบทความให้น่าอ่านนั้นมีหลักการสำคัญหลายประการ</p>
+
+            <h2>1. การเลือกหัวข้อที่น่าสนใจ</h2>
+            <p>หัวข้อที่ดีควรตรงกับความสนใจของกลุ่มเป้าหมาย และมีประโยชน์ต่อผู้อ่าน</p>
+
+            <blockquote>
+                "การเขียนที่ดีไม่ได้เกิดจากพรสวรรค์เพียงอย่างเดียว แต่เกิดจากการฝึกฝนอย่างสม่ำเสมอ"
+            </blockquote>
+
+            <h2>2. การจัดโครงสร้างเนื้อหา</h2>
+            <p>เนื้อหาที่ดีควรมีการจัดลำดับที่เป็นระบบ เข้าใจง่าย และมีความต่อเนื่อง</p>
+        </div>
+    </article>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+.post-title {
+    font-size: 2.5rem; 
+    color: #060c06;    
+    text-align: center;
+    margin-top: 20px;
+}
+.post-meta {
+    font-size: 1rem;
+    color: #888;
+    text-align: center;
+    margin-top: 5px;
+}
+.post-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    font-size: 1.8rem;
+    color: #2E8B57; 
+    margin-top: 20px;
+}
+p {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 15px;
+}
+blockquote {
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #555;
+    border-left: 4px solid #4CAF50; 
+    padding-left: 15px;
+    margin: 20px 0;
+}
+        @media (max-width: 768px) {
+            .post-title {
+                font-size: 2rem;
+            }
+        }
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![c3](https://github.com/user-attachments/assets/22ec9f3c-cf2b-40ec-a2a2-996734eca1d7)
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
@@ -701,12 +1081,85 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+<body>
+    <div class="product-card">
+        <div class="product-image"></div>
+        <div class="product-info">
+            <img src="Images/k5.jpg" alt="MR.BONE Junior First Day"
+            <h2 class="product-title">MR.BONE Junior First Day</h2>
+            <p class="product-price">฿1,200</p>
+            <p class="product-description">
+                MR.BONE Junior First Day
+            </p>
+            <a href="#" class="product-button">ADD TO CART</a>
+        </div>
+    </div>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+<style>
+        .product-card {
+            width: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 20px;
+            background-image: url('product.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-title {
+            color: #030101;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            color: #007bff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .product-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .product-button {
+            display: block;
+            background: linear-gradient(to right, #63e08d, #064b1d);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+
+        .product-button:hover {
+            background: linear-gradient(to right, #0056b3, #003980);
+        }
+    </style>
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![l5](https://github.com/user-attachments/assets/9474fe58-cfb7-4668-a729-bcdd06ede893)
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
@@ -854,10 +1307,185 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <h1>แดชบอร์ด</h1>
+            <nav>
+                <button class="btn">โปรไฟล์</button>
+                <button class="btn logout">ออกจากระบบ</button>
+            </nav>
+        </header>
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#">หน้าแรก</a></li>
+                <li><a href="#">รายงาน</a></li>
+                <li><a href="#">การตั้งค่า</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card"><h3>ยอดขายรวม</h3><p>฿2,500,000</p></div>
+                <div class="stat-card"><h3>จำนวนออเดอร์</h3><p>800,000</p></div>
+                <div class="stat-card"><h3>ลูกค้าใหม่</h3><p>750,328</p></div>
+            </div>
+            <div class="chart-container">
+                <div class="chart"><h3>กราฟแสดงยอดขาย</h3></div>
+                <div class="chart"><h3>สัดส่วนสินค้าขายดี</h3></div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+<style>
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Sarabun', sans-serif;
+    }
+    
+    .dashboard {
+        display: grid;
+        grid-template-areas: 
+            "sidebar header"
+            "sidebar main";
+        grid-template-columns: 250px 1fr;
+        grid-template-rows: auto 1fr;
+        min-height: 100vh;
+    }
+    
+    .header {
+        grid-area: header;
+        background: #ffffff;
+        padding: 1rem 2rem;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .btn {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    
+    .btn:hover {
+        background: #1ed93d;
+    }
+    
+    .logout {
+        background: #3bdc35;
+    }
+    
+    .logout:hover {
+        background: #4dda37;
+    }
+    
+    .sidebar {
+        grid-area: sidebar;
+        background: #2c3e50;
+        color: white;
+        padding: 1.5rem;
+    }
+    
+    .sidebar ul {
+        list-style: none;
+    }
+    
+    .sidebar ul li {
+        margin-bottom: 1rem;
+    }
+    
+    .sidebar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: 0.3s;
+    }
+    
+    .sidebar ul li a:hover {
+        color: #1abc9c;
+    }
+    
+    .main-content {
+        grid-area: main;
+        padding: 2rem;
+        background: #f5f7fa;
+    }
+    
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .stat-card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+    
+    .stat-card h3 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+    
+    .stat-card p {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #db1a1d;
+    }
+    
+    .chart-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+    }
+    
+    .chart {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    @media (max-width: 768px) {
+        .dashboard {
+            grid-template-areas: 
+                "header"
+                "main";
+            grid-template-columns: 1fr;
+        }
+    
+        .sidebar {
+            display: none;
+        }
+    
+        .chart-container {
+            grid-template-columns: 1fr;
+        }
+    }
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![p6](https://github.com/user-attachments/assets/ed6d8db0-51b5-4a90-b6de-37297eab1795)
 
