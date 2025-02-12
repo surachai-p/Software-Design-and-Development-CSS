@@ -1,85 +1,69 @@
-nav {
-    background-color: #F8F9FA;
-    padding: 15px;
+/* styles.css */
+body {
+    font-family: 'Sarabun', sans-serif;
+    background-color: #f9f9f9;
+    color: #444;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+.blog-post {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-nav > ul > li {
-    margin: 0 10px;
-}
-
-.menu-item {
-    color: #333;
-    text-decoration: none;
-    padding: 5px 10px;
-    background-color: #E0E0E0;
-    border-radius: 3px;
-}
-
-.menu-item:hover {
-    background-color: #D6D6D6;
-}
-
-.menu-item.active {
-    background-color: #B0B0B0;
-    border-radius: 3px;
-}
-
-.product-card {
-    width: 300px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    background-color: #FFFFFF;
-}
-
-.product-image {
-    width: 75%;
-    height: 200px;
-    background-image: url('product.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.product-info {
-    padding: 15px;
-}
-
-.product-title {
-    color: #333;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.product-price {
-    color: #555;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.product-description {
-    color: #777;
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.product-button {
-    display: block;
-    background: linear-gradient(to right, #B0B0B0, #909090);
-    color: white;
+.post-header {
     text-align: center;
-    padding: 10px;
-    text-decoration: none;
-    margin-top: 15px;
-    border-radius: 4px;
+    margin-bottom: 2rem;
 }
 
-.product-button:hover {
-    background: linear-gradient(to right, #909090, #707070);
+.post-title {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.post-meta {
+    color: #888;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.post-content {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+.post-content p {
+    margin-bottom: 1.5rem;
+}
+
+.post-content h2 {
+    font-size: 2rem;
+    color: #333;
+    margin: 2rem 0 1rem;
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 4px solid #007bff;
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .post-title {
+        font-size: 2.5rem;
+    }
+
+    .post-content {
+        font-size: 1.1rem;
+    }
+
+    .post-content h2 {
+        font-size: 1.7rem;
+    }
 }

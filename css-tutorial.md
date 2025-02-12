@@ -648,12 +648,228 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item" id="active">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product1.jpg');"></div>
+            <div class="product-info">
+                <h2 class="product-title">GEL INK BALLPOINT PEN CAP TYPE 0.7 BLUE 0.7MM BLUE</h2>
+                <p class="product-price">฿29.00</p>
+                <p class="product-description">BODY:POLYPROPYLENE (UK)/OLEFIN(US)</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product2.jpg');"></div>
+            <div class="product-info">
+                <h2 class="product-title">Acacia Mirror L W44*D38.5*H150cm</h2>
+                <p class="product-price">฿899.00</p>
+                <p class="product-description">mirror mirror on the wall who is the fairest of them all</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product3.jpg');"></div>
+            <div class="product-info">
+                <h2 class="product-title">Wooden Round chair W45*D52*H78cm</h2>
+                <p class="product-price">฿1,599.00</p>
+                <p class="product-description">It is comfortable to sit on due to its curved shape.</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product4.jpg');"></div>
+            <div class="product-info">
+                <h2 class="product-title">STYRENE DIVIDER</h2>
+                <p class="product-price">฿ 399.00</p>
+                <p class="product-description">BODY:STYRENE RESIN</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="stats-container">
+        <div class="stat-box">
+            <div class="stat-number">1,234</div>
+            <div class="stat-label">ผู้ใช้งาน</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">5.6K</div>
+            <div class="stat-label">ยอดขาย</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">ความพึงพอใจ</div>
+        </div>
+    </div>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+/* styles.css */
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation */
+nav {
+    background-color: #F1F1F1;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav > ul > li {
+    margin: 0 15px;
+}
+
+.menu-item {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #E0E0E0;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.menu-item:hover {
+    background-color: #D6D6D6;
+}
+
+.menu-item.active {
+    background-color: #B0B0B0;
+    border-radius: 5px;
+}
+
+/* Product Card */
+.product-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    width: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    background-color: #FFFFFF;
+    margin: 20px;
+}
+
+.product-image {
+    width: 100%;
+    height: 220px;
+    background-image: url('product.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-title {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.product-price {
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.product-description {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.product-button {
+    display: block;
+    background: linear-gradient(to right, #B0B0B0, #909090);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.product-button:hover {
+    background: linear-gradient(to right, #909090, #707070);
+}
+
+/* Stats Container */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.stat-box {
+    flex: 1;
+    margin: 0 15px;
+    padding: 30px;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #707070;
+    margin-bottom: 1rem;
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+    }
+
+    .stat-box {
+        margin: 1rem 0;
+    }
+}
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](image-4.png)
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
@@ -766,12 +982,107 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css"> <!-- ลิงก์ไปยังไฟล์ CSS ภายนอก -->
+</head>
+<body>
+    <article class="blog-post">
+        <header class="post-header">
+            <h1 class="post-title">วิธีการเขียนบทความที่น่าสนใจ</h1>
+            <div class="post-meta">โพสต์เมื่อ 1 มกราคม 2025 | โดย ผู้เขียน</div>
+        </header>
+        
+        <div class="post-content">
+            <p>เนื้อหาบทความที่ดีควรมีความน่าสนใจและเป็นประโยชน์ต่อผู้อ่าน การเขียนบทความให้น่าอ่านนั้นมีหลักการสำคัญหลายประการ</p>
+
+            <h2>1. การเลือกหัวข้อที่น่าสนใจ</h2>
+            <p>หัวข้อที่ดีควรตรงกับความสนใจของกลุ่มเป้าหมาย และมีประโยชน์ต่อผู้อ่าน</p>
+
+            <blockquote>
+                "การเขียนที่ดีไม่ได้เกิดจากพรสวรรค์เพียงอย่างเดียว แต่เกิดจากการฝึกฝนอย่างสม่ำเสมอ"
+            </blockquote>
+
+            <h2>2. การจัดโครงสร้างเนื้อหา</h2>
+            <p>เนื้อหาที่ดีควรมีการจัดลำดับที่เป็นระบบ เข้าใจง่าย และมีความต่อเนื่อง</p>
+        </div>
+    </article>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+/* styles.css */
+body {
+    font-family: 'Sarabun', sans-serif;
+    background-color: #f9f9f9;
+    color: #444;
+}
+
+.blog-post {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.post-title {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.post-meta {
+    color: #888;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.post-content {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+.post-content p {
+    margin-bottom: 1.5rem;
+}
+
+.post-content h2 {
+    font-size: 2rem;
+    color: #333;
+    margin: 2rem 0 1rem;
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 4px solid #007bff;
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .post-title {
+        font-size: 2.5rem;
+    }
+
+    .post-content {
+        font-size: 1.1rem;
+    }
+
+    .post-content h2 {
+        font-size: 1.7rem;
+    }
+}
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](image-5.png)
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
