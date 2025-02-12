@@ -388,9 +388,171 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item" id="active">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product1.jpg');"></div>
+            <div class="product-info">
+                <h2 class="product-title">GEL INK BALLPOINT PEN CAP TYPE 0.7 BLUE 0.7MM BLUE
+                </h2>
+                <p class="product-price">฿29.00</p>
+                <p class="product-description">
+                    BODY:POLYPROPYLENE (UK)/OLEFIN(US)
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+            </div>
+        </div>
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product2.jpg');"></div>
+            <div class="product-info">
+                <h2 class="product-title">Acacia Mirror L W44*D38.5*H150cm</h2>
+                <p class="product-price">฿899.00</p>
+                <p class="product-description">
+                    mirror mirror on the wall who is the fairest of them all
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+            </div>
+        </div>
+        <div class="product-container">
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product3.jpg');"></div>
+            <div class="product-info">
+                <h2 class="product-title">Wooden Round chair W45*D52*H78cm</h2>
+                <p class="product-price">฿1,599.00</p>
+                <p class="product-description">
+                    It is comfortable to sit on due to its curved shape.
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+            </div>
+        </div>
+        <div class="product-container">
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product4.jpg');"></div>
+            <div class="product-info">
+                <h2 class="product-title">STYRENE DIVIDER</h2>
+                <p class="product-price">฿ 399.00</p>
+                <p class="product-description">
+                    BODY:STYRENE RESIN
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+```css
+nav {
+    background-color: #F8F9FA;
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav > ul > li {
+    margin: 0 10px;
+}
+
+.menu-item {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #E0E0E0;
+    border-radius: 3px;
+}
+
+.menu-item:hover {
+    background-color: #D6D6D6;
+}
+
+.menu-item.active {
+    background-color: #B0B0B0;
+    border-radius: 3px;
+}
+
+.product-card {
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #FFFFFF;
+}
+
+.product-image {
+    width: 75%;
+    height: 200px;
+    background-image: url('product.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-title {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: #555;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-description {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.product-button {
+    display: block;
+    background: linear-gradient(to right, #B0B0B0, #909090);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.product-button:hover {
+    background: linear-gradient(to right, #909090, #707070);
+}
+```
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
