@@ -520,12 +520,209 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แกลเลอรีสินค้า</title>
+    <link rel="stylesheet" href="styles.css"> <!-- ใช้ CSS ภายนอก -->
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <h1>แกลเลอรีสินค้า</h1>
+
+    <div class="gallery">
+        <div class="card">
+            <img src="image/gallery/robot1.jpg" alt="หุ่นยนต์ 1">
+            <div class="card-content">
+                <h3>หุ่นยนต์เรียนรู้ 1</h3>
+                <p>ชุดเรียนรู้วิทยาการคำนวณเชิงปฏิบัติการด้วยหุ่นยนต์</p>
+                <a href="image/gallery/robot1.jpg" class="btn">ดูรายละเอียด</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image/gallery/robot2.jpg" alt="หุ่นยนต์ 2">
+            <div class="card-content">
+                <h3>หุ่นยนต์เรียนรู้ 2</h3>
+                <p>ชุดอุปกรณ์เรียนรู้และพัฒนาโปรแกรมภาษา C/C++</p>
+                <a href="image/gallery/robot2.jpg" class="btn">ดูรายละเอียด</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image/gallery/robot3.jpg" alt="หุ่นยนต์ 3">
+            <div class="card-content">
+                <h3>หุ่นยนต์แข่งขัน</h3>
+                <p>ชุดอุปกรณ์เรียนรู้และพัฒนาโปรแกรมหุ่นยนต์แข่งขัน</p>
+                <a href="image/gallery/robot3.jpg" class="btn">ดูรายละเอียด</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image/gallery/robot4.jpg" alt="หุ่นยนต์ 4">
+            <div class="card-content">
+                <h3>หุ่นยนต์เคลื่อนที่</h3>
+                <p>หุ่นยนต์เคลื่อนที่ตามเส้นอัตโนมัติแบบไม่ต้องเขียนโปรแกรม</p>
+                <a href="image/gallery/robot4.jpg" class="btn">ดูรายละเอียด</a>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="back-to-top">กลับไปข้างบน</a>
+
+</body>
+</html>
+
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
+
+/* รีเซ็ตค่าพื้นฐาน */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', sans-serif; /* ใช้ฟอนต์ Kanit */
+}
+
+/* ตั้งค่าพื้นฐาน */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* --------- เมนูนำทาง --------- */
+nav {
+    background-color: #2c3e50;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+.menu-item {
+    background-color: #34495e;
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #731abc;
+}
+
+#active {
+    background-color: #ad0783;
+}
+
+/* --------- กล่องแสดงสินค้า --------- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+/* Card สำหรับสินค้า */
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding: 20px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* ข้อความภายในการ์ด */
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+/* ปุ่ม "ดูรายละเอียด" */
+.card-content a.btn {
+    display: inline-block;
+    background: #ad0783;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.card-content a.btn:hover {
+    background: #731abc;
+}
+
+/* --------- ปุ่มกลับไปข้างบน --------- */
+.back-to-top {
+    display: block;
+    text-align: center;
+    margin: 40px 0;
+    color: #e74c3c;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.back-to-top:hover {
+    text-decoration: underline;
+}
+
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![image](https://github.com/user-attachments/assets/28bd8b84-f0bb-4c34-9f7c-c4a8414f3a34)
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
