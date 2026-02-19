@@ -232,9 +232,64 @@ div > p {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/lab/styles-lab2.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item" >หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+
+```css
+/* การใช้ Element Selector */
+        nav {
+            background-color: #007bff;
+            padding: 15px;
+        }
+
+        /* การใช้ Descendant Selector */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* การใช้ Child Selector */
+        nav > ul > li {
+            margin: 0 10px;
+        }
+
+        /* การใช้ Class Selector */
+        .menu-item {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        /* การใช้ Pseudo-class */
+        .menu-item:hover {
+            background-color: #555;
+            border-radius: 3px;
+        }
+
+        /* การใช้ ID Selector */
+        #active {
+            background-color: #007bff;
+            border-radius: 3px;
+        }
+```
+[![alt text](image.png)]
 
 
 [](#การทดลองที่-3-การจัดการสีและพื้นหลัง)
@@ -338,9 +393,184 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/lab/stlys.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item" >หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="product-card">
+        <div class="product-image">
+            <img src="/image/dzbt09_008.png" alt="Product Image" width="150" height="260">
+        </div>
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card2">
+        <div class="product-image">
+            <img src="/image/dzbt09_027.png" alt="Product Image" width="150" height="260">
+        </div>
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+      
+    </div>
+
+    <div class="product-card3">
+        <div class="product-image">
+            <img src="/image/dzbt09_088.png" alt="Product Image" width="150" height="260">
+        </div>
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+      
+    </div>
+
+    <div class="product-card4">
+        <div class="product-image">
+            <img src="/image/images.jpeg" alt="Product Image" width="150" height="250">
+        </div>
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+      
+    </div>
+</body>
+</html>
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+```css
+/* การใช้ Element Selector */
+        nav {
+            background-color: #007bff;
+            padding: 15px;
+        }
+
+        /* การใช้ Descendant Selector */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* การใช้ Child Selector */
+        nav > ul > li {
+            margin: 0 10px;
+        }
+
+        /* การใช้ Class Selector */
+        .menu-item {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        /* การใช้ Pseudo-class */
+        .menu-item:hover {
+            background-color: #555;
+            border-radius: 3px;
+        }
+
+        /* การใช้ ID Selector */
+        #active {
+            background-color: #007bff;
+            border-radius: 3px;
+        }
+
+
+   .product-card, .product-card2, .product-card3, .product-card4 {
+            width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: white;
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background-color: #666;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-title {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            color: #007bff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .product-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .product-button {
+            display: block;
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+
+        .product-button:hover {
+            background: linear-gradient(to right, #0056b3, #003980);
+        }      
+```
+![alt text](image-1.png)
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
@@ -436,12 +666,198 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/lab/stlys.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item" >หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="product-card">
+        <div class="product-image">
+            <img src="/image/dzbt09_008.png" alt="Product Image" width="150" height="260">
+        </div>
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card2">
+        <div class="product-image">
+            <img src="/image/dzbt09_027.png" alt="Product Image" width="150" height="260">
+        </div>
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+      
+    </div>
+
+    <div class="product-card3">
+        <div class="product-image">
+            <img src="/image/dzbt09_088.png" alt="Product Image" width="150" height="260">
+        </div>
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+      
+    </div>
+
+    <div class="product-card4">
+        <div class="product-image">
+            <img src="/image/images.jpeg" alt="Product Image" width="150" height="250">
+        </div>
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+      
+    </div>
+
+ 
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+body {
+            font-family: monospace , sans-serif ;
+            background-color: #f4f4f4;
+            margin: 100;
+            padding: 20px;
+        
+}
+
+
+/* การใช้ Element Selector */
+        nav {
+            background-color: #007bff;
+            padding: 15px;
+        }
+        
+
+        /* การใช้ Descendant Selector */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* การใช้ Child Selector */
+        nav > ul > li {
+            margin: 0 10px;
+        }
+
+        /* การใช้ Class Selector */
+        .menu-item {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        /* การใช้ Pseudo-class */
+        .menu-item:hover {
+            background-color: #555;
+            border-radius: 3px;
+        }
+
+        /* การใช้ ID Selector */
+        #active {
+            background-color: #007bff;
+            border-radius: 3px;
+        }
+
+
+   .product-card, .product-card2, .product-card3, .product-card4 {
+            width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: white;
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background-color: #666;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-title {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            color: #007bff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .product-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .product-button {
+            display: block;
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+
+        .product-button:hover {
+            background: linear-gradient(to right, #0056b3, #003980);
+        }      
+
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](image-2.png)
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
@@ -554,12 +970,199 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/lab/stlys.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item" >หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="product-card">
+        <div class="product-image">
+            <img src="/image/dzbt09_008.png" alt="Product Image" width="150" height="260">
+        </div>
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card2">
+        <div class="product-image">
+            <img src="/image/dzbt09_027.png" alt="Product Image" width="150" height="260">
+        </div>
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+      
+    </div>
+
+    <div class="product-card3">
+        <div class="product-image">
+            <img src="/image/dzbt09_088.png" alt="Product Image" width="150" height="260">
+        </div>
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+      
+    </div>
+
+    <div class="product-card4">
+        <div class="product-image">
+            <img src="/image/images.jpeg" alt="Product Image" width="150" height="250">
+        </div>
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+      
+    </div>
+
+ 
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+body {
+            font-family: monospace , sans-serif ;
+            background-color: #f4f4f4;
+            margin: 100;
+            padding: 20px;
+        
+}
+
+
+/* การใช้ Element Selector */
+        nav {
+            background-color: #007bff;
+            padding: 15px;
+        }
+        
+
+        /* การใช้ Descendant Selector */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* การใช้ Child Selector */
+        nav > ul > li {
+            margin: 0 10px;
+        }
+
+        /* การใช้ Class Selector */
+        .menu-item {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        /* การใช้ Pseudo-class */
+        .menu-item:hover {
+            background-color: #555;
+            border-radius: 3px;
+        }
+
+        /* การใช้ ID Selector */
+        #active {
+            background-color: #007bff;
+            border-radius: 3px;
+        }
+
+
+   .product-card, .product-card2, .product-card3, .product-card4 {
+            width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: white;
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background-color: #666;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-title {
+            color: #030210;
+            font-size: 18px;
+            margin-bottom: 10px;
+            margin-top: 50px;
+        }
+
+        .product-price {
+            color: #7d95a8;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .product-description {
+            color: #2d2626;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .product-button {
+            display: block;
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+
+        .product-button:hover {
+            background: linear-gradient(to right, #0056b3, #003980);
+        }      
+
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](image-3.png)
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
@@ -701,12 +1304,210 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/lab/stlys.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item" >หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="/image/dzbt09_008.png" alt="Product Image" width="150" height="260">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">สินค้าตัวอย่าง</h2>
+                <p class="product-price">฿1,999</p>
+                <p class="product-description">
+                    รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card2">
+            <div class="product-image">
+                <img src="/image/dzbt09_027.png" alt="Product Image" width="150" height="260">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">สินค้าตัวอย่าง</h2>
+                <p class="product-price">฿1,999</p>
+                <p class="product-description">
+                    รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card3">
+            <div class="product-image">
+                <img src="/image/dzbt09_088.png" alt="Product Image" width="150" height="260">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">สินค้าตัวอย่าง</h2>
+                <p class="product-price">฿1,999</p>
+                <p class="product-description">
+                    รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card4">
+            <div class="product-image">
+                <img src="/image/images.jpeg" alt="Product Image" width="150" height="250">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">สินค้าตัวอย่าง</h2>
+                <p class="product-price">฿1,999</p>
+                <p class="product-description">
+                    รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+    </div>
+
+ 
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+/* Flexbox for container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+    margin: 30px 0;
+}
+body {
+            font-family: monospace , sans-serif ;
+            background-color: #f4f4f4;
+            margin: 100;
+            padding: 20px;
+        
+}
+
+
+/* การใช้ Element Selector */
+        nav {
+            background-color: #007bff;
+            padding: 15px;
+        }
+        
+
+        /* การใช้ Descendant Selector */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* การใช้ Child Selector */
+        nav > ul > li {
+            margin: 0 10px;
+        }
+
+        /* การใช้ Class Selector */
+        .menu-item {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        /* การใช้ Pseudo-class */
+        .menu-item:hover {
+            background-color: #555;
+            border-radius: 3px;
+        }
+
+        /* การใช้ ID Selector */
+        #active {
+            background-color: #007bff;
+            border-radius: 3px;
+        }
+
+
+   .product-card, .product-card2, .product-card3, .product-card4 {
+            width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: white;
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px;
+            box-sizing: border-box;
+             transition: transform 0.3s ease;
+        }
+
+        .product-card:hover, .product-card2:hover, .product-card3:hover, .product-card4:hover {
+            transform: translateY(-5px);
+            background-color: firebrick;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background-color: #666;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-title {
+            color: #030210;
+            font-size: 18px;
+            margin-bottom: 10px;
+            margin-top: 50px;
+        }
+
+        .product-price {
+            color: #7d95a8;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .product-description {
+            color: #2d2626;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .product-button {
+            display: block;
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+
+        .product-button:hover {
+            background: linear-gradient(to right, #0056b3, #003980);
+        }      
+
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](image-4.png)
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
@@ -854,10 +1655,225 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="lab7.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <h1>แดชบอร์ด</h1>
+            
+            <nav>
+                <div class="headerBtn">
+                <button>โปรไฟล์</button>
+                <button>ออกจากระบบ</button>
+                </div>
+            </nav>
+        </header>
+
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <div class="btnSide">
+                    <ul>
+            <li><a href="#" class="menu-item" >หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">รายงาน</a></li>
+            <li><a href="#" class="menu-item">การตั้งค่า</a></li>
+                    </div>
+        </ul>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>ยอดขายรวม</h3>
+                    <p>฿150,000</p>
+                </div>
+                <div class="stat-card">
+                    <h3>จำนวนออเดอร์</h3>
+                    <p>1,234</p>
+                </div>
+                <div class="stat-card">
+                    <h3>ลูกค้าใหม่</h3>
+                    <p>45</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart">
+                    <h3>กราฟแสดงยอดขาย</h3>
+                    <!-- เพิ่มกราฟตามต้องการ -->
+                </div>
+                <div class="chart">
+                    <h3>สัดส่วนสินค้าขายดี</h3>
+                    <!-- เพิ่มกราฟตามต้องการ -->
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+body {
+            margin: 0;
+            font-family: monospace;
+            background: #ecf0f1;
+        }
+
+.dashboard {
+            display: grid;
+            grid-template-areas: 
+                "sidebar header"
+                "sidebar main";
+            grid-template-columns: 250px 1fr;
+            grid-template-rows: auto 1fr;
+            min-height: 100vh;
+        }
+
+        .header {
+            grid-area: header;
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background: #2c3e50;
+            color: white;
+            padding: 1rem;
+        }
+
+        .main-content {
+            grid-area: main;
+            padding: 1rem;
+            background: #f5f7fa;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #ffffff 70%, #e0e7ff 100%);
+            padding: 2rem 1.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(44, 62, 80, 0.10), 0 1.5px 4px rgba(44, 62, 80, 0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18), 0 2px 8px rgba(44, 62, 80, 0.12);
+        }
+
+        .stat-card h3 {
+            color: #4f46e5;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .stat-card p {
+            font-size: 2.1rem;
+            font-weight: 600;
+            color: #22223b;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        .chart-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 1rem;
+        }
+
+        .chart {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-areas: 
+                    "header"
+                    "main";
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .chart-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+.headerBtn {
+    display: flex;
+    gap: 1rem;
+}
+
+.headerBtn button {
+    background: linear-gradient(90deg, #6366f1 60%, #818cf8 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(99,102,241,0.10);
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+.headerBtn button:hover {
+    background: linear-gradient(90deg, #4f46e5 60%, #6366f1 100%);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 16px rgba(99,102,241,0.18);
+}
+
+.btnSide {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.btnSide .menu-item {
+    display: block;
+    background: #334155;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.btnSide .menu-item:hover, .btnSide .menu-item#active {
+    background: #6366f1;
+    color: #fff;
+    transform: scale(1.04);
+}
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](image-5.png)
 
