@@ -87,4 +87,9 @@ body {
 .product-button:hover {
     background: linear-gradient(to right, #0056b3, #003980);
 }
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+}
 
