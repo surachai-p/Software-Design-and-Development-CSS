@@ -392,9 +392,148 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="test3.css">
+</head>
+<body>
+    <div class="container">
+    <div class="product-card">
+        <div class="product-image1"></div>
+        <div class="product-info">
+            <h2 class="product-title">ปลา</h2>
+            <p class="product-price">฿999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่ากิน
+            </p>
+            <a href="https://url.in.th/QFBuD" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="product-image2"></div>
+        <div class="product-info">
+            <h2 class="product-title">ปลาปลา</h2>
+            <p class="product-price">฿7,667</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่ากิน
+            </p>
+            <a href="https://url.in.th/QFBuD" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="product-image3"></div>
+        <div class="product-info">
+            <h2 class="product-title">ปลาปลาปลา</h2>
+            <p class="product-price">฿6,969</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่ากิน
+            </p>
+            <a href="https://url.in.th/QFBuD" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="product-image4"></div>
+        <div class="product-info">
+            <h2 class="product-title">ปลาปลาปลาปลา</h2>
+            <p class="product-price">฿9,909</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่ากิน
+            </p>
+            <a href="https://url.in.th/QFBuD" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+    </div>
+    
+</body>
+</html>
+```
+```css
+.container {
+  display: grid;
+    grid-template-columns: repeat(4, 20rem);
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
+.product-card {
+  width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.product-image1 {
+  width: 100%;
+  height: 200px;
+  background-image: url("./images/product1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.product-image2 {
+  width: 100%;
+  height: 200px;
+  background-image: url("./images/product2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.product-image3 {
+  width: 100%;
+  height: 200px;
+  background-image: url("./images/product3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.product-image4 {
+  width: 100%;
+  height: 200px;
+  background-image: url("./images/product4.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.product-info {
+  padding: 15px;
+}
+
+.product-title {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  color: #007bff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.product-description {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.product-button {
+  display: block;
+  background: linear-gradient(to right, #007bff, #0056b3);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  margin-top: 15px;
+  border-radius: 4px;
+}
+
+.product-button:hover {
+  background: linear-gradient(to right, #0056b3, #003980);
+}
+
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](test3.png)
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
