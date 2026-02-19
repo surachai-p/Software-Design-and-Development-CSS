@@ -174,9 +174,35 @@ div > p {
 <html>
 <head>
     <style>
+       
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item" id="active">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
+```
+### แบบฝึกหัด
+1. แก้ไขโค้ดโปรแกรมเดิม ให้ใช้งาน CSS แบบ External CSS
+2. แก้ไขให้เมนูถูกเลือกที่ สินค้า
+3. เปลี่ยนสีพื้นหลังของเมนู
+
+### ผลการทดลอง
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
         /* การใช้ Element Selector */
         nav {
-            background-color: #333;
+            background-color: #ff0000;
             padding: 15px;
         }
 
@@ -202,22 +228,23 @@ div > p {
 
         /* การใช้ Pseudo-class */
         .menu-item:hover {
-            background-color: #555;
+            background-color: #1c1c1d;
             border-radius: 3px;
         }
 
         /* การใช้ ID Selector */
         #active {
-            background-color: #007bff;
+            background-color: #000000;
             border-radius: 3px;
         }
     </style>
+    <link rel="stylesheet" href="css/lab2.css">
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="#" class="menu-item" id="active">หน้าแรก</a></li>
-            <li><a href="#" class="menu-item">สินค้า</a></li>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
             <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
             <li><a href="#" class="menu-item">ติดต่อ</a></li>
         </ul>
@@ -225,16 +252,7 @@ div > p {
 </body>
 </html>
 ```
-### แบบฝึกหัด
-1. แก้ไขโค้ดโปรแกรมเดิม ให้ใช้งาน CSS แบบ External CSS
-2. แก้ไขให้เมนูถูกเลือกที่ สินค้า
-3. เปลี่ยนสีพื้นหลังของเมนู
-
-### ผลการทดลอง
-```html
-[วางโค้ดที่นี่]
-```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](Lab2.png)
 
 
 [](#การทดลองที่-3-การจัดการสีและพื้นหลัง)
@@ -338,9 +356,65 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    </style>
+    <link rel="stylesheet" href="css/lab3.css">
+</head>
+<body>
+    <h1>Puma Shop</h1>
+    <div class="product-list">
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/puma4.png');"></div>
+            <div class="product-info">
+                <h2 class="product-title"> PUMA x Monster Hunter Speedcat</h2>
+                <p class="product-price">฿4,200</p>
+                <p class="product-description">
+                    รวมภาษีมูลค่าเพิ่ม 7%
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/puma3.png');"></div>
+            <div class="product-info">
+                <h2 class="product-title">Deviate NITRO™ Elite 3</h2>
+                <p class="product-price">฿7,500</p>
+                <p class="product-description">
+                    รวมภาษีมูลค่าเพิ่ม 7%
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/puma2.png');"></div>
+            <div class="product-info">
+                <h2 class="product-title">PUMA x HYROX Deviate Elite 4</h2>
+                <p class="product-price">฿8,000</p>
+                <p class="product-description"> รวมภาษีมูลค่าเพิ่ม 7%
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/puma1.png');"></div>
+            <div class="product-info">
+                <h2 class="product-title">รองเท้ากีฬา Axis</h2>
+                <p class="product-price">฿1,540</p>
+                <p class="product-description">
+                    (ลด 30%) รวมภาษีมูลค่าเพิ่ม 7%
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](lab3.png)
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
@@ -436,12 +510,101 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+    </style>
+    <link rel="stylesheet" href="css/lab4.css">
+</head>
+<body>
+    <div class="stats-container">
+        <div class="stat-box">
+            <div class="stat-number">1,234</div>
+            <div class="stat-label">ผู้ใช้งาน</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">5.6K</div>
+            <div class="stat-label">ยอดขาย</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">ความพึงพอใจ</div>
+        </div>
+    </div>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+.stats-container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+     .stat-box {
+    flex: 1 1 420px;
+    min-width: 340px;
+    margin: 0 15px;
+    padding: 3.2rem;
+    text-align: center;
+    background: linear-gradient(180deg, #7ef08a 0%, #4ed36a 100%);
+    color: #072b12;
+    border-radius: 14px;
+    box-shadow: 0 18px 36px rgba(46, 125, 50, 0.14);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    min-height: 220px;
+    transition: transform .16s ease, box-shadow .16s ease;
+}
+.stat-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 28px 60px rgba(46,125,50,0.18);
+}
+
+
+        .stat-number {
+            font-size: 3.4rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.95);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        @media (max-width: 768px) {
+            .stats-container {
+                flex-direction: column;
+                gap: 12px;
+                padding: 0 1rem;
+            }
+
+            .stat-box {
+                margin: 0;
+                min-width: auto;
+                width: 100%;
+                flex: none;
+                padding: 1.25rem 1rem;
+                min-height: 140px;
+            }
+            .stat-number { font-size: 2rem; }
+            .stat-label { font-size: 0.95rem; }
+        }
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](lab4.png)
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
@@ -554,13 +717,100 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    </style>
+    <link rel="stylesheet" href="css/lab5.css">
+</head>
+<body>
+    <article class="blog-post">
+        <header class="post-header">
+            <h1 class="post-title">วิธีการเขียนบทความที่น่าสนใจ</h1>
+            <div class="post-meta">โพสต์เมื่อ 1 มกราคม 2025 | โดย ภัคธร ศรีบุ่งง้าว</div>
+        </header>
+        
+        <div class="post-content">
+            <p>เนื้อหาบทความที่ดีควรมีความน่าสนใจและเป็นประโยชน์ต่อผู้อ่าน การเขียนบทความให้น่าอ่านนั้นมีหลักการสำคัญหลายประการ</p>
+
+            <h2>1. การเลือกหัวข้อที่น่าสนใจ</h2>
+            <p>หัวข้อที่ดีควรตรงกับความสนใจของกลุ่มเป้าหมาย และมีประโยชน์ต่อผู้อ่าน</p>
+
+            <blockquote>
+                "การเขียนที่ดีไม่ได้เกิดจากพรสวรรค์เพียงอย่างเดียว แต่เกิดจากการฝึกฝนอย่างสม่ำเสมอ"
+            </blockquote>
+
+            <h2>2. การจัดโครงสร้างเนื้อหา</h2>
+            <p>เนื้อหาที่ดีควรมีการจัดลำดับที่เป็นระบบ เข้าใจง่าย และมีความต่อเนื่อง</p>
+        </div>
+    </article>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+.blog-post {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            font-family: 'Sarabun', sans-serif;
+            background-color: #1f1f1f;
+            border-radius: 8px;
+        }
+
+        .post-header {
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .post-title {
+            font-size: 2.5rem;
+            color: #fd0000;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .post-meta {
+            color: #790000;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .post-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #0300b0;
+        }
+
+       h1, h2, .heading {
+  font-family: 'Kanit', 'Mitr', sans-serif;
+  font-weight: 700;
+}
+
+p, .content {
+  font-family: 'Sarabun', 'Noto Sans Thai', sans-serif;
+  font-weight: 400;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+        blockquote {
+            font-family: 'Sarabun', 'Noto Sans Thai', sans-serif;
+            border-left: 10px solid #000000;
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+            color: #570ffd;
+        }
+
+        @media (max-width: 768px) {
+            .post-title {
+                font-size: 2rem;
+            }
+        }
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-
+![alt text](lab5.png)
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
 
@@ -701,13 +951,168 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+    </style>
+    <link rel="stylesheet" href="css/lab6.css">
+</head>
+<body>
+    <h1>Nike shop</h1>
+    <div class="product-grid">
+        <!-- สินค้าชิ้นที่ 1 -->
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/nike1.png');"></div>
+            <div class="product-details">
+                <h3 class="product-title">Air Jordan 1 Low G</h3>
+                <div class="product-price">฿5,400</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- สินค้าชิ้นที่ 2 -->
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/nike2.png');"></div>
+            <div class="product-details">
+                <h3 class="product-title">Ja 3 "Price of Admission" EP</h3>
+                <div class="product-price">฿4,200</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+         <div class="product-card">
+            <div class="product-image" style="background-image: url('images/nike3.png');"></div>
+            <div class="product-details">
+                <h3 class="product-title">Nike Tiempo Ligera Pro LE</h3>
+                <div class="product-price">฿5,600</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+         <div class="product-card">
+            <div class="product-image" style="background-image: url('images/nike4.png');"></div>
+            <div class="product-details">
+                <h3 class="product-title">Tatum 4 "Smooth Soul Volume 2" PF</h3>
+                <div class="product-price">฿4,900</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+         <div class="product-card">
+            <div class="product-image" style="background-image: url('images/nike5.png');"></div>
+            <div class="product-details">
+                <h3 class="product-title">Kobe IX Elite Low EM Protro</h3>
+                <div class="product-price">฿6,600</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+         <div class="product-card">
+            <div class="product-image" style="background-image: url('images/nike6.png');"></div>
+            <div class="product-details">
+                <h3 class="product-title">Nike GP Challenge Pro</h3>
+                <div class="product-price">฿4,300</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+.product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 12px;
+            padding: 12px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+             h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 140px;
+            background-color: #f5f5f5;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-details {
+            padding: 10px;
+        }
+
+        .product-title {
+            font-size: 0.95rem;
+            margin: 0 0 8px 0;
+            color: #333;
+        }
+
+        .product-price {
+            font-size: 1rem;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .product-action {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .add-to-cart {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .add-to-cart:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 10px;
+                padding: 10px;
+            }
+        }
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-
+![alt text](lab6.png)
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
 

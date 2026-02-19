@@ -1,0 +1,67 @@
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+.stats-container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+     .stat-box {
+    flex: 1 1 420px;
+    min-width: 340px;
+    margin: 0 15px;
+    padding: 3.2rem;
+    text-align: center;
+    background: linear-gradient(180deg, #7ef08a 0%, #4ed36a 100%);
+    color: #072b12;
+    border-radius: 14px;
+    box-shadow: 0 18px 36px rgba(46, 125, 50, 0.14);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    min-height: 220px;
+    transition: transform .16s ease, box-shadow .16s ease;
+}
+.stat-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 28px 60px rgba(46,125,50,0.18);
+}
+
+
+        .stat-number {
+            font-size: 3.4rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.95);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .stats-container {
+                flex-direction: column;
+                gap: 12px;
+                padding: 0 1rem;
+            }
+
+            .stat-box {
+                margin: 0;
+                min-width: auto;
+                width: 100%;
+                flex: none;
+                padding: 1.25rem 1rem;
+                min-height: 140px;
+            }
+            .stat-number { font-size: 2rem; }
+            .stat-label { font-size: 0.95rem; }
+        }
