@@ -702,12 +702,133 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>บทความบล็อก</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <article class="blog-post">
+        <header class="post-header">
+            <h1 class="post-title">วิธีการเขียนบทความที่น่าสนใจ</h1>
+            <div class="post-meta">โพสต์เมื่อ 1 มกราคม 2025 | โดย ผู้เขียน</div>
+        </header>
+        
+        <div class="post-content">
+            <p>
+                เนื้อหาบทความที่ดีควรมีความน่าสนใจและเป็นประโยชน์ต่อผู้อ่าน 
+                การเขียนบทความให้น่าอ่านนั้นมีหลักการสำคัญหลายประการ
+            </p>
+
+            <h2>1. การเลือกหัวข้อที่น่าสนใจ</h2>
+            <p>
+                หัวข้อที่ดีควรตรงกับความสนใจของกลุ่มเป้าหมาย 
+                และมีประโยชน์ต่อผู้อ่าน
+            </p>
+
+            <blockquote>
+                "การเขียนที่ดีไม่ได้เกิดจากพรสวรรค์เพียงอย่างเดียว 
+                แต่เกิดจากการฝึกฝนอย่างสม่ำเสมอ"
+            </blockquote>
+
+            <h2>2. การจัดโครงสร้างเนื้อหา</h2>
+            <p>
+                เนื้อหาที่ดีควรมีการจัดลำดับที่เป็นระบบ 
+                เข้าใจง่าย และมีความต่อเนื่อง
+            </p>
+        </div>
+    </article>
+
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+/* ตั้งค่าพื้นฐาน */
+body {
+    margin: 0;
+    background-color: #f8f9fc;
+    font-family: 'Sarabun', Arial, sans-serif;
+}
+
+/* กล่องบทความ */
+.blog-post {
+    max-width: 850px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* ส่วนหัวบทความ */
+.post-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.post-title {
+    font-size: 2.8rem;      /* ปรับขนาดใหญ่ขึ้น */
+    color: #2c3e50;         /* เปลี่ยนสี */
+    margin-bottom: 0.7rem;
+    line-height: 1.3;
+}
+
+.post-meta {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* เนื้อหา */
+.post-content {
+    font-size: 1.2rem;      /* เพิ่มขนาดอ่านง่ายขึ้น */
+    line-height: 1.9;
+    color: #444;
+}
+
+.post-content p {
+    margin-bottom: 1.5rem;
+}
+
+/* หัวข้อย่อย */
+.post-content h2 {
+    font-size: 1.9rem;
+    color: #34495e;
+    margin: 2rem 0 1rem;
+}
+
+/* blockquote */
+blockquote {
+    font-style: italic;
+    background-color: #eef2ff;
+    border-left: 6px solid #4e73df;
+    margin: 2rem 0;
+    padding: 1rem 1.5rem;
+    color: #2c3e50;
+    border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .blog-post {
+        margin: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .post-title {
+        font-size: 2.2rem;
+    }
+
+    .post-content {
+        font-size: 1.05rem;
+    }
+}
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](<image/Experimental results-lab5.png>)
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
