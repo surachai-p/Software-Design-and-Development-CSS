@@ -497,12 +497,99 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>สถิติการใช้งาน</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="stats-container">
+        <div class="stat-box">
+            <div class="stat-number">1,234</div>
+            <div class="stat-label">ผู้ใช้งาน</div>
+        </div>
+
+        <div class="stat-box">
+            <div class="stat-number">5.6K</div>
+            <div class="stat-label">ยอดขาย</div>
+        </div>
+
+        <div class="stat-box">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">ความพึงพอใจ</div>
+        </div>
+    </div>
+
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+/* ตั้งค่าพื้นฐาน */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(to right, #4e73df, #1cc88a);
+}
+
+/* กล่องรวมสถิติ */
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 3rem auto;          /* margin รอบนอก */
+    padding: 2rem;              /* padding ภายใน container */
+}
+
+/* กล่องแต่ละอัน */
+.stat-box {
+    flex: 1;
+    margin: 0 20px;             /* ระยะห่างระหว่างกล่อง */
+    padding: 3rem 2rem;         /* padding ภายในกล่อง */
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    border: 2px solid #ddd;     /* เพิ่ม border */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+/* hover effect */
+.stat-box:hover {
+    transform: translateY(-10px);
+}
+
+/* ตัวเลข */
+.stat-number {
+    font-size: 3rem;            /* ขนาดใหญ่ขึ้น */
+    font-weight: bold;
+    color: #e74a3b;             /* เปลี่ยนสี */
+    margin-bottom: 1rem;
+}
+
+/* ป้ายข้อความ */
+.stat-label {
+    font-size: 1.2rem;          /* ปรับขนาด */
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .stat-box {
+        margin: 1rem 0;
+    }
+}
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](<image/Experimental results-lab4.png>)
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
