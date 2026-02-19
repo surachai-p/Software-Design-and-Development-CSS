@@ -232,9 +232,28 @@ div > p {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lab 2 - Selectors & Menu</title>
+  <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#" class="menu-item">หน้าแรก</a></li>
+      <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+      <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+      <li><a href="#" class="menu-item">ติดต่อ</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
+]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[ผลการทดลอง (ภาพตัวอย่าง)](css/gallery/Lab2.png)
 
 
 [](#การทดลองที่-3-การจัดการสีและพื้นหลัง)
@@ -338,9 +357,43 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+[<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lab 3 - Color & Background</title>
+  <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+  <h1>การทดลองที่ 3: การจัดการสีและพื้นหลัง</h1>
+  <div class="cards">
+    <div class="product-card">
+      <img src="images/product1.jpg" alt="p1">
+      <h3>สินค้า 1</h3>
+      <p class="price">฿499</p>
+    </div>
+    <div class="product-card">
+      <img src="images/product2.jpg" alt="p2">
+      <h3>สินค้า 2</h3>
+      <p class="price">฿799</p>
+    </div>
+    <div class="product-card">
+      <img src="images/product3.jpg" alt="p3">
+      <h3>สินค้า 3</h3>
+      <p class="price">฿1,299</p>
+    </div>
+    <div class="product-card">
+      <img src="images/product4.jpg" alt="p4">
+      <h3>สินค้า 4</h3>
+      <p class="price">฿2,199</p>
+    </div>
+  </div>
+</body>
+</html>
+]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[ผลการทดลอง (ภาพตัวอย่าง)](css/gallery/Lab3.png)
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
@@ -436,12 +489,44 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lab 4 - Box Model & Sizing</title>
+  <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+  <h1>การทดลองที่ 4: การจัดการขนาดและระยะห่าง</h1>
+  <div class="stats-container">
+    <div class="stat-box">
+      <div class="stat-number">1,234</div>
+      <div class="stat-label">ผู้ใช้งาน</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number">5.6K</div>
+      <div class="stat-label">ยอดขาย</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number">98%</div>
+      <div class="stat-label">ความพึงพอใจ</div>
+    </div>
+  </div>
+</body>
+</html>
+]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[body { font-family: Arial, sans-serif; background:#f2f6f9; padding:2rem }
+.stats-container { display:flex; justify-content:space-around; max-width:1000px; margin:0 auto }
+.stat-box { flex:1; margin:0 12px; padding:1.5rem; text-align:center; background:#fff; border-radius:6px; box-shadow:0 1px 4px rgba(0,0,0,0.06) }
+.stat-number { font-size:2rem; color:#007bff; font-weight:700 }
+.stat-label { text-transform:uppercase; color:#666; letter-spacing:1px }
+@media (max-width:768px) { .stats-container { flex-direction:column } .stat-box { margin:10px 0 } }
+]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![ผลการทดลอง Lab4](css/gallery/Lab4.png)
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
@@ -554,12 +639,41 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lab 5 - Text & Fonts</title>
+  <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+  <article class="blog-post">
+    <header class="post-header">
+      <h1 class="post-title">บทความตัวอย่าง: เริ่มต้นกับ CSS</h1>
+      <div class="post-meta">โดย อาจารย์ตัวอย่าง • 19 กุมภาพันธ์ 2026</div>
+    </header>
+    <div class="post-content">
+      <p>ย่อหน้าแรก ตัวอย่างการตั้งค่าฟอนต์ ขนาด และระยะบรรทัด เพื่อให้อ่านง่ายบนหน้าจอ</p>
+      <p>ย่อหน้าที่สอง แสดงการใช้งาน <strong>bold</strong>, <em>italic</em> และลิงก์ <a href="#">อ่านต่อ</a>.</p>
+    </div>
+  </article>
+</body>
+</html>
+]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[body { font-family: Arial, sans-serif; background:#fff; color:#222; padding:2rem }
+.blog-post { max-width:800px; margin:0 auto; padding:1rem }
+.post-header { text-align:center; margin-bottom:1.5rem }
+.post-title { font-size:2rem; margin:0; color:#1b1b1b }
+.post-meta { color:#777; font-size:0.9rem; text-transform:uppercase; letter-spacing:1px }
+.post-content { font-size:1.05rem; line-height:1.8; color:#333 }
+.post-content a { color:#007bff; text-decoration:none }
+.post-content a:hover { text-decoration:underline }
+]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![ผลการทดลอง Lab5](css/gallery/Lab5.png)
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
@@ -701,12 +815,36 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lab 6 - Layout</title>
+  <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+  <div class="site-grid">
+    <header class="site-header">Header</header>
+    <aside class="site-aside">Sidebar</aside>
+    <main class="site-main">Main content area<br><br>ใช้ CSS Grid/Flexbox ในการจัดวาง</main>
+    <footer class="site-footer">Footer</footer>
+  </div>
+</body>
+</html>
+]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f3f6f8 }
+.site-grid { display:grid; grid-template-areas: "header header" "aside main" "footer footer"; grid-template-columns: 240px 1fr; gap:12px; max-width:1000px; margin:20px auto; padding:12px }
+.site-header { grid-area:header; background:#007bff; color:#fff; padding:12px; border-radius:5px }
+.site-aside { grid-area:aside; background:#fff; padding:12px; border-radius:5px; box-shadow:0 1px 4px rgba(0,0,0,0.06) }
+.site-main { grid-area:main; background:#fff; padding:12px; border-radius:5px; box-shadow:0 1px 4px rgba(0,0,0,0.06) }
+.site-footer { grid-area:footer; background:#222; color:#fff; padding:10px; border-radius:5px; text-align:center }
+@media (max-width:800px) { .site-grid { grid-template-areas: "header" "main" "aside" "footer"; grid-template-columns:1fr } }
+]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![ผลการทดลอง Lab6](css/gallery/Lab6.png)
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
@@ -854,10 +992,99 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[*{box-sizing:border-box}
+body{margin:0;font-family:Arial, sans-serif;background:#f7f9fb;color:#111}
+.dash-app{display:grid;grid-template-columns:200px 1fr;min-height:100vh}
+.dash-sidebar{background:#1f2937;color:#fff;padding:14px;display:flex;flex-direction:column}
+.brand{font-weight:700;font-size:18px;margin-bottom:12px}
+.nav-item{display:block;color:#d1d5db;padding:8px;border-radius:4px;margin-bottom:6px;text-decoration:none;cursor:pointer}
+.nav-item.active{background:#374151;color:#fff}
+.sidebar-footer{margin-top:auto;font-size:12px;color:#9ca3af}
+.dash-main{display:flex;flex-direction:column}
+.dash-header{display:flex;justify-content:space-between;align-items:center;padding:12px 18px}
+.dash-content{padding:16px}
+.stats{display:flex;gap:12px;margin:10px 0}
+.card{background:#fff;padding:12px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.06)}
+.stat{flex:1}
+.stat .label{color:#6b7280;font-size:13px}
+.stat .value{font-size:20px;font-weight:700;color:#0b5cff;margin-top:6px}
+.grid{display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-top:12px}
+.chart{min-height:160px;display:flex;align-items:center;justify-content:center;color:#6b7280}
+.table table{width:100%;border-collapse:collapse}
+.table th,.table td{padding:8px;text-align:left;border-bottom:1px solid #eef2f7}
+.dash-footer{padding:12px;color:#9ca3af;font-size:13px}
+
+@media (max-width:900px){.dash-app{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.stats{flex-direction:column}}
+]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Modern Dashboard - Lab 6</title>
+  <link rel="stylesheet" href="modern-dashboard.css">
+  </head>
+<body>
+  <div class="dash-app">
+    <aside class="dash-sidebar">
+      <div class="brand">MyDash</div>
+      <nav>
+        <a class="nav-item active">Overview</a>
+        <a class="nav-item">Analytics</a>
+        <a class="nav-item">Products</a>
+        <a class="nav-item">Settings</a>
+      </nav>
+      <div class="sidebar-footer">Logged in as Student</div>
+    </aside>
+
+    <div class="dash-main">
+      <header class="dash-header">
+        <div class="search">ค้นหา...</div>
+        <div class="profile">สวัสดี, นักเรียน</div>
+      </header>
+
+      <section class="dash-content">
+        <h1>Overview</h1>
+        <div class="stats">
+          <div class="card stat">
+            <div class="label">Users</div>
+            <div class="value">1,234</div>
+          </div>
+          <div class="card stat">
+            <div class="label">Sales</div>
+            <div class="value">5.6K</div>
+          </div>
+          <div class="card stat">
+            <div class="label">Conversion</div>
+            <div class="value">3.8%</div>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="card chart">Chart placeholder</div>
+          <div class="card table">
+            <table>
+              <thead>
+                <tr><th>Product</th><th>Stock</th><th>Price</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>สินค้า A</td><td>12</td><td>฿499</td></tr>
+                <tr><td>สินค้า B</td><td>5</td><td>฿799</td></tr>
+                <tr><td>สินค้า C</td><td>0</td><td>฿1,299</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <footer class="dash-footer">© 2026 Example University — Lab Dashboard</footer>
+    </div>
+  </div>
+</body>
+</html>
+]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![Modern Dashboard ตัวอย่าง](css/gallery/Lab6-modern-dashboard.png)
 

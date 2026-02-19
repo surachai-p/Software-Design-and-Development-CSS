@@ -1,0 +1,6 @@
+body { font-family: Arial, sans-serif; background:#f2f6f9; padding:2rem }
+.stats-container { display:flex; justify-content:space-around; max-width:1000px; margin:0 auto }
+.stat-box { flex:1; margin:0 12px; padding:1.5rem; text-align:center; background:#fff; border-radius:6px; box-shadow:0 1px 4px rgba(0,0,0,0.06) }
+.stat-number { font-size:2rem; color:#007bff; font-weight:700 }
+.stat-label { text-transform:uppercase; color:#666; letter-spacing:1px }
+@media (max-width:768px) { .stats-container { flex-direction:column } .stat-box { margin:10px 0 } }
