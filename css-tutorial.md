@@ -232,10 +232,63 @@ div > p {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* การใช้ Element Selector */
+        nav {
+            background-color: #b03d3d;
+            padding: 15px;
+        }
+
+        /* การใช้ Descendant Selector */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* การใช้ Child Selector */
+        nav > ul > li {
+            margin: 0 10px;
+        }
+
+        /* การใช้ Class Selector */
+        .menu-item {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        /* การใช้ Pseudo-class */
+        .menu-item:hover {
+            background-color: #555;
+            border-radius: 3px;
+        }
+
+        /* การใช้ ID Selector */
+        #active {
+            background-color: #007bff;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-
+![alt text](../image.png)
 
 [](#การทดลองที่-3-การจัดการสีและพื้นหลัง)
 ## การทดลองที่ 3: การจัดการสีและพื้นหลัง
@@ -338,9 +391,124 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .product-card {
+            width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background-image: url('product.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-title {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            color: #007bff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .product-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .product-button {
+            display: block;
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+
+        .product-button:hover {
+            background: linear-gradient(to right, #0056b3, #003980);
+        }
+
+        .product-container {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" href="product-styles.css">
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product1.png');"></div>
+            <div class="product-info">
+                <h2 class="product-title">T-34-57</h2>
+                <p class="product-price">฿80,000</p>
+                <p class="product-description">
+                    USSR  Medium tank
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product2.png');"></div>
+            <div class="product-info">
+                <h2 class="product-title">KV-1</h2>
+                <p class="product-price">฿180,000</p>
+                <p class="product-description">
+                    USSR Heavy tank
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product3.png');"></div>
+            <div class="product-info">
+                <h2 class="product-title">T-34-85</h2>
+                <p class="product-price">฿130,000</p>
+                <p class="product-description">
+                    USSR  Medium tank
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product4.png');"></div>
+            <div class="product-info">
+                <h2 class="product-title">IS-1</h2>
+                <p class="product-price">฿250,000</p>
+                <p class="product-description">
+                    USSR Heavy tank
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](images/2.png)
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
