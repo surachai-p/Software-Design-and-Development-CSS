@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ตัวอย่างปุ่ม CSS</title>
+    
+    <style>
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+
+    <link rel="stylesheet" href="css/buttons.css">
+</head>
+<body>
+
+    <h2>การทดลองใช้งาน CSS ทั้ง 3 แบบ</h2>
+
+    <button style="background-color: #dc3545; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+        ปุ่มแบบ Inline (สีแดง)
+    </button>
+    
+    <button class="btn-primary">
+        ปุ่มแบบ Internal (สีน้ำเงิน)
+    </button>
+    
+    <button class="btn-success">
+        ปุ่มแบบ External (สีเขียว)
+    </button>
+
+</body>
+</html>
