@@ -235,7 +235,7 @@ div > p {
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="test2.css">
 </head>
 <body>
     <nav>
