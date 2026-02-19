@@ -399,9 +399,157 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Grid</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="product-container">
+
+    <div class="product-card">
+        <div class="product-image img1"></div>
+        <div class="product-info">
+            <h2 class="product-title">สินค้า 1</h2>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าชิ้นที่ 1
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image img2"></div>
+        <div class="product-info">
+            <h2 class="product-title">สินค้า 2</h2>
+            <p class="product-price">฿2,490</p>
+            <p class="product-description">
+                รายละเอียดสินค้าชิ้นที่ 2
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image img3"></div>
+        <div class="product-info">
+            <h2 class="product-title">สินค้า 3</h2>
+            <p class="product-price">฿3,290</p>
+            <p class="product-description">
+                รายละเอียดสินค้าชิ้นที่ 3
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image img4"></div>
+        <div class="product-info">
+            <h2 class="product-title">สินค้า 4</h2>
+            <p class="product-price">฿990</p>
+            <p class="product-description">
+                รายละเอียดสินค้าชิ้นที่ 4
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+
+```css
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 40px;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: white;
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* แยกรูป 4 รูป */
+.img1 {
+    background-image: url('../img/606044511_1293130172860599_9048848234679453717_n.jpg');
+}
+
+.img2 {
+    background-image: url('../img/625121974_1240123758295771_8861187517801124305_n.jpg');
+}
+
+.img3 {
+    background-image: url('../img/628319792_1243082271333253_826606970865563642_n.jpg');
+}
+
+.img4 {
+    background-image: url('../img/Flag_of_Thailand_\(proposed_shade_of_colours\).png');
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: #007bff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #666;
+}
+
+.product-button {
+    display: block;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.product-button:hover {
+    background: linear-gradient(to right, #0056b3, #003980);
+}
+```
+
+![alt text](image-1.png)
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
