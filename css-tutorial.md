@@ -232,9 +232,39 @@ div > p {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็บไซต์ตัวอย่าง</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a href="#" class="menu-item">หน้าแรก</a></li>
+                <li><a href="#" class="menu-item active">สินค้า</a></li>
+                <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+                <li><a href="#" class="menu-item">ติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content">
+            <h1>สินค้า</h1>
+            <p>นี่คือหน้าสินค้าของเว็บไซต์ตัวอย่าง</p>
+        </section>
+    </main>
+
+</body>
+</html>
+]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](<Screenshot 2026-02-19 152022.png>)]
 
 
 [](#การทดลองที่-3-การจัดการสีและพื้นหลัง)
@@ -338,9 +368,82 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็บไซต์ตัวอย่าง</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="content">
+        <h1>สินค้า</h1>
+
+        <div class="product-container">
+
+            <div class="product-card">
+                <img src="images/Screenshot 2026-02-19 152546.png" alt="สินค้า 1">
+                <div class="product-info">
+                    <h2>CSM คาบูโตธ</h2>
+                    <p class="price">฿8,999</p>
+                    <p>เอาไว้แปลงร่าง</p>
+                    <a href="#" class="btn">เพิ่มลงตะกร้า</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/csm-henshin-belt-typhoon-shin-kamen-rider-version-v0-xqouuylo34rb1.jpg" alt="สินค้า 2">
+                <div class="product-info">
+                    <h2>V 2</h2>
+                    <p class="price">฿2,499</p>
+                    <p>สินค้าที่มีคุณภาพสูง</p>
+                    <a href="#" class="btn">เพิ่มลงตะกร้า</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/Screenshot 2026-02-19 153726.png" alt="สินค้า 3">
+                <div class="product-info">
+                    <h2>๕</h2>
+                    <p class="price">฿12,199</p>
+                    <p>หากการต่อสู้ถือเป็นปาบฉันจะปกป้องเอง</p>
+                    <a href="#" class="btn">เพิ่มลงตะกร้า</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/Screenshot 2026-02-19 154005.png" alt="สินค้า 4">
+                <div class="product-info">
+                    <h2> V 1</h2>
+                    <p class="price">฿8,599</p>
+                    <p>แปลงร่างที่มีคุณภาพสูง</p>
+                    <a href="#" class="btn">เพิ่มลงตะกร้า</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+</body>
+</html>
+]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image.png)]
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
@@ -436,12 +539,274 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็บไซต์ตัวอย่าง</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <!-- Section สินค้า -->
+    <section class="content">
+        <h1 class="section-title">สินค้า</h1>
+
+        <div class="product-container">
+
+            <div class="product-card">
+                <img src="images/Screenshot 2026-02-19 152546.png" alt="สินค้า 1">
+                <div class="product-info">
+                    <h2>CSM คาบูโตะ</h2>
+                    <div class="stat-number">฿8,999</div>
+                    <p>เอาไว้แปลงร่าง</p>
+                    <a href="#" class="btn">เพิ่มลงตะกร้า</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/csm-henshin-belt-typhoon-shin-kamen-rider-version-v0-xqouuylo34rb1.jpg" alt="สินค้า 2">
+                <div class="product-info">
+                    <h2>V2</h2>
+                    <div class="stat-number">฿2,499</div>
+                    <p>สินค้าที่มีคุณภาพสูง</p>
+                    <a href="#" class="btn">เพิ่มลงตะกร้า</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/Screenshot 2026-02-19 153726.png" alt="สินค้า 3">
+                <div class="product-info">
+                    <h2>หมายเลข 5</h2>
+                    <p class="price">฿12,199</p>
+                    <p>หากการต่อสู้ถือเป็นบาป ฉันจะปกป้องเอง</p>
+                    <a href="#" class="btn">เพิ่มลงตะกร้า</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/Screenshot 2026-02-19 154005.png" alt="สินค้า 4">
+                <div class="product-info">
+                    <h2>V1</h2>
+                    <p class="price">฿8,599</p>
+                    <p>แปลงร่างที่มีคุณภาพสูง</p>
+                    <a href="#" class="btn">เพิ่มลงตะกร้า</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section สถิติ -->
+    <section class="stats-container">
+        <div class="stat-box">
+            <div class="stat-number">1,234</div>
+            <div class="stat-label">ผู้ใช้งาน</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">5.6K</div>
+            <div class="stat-label">ยอดขาย</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">ความพึงพอใจ</div>
+        </div>
+    </section>
+
+</main>
+
+</body>
+</html>
+]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[/* ===== Global Reset & Font ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    background: linear-gradient(90deg, #1e1e1e, #333);
+    padding: 15px 0;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.menu > li {
+    margin: 0 20px;
+}
+
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #555;
+}
+
+.menu-item.active {
+    background-color: #ff6600;
+    font-weight: bold;
+}
+
+/* ===== Section Title ===== */
+.section-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+/* ===== Product Grid ===== */
+.content {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* ===== Product Card ===== */
+.product-card {
+    background: #edcccc;
+    border-radius: 12px;
+    padding-bottom: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.product-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* ===== Stats Section ===== */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.stat-box {
+    flex: 1;
+    margin: 0 15px;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff6600;
+}
+
+.stat-label {
+    font-size: 14px;
+    margin-top: 8px;
+    letter-spacing: 1px;
+    color: #666;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-container {
+        flex-direction: column;
+    }
+
+    .stat-box {
+        margin: 15px 0;
+    }
+}
+]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image.png)]
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
@@ -554,12 +919,327 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็บไซต์ตัวอย่าง</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <!-- Section สินค้า -->
+    <section class="content">
+        <h1 class="section-title">สินค้า</h1>
+
+        <div class="product-container">
+
+            <div class="product-card">
+                <img src="images/Screenshot 2026-02-19 152546.png" alt="สินค้า 1">
+                <div class="product-info">
+                    <h2>CSM คาบูโตะ</h2>
+                    <div class="stat-number">฿8,999</div>
+                    <p>เอาไว้แปลงร่าง</p>
+                    <a href="#" class="btn">เพิ่มลงตะกร้า</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/csm-henshin-belt-typhoon-shin-kamen-rider-version-v0-xqouuylo34rb1.jpg" alt="สินค้า 2">
+                <div class="product-info">
+                    <h2>V2</h2>
+                    <div class="stat-number">฿2,499</div>
+                    <p>สินค้าที่มีคุณภาพสูง</p>
+                    <a href="#" class="btn">เพิ่มลงตะกร้า</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/Screenshot 2026-02-19 153726.png" alt="สินค้า 3">
+                <div class="product-info">
+                    <h2>หมายเลข 5</h2>
+                    <p class="price">฿12,199</p>
+                    <p>หากการต่อสู้ถือเป็นบาป ฉันจะปกป้องเอง</p>
+                    <a href="#" class="btn">เพิ่มลงตะกร้า</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/Screenshot 2026-02-19 154005.png" alt="สินค้า 4">
+                <div class="product-info">
+                    <h2>V1</h2>
+                    <p class="price">฿8,599</p>
+                    <p>แปลงร่างที่มีคุณภาพสูง</p>
+                    <a href="#" class="btn">เพิ่มลงตะกร้า</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section สถิติ -->
+    <section class="stats-container">
+        <div class="stat-box">
+            <div class="stat-number">1,234</div>
+            <div class="stat-label">ผู้ใช้งาน</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">5.6K</div>
+            <div class="stat-label">ยอดขาย</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">ความพึงพอใจ</div>
+        </div>
+    </section>
+
+</main>
+
+</body>
+</html>
+]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[/* ===== Global Reset & Font ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    background: linear-gradient(90deg, #1e1e1e, #333);
+    padding: 15px 0;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.menu > li {
+    margin: 0 20px;
+}
+
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #555;
+}
+
+.menu-item.active {
+    background-color: #ff6600;
+    font-weight: bold;
+}
+
+/* ===== Section Title ===== */
+.section-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+/* ===== Product Grid ===== */
+.content {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* ===== Product Card ===== */
+.product-card {
+    background: #edcccc;
+    border-radius: 12px;
+    padding-bottom: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.product-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* ===== Stats Section ===== */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.stat-box {
+    flex: 1;
+    margin: 0 15px;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff6600;
+}
+
+.stat-label {
+    font-size: 14px;
+    margin-top: 8px;
+    letter-spacing: 1px;
+    color: #666;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-container {
+        flex-direction: column;
+    }
+
+    .stat-box {
+        margin: 15px 0;
+    }
+}
+
+/* ===== Blog Post Style ===== */
+.blog-post {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* ===== Header ===== */
+.post-title {
+    font-size: 36px;
+    color: #222;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.post-meta {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 30px;
+}
+
+/* ===== Content ===== */
+.post-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.post-content h2 {
+    font-size: 24px;
+    color: #ff6600;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* ===== Blockquote ===== */
+.post-content blockquote {
+    font-size: 18px;
+    font-style: italic;
+    background: #f9f9f9;
+    border-left: 5px solid #ff6600;
+    padding: 20px;
+    margin: 30px 0;
+    color: #555;
+}
+
+]
+
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image.png)]
+
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
@@ -701,12 +1381,339 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็บไซต์ตัวอย่าง</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <!-- Section สินค้า -->
+    <section class="content">
+        <h1 class="section-title">สินค้า</h1>
+
+        <div class="product-container">
+
+            <div class="product-card">
+                <img src="images/Screenshot 2026-02-19 152546.png" alt="สินค้า 1">
+                <div class="product-info">
+                    <h2>CSM คาบูโตะ</h2>
+                    <div class="stat-number">฿8,999</div>
+                    <p>เอาไว้แปลงร่าง</p>
+                    <a href="#" class="btn">เพิ่มลงตะกร้า</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/csm-henshin-belt-typhoon-shin-kamen-rider-version-v0-xqouuylo34rb1.jpg" alt="สินค้า 2">
+                <div class="product-info">
+                    <h2>V2</h2>
+                    <div class="stat-number">฿2,499</div>
+                    <p>สินค้าที่มีคุณภาพสูง</p>
+                    <a href="#" class="btn">เพิ่มลงตะกร้า</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/Screenshot 2026-02-19 153726.png" alt="สินค้า 3">
+                <div class="product-info">
+                    <h2>หมายเลข 5</h2>
+                    <p class="price">฿12,199</p>
+                    <p>หากการต่อสู้ถือเป็นบาป ฉันจะปกป้องเอง</p>
+                    <a href="#" class="btn">เพิ่มลงตะกร้า</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/Screenshot 2026-02-19 154005.png" alt="สินค้า 4">
+                <div class="product-info">
+                    <h2>V1</h2>
+                    <p class="price">฿8,599</p>
+                    <p>แปลงร่างที่มีคุณภาพสูง</p>
+                    <a href="#" class="btn">เพิ่มลงตะกร้า</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/Screenshot 2026-02-19 161744.png" alt="สินค้า 1">
+                <div class="product-info">
+                    <h2>C M S</h2>
+                    <div class="price">฿80,000</div>
+                    <a href="#" class="btn">สั่งซื้อ</a>
+        </div>
+    </div>
+
+        </div>
+    </section>
+
+    <!-- Section สถิติ -->
+    <section class="stats-container">
+        <div class="stat-box">
+            <div class="stat-number">1,234</div>
+            <div class="stat-label">ผู้ใช้งาน</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">5.6K</div>
+            <div class="stat-label">ยอดขาย</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">ความพึงพอใจ</div>
+        </div>
+    </section>
+
+</main>
+
+</body>
+</html>
+]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[/* ===== Global Reset & Font ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    background: linear-gradient(90deg, #1e1e1e, #333);
+    padding: 15px 0;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.menu > li {
+    margin: 0 20px;
+}
+
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #555;
+}
+
+.menu-item.active {
+    background-color: #ff6600;
+    font-weight: bold;
+}
+
+/* ===== Section Title ===== */
+.section-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+/* ===== Content ===== */
+.content {
+    padding: 40px 5%;
+    text-align: center;
+}
+
+/* ===== Product Grid (เล็กลงจริง) ===== */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+}
+
+/* ===== Product Card ===== */
+.product-card {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+/* ===== Product Info ===== */
+.product-info {
+    padding: 15px;
+    text-align: left;
+}
+
+.product-info h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 8px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* ===== Stats Section ===== */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.stat-box {
+    flex: 1;
+    margin: 0 15px;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ff6600;
+}
+
+.stat-label {
+    font-size: 14px;
+    margin-top: 8px;
+    letter-spacing: 1px;
+    color: #666;
+}
+
+/* ===== Blog Post ===== */
+.blog-post {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.post-title {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.post-meta {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.post-content p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.post-content h2 {
+    font-size: 22px;
+    color: #ff6600;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.post-content blockquote {
+    font-size: 17px;
+    font-style: italic;
+    background: #f9f9f9;
+    border-left: 5px solid #ff6600;
+    padding: 20px;
+    margin: 30px 0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1200px) {
+    .product-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .product-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-container {
+        flex-direction: column;
+    }
+
+    .stat-box {
+        margin: 15px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+}
+]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image-1.png)]
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
@@ -854,10 +1861,316 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็บไซต์ตัวอย่าง</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <!-- Section สินค้า -->
+    <section class="content">
+        <h1 class="section-title">สินค้า</h1>
+
+        <div class="product-container">
+
+            <div class="product-card">
+                <img src="images/Screenshot 2026-02-19 152546.png" alt="สินค้า 1">
+                <div class="product-info">
+                    <h2>CSM คาบูโตะ</h2>
+                    <div class="stat-number">฿8,999</div>
+                    <p>เอาไว้แปลงร่าง</p>
+                    <a href="#" class="btn">เพิ่มลงตะกร้า</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/csm-henshin-belt-typhoon-shin-kamen-rider-version-v0-xqouuylo34rb1.jpg" alt="สินค้า 2">
+                <div class="product-info">
+                    <h2>V2</h2>
+                    <div class="stat-number">฿2,499</div>
+                    <p>สินค้าที่มีคุณภาพสูง</p>
+                    <a href="#" class="btn">เพิ่มลงตะกร้า</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/Screenshot 2026-02-19 153726.png" alt="สินค้า 3">
+                <div class="product-info">
+                    <h2>หมายเลข 5</h2>
+                    <p class="price">฿12,199</p>
+                    <p>หากการต่อสู้ถือเป็นบาป ฉันจะปกป้องเอง</p>
+                    <a href="#" class="btn">เพิ่มลงตะกร้า</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/Screenshot 2026-02-19 154005.png" alt="สินค้า 4">
+                <div class="product-info">
+                    <h2>V1</h2>
+                    <p class="price">฿8,599</p>
+                    <p>แปลงร่างที่มีคุณภาพสูง</p>
+                    <a href="#" class="btn">เพิ่มลงตะกร้า</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/Screenshot 2026-02-19 161744.png" alt="สินค้า 1">
+                <div class="product-info">
+                    <h2>C M S</h2>
+                    <div class="price">฿80,000</div>
+                    <a href="#" class="btn">สั่งซื้อ</a>
+        </div>
+    </div>
+
+        </div>
+    </section>
+
+    <!-- Section สถิติ -->
+    <section class="stats-container">
+        <div class="stat-box">
+            <div class="stat-number">1,234</div>
+            <div class="stat-label">ผู้ใช้งาน</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">5.6K</div>
+            <div class="stat-label">ยอดขาย</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">ความพึงพอใจ</div>
+        </div>
+    </section>
+
+</main>
+
+</body>
+</html>
+]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[/* ===== Reset ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f9f9f9;
+    color: #2c2c2c;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    background: white;
+    padding: 18px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.menu > li {
+    margin: 0 25px;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #444;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.menu-item:hover {
+    color: #b08d2f; /* ทองอ่อน */
+}
+
+.menu-item.active {
+    color: #b08d2f;
+    border-bottom: 2px solid #b08d2f;
+    padding-bottom: 4px;
+}
+
+/* ===== Section Title ===== */
+.section-title {
+    font-size: 30px;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+/* ===== Content ===== */
+.content {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+/* ===== Product Grid ===== */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+}
+
+/* ===== Product Card ===== */
+.product-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+}
+
+/* ===== Product Image ===== */
+.product-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+/* ===== Product Info ===== */
+.product-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.product-info h2 {
+    font-size: 17px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #b08d2f; /* ทอง */
+    margin-bottom: 12px;
+}
+
+/* ===== Button ===== */
+.btn {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 1px solid #b08d2f;
+    color: #b08d2f;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #b08d2f;
+    color: white;
+}
+
+/* ===== Stats Section ===== */
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 90px auto;
+    max-width: 1100px;
+}
+
+.stat-box {
+    flex: 1;
+    background: white;
+    padding: 40px 25px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #b08d2f;
+}
+
+.stat-label {
+    font-size: 14px;
+    margin-top: 8px;
+    color: #777;
+}
+
+/* ===== Blog Post ===== */
+.blog-post {
+    max-width: 850px;
+    margin: 90px auto;
+    padding: 50px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.post-title {
+    font-size: 32px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.post-meta {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 30px;
+}
+
+.post-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.post-content h2 {
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #b08d2f;
+}
+
+.post-content blockquote {
+    font-size: 16px;
+    background: #f5f5f5;
+    border-left: 4px solid #b08d2f;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 6px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+    }
+}
+]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image.png)]
 
