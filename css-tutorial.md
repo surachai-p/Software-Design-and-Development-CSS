@@ -359,9 +359,49 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>สินค้า</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>สินค้าของเรา</h1>
+
+    <div class="product-container">
+
+        <div class="card">
+            <img src="Product/product1.png" alt="สินค้า 1">
+            <h3>สินค้า 1</h3>
+            <p>ราคา 15,900 บาท</p>
+        </div>
+
+        <div class="card">
+            <img src="Product/product2.png" alt="สินค้า 2">
+            <h3>สินค้า 2</h3>
+            <p>ราคา 20,900 บาท</p>
+        </div>
+
+        <div class="card">
+            <img src="Product/product3.png" alt="สินค้า 3">
+            <h3>สินค้า 3</h3>
+            <p>ราคา 20,900 บาท</p>
+        </div>
+
+        <div class="card">
+            <img src="Product/product4.png" alt="สินค้า 4">
+            <h3>สินค้า 4</h3>
+            <p>ราคา 20,900 บาท</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](<image/Experimental results-lab3.png>)
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
