@@ -1,0 +1,15 @@
+/* buttons.css */
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* แถม: ทำให้ปุ่มเปลี่ยนสีเวลาเอาเมาส์ไปชี้ */
+.btn-success:hover {
+    background-color: #218838;
+}
