@@ -1,0 +1,511 @@
+/* การทดลองที่ 2 */
+/* เปลี่ยนสีพื้นหลังเมนู */
+nav {
+    background-color: #ff83d6; /* สีใหม่ */
+    padding: 15px;
+}
+
+/* Descendant Selector */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Child Selector */
+nav > ul > li {
+    margin: 0 15px;
+}
+
+/* Class Selector */
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+}
+
+/* Pseudo-class */
+.menu-item:hover {
+    background-color: #f8c2c2;
+}
+
+/* เมนูที่ถูกเลือก (สินค้า) */
+.active {
+    background-color: #28a745;
+}
+
+/* การทดลองที่ 3 */
+/* พื้นหลัง */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+/* จัดเรียงสินค้า */
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+/* การ์ด */
+.product-card {
+    width: 260px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* รูปสินค้า */
+.product-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* ข้อมูลสินค้า */
+.product-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-title {
+    font-size: 18px;
+    color: #333;
+}
+
+.product-price {
+    color: #007bff;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product-description {
+    color: #666;
+    font-size: 14px;
+    min-height: 50px;
+}
+
+/* ปุ่ม */
+.product-button {
+    margin-top: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: #ff66cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.product-button:hover {
+    background-color: #ff3399;
+}
+
+/* การทดลองที่ 4 */
+/* พื้นหลัง */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+}
+
+/* กล่องรวม */
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+/* กล่องสถิติ */
+.stat-box {
+    flex: 1;
+    margin: 0 20px;
+    padding: 2.5rem;
+    text-align: center;
+    background-color: white;
+    border-radius: 12px;
+    border: 2px solid #dee2e6;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.stat-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* ตัวเลข */
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff3399;
+    margin-bottom: 1rem;
+}
+
+/* ข้อความ */
+.stat-label {
+    font-size: 1.1rem;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+    }
+
+    .stat-box {
+        margin: 1rem 0;
+    }
+}
+
+/* การทดลองที่ 5 */
+/* พื้นหลังเว็บ */
+body {
+    margin: 0;
+    background: #f4f6f9;
+    font-family: 'Sarabun', sans-serif;
+}
+
+/* กล่องบทความ */
+.blog-post {
+    max-width: 850px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* ส่วนหัวบทความ */
+.post-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.post-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+}
+
+.post-meta {
+    font-size: 0.95rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* เนื้อหา */
+.post-content {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #444;
+}
+
+.post-content p {
+    margin-bottom: 1.6rem;
+}
+
+/* หัวข้อย่อย */
+.post-content h2 {
+    font-size: 1.9rem;
+    color: #ff3399;
+    margin: 2rem 0 1rem;
+}
+
+/* Blockquote */
+blockquote {
+    font-style: italic;
+    border-left: 5px solid #ff3399;
+    margin: 2rem 0;
+    padding-left: 1.2rem;
+    color: #555;
+    background-color: #fff0f6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .blog-post {
+        padding: 1.5rem;
+    }
+
+    .post-title {
+        font-size: 2.2rem;
+    }
+
+    .post-content {
+        font-size: 1rem;
+    }
+}
+
+/* การทดลองที่ 6 */
+/* พื้นหลัง */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+}
+
+/* หัวข้อ */
+.page-title {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Grid แสดงสินค้า */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+}
+
+/* การ์ดสินค้า (ปรับให้เล็กลง) */
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+/* hover */
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* รูปสินค้า */
+.product-card img {
+    width: 100%;
+    height: 150px; /* ลดขนาดรูป */
+    object-fit: cover;
+}
+
+/* รายละเอียด */
+.product-details {
+    padding: 12px;
+    text-align: center;
+}
+
+.product-title {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.product-price {
+    font-size: 1.1rem;
+    color: #ff3399;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* ปุ่ม */
+.add-to-cart {
+    background-color: #ff3399;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #cc0066;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+}
+
+/* Dashboard */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 22px;
+    color: #2c3e50;
+}
+
+.header button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #3498db;
+    color: white;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.header button:hover {
+    background: #2980b9;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #2c3e50;
+    color: white;
+    padding: 2rem 1rem;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar li:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.main-content {
+    grid-area: main;
+    padding: 2rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.stat-card h3 {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.chart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+.chart {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    min-height: 200px;
+}
+
+.chart h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-areas: 
+            "header"
+            "main";
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .chart-container {
+        grid-template-columns: 1fr;
+    }
+}
