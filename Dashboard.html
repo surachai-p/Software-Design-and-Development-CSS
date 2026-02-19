@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>แดชบอร์ดร้านกาแฟ</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- เมนูซ้าย -->
+    <aside class="sidebar">
+        <h2>เมนู</h2>
+        <a class="active">หน้าแรก</a>
+        <a>รายงาน</a>
+        <a>การตั้งค่า</a>
+    </aside>
+
+    <!-- เนื้อหา -->
+    <main class="main">
+
+        <!-- header -->
+        <div class="topbar">
+            <h1>📊 แดชบอร์ด</h1>
+            <div>
+                <button class="btn">โปรไฟล์</button>
+                <button class="btn logout">ออกจากระบบ</button>
+            </div>
+        </div>
+
+        <!-- การ์ด -->
+        <div class="cards">
+            <div class="card">
+                <p>ยอดขายรวม</p>
+                <h2>฿150,000</h2>
+            </div>
+
+            <div class="card">
+                <p>จำนวนออเดอร์</p>
+                <h2>1,234</h2>
+            </div>
+
+            <div class="card">
+                <p>ลูกค้าใหม่</p>
+                <h2>45</h2>
+            </div>
+        </div>
+
+        <!-- กราฟ -->
+        <div class="charts">
+
+            <div class="card">
+                <h3>📈 กราฟยอดขาย</h3>
+                <canvas id="salesChart"></canvas>
+            </div>
+
+            <div class="card">
+                <h3>🏆 สินค้าขายดี</h3>
+                <canvas id="productChart"></canvas>
+            </div>
+
+        </div>
+
+    </main>
+</div>
+
+<script>
+// กราฟเส้น
+new Chart(document.getElementById('salesChart'), {
+    type: 'line',
+    data: {
+        labels: ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.'],
+        datasets: [{
+            label: 'ยอดขาย',
+            data: [12000,19000,15000,22000,18000,25000],
+            borderWidth: 3,
+            tension: 0.4
+        }]
+    }
+});
+
+// กราฟแท่ง
+new Chart(document.getElementById('productChart'), {
+    type: 'bar',
+    data: {
+        labels: ['เอสเพรสโซ่','ลาเต้','คาปูชิโน','มอคค่า'],
+        datasets: [{
+            label: 'จำนวนขาย',
+            data: [50,40,35,60],
+            borderWidth: 2
+        }]
+    }
+});
+</script>
+
+</body>
+</html>
