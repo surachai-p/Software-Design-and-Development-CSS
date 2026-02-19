@@ -233,8 +233,65 @@ div > p {
 ### ผลการทดลอง
 ```html
 [วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
+```
+
+```CSS
+/* การใช้ Element Selector */
+        nav {
+            background-color: #fd7676;
+            padding: 15px;
+        }
+
+        /* การใช้ Descendant Selector */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* การใช้ Child Selector */
+        nav > ul > li {
+            margin: 0 10px;
+        }
+
+        /* การใช้ Class Selector */
+        .menu-item {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        /* การใช้ Pseudo-class */
+        .menu-item:hover {
+            background-color: #f58e8e;
+            border-radius: 3px;
+        }
+
+        /* การใช้ ID Selector */
+        #active {
+            background-color: #007bff;
+            border-radius: 3px;
+        }
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](image.png)
 
 
 [](#การทดลองที่-3-การจัดการสีและพื้นหลัง)
@@ -339,9 +396,161 @@ background-size: cover;
 ### ผลการทดลอง
 ```html
 [วางโค้ดที่นี่]
-```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+<!DOCTYPE html>
+<html>
+<head>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+    <div class = "product-container">
+    <div class="product-card">
+        <div class="product-image1"></div>
+        <div class="product-info">
+            <h2 class="product-title">Mizuno Alpha</h2>
+            <p class="product-price">฿3,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
 
+    <div class="product-card">
+        <div class="product-image2"></div>
+        <div class="product-info">
+            <h2 class="product-title">Adidas F50</h2>
+            <p class="product-price">฿4,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image3"></div>
+        <div class="product-info">
+            <h2 class="product-title">Nike Mercurial</h2>
+            <p class="product-price">฿7,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image4"></div>
+        <div class="product-info">
+            <h2 class="product-title">Adidas Predator</h2>
+            <p class="product-price">฿5,599</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
+```
+```css
+.product-card {
+            width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+
+        .product-image1 {
+            width: 100%;
+            height: 200px;
+            background-image: url('images/alpha.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-image2 {
+            width: 100%;
+            height: 200px;
+            background-image: url('images/F50.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-image3 {
+            width: 100%;
+            height: 200px;
+            background-image: url('images/mercurial.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-image4 {
+            width: 100%;
+            height: 200px;
+            background-image: url('images/predetor.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-title {
+            color: #694141;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            color: #007bff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .product-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .product-button {
+            display: block;
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+
+        .product-button:hover {
+            background: linear-gradient(to right, #0056b3, #003980);
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            vertical-align: top;
+            gap: 20px;
+        }
+```
+
+[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](image-1.png)
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
 
@@ -437,12 +646,162 @@ border: 1px solid black;
 ### ผลการทดลอง
 ```html
 [วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+    <div class = "product-container">
+    <div class="product-card">
+        <div class="product-image1"></div>
+        <div class="product-info">
+            <h2 class="product-title">Mizuno Alpha</h2>
+            <p class="product-price">฿3,999</p>
+            <p class="product-description">
+                สตั๊ดตัวใหม่จาก Mizuno ที่มาพร้อมกับเทคโนโลยีล้ำสมัย เพื่อประสิทธิภาพในการเล่นที่ยอดเยี่ยม
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image2"></div>
+        <div class="product-info">
+            <h2 class="product-title">Adidas F50</h2>
+            <p class="product-price">฿4,999</p>
+            <p class="product-description">
+                สตั๊ดตัวใหม่จาก Adidas ที่มาพร้อมกับเทคโนโลยีล้ำสมัย เพื่อประสิทธิภาพในการเล่นที่ยอดเยี่ยม
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image3"></div>
+        <div class="product-info">
+            <h2 class="product-title">Nike Mercurial</h2>
+            <p class="product-price">฿7,999</p>
+            <p class="product-description">
+                สตั๊ดตัวใหม่จาก Nike Mercurial ที่มาพร้อมกับเทคโนโลยีล้ำสมัย เพื่อประสิทธิภาพในการเล่นที่ยอดเยี่ยม
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image4"></div>
+        <div class="product-info">
+            <h2 class="product-title">Adidas Predator</h2>
+            <p class="product-price">฿5,599</p>
+            <p class="product-description">
+                สตั๊ดตัวใหม่จาก Adidas ที่มาพร้อมกับเทคโนโลยีล้ำสมัย เพื่อประสิทธิภาพในการเล่นที่ยอดเยี่ยม
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
 ```
 ```css
 [วางโค้ด CSS ที่นี่]
+.product-card {
+            width: 700px;
+            height: inherit;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+
+        .product-image1 {
+            width: 100%;
+            height: 500px;
+            background-image: url('images/alpha.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-image2 {
+            width: 100%;
+            height: 500px;
+            background-image: url('images/F50.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-image3 {
+            width: 100%;
+            height: 500px;
+            background-image: url('images/mercurial.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-image4 {
+            width: 100%;
+            height: 500px;
+            background-image: url('images/predetor.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-title {
+            color: #694141;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            color: #007bff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .product-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .product-button {
+            display: block;
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+
+        .product-button:hover {
+            background: linear-gradient(to right, #0056b3, #003980);
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            vertical-align: top;
+            gap: 20px;
+        }
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-
+![alt text](image-2.png)
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
 
@@ -555,12 +914,163 @@ font-weight: bold;
 ### ผลการทดลอง
 ```html
 [วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+    <div class = "product-container">
+    <div class="product-card">
+        <div class="product-image1"></div>
+        <div class="product-info">
+            <h2 class="product-title">Mizuno Alpha</h2>
+            <p class="product-price">฿3,999</p>
+            <p class="product-description">
+                สตั๊ดตัวใหม่จาก Mizuno ที่มาพร้อมกับเทคโนโลยีล้ำสมัย เพื่อประสิทธิภาพในการเล่นที่ยอดเยี่ยม
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image2"></div>
+        <div class="product-info">
+            <h2 class="product-title">Adidas F50</h2>
+            <p class="product-price">฿4,999</p>
+            <p class="product-description">
+                สตั๊ดตัวใหม่จาก Adidas ที่มาพร้อมกับเทคโนโลยีล้ำสมัย เพื่อประสิทธิภาพในการเล่นที่ยอดเยี่ยม
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image3"></div>
+        <div class="product-info">
+            <h2 class="product-title">Nike Mercurial</h2>
+            <p class="product-price">฿7,999</p>
+            <p class="product-description">
+                สตั๊ดตัวใหม่จาก Nike Mercurial ที่มาพร้อมกับเทคโนโลยีล้ำสมัย เพื่อประสิทธิภาพในการเล่นที่ยอดเยี่ยม
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image4"></div>
+        <div class="product-info">
+            <h2 class="product-title">Adidas Predator</h2>
+            <p class="product-price">฿5,599</p>
+            <p class="product-description">
+                สตั๊ดตัวใหม่จาก Adidas ที่มาพร้อมกับเทคโนโลยีล้ำสมัย เพื่อประสิทธิภาพในการเล่นที่ยอดเยี่ยม
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
 ```
 ```css
 [วางโค้ด CSS ที่นี่]
+.product-card {
+            width: 700px;
+            height: inherit;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+
+        .product-image1 {
+            width: 100%;
+            height: 500px;
+            background-image: url('images/alpha.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-image2 {
+            width: 100%;
+            height: 500px;
+            background-image: url('images/F50.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-image3 {
+            width: 100%;
+            height: 500px;
+            background-image: url('images/mercurial.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-image4 {
+            width: 100%;
+            height: 500px;
+            background-image: url('images/predetor.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-title {
+            color: #694141;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            color: #00ff62;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .product-description {
+            color: #666;
+            font-size: 14px;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        .product-button {
+            display: block;
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+
+        .product-button:hover {
+            background: linear-gradient(to right, #0056b3, #003980);
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            vertical-align: top;
+            gap: 20px;
+        }
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-
+![alt text](image-3.png)
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
 
@@ -702,12 +1212,192 @@ font-weight: bold;
 ### ผลการทดลอง
 ```html
 [วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+    <div class = "product-container">
+    <div class="product-card">
+        <div class="product-image1"></div>
+        <div class="product-info">
+            <h2 class="product-title">Mizuno Alpha</h2>
+            <p class="product-price">฿3,999</p>
+            <p class="product-description">
+                สตั๊ดตัวใหม่จาก Mizuno ที่มาพร้อมกับเทคโนโลยีล้ำสมัย เพื่อประสิทธิภาพในการเล่นที่ยอดเยี่ยม
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image2"></div>
+        <div class="product-info">
+            <h2 class="product-title">Adidas F50</h2>
+            <p class="product-price">฿4,999</p>
+            <p class="product-description">
+                สตั๊ดตัวใหม่จาก Adidas ที่มาพร้อมกับเทคโนโลยีล้ำสมัย เพื่อประสิทธิภาพในการเล่นที่ยอดเยี่ยม
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+    </div>
+
+    <div class="product-container2">
+    <div class="product-card">
+        <div class="product-image3"></div>
+        <div class="product-info">
+            <h2 class="product-title">Nike Mercurial</h2>
+            <p class="product-price">฿7,999</p>
+            <p class="product-description">
+                สตั๊ดตัวใหม่จาก Nike Mercurial ที่มาพร้อมกับเทคโนโลยีล้ำสมัย เพื่อประสิทธิภาพในการเล่นที่ยอดเยี่ยม
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image4"></div>
+        <div class="product-info">
+            <h2 class="product-title">Adidas Predator</h2>
+            <p class="product-price">฿5,599</p>
+            <p class="product-description">
+                สตั๊ดตัวใหม่จาก Adidas ที่มาพร้อมกับเทคโนโลยีล้ำสมัย เพื่อประสิทธิภาพในการเล่นที่ยอดเยี่ยม
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image5"></div>
+        <div class="product-info">
+            <h2 class="product-title">Puma Ultra</h2>
+            <p class="product-price">฿4,599</p>
+            <p class="product-description">
+                สตั๊ดตัวใหม่จาก Puma ที่มาพร้อมกับเทคโนโลยีล้ำสมัย เพื่อประสิทธิภาพในการเล่นที่ยอดเยี่ยม
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
 ```
 ```css
 [วางโค้ด CSS ที่นี่]
+.product-card {
+            width: 400px;
+            height: inherit;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+
+        .product-image1 {
+            width: 100%;
+            height: 300px;
+            background-image: url('images/alpha.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-image2 {
+            width: 100%;
+            height: 300px;
+            background-image: url('images/F50.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-image3 {
+            width: 100%;
+            height: 300px;
+            background-image: url('images/mercurial.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-image4 {
+            width: 100%;
+            height: 300px;
+            background-image: url('images/predetor.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-image5 {
+            width: 100%;
+            height: 300px;
+            background-image: url('images/ULTRA.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-title {
+            color: #694141;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            color: #00ff62;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .product-description {
+            color: #666;
+            font-size: 14px;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        .product-button {
+            display: block;
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+
+        .product-button:hover {
+            background: linear-gradient(to right, #0056b3, #003980);
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            vertical-align: top;
+            gap: 20px;
+        }
+
+        .product-container2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-
+![alt text](image-4.png)
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
 
@@ -855,9 +1545,236 @@ font-weight: bold;
 ### ผลการทดลอง
 ```html
 [วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+    <div class = "product-container">
+    <div class="product-card">
+        <div class="product-image1"></div>
+        <div class="product-info">
+            <h2 class="product-title">Mizuno Alpha</h2>
+            <p class="product-price">฿3,999</p>
+            <p class="product-description">
+                สตั๊ดตัวใหม่จาก Mizuno ที่มาพร้อมกับเทคโนโลยีล้ำสมัย เพื่อประสิทธิภาพในการเล่นที่ยอดเยี่ยม
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image2"></div>
+        <div class="product-info">
+            <h2 class="product-title">Adidas F50</h2>
+            <p class="product-price">฿4,999</p>
+            <p class="product-description">
+                สตั๊ดตัวใหม่จาก Adidas ที่มาพร้อมกับเทคโนโลยีล้ำสมัย เพื่อประสิทธิภาพในการเล่นที่ยอดเยี่ยม
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+    </div>
+
+    <div class="product-container2">
+    <div class="product-card">
+        <div class="product-image3"></div>
+        <div class="product-info">
+            <h2 class="product-title">Nike Mercurial</h2>
+            <p class="product-price">฿7,999</p>
+            <p class="product-description">
+                สตั๊ดตัวใหม่จาก Nike Mercurial ที่มาพร้อมกับเทคโนโลยีล้ำสมัย เพื่อประสิทธิภาพในการเล่นที่ยอดเยี่ยม
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image4"></div>
+        <div class="product-info">
+            <h2 class="product-title">Adidas Predator</h2>
+            <p class="product-price">฿5,599</p>
+            <p class="product-description">
+                สตั๊ดตัวใหม่จาก Adidas ที่มาพร้อมกับเทคโนโลยีล้ำสมัย เพื่อประสิทธิภาพในการเล่นที่ยอดเยี่ยม
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image5"></div>
+        <div class="product-info">
+            <h2 class="product-title">Puma Ultra</h2>
+            <p class="product-price">฿4,599</p>
+            <p class="product-description">
+                สตั๊ดตัวใหม่จาก Puma ที่มาพร้อมกับเทคโนโลยีล้ำสมัย เพื่อประสิทธิภาพในการเล่นที่ยอดเยี่ยม
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
 ```
 ```css
 [วางโค้ด CSS ที่นี่]
+/* การใช้ Element Selector */
+        nav {
+            background-color: #fd7676;
+            padding: 15px;
+        }
+
+        /* การใช้ Descendant Selector */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* การใช้ Child Selector */
+        nav > ul > li {
+            margin: 0 10px;
+        }
+
+        /* การใช้ Class Selector */
+        .menu-item {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        /* การใช้ Pseudo-class */
+        .menu-item:hover {
+            background-color: #f58e8e;
+            border-radius: 3px;
+        }
+
+        /* การใช้ ID Selector */
+        #active {
+            background-color: #007bff;
+            border-radius: 3px;
+        }
+
+
+.product-card {
+            width: 350px; /* Slightly smaller for better alignment */
+            height: auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9; /* Softer background */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px); /* Subtle lift effect */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image1 {
+            width: 100%;
+            height: 300px;
+            background-image: url('images/alpha.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-image2 {
+            width: 100%;
+            height: 300px;
+            background-image: url('images/F50.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-image3 {
+            width: 100%;
+            height: 300px;
+            background-image: url('images/mercurial.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-image4 {
+            width: 100%;
+            height: 300px;
+            background-image: url('images/predetor.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-image5 {
+            width: 100%;
+            height: 300px;
+            background-image: url('images/ULTRA.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-info {
+            padding: 20px; /* More spacious padding */
+            text-align: center; /* Center-align text for consistency */
+        }
+
+        .product-title {
+            color: #333;
+            font-size: 22px; /* Slightly smaller for balance */
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .product-price {
+            color: #007bff;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .product-description {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .product-button {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.2s ease;
+        }
+
+        .product-button:hover {
+            background: #0056b3;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            vertical-align: top;
+            gap: 20px;
+        }
+
+        .product-container2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-
+![alt text](image-5.png)
