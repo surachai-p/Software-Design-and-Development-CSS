@@ -233,9 +233,29 @@ div > p {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>เมนูนำทาง</title>
+    <!-- เรียกใช้ไฟล์ CSS ภายนอก -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](<image/Experimental results-lab2.png>)
 
 
 [](#การทดลองที่-3-การจัดการสีและพื้นหลัง)
