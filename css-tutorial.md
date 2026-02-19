@@ -231,11 +231,104 @@ div > p {
 3. เปลี่ยนสีพื้นหลังของเมนู
 
 ### ผลการทดลอง
-```html
-[วางโค้ดที่นี่]
-```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
 
+```html
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+        /* การใช้ Element Selector */
+        nav {
+            background-color: #27b0ff;
+            padding: 15px;
+        }
+
+        /* การใช้ Descendant Selector */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* การใช้ Child Selector */
+        nav > ul > li {
+            margin: 0 10px;
+        }
+
+        /* การใช้ Class Selector */
+        .menu-item {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            font-size: 2rem;
+        }
+
+        /* การใช้ Pseudo-class */
+        .menu-item:hover {
+            background-color: #555;
+            border-radius: 3px;
+        }
+
+        /* การใช้ ID Selector */
+        #active {
+            background-color: #007bff;
+            border-radius: 3px;
+        }
+<
+[วางโค้ดที่นี่]
+``` css
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+        /* การใช้ Element Selector */
+        nav {
+            background-color: #27b0ff;
+            padding: 15px;
+        }
+
+        /* การใช้ Descendant Selector */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* การใช้ Child Selector */
+        nav > ul > li {
+            margin: 0 10px;
+        }
+
+        /* การใช้ Class Selector */
+        .menu-item {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            font-size: 2rem;
+        }
+
+        /* การใช้ Pseudo-class */
+        .menu-item:hover {
+            background-color: #555;
+            border-radius: 3px;
+        }
+
+        /* การใช้ ID Selector */
+        #active {
+            background-color: #007bff;
+            border-radius: 3px;
+        }
+```
+
+
+
+
+[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](image-1.png)
 
 [](#การทดลองที่-3-การจัดการสีและพื้นหลัง)
 ## การทดลองที่ 3: การจัดการสีและพื้นหลัง
@@ -338,9 +431,205 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item" id="active">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+    <div class="product-card">
+         <h1>Nike</h1>
+        <div class="product-image">
+           
+       
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="/images/image.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b48d5070-e2c3-4ec0-84e4-00cf56f7174b/AIR+JORDAN+1+LOW.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/dd1b40fa-0b50-4a9b-97be-ef49d4c44b0c/NIKE+VOMERO+PLUS+CM.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/d9f1d9ee-a848-4a36-aab9-48b241078ebb/AIR+FORCE+1+LE+%28GS%29.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+     </div>
+    </div>
+</body>
+</html>
 [วางโค้ดที่นี่]
 ```
+
+```css
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p {
+    color: blue;
+}
+
+/* Class Selector */
+.highlight {
+    background-color: yellow;
+}
+
+/* ID Selector */
+#header {
+    font-size: 24px;
+}
+
+/* Descendant Selector */
+div p {
+    margin: 10px;
+}
+
+/* Child Selector */
+div > p {
+    padding: 5px;
+}
+
+        nav {
+            background-color: #333;
+            padding: 15px;
+        }
+
+        /* การใช้ Descendant Selector */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* การใช้ Child Selector */
+        nav > ul > li {
+            margin: 0 10px;
+        }
+
+        /* การใช้ Class Selector */
+        .menu-item {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            font-size: 2rem;
+            font-weight: 300;
+        }
+
+        /* การใช้ Pseudo-class */
+        .menu-item:hover {
+            background-color: #555;
+            border-radius: 3px;
+        }
+
+        /* การใช้ ID Selector */
+        #active {
+            background-color: #007bff;
+            border-radius: 3px;
+        }
+        
+       
+        .product-card{
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            h1{
+                padding: 2rem 0;
+                text-align: center;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 3rem;
+                font-weight: 300;
+                
+                
+            }
+        }
+        .product-image{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 2rem;
+            .product-price{
+                color: black;
+                font-size: 1.5rem;
+            }
+            .product-description{
+                color: #555;
+                font-size: 1.5rem;
+            }
+            .product-button{
+                display: inline-block;
+                list-style: none;
+                text-decoration: none;
+                color: aliceblue;
+                background-color: #007bff;
+                padding: 1.5rem;
+                border-radius: 10%;
+                font-size: 1.5rem;
+            }
+            .img, img {
+                width: 100%;
+            }
+
+
+        }
+        .product-title{
+                   
+                    font-size: 2rem;
+                    font-weight: 100;
+                }
+
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](image.png)
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
@@ -436,12 +725,291 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item" id="active">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+    <div class="product-card">
+         <h1>Nike</h1>
+        <div class="product-image">
+           
+       
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="/images/image.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b48d5070-e2c3-4ec0-84e4-00cf56f7174b/AIR+JORDAN+1+LOW.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/dd1b40fa-0b50-4a9b-97be-ef49d4c44b0c/NIKE+VOMERO+PLUS+CM.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/d9f1d9ee-a848-4a36-aab9-48b241078ebb/AIR+FORCE+1+LE+%28GS%29.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+     </div>
+    </div>
+</body>
+</html>
+
 [วางโค้ด HTML ที่นี่]
 ```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item" id="active">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+    <div class="product-card">
+         <h1>Nike</h1>
+        <div class="product-image">
+           
+       
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="/images/image.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b48d5070-e2c3-4ec0-84e4-00cf56f7174b/AIR+JORDAN+1+LOW.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/dd1b40fa-0b50-4a9b-97be-ef49d4c44b0c/NIKE+VOMERO+PLUS+CM.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/d9f1d9ee-a848-4a36-aab9-48b241078ebb/AIR+FORCE+1+LE+%28GS%29.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+     </div>
+    </div>
+</body>
+</html>
+
 ```css
 [วางโค้ด CSS ที่นี่]
 ```
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p {
+    color: blue;
+}
+
+/* Class Selector */
+.highlight {
+    background-color: yellow;
+}
+
+/* ID Selector */
+#header {
+    font-size: 24px;
+}
+
+/* Descendant Selector */
+div p {
+    margin: 10px;
+}
+
+/* Child Selector */
+div > p {
+    padding: 5px;
+}
+
+        nav {
+            background-color: #333;
+            padding: 15px;
+        }
+
+        /* การใช้ Descendant Selector */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* การใช้ Child Selector */
+        nav > ul > li {
+            margin: 0 10px;
+        }
+
+        /* การใช้ Class Selector */
+        .menu-item {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            font-size: 2rem;
+            font-weight: 300;
+        }
+
+        /* การใช้ Pseudo-class */
+        .menu-item:hover {
+            background-color: #555;
+            border-radius: 3px;
+        }
+
+        /* การใช้ ID Selector */
+        #active {
+            background-color: #007bff;
+            border-radius: 3px;
+        }
+        
+       
+        .product-card{
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            h1{
+                padding: 2rem 0;
+                text-align: center;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 3rem;
+                font-weight: 300;
+                
+                
+            }
+        }
+        .product-image{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 2rem;
+            .product-price{
+                color: black;
+                font-size: 1.5rem;
+            }
+            .product-description{
+                color: #555;
+                font-size: 1.5rem;
+            }
+            .product-button{
+                display: inline-block;
+                list-style: none;
+                text-decoration: none;
+                color: aliceblue;
+                background-color: #007bff;
+                padding: 1.5rem;
+                border-radius: 10%;
+                font-size: 1.5rem;
+            }
+            .img, img {
+                width: 100%;
+                border-radius: 10%;
+            }
+            .product-info{
+                padding: 10%;
+                background-color: #d5d5d5;
+                border-radius: 10%;
+
+            }
+
+
+        }
+        .product-title{
+                   
+                    font-size: 2rem;
+                    font-weight: 100;
+                }
+
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](image-2.png)
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
@@ -556,10 +1124,103 @@ font-weight: bold;
 ```html
 [วางโค้ด HTML ที่นี่]
 ```
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="style.css">
+<head>
+
+</head>
+<body>
+    <article class="blog-post">
+        <header class="post-header">
+            <h1 class="post-title">วิธีการเขียนบทความที่น่าสนใจ</h1>
+            <div class="post-meta">โพสต์เมื่อ 1 มกราคม 2025 | โดย ผู้เขียน</div>
+        </header>
+        
+        <div class="post-content">
+            <p>เนื้อหาบทความที่ดีควรมีความน่าสนใจและเป็นประโยชน์ต่อผู้อ่าน การเขียนบทความให้น่าอ่านนั้นมีหลักการสำคัญหลายประการ</p>
+
+            <h2>1. การเลือกหัวข้อที่น่าสนใจ</h2>
+            <p>หัวข้อที่ดีควรตรงกับความสนใจของกลุ่มเป้าหมาย และมีประโยชน์ต่อผู้อ่าน</p>
+
+            <blockquote>
+                "การเขียนที่ดีไม่ได้เกิดจากพรสวรรค์เพียงอย่างเดียว แต่เกิดจากการฝึกฝนอย่างสม่ำเสมอ"
+            </blockquote>
+
+            <h2>2. การจัดโครงสร้างเนื้อหา</h2>
+            <p>เนื้อหาที่ดีควรมีการจัดลำดับที่เป็นระบบ เข้าใจง่าย และมีความต่อเนื่อง</p>
+        </div>
+    </article>
+</body>
+</html>
 ```css
 [วางโค้ด CSS ที่นี่]
 ```
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .blog-post {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            font-family: 'Sarabun', sans-serif;
+            font-size: 1.5remd;
+        }
+
+        .post-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .post-title {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+            font-weight: 200;
+        }
+
+        .post-meta {
+            color: #878080;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .post-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .post-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .post-content h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin: 2rem 0 1rem;
+        }
+
+        blockquote {
+            font-style: italic;
+            border-left: 4px solid #007bff;
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .post-title {
+                font-size: 2rem;
+            }
+        }
+        
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](image-5.png)
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
@@ -703,10 +1364,262 @@ font-weight: bold;
 ```html
 [วางโค้ด HTML ที่นี่]
 ```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item" id="active">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+    <div class="product-card">
+         <h1>Nike</h1>
+        <div class="product-image">
+           
+       
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="/images/image.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b48d5070-e2c3-4ec0-84e4-00cf56f7174b/AIR+JORDAN+1+LOW.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/dd1b40fa-0b50-4a9b-97be-ef49d4c44b0c/NIKE+VOMERO+PLUS+CM.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/d9f1d9ee-a848-4a36-aab9-48b241078ebb/AIR+FORCE+1+LE+%28GS%29.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+
+           <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/dd1b40fa-0b50-4a9b-97be-ef49d4c44b0c/NIKE+VOMERO+PLUS+CM.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+
+           <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/dd1b40fa-0b50-4a9b-97be-ef49d4c44b0c/NIKE+VOMERO+PLUS+CM.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+           <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/dd1b40fa-0b50-4a9b-97be-ef49d4c44b0c/NIKE+VOMERO+PLUS+CM.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+           <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/dd1b40fa-0b50-4a9b-97be-ef49d4c44b0c/NIKE+VOMERO+PLUS+CM.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+     </div>
+    </div>
+</body>
+</html>
+
 ```css
 [วางโค้ด CSS ที่นี่]
 ```
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p {
+    color: blue;
+}
+
+/* Class Selector */
+.highlight {
+    background-color: yellow;
+}
+
+/* ID Selector */
+#header {
+    font-size: 24px;
+}
+
+/* Descendant Selector */
+div p {
+    margin: 10px;
+}
+
+/* Child Selector */
+div > p {
+    padding: 5px;
+}
+
+        nav {
+            background-color: #333;
+            padding: 15px;
+        }
+
+        /* การใช้ Descendant Selector */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* การใช้ Child Selector */
+        nav > ul > li {
+            margin: 0 10px;
+        }
+
+        /* การใช้ Class Selector */
+        .menu-item {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            font-size: 2rem;
+            font-weight: 300;
+        }
+
+        /* การใช้ Pseudo-class */
+        .menu-item:hover {
+            background-color: #555;
+            border-radius: 3px;
+        }
+
+        /* การใช้ ID Selector */
+        #active {
+            background-color: #007bff;
+            border-radius: 3px;
+        }
+        
+       
+        .product-card{
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            h1{
+                padding: 2rem 0;
+                text-align: center;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 3rem;
+                font-weight: 300;
+                
+                
+            }
+        }
+        .product-image{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 2rem;
+            .product-price{
+                color: black;
+                font-size: 1.5rem;
+            }
+            .product-description{
+                color: #555;
+                font-size: 1.5rem;
+            }
+            .product-button{
+                display: inline-block;
+                list-style: none;
+                text-decoration: none;
+                color: aliceblue;
+                background-color: #007bff;
+                padding: 1.5rem;
+                border-radius: 10%;
+                font-size: 1.5rem;
+            }
+            .img, img {
+                width: 100%;
+                border-radius: 10px;
+            }
+            .product-info{
+                padding: 10%;
+                background-color: #c0bcbc;
+                border-radius: 20px;
+
+            }
+
+
+        }
+        .product-title{
+                   
+                    font-size: 2rem;
+                    font-weight: 100;
+                }
+
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](image-3.png)
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
@@ -856,8 +1769,263 @@ font-weight: bold;
 ```html
 [วางโค้ด HTML ที่นี่]
 ```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item" id="active">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+    <div class="product-card">
+         <h1>Nike</h1>
+        <div class="product-image">
+           
+       
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="/images/image.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b48d5070-e2c3-4ec0-84e4-00cf56f7174b/AIR+JORDAN+1+LOW.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/dd1b40fa-0b50-4a9b-97be-ef49d4c44b0c/NIKE+VOMERO+PLUS+CM.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/d9f1d9ee-a848-4a36-aab9-48b241078ebb/AIR+FORCE+1+LE+%28GS%29.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+
+           <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/dd1b40fa-0b50-4a9b-97be-ef49d4c44b0c/NIKE+VOMERO+PLUS+CM.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+
+           <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/dd1b40fa-0b50-4a9b-97be-ef49d4c44b0c/NIKE+VOMERO+PLUS+CM.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+           <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/dd1b40fa-0b50-4a9b-97be-ef49d4c44b0c/NIKE+VOMERO+PLUS+CM.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+
+           <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <div class="img">
+                <img src="https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/dd1b40fa-0b50-4a9b-97be-ef49d4c44b0c/NIKE+VOMERO+PLUS+CM.png" alt="">
+            </div>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+     </div>
+    </div>
+</body>
+</html>
 ```css
 [วางโค้ด CSS ที่นี่]
 ```
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p {
+    color: blue;
+}
+
+/* Class Selector */
+.highlight {
+    background-color: yellow;
+}
+
+/* ID Selector */
+#header {
+    font-size: 24px;
+}
+
+/* Descendant Selector */
+div p {
+    margin: 10px;
+}
+
+/* Child Selector */
+div > p {
+    padding: 5px;
+}
+
+        nav {
+            background-color: #333;
+            padding: 15px;
+        }
+
+        /* การใช้ Descendant Selector */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* การใช้ Child Selector */
+        nav > ul > li {
+            margin: 0 10px;
+        }
+
+        /* การใช้ Class Selector */
+        .menu-item {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            font-size: 2rem;
+            font-weight: 300;
+        }
+
+        /* การใช้ Pseudo-class */
+        .menu-item:hover {
+            background-color: #555;
+            border-radius: 3px;
+        }
+
+        /* การใช้ ID Selector */
+        #active {
+            background-color: #007bff;
+            border-radius: 3px;
+        }
+        
+       
+        .product-card{
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            h1{
+                padding: 2rem 0;
+                text-align: center;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 3rem;
+                font-weight: 300;
+                
+                
+            }
+        }
+        .product-image{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 2rem;
+            .product-price{
+                color: black;
+                font-size: 1.5rem;
+            }
+            .product-description{
+                color: #555;
+                font-size: 1.5rem;
+            }
+            .product-button{
+                display: inline-block;
+                list-style: none;
+                text-decoration: none;
+                color: aliceblue;
+                background-color: #007bff;
+                padding: 1.5rem;
+                border-radius: 10%;
+                font-size: 1.5rem;
+            }
+            .img, img {
+                width: 100%;
+                border-radius: 10px;
+            }
+            .product-info{
+                padding: 10%;
+                background-color: #e9e1e1;
+                border-radius: 20px;
+
+            }
+            .product-info:hover{
+                background-color: #5900ff;
+
+            }
+
+
+        }
+        .product-title{
+                   
+                    font-size: 2rem;
+                    font-weight: 100;
+                }
+
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](image-4.png)
 
