@@ -217,7 +217,7 @@ div > p {
     <nav>
         <ul>
             <li><a href="#" class="menu-item" id="active">หน้าแรก</a></li>
-            <li><a href="#" class="menu-item">สินค้า</a></li>
+            <li><a href="#" class="menu-item" >สินค้า</a></li>
             <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
             <li><a href="#" class="menu-item">ติดต่อ</a></li>
         </ul>
@@ -232,9 +232,24 @@ div > p {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+[<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item"></a>หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+</body>
+</html>]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image.png)]
 
 
 [](#การทดลองที่-3-การจัดการสีและพื้นหลัง)
@@ -338,9 +353,65 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+[<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+<div class="product-container">
+
+    <div class="product-card">
+        <img src="images/PS2-Versions.png" alt="PS2 Versions">
+        <div class="product-info">
+            <h2 class="product-title">PS2</h2>
+            <p class="product-price">฿4,000</p>
+            <p class="product-description">
+                PS2 หรือ PlayStation 2 เป็นเครื่องเล่นเกมคอนโซลที่พัฒนาโดย Sony Computer Entertainment
+                เปิดตัวในปี 2000 และเป็นหนึ่งในเครื่องเล่นเกมที่ขายดีที่สุดในประวัติศาสตร์
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="images/PS3.jpg" alt="สินค้า 2">
+        <div class="product-info">
+            <h2 class="product-title">PS3</h2>
+            <p class="product-price">฿5,500</p>
+            <p class="product-description">PS3 หรือ PlayStation 3 เป็นเครื่องเล่นเกมคอนโซลที่พัฒนาโดย Sony Computer Entertainment</p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="images/PS4.jpg" alt="สินค้า 3">
+        <div class="product-info">
+            <h2 class="product-title">PS4</h2>
+            <p class="product-price">฿8,500</p>
+            <p class="product-description">PS4 หรือ PlayStation 4 เป็นเครื่องเล่นเกมคอนโซลที่พัฒนาโดย Sony Computer Entertainment</p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="images/PS5.jpg" alt="สินค้า 4">
+        <div class="product-info">
+            <h2 class="product-title">PS5</h2>
+            <p class="product-price">฿12,000</p>
+            <p class="product-description">PS5 หรือ PlayStation 5 เป็นเครื่องเล่นเกมคอนโซลที่พัฒนาโดย Sony Computer Entertainment</p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image-1.png)]
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
@@ -436,12 +507,74 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="stats-container">
+        <div class="stat-box">
+            <div class="stat-number">1,234</div>
+            <div class="stat-label">ผู้ใช้งาน</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">5.6K</div>
+            <div class="stat-label">ยอดขาย</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">ความพึงพอใจ</div>
+        </div>
+    </div>
+</body>
+</html>]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[.stats-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .stat-box {
+            flex: 1;
+            margin: 0 15px;
+            padding: 5rem;
+            text-align: center;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ffa600;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 3rem;
+            color: #0000ff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .stats-container {
+                flex-direction: column;
+            }
+
+            .stat-box {
+                margin: 1rem 0;
+            }
+        }]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image-2.png)]
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
@@ -554,12 +687,95 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style5.css">
+</head>
+<body>
+    <article class="blog-post">
+        <header class="post-header">
+            <h1 class="post-title">วิธีการเขียนบทความที่น่าสนใจ</h1>
+            <div class="post-meta">โพสต์เมื่อ 1 มกราคม 2025 | โดย ผู้เขียน</div>
+        </header>
+        
+        <div class="post-content">
+            <p>เนื้อหาบทความที่ดีควรมีความน่าสนใจและเป็นประโยชน์ต่อผู้อ่าน การเขียนบทความให้น่าอ่านนั้นมีหลักการสำคัญหลายประการ</p>
+
+            <h2>1. การเลือกหัวข้อที่น่าสนใจ</h2>
+            <p>หัวข้อที่ดีควรตรงกับความสนใจของกลุ่มเป้าหมาย และมีประโยชน์ต่อผู้อ่าน</p>
+
+            <blockquote>
+                "การเขียนที่ดีไม่ได้เกิดจากพรสวรรค์เพียงอย่างเดียว แต่เกิดจากการฝึกฝนอย่างสม่ำเสมอ"
+            </blockquote>
+
+            <h2>2. การจัดโครงสร้างเนื้อหา</h2>
+            <blockquote>
+            <p>เนื้อหาที่ดีควรมีการจัดลำดับที่เป็นระบบ เข้าใจง่าย และมีความต่อเนื่อง</p>
+            </blockquote>
+        </div>
+    </article>
+</body>
+</html>]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[        .blog-post {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            font-family: 'Sarabun', Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .post-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .post-title {
+            font-size: 2.5rem;
+            color: #17f10c;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .post-meta {
+            color: #fb0000;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .post-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .post-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .post-content h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin: 2rem 0 1rem;
+        }
+
+        blockquote {
+            font-style: italic;
+            border-left: 4px solid #ff7b00;
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .post-title {
+                font-size: 2rem;
+            }
+        }]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image-3.png)]
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
@@ -701,12 +917,137 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style6.css">
+</head>
+<body>
+    <div class="product-grid">
+        <!-- สินค้าชิ้นที่ 1 -->
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/PS2-Versions.png')"></div>
+            <div class="product-details">
+                <h3 class="product-title">PlayStation 2</h3>
+                <div class="product-price">฿5,999</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- สินค้าชิ้นที่ 2 -->
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/PS3.jpg')"></div>
+            <div class="product-details">
+                <h3 class="product-title">PlayStation 3</h3>
+                <div class="product-price">฿1,499</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- สินค้าชิ้นที่ 3 -->
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/PS4.jpg')"></div>
+            <div class="product-details">
+                <h3 class="product-title">PlayStation 4</h3>
+                <div class="product-price">฿12,900</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- สินค้าชิ้นที่ 4 -->
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/PS5.jpg')"></div>
+            <div class="product-details">
+                <h3 class="product-title">PlayStation 5</h3>
+                <div class="product-price">฿19,999</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 150px;
+            background-color: #f5f5f5;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-details {
+            padding: 15px;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+
+        .product-price {
+            font-size: 1.2rem;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .product-action {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .add-to-cart {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .add-to-cart:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image-4.png)]
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
@@ -854,10 +1195,229 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style7.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- HEADER -->
+    <header class="header">
+        <h1>Dashboard</h1>
+        <nav>
+            <button class="btn btn-light btn-sm">Profile</button>
+            <button class="btn btn-danger btn-sm">Log Out</button>
+        </nav>
+    </header>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <ul>
+            <li>Home</li>
+            <li>Report</li>
+            <li>Setting</li>
+        </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- STAT CARDS -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>ยอดขายรวม</h3>
+                <p>฿150,000</p>
+            </div>
+            <div class="stat-card">
+                <h3>Orders</h3>
+                <p>1,234</p>
+            </div>
+            <div class="stat-card">
+                <h3>New-Cus</h3>
+                <p>45</p>
+            </div>
+        </div>
+
+        <!-- CHARTS -->
+        <div class="chart-container">
+            <div class="chart">
+                <h3>กราฟแสดงยอดขาย</h3>
+                <canvas id="salesChart"></canvas>
+            </div>
+
+            <div class="chart">
+                <h3>สัดส่วนสินค้าขายดี</h3>
+                <canvas id="productChart"></canvas>
+            </div>
+        </div>
+
+    </main>
+
+</div>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    // กราฟเส้น (ยอดขายรายเดือน)
+    const ctx1 = document.getElementById('salesChart').getContext('2d');
+    new Chart(ctx1, {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            datasets: [{
+                label: 'ยอดขาย (บาท)',
+                data: [12000, 19000, 15000, 22000, 18000, 25000],
+                borderColor: '#0d6efd',
+                backgroundColor: 'rgba(13,110,253,0.2)',
+                tension: 0.4,
+                fill: true
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    labels: { color: '#333' }
+                }
+            }
+        }
+    });
+
+    // กราฟวงกลม (สินค้าขายดี)
+    const ctx2 = document.getElementById('productChart').getContext('2d');
+    new Chart(ctx2, {
+        type: 'pie',
+        data: {
+            labels: ['PS2', 'PS3', 'PS4', 'PS5'],
+            datasets: [{
+                data: [40, 20, 45, 40],
+                backgroundColor: [
+                    '#0d6efd',
+                    '#198754',
+                    '#ffc107',
+                    '#dc3545'
+                ]
+            }]
+        },
+        options: {
+            responsive: true
+        }
+    });
+</script>
+
+</body>
+</html>
+]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar main";
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: 70px 1fr;
+    height: 100vh;
+}
+
+/* HEADER */
+.header {
+    grid-area: header;
+    background: #0d6efd;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    grid-area: sidebar;
+    background: #1e293b;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 10px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar li:hover {
+    color: #0d6efd;
+}
+
+/* MAIN */
+.main-content {
+    grid-area: main;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* STATS */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.stat-card h3 {
+    font-size: 16px;
+    color: #555;
+}
+
+.stat-card p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0 0;
+}
+
+/* CHARTS */
+.chart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.chart {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+]
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
 
