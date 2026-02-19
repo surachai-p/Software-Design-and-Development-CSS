@@ -1,0 +1,160 @@
+/* ===== Global ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #eef2f7;
+}
+
+/* ===== Layout Grid ===== */
+.dashboard {
+    display: grid;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main";
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+/* ===== Header ===== */
+.header {
+    grid-area: header;
+    background: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.header-nav button {
+    margin-left: 10px;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+    grid-area: sidebar;
+    background: linear-gradient(180deg, #2c3e50, #1a252f);
+    color: white;
+    padding: 1.5rem 1rem;
+}
+
+.logo {
+    margin-bottom: 2rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.sidebar li:hover,
+.sidebar li.active {
+    background: rgba(255,255,255,0.15);
+}
+
+/* ===== Main Content ===== */
+.main-content {
+    grid-area: main;
+    padding: 2rem;
+}
+
+/* ===== Stats Cards ===== */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #4e73df;
+}
+
+/* ===== Charts ===== */
+.chart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+.chart {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    min-height: 200px;
+}
+
+/* ===== Buttons ===== */
+button {
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background-color: #4e73df;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2e59d9;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #4e73df;
+    color: #4e73df;
+}
+
+.btn-outline:hover {
+    background-color: #4e73df;
+    color: white;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-areas: 
+            "header"
+            "main";
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .chart-container {
+        grid-template-columns: 1fr;
+    }
+}
