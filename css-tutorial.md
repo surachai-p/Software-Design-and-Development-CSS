@@ -208,7 +208,7 @@ div > p {
 
         /* การใช้ ID Selector */
         #active {
-            background-color: #007bff;
+            background-color: #347cc9;
             border-radius: 3px;
         }
     </style>
@@ -233,8 +233,60 @@ div > p {
 ### ผลการทดลอง
 ```html
 [วางโค้ดที่นี่]
+```<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 2 - Navigation</title>
+    <link rel="stylesheet" href="css/lab2.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
+```css
+[วางโค้ดที่นี่]
+```nav {
+    background-color: #5a4949;
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav > ul > li {
+    margin: 0 10px;
+}
+
+.menu-item {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.menu-item:hover {
+    background-color: #dfc0c0;
+    border-radius: 3px;
+}
+
+#active {
+    background-color: #1a80e6;
+    border-radius: 3px;
+}
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image.png)]
 
 
 [](#การทดลองที่-3-การจัดการสีและพื้นหลัง)
@@ -339,9 +391,72 @@ background-size: cover;
 ### ผลการทดลอง
 ```html
 [วางโค้ดที่นี่]
+```<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 3</title>
+    <link rel="stylesheet" href="CSS/lab3.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card">
+        <img src="images/images.jpg" alt="สินค้า1">
+        <h3>ผัดกระเพราหมูสับไข่ดาว</h3>
+        <p>฿ราคา 70 บาท</p>
+    </div>
+
+    <div class="card">
+        <img src="images/images (1).jpg" alt="สินค้า2">
+        <h3>ไก่ชุปเเป้งทอด</h3>
+        <p>฿ราคา 60 บาท </p>
+    </div>
+
+    <div class="card">
+        <img src="images/images (2).jpg" alt="สินค้า3">
+        <h3>ต้มยำกุ้ง พรีเมี่ยมทะเล</h3>
+        <p>฿ราคา 120 บาท</p>
+    </div>
+
+    <div class="card">
+        <img src="images/images (3).jpg" alt="สินค้า4">
+        <h3>ซุปจระเข้หัน</h3>
+        <p>฿ราคา 3,000 บาท</p>
+    </div>
+
+</div>
+
+</body>
+</html>
+```css
+[วางโค้ดที่นี่]
+```body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    width: 200px;
+    padding: 15px;
+    background: white;
+    box-shadow: 0 2px 8px gray;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-
+![alt text](image-1.png)
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
 
@@ -437,12 +552,63 @@ border: 1px solid black;
 ### ผลการทดลอง
 ```html
 [วางโค้ด HTML ที่นี่]
-```
+```<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 4</title>
+    <link rel="stylesheet" href="CSS/lab4.css">
+</head>
+<body>
+
+<div class="stats-container">
+
+    <div class="stat-box">
+        <div class="stat-number">1,234</div>
+        <div class="stat-label">ผู้ใช้งาน</div>
+    </div>
+
+    <div class="stat-box">
+        <div class="stat-number">5.6K</div>
+        <div class="stat-label">ยอดขาย</div>
+    </div>
+
+    <div class="stat-box">
+        <div class="stat-number">98%</div>
+        <div class="stat-label">ความพึงพอใจ</div>
+    </div>
+
+</div>
+
+</body>
+</html>
+
 ```css
 [วางโค้ด CSS ที่นี่]
+```.stats-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.stat-box {
+    padding: 30px;
+    margin: 20px;
+    border: 2px solid blue;
+    background: lightblue;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 40px;
+    color: darkblue;
+}
+
+.stat-label {
+    font-size: 18px;
+}
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-
+![alt text](image-2.png)
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
 
@@ -555,12 +721,90 @@ font-weight: bold;
 ### ผลการทดลอง
 ```html
 [วางโค้ด HTML ที่นี่]
-```
+```<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 5</title>
+    <link rel="stylesheet" href="CSS/lab5.css">
+</head>
+<body>
+
+<article class="blog-post">
+
+    <header class="post-header">
+        <h1 class="post-title">วิธีการเขียนบทความที่น่าสนใจ</h1>
+        <div class="post-meta">
+            โพสต์เมื่อ 19 กุมภาพันธ์ 2025 | โดย ณภัทร สิงห์ตุ้ย ผู้เขียน
+        </div>
+    </header>
+
+    <div class="post-content">
+        <p>
+            เนื้อหาบทความที่ดีควรมีความน่าสนใจและเป็นประโยชน์ต่อผู้อ่าน
+        </p>
+
+        <h2>1. การเลือกหัวข้อที่น่าสนใจ</h2>
+        <p>
+            หัวข้อที่ดีควรตรงกับความสนใจของกลุ่มเป้าหมาย
+        </p>
+
+        <blockquote>
+            "การเขียนที่ดีไม่ได้เกิดจากพรสวรรค์เพียงอย่างเดียว แต่เกิดจากการฝึกฝน"
+        </blockquote>
+
+    </div>
+
+</article>
+
+</body>
+</html>
+
+
 ```css
 [วางโค้ด CSS ที่นี่]
+```.blog-post {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Sarabun', sans-serif;
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.post-title {
+    font-size: 2.5rem;
+    color: #333;
+    line-height: 1.2;
+}
+
+.post-meta {
+    color: #666;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.post-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+.post-content h2 {
+    margin-top: 2rem;
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 4px solid #007bff;
+    padding-left: 1rem;
+    color: #555;
+}
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-
+![alt text](image-3.png)
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
 
@@ -702,12 +946,92 @@ font-weight: bold;
 ### ผลการทดลอง
 ```html
 [วางโค้ด HTML ที่นี่]
-```
+```<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 6</title>
+    <link rel="stylesheet" href="CSS/lab6.css">
+</head>
+<body>
+
+<div class="product-grid">
+
+    <div class="product-card">
+        <img src="images/images (1).jpg" alt="สินค้า1">
+        <h3>ไก่ชุปเเป้งทอด พรีเมี่ยม</h3>
+        <p class="price">฿1,999</p>
+        <button>เพิ่มลงตะกร้า</button>
+    </div>
+
+    <div class="product-card">
+        <img src="images/images.jpg" alt="สินค้า2">
+        <h3>กระเพรา พรีเมี่ยม</h3>
+        <p class="price">฿2,499</p>
+        <button>เพิ่มลงตะกร้า</button>
+    </div>
+
+    <div class="product-card">
+        <img src="images/images (2).jpg" alt="สินค้า3">
+        <h3>ต้มยำกุ้ง พรีเมี่ยม</h3>
+        <p class="price">฿3,199</p>
+        <button>เพิ่มลงตะกร้า</button>
+    </div>
+
+</div>
+
+</body>
+</html>
+
 ```css
 [วางโค้ด CSS ที่นี่]
+```body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.product-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.price {
+    font-weight: bold;
+    color: #007bff;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-
+![alt text](image-4.png)
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
 
@@ -855,9 +1179,147 @@ font-weight: bold;
 ### ผลการทดลอง
 ```html
 [วางโค้ด HTML ที่นี่]
-```
+```<!DOCTYPE html>
+<html>
+<head>
+    <title>Modern Dashboard</title>
+    <link rel="stylesheet" href="CSS/lab6-dashboard.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <header class="header">
+        <h1>แดชบอร์ด</h1>
+        <nav>
+            <button>โปรไฟล์</button>
+            <button>ออกจากระบบ</button>
+        </nav>
+    </header>
+
+    <aside class="sidebar">
+        <ul>
+            <li>หน้าแรก</li>
+            <li>รายงาน</li>
+            <li>การตั้งค่า</li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>ยอดขายรวม</h3>
+                <p>฿150,000</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>จำนวนออเดอร์</h3>
+                <p>1,234</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>ลูกค้าใหม่</h3>
+                <p>45</p>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart">
+                <h3>กราฟแสดงยอดขาย</h3>
+            </div>
+
+            <div class="chart">
+                <h3>สัดส่วนสินค้าขายดี</h3>
+            </div>
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
+
 ```css
 [วางโค้ด CSS ที่นี่]
+```body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main";
+    grid-template-columns: 220px 1fr;
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #2c3e50;
+    color: white;
+    padding: 1rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.sidebar li:hover {
+    color: #1abc9c;
+}
+
+.main-content {
+    grid-area: main;
+    padding: 1.5rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.chart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+}
+
+.chart {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-
+![alt text](image-5.png)
