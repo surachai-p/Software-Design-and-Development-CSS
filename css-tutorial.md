@@ -233,9 +233,27 @@ div > p {
 ### ผลการทดลอง
 ```html
 [วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Workshop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="menu-item" id="active">หน้าแรก</a></li>
+            <li><a href="products.html" class="menu-item">สินค้า</a></li>
+            <li><a href="about.html" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="contact.html" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-
+![alt text](image.png)
 
 [](#การทดลองที่-3-การจัดการสีและพื้นหลัง)
 ## การทดลองที่ 3: การจัดการสีและพื้นหลัง
