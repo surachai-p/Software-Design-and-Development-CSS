@@ -986,13 +986,146 @@ blockquote {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vasin-Online Store</title>
+    <link rel="stylesheet" href="LAB6-style.css">
+</head>
+<nav>
+    <h1>:Vasin Online Store</h1>
+</nav>
+<body>
+    <div class="product-grid">
+        <!-- สินค้าชิ้นที่ 1 -->
+        <div class="product-card">
+            <div class="product-image" style="background-image: url(image/huatakhe_01.png)"></div>
+            <div class="product-details">
+                <h3 class="product-title">HUATAKHE poster 1</h3>
+                <div class="product-price">฿1,499</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- สินค้าชิ้นที่ 2 -->
+        <div class="product-card">
+            <div class="product-image" style="background-image: url(image/huatakhe_02.png)"></div>
+            <div class="product-details">
+                <h3 class="product-title">HUATAKHE poster 2</h3>
+                <div class="product-price">฿1,499</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- เพิ่มสินค้าอื่นๆ ตามต้องการ -->
+         <div class="product-card">
+            <div class="product-image" style="background-image: url(image/huatakhe_03.png)"></div>
+            <div class="product-details">
+                <h3 class="product-title">HUATAKHE poster 3</h3>
+                <div class="product-price">฿1,499</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image" style="background-image: url(image/huatakhe_04.png)"></div>
+            <div class="product-details">
+                <h3 class="product-title">HUATAKHE poster 4</h3>
+                <div class="product-price">฿1,499</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+nav {
+    background-color: #ffaa00;
+    padding: 15px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: rgb(204, 204, 204);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    background-color: #f5f5f5;
+    background-size: cover;
+    background-position: center;
+}
+
+.product-details {
+    padding: 15px;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.product-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.add-to-cart {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-
+![LAB6](LAB6-Layout/LAB6-result.png)
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
 
