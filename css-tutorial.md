@@ -550,12 +550,98 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vasin Kaewmoragot</title>
+    <link rel="stylesheet" href="LAB4-style.css">
+</head>
+<body>
+    <h1>Vasin Kaewmoragot - DIEWLAND STUDIO</h1>
+    <div class="stats-container">
+        <div class="stat-box-black">
+            <div class="stat-number">1,234</div>
+            <div class="stat-label">ผู้ใช้งาน</div>
+        </div>
+        <div class="stat-box-purple">
+            <div class="stat-number">5.6K</div>
+            <div class="stat-label">ยอดขาย</div>
+        </div>
+        <div class="stat-box-blue">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">ความพึงพอใจ</div>
+        </div>
+    </div>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 2000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.stat-box-black{
+    flex: 1;
+    margin: 0 15px;
+    padding: 2rem;
+    text-align: center;
+    background-color: black;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat-box-purple{
+    flex: 1;
+    margin: 0 15px;
+    padding: 2rem;
+    text-align: center;
+    background-color: purple;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat-box-blue{
+    flex: 1;
+    margin: 0 15px;
+    padding: 2rem;
+    text-align: center;
+    background-color: blue;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #ffaa00;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: whitesmoke;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+    }
+
+    .stat-box {
+        margin: 1rem 0;
+    }
+}
 ```
+
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![LAB4-result](LAB4-size/LAB4-result.png)
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
