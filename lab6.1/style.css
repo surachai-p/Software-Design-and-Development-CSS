@@ -1,0 +1,204 @@
+/* นำเข้าฟอนต์จาก Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+
+/* รีเซ็ตค่าพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    background-color: #f1f5f9;
+}
+
+/* 2. ปรับแต่งการแสดงผลและ Layout */
+.dashboard {
+    display: grid;
+    /* การกำหนดพื้นที่ Grid แบบครอบคลุม */
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main";
+    grid-template-columns: 260px 1fr;
+    grid-template-rows: 70px 1fr; /* ฟิกซ์ความสูง header ไว้ที่ 70px */
+    min-height: 100vh;
+}
+
+/* --- Header --- */
+.header {
+    grid-area: header;
+    background: #ffffff;
+    padding: 0 2rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    color: #1e293b;
+}
+
+.header-nav button {
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-left: 10px;
+    transition: all 0.2s;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #cbd5e1;
+    color: #475569;
+}
+
+.btn-outline:hover {
+    background: #f8fafc;
+}
+
+.btn-primary {
+    background: #ef4444;
+    border: none;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #dc2626;
+}
+
+/* --- Sidebar --- */
+.sidebar {
+    grid-area: sidebar;
+    background: #0f172a; /* สีกรมท่าเข้ม */
+    color: #f8fafc;
+    padding: 2rem 1rem;
+    z-index: 20;
+}
+
+.sidebar-menu {
+    list-style: none;
+}
+
+.sidebar-menu li {
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #94a3b8;
+    transition: background 0.2s, color 0.2s;
+}
+
+.sidebar-menu li:hover, .sidebar-menu li.active {
+    background: #1e293b;
+    color: #ffffff;
+}
+
+/* --- Main Content --- */
+.main-content {
+    grid-area: main;
+    padding: 2rem;
+    overflow-y: auto; /* ให้เลื่อนเฉพาะส่วนเนื้อหาหลักได้ */
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    display: flex;
+    align-items: center;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+}
+
+.stat-card.warning {
+    border-left: 4px solid #f59e0b;
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    margin-right: 1.5rem;
+}
+
+.stat-info h3 {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin-bottom: 0.2rem;
+}
+
+.stat-info p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+/* Chart Container */
+.chart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* แบ่งสัดส่วน 2 ต่อ 1 */
+    gap: 1.5rem;
+}
+
+.chart {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    border: 1px solid #e2e8f0;
+}
+
+.chart h3 {
+    font-size: 1.1rem;
+    color: #334155;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 0.5rem;
+}
+
+.resource-list {
+    list-style: none;
+}
+
+.resource-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed #e2e8f0;
+    color: #475569;
+}
+
+/* --- Responsive (Mobile) --- */
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-areas: 
+            "header"
+            "main";
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none; /* ซ่อนแถบด้านข้างเมื่อจอเล็ก */
+    }
+
+    .chart-container {
+        grid-template-columns: 1fr; /* ให้กราฟเรียงเป็นคอลัมน์เดียว */
+    }
+}

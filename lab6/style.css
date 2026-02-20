@@ -1,0 +1,90 @@
+/* ตั้งค่าพื้นฐาน */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.product-grid {
+    display: grid;
+    /* 2. ปรับแต่งขนาดแสดงผลสินค้าให้เล็กลง: 
+       เปลี่ยน minmax จาก 250px เป็น 180px เพื่อให้การ์ดแคบลงและแสดงได้หลายคอลัมน์ขึ้น */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* เพิ่มเงาตอน Hover ให้มีมิติขึ้น */
+}
+
+.product-image {
+    width: 100%;
+    /* ปรับความสูงรูปลงจาก 200px เป็น 150px เพื่อให้สมส่วนกับความกว้างที่ลดลง */
+    height: 150px; 
+    background-color: #eaeaea;
+    background-size: cover;
+    background-position: center;
+}
+
+.product-details {
+    padding: 12px; /* ลด padding ลงเล็กน้อยให้เหมาะกับไซส์การ์ด */
+}
+
+.product-title {
+    font-size: 1rem; /* ลดขนาดฟอนต์หัวข้อลง */
+    margin: 0 0 8px 0;
+    color: #333;
+    white-space: nowrap; /* ป้องกันข้อความยาวเกินบรรทัด */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-price {
+    font-size: 1.1rem; /* ลดขนาดฟอนต์ราคาลง */
+    color: #007bff;
+    font-weight: bold;
+}
+
+.product-action {
+    display: flex;
+    justify-content: center; /* จัดปุ่มให้อยู่ตรงกลาง */
+    margin-top: 12px;
+}
+
+.add-to-cart {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 0;
+    width: 100%; /* ขยายปุ่มให้เต็มความกว้างของการ์ด */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive สำหรับหน้าจอขนาดเล็กมากๆ (มือถือ) */
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); /* เล็กลงอีกบนมือถือ */
+        padding: 15px;
+        gap: 15px;
+    }
+}

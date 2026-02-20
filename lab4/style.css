@@ -1,0 +1,59 @@
+/* 2. ปรับแต่ง Box model, ขนาดและฟอนต์ตัวหนังสือ, สี */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9; /* สีพื้นหลังหน้าเว็บโดยรวม */
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 4rem auto; /* เพิ่ม Margin บน-ล่าง เป็น 4rem (ดันกรอบลงมาจากขอบจอด้านบน) */
+    padding: 0 2rem;   /* เพิ่ม Padding ซ้าย-ขวา */
+}
+
+.stat-box {
+    flex: 1;
+    margin: 0 20px;       /* ภายนอก: เพิ่มระยะห่างระหว่างแต่ละกล่อง */
+    padding: 2.5rem;      /* ภายใน: เพิ่มพื้นที่ว่างระหว่างขอบกล่องกับตัวหนังสือให้กว้างขึ้น */
+    text-align: center;
+    background-color: #ffffff;
+    border: 2px solid #e2e8f0; /* เพิ่ม Border ให้เห็นขอบเขตของกล่องชัดเจน */
+    border-radius: 12px;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* เพิ่มลูกเล่น (Hover State) เพื่อให้หน้าเว็บดูมีชีวิตชีวา */
+.stat-box:hover {
+    transform: translateY(-10px);
+    border-color: #3b82f6; /* เมื่อชี้เมาส์ กรอบจะเปลี่ยนเป็นสีน้ำเงิน */
+}
+
+.stat-number {
+    font-size: 3.5rem;    /* ขยายตัวเลขให้ใหญ่และโดดเด่นขึ้น */
+    font-weight: 800;
+    color: #2563eb;       /* เปลี่ยนตัวเลขเป็นสีน้ำเงินเข้ม */
+    margin-bottom: 1rem;  /* ระยะห่างด้านล่างระหว่างตัวเลขกับข้อความ (Box Model) */
+}
+
+.stat-label {
+    font-size: 1.1rem;    /* ขยายข้อความให้ใหญ่ขึ้นเล็กน้อย */
+    color: #64748b;       /* เปลี่ยนข้อความเป็นสีเทาอมฟ้า */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* เพิ่มระยะห่างระหว่างตัวอักษรให้ดูโปร่งขึ้น */
+}
+
+/* Responsive Design สำหรับหน้าจอมือถือ */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+    .stat-box {
+        margin: 1rem 0; /* เมื่อจอเล็ก ให้เปลี่ยนมาใช้ Margin บน-ล่าง แทน ซ้าย-ขวา */
+    }
+}

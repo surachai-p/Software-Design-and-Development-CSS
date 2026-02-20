@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network & Server Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <div class="logo-area">
+                <h1>🌐 Network Monitor</h1>
+            </div>
+            <nav class="header-nav">
+                <button class="btn-outline">แอดมินระบบ</button>
+                <button class="btn-primary">ออกจากระบบ</button>
+            </nav>
+        </header>
+
+        <aside class="sidebar">
+            <nav>
+                <ul class="sidebar-menu">
+                    <li class="active">ภาพรวมระบบ (Overview)</li>
+                    <li>จัดการเซิร์ฟเวอร์ (Servers)</li>
+                    <li>เครือข่ายจำลอง (Virtual Networks)</li>
+                    <li>ตั้งค่าความปลอดภัย (Firewall)</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">💻</div>
+                    <div class="stat-info">
+                        <h3>เซิร์ฟเวอร์ที่ทำงานอยู่</h3>
+                        <p>12 / 15 Node</p>
+                    </div>
+                </div>
+                <div class="stat-card warning">
+                    <div class="stat-icon">⚠️</div>
+                    <div class="stat-info">
+                        <h3>การแจ้งเตือนระบบ</h3>
+                        <p>3 รายการ</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-info">
+                        <h3>การใช้แบนด์วิดท์</h3>
+                        <p>850 Mbps</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart">
+                    <h3>กราฟปริมาณการรับ-ส่งข้อมูล (Traffic)</h3>
+                    <div class="placeholder-chart" style="background: linear-gradient(180deg, #e2e8f0 0%, #f8fafc 100%); height: 200px; border-radius: 8px; margin-top: 1rem;">
+                        </div>
+                </div>
+                <div class="chart">
+                    <h3>สถานะทรัพยากร (CPU/RAM)</h3>
+                    <ul class="resource-list">
+                        <li><span>Node 1 (Web)</span> <span>75%</span></li>
+                        <li><span>Node 2 (DB)</span> <span>42%</span></li>
+                        <li><span>Node 3 (Backup)</span> <span>15%</span></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

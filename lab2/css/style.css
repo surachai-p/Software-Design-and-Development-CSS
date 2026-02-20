@@ -1,0 +1,39 @@
+/* 3. เปลี่ยนสีพื้นหลังของเมนู (ในตัวอย่างนี้เปลี่ยนเป็นสีน้ำเงินเข้ม #1a252f) */
+nav {
+    background-color: #1a252f; 
+    padding: 15px;
+}
+
+/* --- โค้ดส่วนที่เหลือยังคงเหมือนเดิม --- */
+
+/* การใช้ Descendant Selector */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* การใช้ Child Selector */
+nav > ul > li {
+    margin: 0 10px;
+}
+
+/* การใช้ Class Selector */
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+/* การใช้ Pseudo-class */
+.menu-item:hover {
+    background-color: #555;
+    border-radius: 3px;
+}
+
+/* การใช้ ID Selector */
+#active {
+    background-color: #007bff;
+    border-radius: 3px;
+}
