@@ -454,7 +454,7 @@ background-size: cover;
 </html>
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-![LAB3](LAB3-colour/LAB3-result.png)
+![LAB3](LAB3-background/LAB3-result.png)
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
