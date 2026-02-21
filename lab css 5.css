@@ -1,0 +1,62 @@
+/* style.css */
+body {
+    background-color: #f8f9fa; /* เพิ่มสีพื้นหลังหน้าเว็บ */
+}
+
+.blog-post {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #ffffff; /* ให้เนื้อหาดูเด่นขึ้น */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* เพิ่มเงาให้นุ่มนวล */
+    border-radius: 8px;
+    font-family: 'Sarabun', sans-serif;
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 1.5rem;
+}
+
+.post-title {
+    font-size: 2.8rem; /* ปรับขนาดใหญ่ขึ้น */
+    color: #2c3e50;    /* เปลี่ยนเป็นสีน้ำเงินเข้ม */
+    margin-bottom: 0.7rem;
+    line-height: 1.3;
+}
+
+.post-meta {
+    color: #888;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* เพิ่มระยะห่างตัวอักษร */
+}
+
+.post-content {
+    font-size: 1.15rem; /* ปรับขนาดเนื้อหาให้อ่านง่ายขึ้น */
+    line-height: 1.9;
+    color: #34495e;
+}
+
+.post-content h2 {
+    font-size: 1.6rem;
+    color: #e67e22; /* เปลี่ยนหัวข้อย่อยเป็นสีส้มอิฐ */
+    margin: 2.5rem 0 1rem;
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 5px solid #e67e22; /* เปลี่ยนสีเส้นขอบ quote */
+    margin: 2rem 0;
+    padding: 1rem 1.5rem;
+    background-color: #fffaf5;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .post-title {
+        font-size: 2rem;
+    }
+}

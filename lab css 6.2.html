@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="lab css 6.2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <h2><i class="fas fa-chart-line"></i> MY DASH</h2>
+            <nav>
+                <ul>
+                    <li class="active"><i class="fas fa-home"></i> หน้าแรก</li>
+                    <li><i class="fas fa-chart-bar"></i> รายงานยอดขาย</li>
+                    <li><i class="fas fa-cog"></i> การตั้งค่าระบบ</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <header class="header">
+            <h1>ภาพรวมธุรกิจ</h1>
+            <nav>
+                <button><i class="fas fa-user-circle"></i> โปรไฟล์</button>
+                <button class="logout"><i class="fas fa-sign-out-alt"></i> ออกจากระบบ</button>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3><i class="fas fa-money-bill-wave"></i> ยอดขายรวม </h3>
+                    <p>฿150,000</p>
+                </div>
+                <div class="stat-card" style="border-left-color: #28a745;"> <h3><i class="fas fa-shopping-cart"></i> จำนวนออเดอร์</h3>
+                    <p>1,234</p>
+                </div>
+                <div class="stat-card" style="border-left-color: #ffc107;"> <h3><i class="fas fa-user-plus"></i> ลูกค้าใหม่</h3>
+                    <p>45</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart">
+                    <h3>📈 กราฟแสดงยอดขาย</h3>
+                    <div style="height: 250px; background: #fdfdfd; border: 1px dashed #e9ecef; display: flex; align-items: center; justify-content: center; color: #adb5bd; font-size: 1.1rem;">
+                        <i class="fas fa-chart-line" style="margin-right: 10px;"></i> พื้นที่สำหรับแสดงกราฟเส้น (เช่น Chart.js)
+                    </div>
+                </div>
+                <div class="chart">
+                    <h3>📊 สัดส่วนสินค้าขายดี</h3>
+                    <div style="height: 250px; background: #fdfdfd; border: 1px dashed #e9ecef; display: flex; align-items: center; justify-content: center; color: #adb5bd; font-size: 1.1rem;">
+                        <i class="fas fa-chart-pie" style="margin-right: 10px;"></i> พื้นที่สำหรับแสดงกราฟวงกลม (เช่น Chart.js)
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
