@@ -1,0 +1,177 @@
+/* รีเซ็ตค่าเริ่มต้นและกำหนดฟอนต์ให้กับทั้งหน้าเว็บ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+/* --- ส่วน Header และปุ่ม --- */
+.header {
+    grid-area: header;
+    background: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10; /* ให้เงาทับเนื้อหาด้านล่าง */
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.header button {
+    padding: 8px 16px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.btn-profile {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.btn-profile:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-logout {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-logout:hover {
+    background-color: #c82333;
+}
+
+/* --- ส่วน Sidebar และเมนู --- */
+.sidebar {
+    grid-area: sidebar;
+    background: #2c3e50;
+    color: white;
+    padding: 2rem 1rem;
+}
+
+.sidebar-menu {
+    list-style: none; /* เอาจุดไข่ปลาออก */
+}
+
+.sidebar-menu li {
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar-menu li:hover {
+    background-color: #34495e; /* สีสว่างขึ้นเวลานำเมาส์ไปชี้ */
+}
+
+/* --- ส่วนเนื้อหาหลักและการ์ด --- */
+.main-content {
+    grid-area: main;
+    padding: 2rem;
+    background: #f5f7fa;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* ปรับเงาให้นุ่มนวลขึ้น */
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px); /* ให้การ์ดเด้งขึ้นนิดนึงเวลาชี้ */
+}
+
+.stat-card h3 {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.stat-card p {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+/* เพิ่มแถบสีด้านซ้ายให้การ์ดดูมีมิติ */
+.border-blue { border-left: 4px solid #007bff; }
+.border-green { border-left: 4px solid #28a745; }
+.border-purple { border-left: 4px solid #6f42c1; }
+
+.chart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+.chart {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.chart h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.chart-placeholder {
+    height: 200px;
+    background-color: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #adb5bd;
+}
+
+/* --- Responsive Design สำหรับมือถือ --- */
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-areas: 
+            "header"
+            "main";
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .chart-container {
+        grid-template-columns: 1fr;
+    }
+}
