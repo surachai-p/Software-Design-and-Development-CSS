@@ -1,0 +1,26 @@
+body {
+
+    background-color: #f6fcff;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.dcon {
+    justify-content: center;
+    display: flex;
+}   
+
+.bdr {
+    color: #3d9bd1;
+    padding: 10px 20px;
+    border: 2px solid #87d3ff;
+    border-radius:5px;
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+}
+
+.bdr:hover {
+    background-color: #e3e8eb;
+}
