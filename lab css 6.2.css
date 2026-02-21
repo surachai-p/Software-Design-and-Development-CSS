@@ -1,0 +1,225 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Sarabun', sans-serif;
+    background-color: #f8f9fa; /* Light grey background for a clean look */
+    line-height: 1.6;
+    color: #343a40; /* Darker text for readability */
+}
+
+/* Overall Dashboard Layout */
+.dashboard {
+    display: grid;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main";
+    grid-template-columns: 280px 1fr; /* Wider sidebar for more content */
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+/* --- Header Section --- */
+.header {
+    grid-area: header;
+    background: #ffffff;
+    padding: 1rem 2.5rem; /* More padding */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e9ecef;
+    z-index: 10;
+}
+
+.header h1 {
+    font-size: 1.6rem; /* Slightly larger title */
+    color: #212529;
+    font-weight: 600;
+}
+
+.header nav button {
+    padding: 10px 20px;
+    margin-left: 15px;
+    border-radius: 8px; /* Softer rounded corners */
+    border: none; /* No border for a cleaner look */
+    background: #e9ecef; /* Light grey button background */
+    color: #495057;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.header nav button:hover {
+    background: #dee2e6;
+    color: #212529;
+}
+
+.header nav button.logout {
+    background-color: #dc3545; /* Red for logout */
+    color: white;
+}
+
+.header nav button.logout:hover {
+    background-color: #c82333;
+}
+
+/* --- Sidebar Section --- */
+.sidebar {
+    grid-area: sidebar;
+    background: linear-gradient(to bottom, #142b5f, #334c89); /* Dark gradient for depth */
+    color: #e0e0e0; /* Lighter text for contrast */
+    padding: 2.5rem 1.5rem; /* More vertical padding */
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    position: sticky; /* Make sidebar sticky */
+    top: 0;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    color: #ffffff;
+    margin-bottom: 3rem; /* More space below title */
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 15px 20px; /* More padding for menu items */
+    margin-bottom: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    display: flex; /* For icon alignment */
+    align-items: center;
+    font-weight: 500;
+}
+
+.sidebar li i { /* Icon styling */
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.sidebar li:hover {
+    background: #3a4b60; /* Slightly lighter dark on hover */
+    color: #ffffff;
+}
+
+.sidebar li.active { /* Active menu item */
+    background: #007bff;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,123,255,0.3);
+}
+
+/* --- Main Content Section --- */
+.main-content {
+    grid-area: main;
+    padding: 2.5rem; /* More padding */
+    background: #f8f9fa;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Larger stat cards */
+    gap: 2rem; /* More space between cards */
+    margin-bottom: 3rem;
+}
+
+.stat-card {
+    background: #ffffff;
+    padding: 2rem; /* More internal padding */
+    border-radius: 12px; /* Softer corners */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08); /* More prominent shadow */
+    border-left: 6px solid #007bff; /* Primary blue left border */
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.stat-card h3 {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.stat-card p {
+    font-size: 2.2rem; /* Larger numbers */
+    font-weight: 700;
+    color: #212529;
+}
+
+/* Chart Section */
+.chart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.chart {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    min-height: 350px; /* Taller charts */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.chart h3 {
+    font-size: 1.3rem;
+    color: #212529;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .dashboard {
+        grid-template-columns: 200px 1fr; /* Slightly narrower sidebar on medium screens */
+    }
+    .chart-container {
+        grid-template-columns: 1fr; /* Stack charts on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-areas: 
+            "header"
+            "main";
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        display: none; /* Hide sidebar on mobile */
+    }
+    .header {
+        padding: 0.8rem 1.5rem;
+    }
+    .header h1 {
+        font-size: 1.2rem;
+    }
+    .header nav button {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+    .main-content {
+        padding: 1.5rem;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr; /* Stack stat cards on mobile */
+    }
+}
