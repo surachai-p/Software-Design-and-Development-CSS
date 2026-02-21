@@ -232,9 +232,98 @@ div > p {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <link rel="stylesheet" href="css/mama.css">
+</head>
+<body>
+
+<section id="products">
+    <h2>สินค้าของเรา</h2>
+</section>
+
+<div class="dcon">
+    <figure class="bdr">
+    <a href="img/mamapack.png" target="_blank">
+        <img src="img/mamapack.png" 
+            alt="คลิกเพื่อดูรูปขนาดใหญ่"
+            height="180">
+    </a>
+    <figcaption>
+        มาม่าคัพ หมูสับ
+    </figcaption>
+    </figure>
+
+    <figure class="bdr">
+    <a href="img/mamacup.jpg" target="_blank">
+        <img src="img/mamacup.jpg" 
+            alt="คลิกเพื่อดูรูปขนาดใหญ่"
+            height="180">
+    </a>
+    <figcaption>
+        มาม่าคัพ หมูสับ
+    </figcaption>
+    </figure>
+</div>
+
+<div class="dcon">
+    <figure class="bdr">
+    <a href="img/mamatomyum.png" target="_blank">
+        <img src="img/mamatomyum.png" 
+            alt="คลิกเพื่อดูรูปขนาดใหญ่"
+            height="180">
+    </a>
+    <figcaption>
+        มาม่าคัพซอง
+    </figcaption>
+    </figure>
+
+    <figure class="bdr">
+    <a href="img/mamacuptomyum.jpg" target="_blank">
+        <img src="img/mamacuptomyum.jpg" 
+            alt="คลิกเพื่อดูรูปขนาดใหญ่"
+            height="180">
+    </a>
+    <figcaption>
+        มาม่าคัพ ต้มยำ
+    </figcaption>
+    </figure>
+</div>
+
+</body>
+</html>]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+
+```css
+body {
+
+    background-color: #f6fcff;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.dcon {
+    justify-content: center;
+    display: flex;
+}   
+
+.bdr {
+    color: #3d9bd1;
+    padding: 10px 20px;
+    border: 2px solid #87d3ff;
+    border-radius:5px;
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+}
+
+.bdr:hover {
+    background-color: #e3e8eb;
+}
+```
+![ex1](imglab/ex1.png)
 
 
 [](#การทดลองที่-3-การจัดการสีและพื้นหลัง)
@@ -338,9 +427,262 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="mma.css">
+</head>
+<body class="prompt-medium">
+
+    <div class="dcon">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/mamapack.png" alt="">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">มาม่า หมูสับ</h2>
+                <p class="product-price">฿1,999</p>
+                <p class="product-description">
+                    รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/mamacup.jpg" alt="">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">มาม่าคัพ หมูสับ</h2>
+                <p class="product-price">฿1,999</p>
+                <p class="product-description">
+                    รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="dcon">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/mamatomyum.png" alt="">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">มาม่า ต้มยำ</h2>
+                <p class="product-price">฿1,999</p>
+                <p class="product-description">
+                    รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/mamacuptomyum.jpg" alt="">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">มาม่าคัพ ต้มยำ</h2>
+                <p class="product-price">฿1,999</p>
+                <p class="product-description">
+                    รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+
+```css
+
+body {
+    display: flex;
+    background-color: #e9eaf8;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.dcon {
+    justify-content: center;
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+}   
+
+
+.product-card {
+    width: 300px;
+    
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: white;
+}
+
+.product-image img {
+    
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-title {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: #007bff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.product-button {
+    display: block;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.product-button:hover {
+    background: linear-gradient(to right, #0056b3, #003980);
+}
+
+.prompt-thin {
+  font-family: "Prompt", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.prompt-extralight {
+  font-family: "Prompt", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.prompt-light {
+  font-family: "Prompt", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.prompt-regular {
+  font-family: "Prompt", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.prompt-medium {
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.prompt-semibold {
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.prompt-bold {
+  font-family: "Prompt", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.prompt-extrabold {
+  font-family: "Prompt", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.prompt-black {
+  font-family: "Prompt", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.prompt-thin-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.prompt-extralight-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.prompt-light-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.prompt-regular-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.prompt-medium-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.prompt-semibold-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.prompt-bold-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.prompt-extrabold-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.prompt-black-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+```
+![imglab2](imglab/ex2.png)
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
