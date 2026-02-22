@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Dashboard</title>
+
+    <!-- เชื่อมไฟล์ CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="dashboard">
+    <header class="header">
+        <h1>แดชบอร์ด</h1>
+        <nav>
+            <button>โปรไฟล์</button>
+            <button>ออกจากระบบ</button>
+        </nav>
+    </header>
+
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li>หน้าแรก</li>
+                <li>รายงาน</li>
+                <li>การตั้งค่า</li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>ยอดขายรวม</h3>
+                <p>฿150,000</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>จำนวนออเดอร์</h3>
+                <p>1,234</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>ลูกค้าใหม่</h3>
+                <p>45</p>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart">
+                <h3>กราฟแสดงยอดขาย</h3>
+                <canvas id="salesChart"></canvas>
+            </div>
+
+            <div class="chart">
+                <h3>สัดส่วนสินค้าขายดี</h3>
+                <canvas id="productChart"></canvas>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script>
+    // กราฟยอดขาย
+    const salesCtx = document.getElementById('salesChart').getContext('2d');
+    new Chart(salesCtx, {
+        type: 'line',
+        data: {
+            labels: ['มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน'],
+            datasets: [{
+                label: 'ยอดขาย (พันบาท)',
+                data: [65, 75, 70, 85, 90, 95],
+                borderColor: '#FF6B6B',
+                backgroundColor: 'rgba(255, 107, 107, 0.1)',
+                borderWidth: 3,
+                fill: true,
+                tension: 0.4
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: true,
+                    labels: { font: { size: 14 } }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100
+                }
+            }
+        }
+    });
+
+    // กราฟสินค้าขายดี
+    const productCtx = document.getElementById('productChart').getContext('2d');
+    new Chart(productCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['เสื้อยืด', 'กางเกง', 'รองเท้า', 'อื่นๆ'],
+            datasets: [{
+                data: [40, 25, 20, 15],
+                backgroundColor: [
+                    '#FF6B6B',
+                    '#4ECDC4',
+                    '#FFE66D',
+                    '#95E1D3'
+                ],
+                borderColor: '#fff',
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: true,
+                    labels: { font: { size: 14 } }
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
