@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Premium Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <h1>แดชบอร์ด</h1>
+            <nav class="header-nav">
+                <button class="btn btn-outline">โปรไฟล์</button>
+                <button class="btn btn-primary">ออกจากระบบ</button>
+            </nav>
+        </header>
+
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Admin<span>Pro</span></h2>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li class="active"><a href="#">หน้าแรก</a></li>
+                    <li><a href="#">รายงาน</a></li>
+                    <li><a href="#">ลูกค้า</a></li>
+                    <li><a href="#">การตั้งค่า</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <p class="stat-title">ยอดขายรวม</p>
+                    <h3 class="stat-value text-primary">฿150,000</h3>
+                    <span class="stat-trend positive">+12% จากเดือนที่แล้ว</span>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-title">จำนวนออเดอร์</p>
+                    <h3 class="stat-value">1,234</h3>
+                    <span class="stat-trend positive">+5% จากเดือนที่แล้ว</span>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-title">ลูกค้าใหม่</p>
+                    <h3 class="stat-value">45</h3>
+                    <span class="stat-trend negative">-2% จากเดือนที่แล้ว</span>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart card-glass">
+                    <h3>กราฟแสดงยอดขาย</h3>
+                    <div class="chart-placeholder">
+                        <p>พื้นที่สำหรับใส่กราฟ (เช่น Chart.js)</p>
+                    </div>
+                </div>
+                <div class="chart card-glass">
+                    <h3>สัดส่วนสินค้าขายดี</h3>
+                    <div class="chart-placeholder pie-placeholder">
+                        <p>พื้นที่กราฟวงกลม</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
