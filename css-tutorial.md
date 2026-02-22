@@ -354,9 +354,148 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="product-card">
+        <div class="product-image1"></div>
+        <div class="product-info">
+            <h2 class="product-title">กล้วย</h2>
+            <p class="product-price">฿150</p>
+            <p class="product-description">
+                อร่อยและมีประโยชน์ต่อสุขภาพ เหมาะสำหรับการทำขนมและเครื่องดื่มต่าง ๆ
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image2"></div>
+        <div class="product-info">
+            <h2 class="product-title">หุ่นยนต์แมวจากศตวรรษที่ 22</h2>
+            <p class="product-price">฿3,912</p>
+            <p class="product-description">
+                สภาพเสื่อมลงเล็กน้อย แต่ยังคงความน่ารักและฟังก์ชันการทำงานที่หลากหลาย
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image3"></div>
+        <div class="product-info">
+            <h2 class="product-title">เสื้อผ้าหน้าหล่อสำหรับเด็ก</h2>
+            <p class="product-price">฿200</p>
+            <p class="product-description">
+                ใส่แล้วหน้าหล่อเหมือนเสื้อ เหมาะสำหรับเด็กที่ต้องการหน้าหล่อ
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image4"></div>
+        <div class="product-info">
+            <h2 class="product-title">ชุดสูท</h2>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                เหมาะสำหรับทางการงานที่เป็นทางการหรือโอกาสพิเศษต่าง ๆ
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+</body>
+</html>
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+
+```css
+        .product-card {
+            width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: white;
+
+            display: inline-block; /* ทำให้ element วางต่อกันได้ */
+            vertical-align: top;   /* จัดให้ด้านบนเสมอกัน */
+            margin-right: 20px; /* เพิ่มระยะห่างระหว่างการ์ดแต่ละใบ */
+        }
+
+        .product-image1 {
+            width: 100%;
+            height: 200px;
+            background-image: url('/images/banana.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-image2 {
+            width: 100%;
+            height: 200px;
+            background-image: url('/images/Doraemon.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-image3 {
+            width: 100%;
+            height: 200px;
+            background-image: url('/images/manface-shirt.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-image4 {
+            width: 100%;
+            height: 200px;
+            background-image: url('/images/suit.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-title {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            color: #007bff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .product-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .product-button {
+            display: block;
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+
+        .product-button:hover {
+            background: linear-gradient(to right, #0056b3, #003980);
+        }
+```
+
+![screenshots-LAB3](../68030250_LAB-CSS/screenshots/LAB3.png)
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
