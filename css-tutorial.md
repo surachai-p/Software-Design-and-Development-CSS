@@ -1275,10 +1275,280 @@ body {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Dashboard</title>
+
+    <!-- เชื่อมไฟล์ CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="dashboard">
+    <header class="header">
+        <h1>แดชบอร์ด</h1>
+        <nav>
+            <button>โปรไฟล์</button>
+            <button>ออกจากระบบ</button>
+        </nav>
+    </header>
+
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li>หน้าแรก</li>
+                <li>รายงาน</li>
+                <li>การตั้งค่า</li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>ยอดขายรวม</h3>
+                <p>฿150,000</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>จำนวนออเดอร์</h3>
+                <p>1,234</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>ลูกค้าใหม่</h3>
+                <p>45</p>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart">
+                <h3>กราฟแสดงยอดขาย</h3>
+                <canvas id="salesChart"></canvas>
+            </div>
+
+            <div class="chart">
+                <h3>สัดส่วนสินค้าขายดี</h3>
+                <canvas id="productChart"></canvas>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script>
+    // กราฟยอดขาย
+    const salesCtx = document.getElementById('salesChart').getContext('2d');
+    new Chart(salesCtx, {
+        type: 'line',
+        data: {
+            labels: ['มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน'],
+            datasets: [{
+                label: 'ยอดขาย (พันบาท)',
+                data: [65, 75, 70, 85, 90, 95],
+                borderColor: '#FF6B6B',
+                backgroundColor: 'rgba(255, 107, 107, 0.1)',
+                borderWidth: 3,
+                fill: true,
+                tension: 0.4
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: true,
+                    labels: { font: { size: 14 } }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100
+                }
+            }
+        }
+    });
+
+    // กราฟสินค้าขายดี
+    const productCtx = document.getElementById('productChart').getContext('2d');
+    new Chart(productCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['เสื้อยืด', 'กางเกง', 'รองเท้า', 'อื่นๆ'],
+            datasets: [{
+                data: [40, 25, 20, 15],
+                backgroundColor: [
+                    '#FF6B6B',
+                    '#4ECDC4',
+                    '#FFE66D',
+                    '#95E1D3'
+                ],
+                borderColor: '#fff',
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: true,
+                    labels: { font: { size: 14 } }
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 22px;
+    color: #2c3e50;
+}
+
+.header button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #3498db;
+    color: white;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.header button:hover {
+    background: #2980b9;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #2c3e50;
+    color: white;
+    padding: 2rem 1rem;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar li:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.main-content {
+    grid-area: main;
+    padding: 2rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.stat-card h3 {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.chart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+.chart {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    min-height: 200px;
+}
+
+.chart h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-areas: 
+            "header"
+            "main";
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .chart-container {
+        grid-template-columns: 1fr;
+    }
+}
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-
+![alt text](dash.png)
