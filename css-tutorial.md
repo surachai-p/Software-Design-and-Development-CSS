@@ -1,4 +1,4 @@
-# ใบงานการทดลอง: พื้นฐานการจัดการรูปแบบเว็บไซต์ด้วย CSS
+<img width="1919" height="980" alt="image" src="https://github.com/user-attachments/assets/89533118-284b-460a-ac5b-7838077deb92" /># ใบงานการทดลอง: พื้นฐานการจัดการรูปแบบเว็บไซต์ด้วย CSS
 [](#การทดลองที่-1-ทำความรู้จักกับ-css)
 ## การทดลองที่ 1: ทำความรู้จักกับ CSS
 
@@ -917,12 +917,180 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 3 - Balenciaga Collection</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="main-title">รายการสินค้า BALENCIAGA</h1>
+
+    <div class="container">
+        <div class="product-card">
+            <div class="product-image img-1"></div>
+            <div class="product-info">
+                <h2 class="product-title">BALENCIAGA L/S TEE</h2>
+                <div class="product-footer">
+                    <p class="product-price">฿23,000</p>
+                    <a href="#" class="product-button">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image img-2"></div>
+            <div class="product-info">
+                <h2 class="product-title">BALENCIAGA JERSEY</h2>
+                <div class="product-footer">
+                    <p class="product-price">฿21,000</p>
+                    <a href="#" class="product-button">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image img-3"></div>
+            <div class="product-info">
+                <h2 class="product-title">BALENCIAGA OVERSIZED</h2>
+                <div class="product-footer">
+                    <p class="product-price">฿23,500</p>
+                    <a href="#" class="product-button">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image img-4"></div>
+            <div class="product-info">
+                <h2 class="product-title">BALENCIAGA GRAFFITI</h2>
+                <div class="product-footer">
+                    <p class="product-price">฿20,000</p>
+                    <a href="#" class="product-button">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+nav {
+    background-color: #000000;
+    padding: 15px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0; 
+    padding: 0;
+    gap: 20px;
+}
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 8px 18px;
+    font-size: 18px;
+}
+#active {
+    background-color: #ff0000;
+    border-radius: 4px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    width: 320px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgb(0, 0, 0);
+}
+
+.product-image {
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.1);
+}
+
+.img-1 { background-image: url('https://cdn.phototourl.com/uploads/2026-02-23-8eeae682-0859-492e-91e4-070a628c0a64.jpg'); }
+.img-2 { background-image: url('https://cdn.phototourl.com/uploads/2026-02-23-34f97e42-516b-43c2-b519-5f0cc3b95e5c.jpg'); }
+.img-3 { background-image: url('https://cdn.phototourl.com/uploads/2026-02-23-74fc5d0e-ed41-40f1-94d3-76ed174a3c8a.jpg'); }
+.img-4 { background-image: url('https://cdn.phototourl.com/uploads/2026-02-23-a00ac03e-5ae4-4dd0-adf2-7a54ebb3a2e9.jpg'); }
+
+.product-info { 
+    padding: 20px; 
+}
+
+.product-title { 
+    font-size: 22px;
+    margin: 0 0 15px 0;
+    font-weight: bold;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.product-price { 
+    font-weight: bold; 
+    font-size: 24px;
+    color: #000000; 
+    margin: 0; 
+}
+
+.product-button {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.product-button:hover {
+    background-color: #444;
+}
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+<img width="1919" height="980" alt="image" src="https://github.com/user-attachments/assets/aaa0710e-481e-4a59-a9d4-0ae3ffbaf058" />
+
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
