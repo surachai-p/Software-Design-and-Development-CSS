@@ -1553,10 +1553,171 @@ nav ul {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Dashboard - LAB 3</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <h1>Dashboard</h1>
+            <nav>
+                <button>โปรไฟล์</button>
+            </nav>
+        </header>
+
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li>หน้าแรก</li>
+                    <li>รายงาน</li>
+                    <li>สินค้า</li>
+                    <li>การตั้งค่า</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>ยอดขาย</h3>
+                    <p>฿1,250,000</p>
+                </div>
+                <div class="stat-card">
+                    <h3>ออเดอร์</h3>
+                    <p>30,250</p>
+                </div>
+                <div class="stat-card">
+                    <h3>ลูกค้า</h3>
+                    <p>75</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart">
+                    <h3>กราฟยอดขาย</h3>
+                    <div style="height: 100px; background: #eee; margin-top:10px;"></div>
+                </div>
+                <div class="chart">
+                    <h3>สัดส่วนสินค้า</h3>
+                    <div style="height: 100px; background: #eee; margin-top:10px;"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+
+body {
+    font-family: 'Arial', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+}
+
+
+.dashboard {
+    display: grid;
+
+    grid-template-areas: 
+        "header"
+        "sidebar"
+        "main";
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto auto 1fr;
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; 
+    top: 0;
+    z-index: 100;
+}
+
+
+.sidebar {
+    grid-area: sidebar;
+    background: #000000;
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    gap: 20px;
+    justify-content: center;
+}
+
+.sidebar li {
+    padding: 10px 15px;
+    border-bottom: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.sidebar li:hover {
+    background-color: #000000;
+    border-radius: 4px;
+}
+
+.main-content {
+    grid-area: main;
+    padding: 1.5rem;
+}
+
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.stat-card p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 5px;
+    color: #000000;
+}
+
+
+.chart-container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 1.5rem;
+}
+
+.chart {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+<img width="1909" height="941" alt="image" src="https://github.com/user-attachments/assets/3043bfb6-bf5d-4736-b5b2-28172493867b" />
+
 
