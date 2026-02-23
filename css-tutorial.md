@@ -231,7 +231,7 @@ div > p {
 3. เปลี่ยนสีพื้นหลังของเมนู
 
 ### ผลการทดลอง
-html
+```html
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -252,9 +252,9 @@ html
 
 </body>
 </html>
+```
 
-
-css
+```css
 nav {
     background-color: #333; 
     padding: 15px;
@@ -291,6 +291,7 @@ nav > ul > li {
     background-color: #007bff; 
     border-radius: 4px;
 }
+```
 <img width="1919" height="1028" alt="image" src="https://github.com/user-attachments/assets/6733cd6e-e5dc-4136-b7c4-7190fe9eecc3" />
 
 
@@ -456,6 +457,7 @@ background-size: cover;
 
 </body>
 </html>
+```
 ```css
 body {
     background-color: #f0f0f0;
@@ -542,7 +544,7 @@ body {
         grid-template-columns: 1fr;
     }
 }
-
+```
 <img width="1912" height="974" alt="image" src="https://github.com/user-attachments/assets/188a7901-fb5b-4737-8980-0092e7d654c4" />
 
 
