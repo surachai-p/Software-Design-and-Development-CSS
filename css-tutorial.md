@@ -542,7 +542,7 @@ body {
         grid-template-columns: 1fr;
     }
 }
-<img width="1919" height="1028" alt="image" src="https://github.com/user-attachments/assets/ddf0acf0-2633-484f-8c28-5562d984fb41" />
+<img width="1912" height="974" alt="image" src="https://github.com/user-attachments/assets/188a7901-fb5b-4737-8980-0092e7d654c4" />
 
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
