@@ -310,7 +310,72 @@ div > p {
 
 </body>
 </html>
+```
+``` CSS
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
 
+header {
+    background-color: #111;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.container {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+}
+
+article {
+    flex: 3;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+.images {
+    display: flex;
+    justify-content: center;
+}
+
+aside {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #111;
+    color: white;
+    margin-top: 20px;
+}
+nav a.active {
+    background-color: red;
+    color: black;
+    font-weight: bold;
+}
 ```
 ![lab2](imageslab/lab2(1).png)
 ![lab2](imageslab/lab2(2).png)
@@ -417,9 +482,204 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>FORMULA 1 | Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">FORMULA 1</div>
+    <nav>
+        <a href="home.html">หน้าหลัก</a>
+        <a href="shop.html" class="active">สินค้า</a>
+    </nav>
+</header>
+
+<section class="content">
+    <h2>OFFICIAL TEAM SHIRTS</h2>
+
+    <div class="product-grid">
+        <div class="card">
+            <div class="images"><img src="images/product1.png" alt="Mercedes Shirt"></div>
+            <div class="info">
+            <h2 class="product-title">Mercedes-AMG Petronas Team Shirt</h2>
+            <p class="product-price">฿3,700</p>
+            <p class="product-description">
+            สัมผัสความสง่างามเหนือระดับจากทีมแชมป์โลก 
+            ดีไซน์สีดำตัดเขียวอันเป็นเอกลักษณ์ สื่อถึงพลัง ความแม่นยำ 
+            และเทคโนโลยีล้ำสมัย ผลิตจากผ้าเกรดพรีเมียมที่ให้ความรู้สึกหรูหรา 
+            เบาสบาย และระบายอากาศได้อย่างสมบูรณ์แบบ 
+            คือไอเท็มที่สะท้อนตัวตนของผู้ที่หลงใหลในความเป็นเลิศ
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="images"><img src="images/product2.png" alt="Ferrari Shirt"></div>
+            <div class="info">
+            <h2 class="product-title">Scuderia Ferrari Team Shirt</h2>
+            <p class="product-price">฿3,600</p>
+            <p class="product-description">
+            นิยามแห่งความเร่าร้อนและประวัติศาสตร์แห่งชัยชนะ 
+            สีแดง Rosso Corsa อันทรงพลังสะกดทุกสายตา 
+            ตัดเย็บอย่างประณีตด้วยรายละเอียดที่สะท้อนความเป็นตำนานของ Ferrari 
+            ทุกการสวมใส่คือการประกาศความภาคภูมิใจในทีมม้าลำพอง 
+            หรูหรา คลาสสิก และทรงพลังเหนือกาลเวลา
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="images"><img src="images/product3.png" alt="Red Bull Shirt"></div>
+            <div class="info">
+            <h2 class="product-title">Oracle Red Bull Racing Team Shirt</h2>
+            <p class="product-price">฿3,900</p>
+            <p class="product-description">
+            ความดุดันผสานความทันสมัยในดีไซน์ระดับแชมป์โลก 
+            โทนสีน้ำเงินเข้มตัดแดง-เหลืองโดดเด่นอย่างมีสไตล์ 
+            ถ่ายทอดจิตวิญญาณแห่งความเร็วและความกล้าท้าทายขีดจำกัด 
+            เนื้อผ้าคุณภาพสูงให้สัมผัสนุ่มลื่น หรูหรา และคล่องตัว 
+            เหมาะสำหรับผู้ที่ต้องการสะท้อนพลังและความมั่นใจในทุกย่างก้าว
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="images"><img src="images/product4.png" alt="McLaren Shirt"></div>
+            <div class="info">
+            <h2 class="product-title">McLaren Team Shirt</h2>
+            <p class="product-price">฿3,600</p>
+            <p class="product-description">
+        สัมผัสจิตวิญญาณแห่งความเร็วระดับตำนานกับดีไซน์สีส้ม Papaya 
+        อันเป็นเอกลักษณ์ของ McLaren ถ่ายทอดพลัง ความกล้า 
+        และความแม่นยำทางวิศวกรรมขั้นสูง เนื้อผ้าพรีเมียมเบาสบาย 
+        ระบายอากาศดีเยี่ยม พร้อมรายละเอียดที่สะท้อนความเป็นทีมแข่งระดับโลก 
+        สำหรับผู้ที่ต้องการความโดดเด่นอย่างเหนือชั้นในทุกมิติ
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Formula 1 Official Website</p>
+</footer>
+
+</body>
+</html>
+
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+``` CSS
+header {
+    background-color: #111;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+nav a.active {
+    background-color: red;
+    color: black;
+    font-weight: bold;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.card {
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: white;
+    text-align: center;
+}
+
+.images {
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+}
+
+.images img {
+    max-height: 350px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+
+.info {
+    padding: 15px;
+}
+
+.product-title {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: #007bff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.product-button {
+    display: block;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.product-button:hover {
+    background: linear-gradient(to right, #0056b3, #003980);
+}
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #111;
+    color: white;
+    margin-top: 20px;
+}
+```
+
+![lab3](imageslab/lab3.png)
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
