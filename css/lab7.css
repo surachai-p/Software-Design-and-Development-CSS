@@ -20,6 +20,18 @@
         }
         .header h1 { margin: 0; font-size: 1.5rem; font-weight: 700; }
 
+        .header button {
+            background: #3498db;
+            border: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background .2s ease;
+        }
+        .header button:hover { background: #2980b9; }
+
         .sidebar {
             grid-area: sidebar;
             background: linear-gradient(180deg, #2c3e50 0%, #1a252f 100%);
@@ -72,6 +84,10 @@
         }
         .chart:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
         .chart h2 { margin-top: 0; font-size: 1.2rem; color: #2c3e50; font-weight: 700; }
+        .chart canvas {
+            width: 100% !important;
+            height: 300px !important;
+        }
 
         @media (max-width: 768px) {
             .dashboard {
