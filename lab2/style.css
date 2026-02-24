@@ -46,6 +46,10 @@ article {
     padding: 25px;
     border-radius: 10px;
 }
+.images {
+    display: flex;
+    justify-content: center;
+}
 
 aside {
     flex: 1;
@@ -62,7 +66,7 @@ footer {
     margin-top: 20px;
 }
 nav a.active {
-    background-color: gold;
+    background-color: red;
     color: black;
     font-weight: bold;
 }
