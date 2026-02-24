@@ -1461,5 +1461,5 @@ p, .content {
         }
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-![alt text](image.png)
+![alt text](lab7.png)
 
