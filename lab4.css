@@ -1,0 +1,126 @@
+/* ตั้งค่าพื้นฐาน */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+}
+
+/* Container */
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 3rem auto;          /* ระยะห่างรอบนอก */
+    padding: 0 2rem;            /* padding ด้านข้าง */
+}
+
+/* กล่องสถิติ */
+.stat-box {
+    flex: 1;
+    margin: 0 15px;             /* margin ระหว่างกล่อง */
+    padding: 2.5rem;            /* padding ภายใน */
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 12px;        /* มุมโค้ง */
+    border: 2px solid #e0e0e0;  /* border */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+/* ตัวเลข */
+.stat-number {
+    font-size: 3rem;            /* ปรับขนาดตัวเลข */
+    font-weight: bold;
+    color: #4CAF50;             /* เปลี่ยนสี */
+    margin-bottom: 1rem;
+}
+
+/* ป้ายข้อความ */
+.stat-label {
+    font-size: 1.1rem;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+    }
+
+    .stat-box {
+        margin: 1rem 0;
+    }
+}
+
+.mali-extralight {
+  font-family: "Mali", cursive;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.mali-light {
+  font-family: "Mali", cursive;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.mali-regular {
+  font-family: "Mali", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mali-medium {
+  font-family: "Mali", cursive;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.mali-semibold {
+  font-family: "Mali", cursive;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.mali-bold {
+  font-family: "Mali", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.mali-extralight-italic {
+  font-family: "Mali", cursive;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.mali-light-italic {
+  font-family: "Mali", cursive;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.mali-regular-italic {
+  font-family: "Mali", cursive;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.mali-medium-italic {
+  font-family: "Mali", cursive;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.mali-semibold-italic {
+  font-family: "Mali", cursive;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.mali-bold-italic {
+  font-family: "Mali", cursive;
+  font-weight: 700;
+  font-style: italic;
+}

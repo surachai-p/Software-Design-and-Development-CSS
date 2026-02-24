@@ -1,0 +1,37 @@
+/* Element Selector */
+nav {
+    background-color: #222;   /* เปลี่ยนสีพื้นหลัง */
+    padding: 15px;
+}
+
+/* Descendant Selector */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Child Selector */
+nav > ul > li {
+    margin: 0 10px;
+}
+
+/* Class Selector */
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+/* Pseudo-class */
+.menu-item:hover {
+    background-color: #555;
+    border-radius: 3px;
+}
+
+/* ID Selector */
+#active {
+    background-color: #ff9800;   /* เปลี่ยนให้เมนูสินค้าเป็นสีส้ม */
+    border-radius: 3px;
+}
