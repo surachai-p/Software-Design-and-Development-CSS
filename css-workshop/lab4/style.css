@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Sarabun', sans-serif; 
+    display: flex;
+    justify-content: center;
+    gap: 30px;          
+    flex-wrap: wrap; 
+    background-color: #1a1a1a; 
+    padding: 50px;      
+}
+
+.product-card {
+    width: 300px;      
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3); 
+    
+    
+    background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    border: 1px solid #d4af37; 
+    
+    transition: transform 0.3s ease; 
+}
+
+.product-card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4); 
+}
+
+.product-image {
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    background-color: #333; 
+    border-bottom: 2px solid #aa771c; 
+}
+
+.product-info {
+    padding: 20px;     
+}
+
+.product-title {
+    color: #1a1a1a;    
+    font-size: 1.2rem; 
+    font-weight: 700;
+    margin-bottom: 12px; 
+}
+
+.product-price {
+    color: #8a0000;    
+    font-size: 24px;
+    font-weight: 800;
+    margin: 10px 0;    
+}
+
+.product-description {
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    height: 40px;      
+    overflow: hidden;
+}
+
+.product-button {
+    display: block;
+    background: #1a1a1a; 
+    color: #fcf6ba;      
+    text-align: center;
+    padding: 12px;      
+    text-decoration: none;
+    margin-top: 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.product-button:hover {
+    background: #333;
+    color: #fff;
+}

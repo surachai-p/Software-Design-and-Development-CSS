@@ -1,0 +1,30 @@
+<!-- ไฟล์ index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ตัวอย่างปุ่ม CSS</title>
+    <!-- Internal CSS -->
+    <style>
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/buttons.css">
+</head>
+<body>
+    <!-- Inline CSS -->
+    <button style="background-color: #dc3545; color: white; padding: 10px 20px;">ปุ่มแบบ Inline</button>
+    
+    <!-- Internal CSS -->
+    <button class="btn-primary">ปุ่มแบบ Internal</button>
+    
+    <!-- External CSS -->
+    <button class="btn-success">ปุ่มแบบ External</button>
+</body>
+</html>
