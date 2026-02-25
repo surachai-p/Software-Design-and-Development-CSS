@@ -1,0 +1,211 @@
+:root {
+    --sidebar-width: 260px;
+    --header-height: 70px;
+    --primary-blue: #3b82f6;
+    --success-green: #10b981;
+    --warning-orange: #f59e0b;
+    --bg-main: #f3f4f6;
+    --sidebar-dark: #1e293b;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sarabun', sans-serif;
+}
+
+/* --- 1. Grid Layout Structure --- */
+.dashboard-container {
+    display: grid;
+    grid-template-areas: 
+        "side head"
+        "side main";
+    grid-template-columns: var(--sidebar-width) 1fr;
+    grid-template-rows: var(--header-height) 1fr;
+    min-height: 100vh;
+}
+
+/* --- 2. Sidebar (Grid Area: side) --- */
+.sidebar {
+    grid-area: side;
+    background-color: var(--sidebar-dark);
+    color: #94a3b8;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 30px;
+    color: var(--white);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.logo-icon {
+    background: var(--primary-blue);
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 20px 0 10px 10px;
+}
+
+.sidebar-menu ul { list-style: none; }
+
+.sidebar-menu li {
+    padding: 12px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.sidebar-menu li:hover, .sidebar-menu li.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+}
+
+.sidebar-menu li.active {
+    border-left: 4px solid var(--primary-blue);
+}
+
+/* --- 3. Header (Grid Area: head) --- */
+.main-header {
+    grid-area: head;
+    background: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-bar input {
+    padding: 8px 15px;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    background: #f9fafb;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    background: #e2e8f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* --- 4. Main Area (Grid Area: main) --- */
+.content-area {
+    grid-area: main;
+    background-color: var(--bg-main);
+    padding: 30px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.bg-blue { background: #eff6ff; color: var(--primary-blue); }
+.bg-green { background: #ecfdf5; color: var(--success-green); }
+.bg-orange { background: #fffbeb; color: var(--warning-orange); }
+
+.value { font-size: 1.5rem; color: #1e293b; margin: 5px 0; }
+.trend { font-size: 0.85rem; font-weight: bold; }
+.trend.up { color: var(--success-green); }
+.trend.down { color: #ef4444; }
+
+/* Visual Section (Mixed Grid) */
+.visual-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+}
+
+.card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 16px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.chart-box {
+    height: 250px;
+    background: #f9fafb;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+/* Simple Bar Chart Sim */
+.bar {
+    width: 40px;
+    background: var(--primary-blue);
+    border-radius: 4px 4px 0 0;
+    transition: 0.3s;
+}
+
+.bar:hover { opacity: 0.8; }

@@ -1,0 +1,145 @@
+/* กำหนดค่าตัวแปรกลาง */
+:root {
+    --primary-color: #3498db;
+    --dark-bg: #2c3e50;
+    --light-bg: #f8f9fa;
+    --text-color: #333;
+    --price-color: #e74c3c;
+    --white: #ffffff;
+    --shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* การตั้งค่าพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sarabun', sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.main-header {
+    background-color: var(--dark-bg);
+    color: var(--white);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.user-nav .btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.btn-profile { background: #ecf0f1; color: #2c3e50; }
+.btn-logout { background: #e74c3c; color: white; }
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.welcome-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* ปรับขนาดอัตโนมัติ */
+    gap: 30px;
+    padding-bottom: 50px;
+}
+
+/* Product Card */
+.product-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.product-image {
+    width: 100%;
+    height: 220px;
+    background-color: #f1f1f1;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* จัดการรูปภาพให้พอดีพื้นที่ */
+}
+
+.product-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.3rem;
+    color: var(--price-color);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.btn-buy {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-buy:hover {
+    background-color: #2980b9;
+}

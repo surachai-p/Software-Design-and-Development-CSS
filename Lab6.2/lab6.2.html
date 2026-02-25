@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Dashboard - Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="logo-icon">A</div>
+                <span>Admin<span>Core</span></span>
+            </div>
+            <nav class="sidebar-menu">
+                <p class="menu-label">Main Menu</p>
+                <ul>
+                    <li class="active"><span class="icon">🏠</span> หน้าแรก</li>
+                    <li><span class="icon">📊</span> รายงานยอดขาย</li>
+                    <li><span class="icon">🛒</span> ออเดอร์</li>
+                    <li><span class="icon">👥</span> ลูกค้า</li>
+                </ul>
+                <p class="menu-label">System</p>
+                <ul>
+                    <li><span class="icon">⚙️</span> การตั้งค่า</li>
+                    <li><span class="icon">🛡️</span> ความปลอดภัย</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <header class="main-header">
+            <div class="header-left">
+                <h1 class="page-title">แดชบอร์ดสรุปผล</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="ค้นหาข้อมูล...">
+                </div>
+                <div class="user-profile">
+                    <div class="avatar">JD</div>
+                    <button class="btn-logout">ออกจากระบบ</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="content-area">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon bg-blue">💰</div>
+                    <div class="stat-details">
+                        <span class="label">ยอดขายรวม</span>
+                        <h3 class="value">฿150,000</h3>
+                        <span class="trend up">↑ 12.5%</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon bg-green">📦</div>
+                    <div class="stat-details">
+                        <span class="label">จำนวนออเดอร์</span>
+                        <h3 class="value">1,234</h3>
+                        <span class="trend up">↑ 5.2%</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon bg-orange">👥</div>
+                    <div class="stat-details">
+                        <span class="label">ลูกค้าใหม่</span>
+                        <h3 class="value">45</h3>
+                        <span class="trend down">↓ 2.1%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="visual-section">
+                <div class="card chart-main">
+                    <div class="card-header">
+                        <h3>กราฟแสดงยอดขายรายเดือน</h3>
+                        <button class="btn-more">...</button>
+                    </div>
+                    <div class="chart-box">
+                        <div class="bar-chart-sim">
+                            <div class="bar" style="height: 60%"></div>
+                            <div class="bar" style="height: 80%"></div>
+                            <div class="bar" style="height: 40%"></div>
+                            <div class="bar" style="height: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card chart-side">
+                    <div class="card-header">
+                        <h3>สัดส่วนสินค้า</h3>
+                    </div>
+                    <div class="chart-box circle-sim">
+                        <div class="circle-inner">75%</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

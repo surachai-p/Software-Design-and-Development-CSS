@@ -1,0 +1,59 @@
+/* ประกาศตัวแปรสีเพื่อให้แก้ไขง่ายในที่เดียว */
+:root {
+    --primary-green: #1b4d3e;
+    --highlight-orange: #f39c12;
+    --text-white: #ffffff;
+    --hover-white: rgba(255, 255, 255, 0.2);
+}
+
+/* Reset ค่าพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 1. Element Selector: ปรับพื้นหลังเมนู */
+nav {
+    background-color: var(--primary-green);
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 2. Descendant Selector: จัดการรายการในเมนู */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* จัดเมนูไว้กึ่งกลาง */
+    height: 60px;
+    align-items: center;
+}
+
+/* 3. Child Selector: ระยะห่างระหว่างเมนู */
+nav > ul > li {
+    margin: 0 5px;
+}
+
+/* 4. Class Selector: สไตล์ของลิงก์ */
+.menu-item {
+    color: var(--text-white);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+/* 5. Pseudo-class: เอฟเฟกต์เมื่อเอาเมาส์ไปวาง */
+.menu-item:hover {
+    background-color: var(--hover-white);
+    transform: translateY(-2px); /* เพิ่มลูกเล่นขยับขึ้นเล็กน้อย */
+}
+
+/* 6. ID Selector: สำหรับเมนูที่กำลังใช้งาน */
+#active {
+    background-color: var(--highlight-orange);
+    color: var(--text-white);
+    font-weight: bold;
+}
