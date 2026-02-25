@@ -1,0 +1,107 @@
+/* การตั้งค่าพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sarabun', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    padding: 40px 0;
+}
+
+/* 2. ปรับแต่งขนาดแสดงผลสินค้าให้เล็กลง (ปรับจาก 250px เป็น 180px) */
+.product-grid {
+    display: grid;
+    /* การใช้ Grid เพื่อจัดวางแบบตารางที่ยืดหยุ่น */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+}
+
+/* 3. การจัดการรูปภาพสินค้า */
+.product-image-container {
+    width: 100%;
+    height: 150px; /* ลดความสูงของรูปภาพให้รับกับขนาดการ์ดที่เล็กลง */
+    background-color: #f8f9fa;
+    overflow: hidden;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ทำให้รูปภาพพอดีกรอบโดยไม่เสียสัดส่วน */
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.1); /* ลูกเล่นขยายรูปเมื่อ Hover */
+}
+
+.product-details {
+    padding: 12px;
+}
+
+.product-title {
+    font-size: 0.95rem; /* ลดขนาดตัวอักษรหัวข้อ */
+    margin-bottom: 8px;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* ตัดคำถ้าชื่อสินค้ายาวเกินไป */
+}
+
+.product-price {
+    font-size: 1.1rem;
+    color: #e74c3c; /* เปลี่ยนเป็นสีแดงเพื่อดึงดูดสายตา */
+    font-weight: bold;
+}
+
+/* การใช้ Flexbox สำหรับจัดวางปุ่ม */
+.product-action {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.add-to-cart {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 6px 0;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive สำหรับหน้าจอเล็กมาก */
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* แสดง 2 คอลัมน์บนมือถือ */
+        gap: 10px;
+    }
+}

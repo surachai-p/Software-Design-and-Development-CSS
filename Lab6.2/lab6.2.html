@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Dashboard - External CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <h1 class="page-title">แดชบอร์ดสรุปผล</h1>
+            <nav class="header-nav">
+                <button class="btn btn-outline">โปรไฟล์</button>
+                <button class="btn btn-danger">ออกจากระบบ</button>
+            </nav>
+        </header>
+
+        <aside class="sidebar">
+            <div class="sidebar-logo">AdminPanel</div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><span>🏠</span> หน้าแรก</li>
+                    <li><span>📊</span> รายงานยอดขาย</li>
+                    <li><span>⚙️</span> การตั้งค่า</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-icon icon-blue">💰</span>
+                    <div class="stat-info">
+                        <h3>ยอดขายรวม</h3>
+                        <p class="value">฿150,000</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon icon-green">📦</span>
+                    <div class="stat-info">
+                        <h3>จำนวนออเดอร์</h3>
+                        <p class="value">1,234</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon icon-orange">👥</span>
+                    <div class="stat-info">
+                        <h3>ลูกค้าใหม่</h3>
+                        <p class="value">45</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart">
+                    <div class="chart-header">
+                        <h3>กราฟแสดงยอดขายรายเดือน</h3>
+                    </div>
+                    <div class="chart-placeholder">พื้นที่แสดงข้อมูลกราฟเส้น</div>
+                </div>
+                <div class="chart">
+                    <div class="chart-header">
+                        <h3>สัดส่วนสินค้าขายดี</h3>
+                    </div>
+                    <div class="chart-placeholder">พื้นที่แสดงข้อมูลกราฟวงกลม</div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

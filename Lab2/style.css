@@ -1,0 +1,40 @@
+/* 3. เปลี่ยนสีพื้นหลังของเมนู (จากเดิม #333 เป็นสีเขียวเข้ม #1b4d3e) */
+nav {
+    background-color: #1b4d3e; 
+    padding: 15px;
+}
+
+/* การใช้ Descendant Selector */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* การใช้ Child Selector */
+nav > ul > li {
+    margin: 0 10px;
+}
+
+/* การใช้ Class Selector */
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: 0.3s; /* เพิ่มความนุ่มนวลเวลา Hover */
+}
+
+/* การใช้ Pseudo-class */
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+}
+
+/* การใช้ ID Selector สำหรับเมนูที่ถูกเลือก (Active) */
+#active {
+    background-color: #f39c12; /* เปลี่ยนสี Highlight ให้เด่นขึ้นเป็นสีส้มทอง */
+    color: white;
+    border-radius: 3px;
+    font-weight: bold;
+}
