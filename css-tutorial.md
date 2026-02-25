@@ -591,12 +591,75 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="stats-container">
+        <div class="stat-box">
+            <div class="stat-number">1,234</div>
+            <div class="stat-label">ผู้ใช้งาน</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">5.6K</div>
+            <div class="stat-label">ยอดขาย</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">ความพึงพอใจ</div>
+        </div>
+    </div>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 2000px;
+            height: 200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .stat-box {
+            flex: 1;
+            margin: 0 15px;
+            padding: 2rem;
+            text-align: center;
+            background-color: rgb(255, 119, 0);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 5rem;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 2rem;
+            color: #0e1166;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .stats-container {
+                flex-direction: column;
+            }
+
+            .stat-box {
+                margin: 1rem 0;
+            }
+        }
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![screenshots-LAB4](../68030250_LAB-CSS/screenshots/LAB4.png)
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
@@ -709,12 +772,93 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <article class="blog-post">
+        <header class="post-header">
+            <h1 class="post-title">วิธีการเขียนบทความที่น่าสนใจ</h1>
+            <div class="post-meta">โพสต์เมื่อ 1 มกราคม 2025 | โดย ผู้เขียน</div>
+        </header>
+        
+        <div class="post-content">
+            <p>เนื้อหาบทความที่ดีควรมีความน่าสนใจและเป็นประโยชน์ต่อผู้อ่าน การเขียนบทความให้น่าอ่านนั้นมีหลักการสำคัญหลายประการ</p>
+
+            <h2>1. การเลือกหัวข้อที่น่าสนใจ</h2>
+            <p>หัวข้อที่ดีควรตรงกับความสนใจของกลุ่มเป้าหมาย และมีประโยชน์ต่อผู้อ่าน</p>
+
+            <blockquote>
+                "การเขียนที่ดีไม่ได้เกิดจากพรสวรรค์เพียงอย่างเดียว แต่เกิดจากการฝึกฝนอย่างสม่ำเสมอ"
+            </blockquote>
+
+            <h2>2. การจัดโครงสร้างเนื้อหา</h2>
+            <p>เนื้อหาที่ดีควรมีการจัดลำดับที่เป็นระบบ เข้าใจง่าย และมีความต่อเนื่อง</p>
+        </div>
+    </article>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+        .blog-post {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            font-family: 'Sarabun', sans-serif;
+        }
+
+        .post-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .post-title {
+            font-size: 2rem;
+            color: rgb(3, 11, 97);
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .post-meta {
+            color: #293ba2;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .post-content {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: rgb(3, 11, 97);
+        }
+
+        .post-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .post-content h2 {
+            font-size: 1.5rem;
+            color: rgb(180, 9, 9);
+            margin: 2rem 0 1rem;
+        }
+
+        blockquote {
+            font-style: italic;
+            border-left: 4px solid rgb(180, 9, 9);
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .post-title {
+                font-size: 1.5rem;
+            }
+        }
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![screenshots-LAB5](../68030250_LAB-CSS/screenshots/LAB5.png)
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
@@ -856,12 +1000,116 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="product-grid">
+        <!-- สินค้าชิ้นที่ 1 -->
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('/images/manface-shirt.jpg')"></div>
+            <div class="product-details">
+                <h3 class="product-title">เสื้อผ้าหน้าหล่อ</h3>
+                <div class="product-price">฿200</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- สินค้าชิ้นที่ 2 -->
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('/images/suit.jpg')"></div>
+            <div class="product-details">
+                <h3 class="product-title">ชุดสูทสุภาพ</h3>
+                <div class="product-price">฿350</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- เพิ่มสินค้าอื่นๆ ตามต้องการ -->
+    </div>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+         .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            width: 100;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100px;
+            background-color: #f5f5f5;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-details {
+            padding: 15px;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+
+        .product-price {
+            font-size: 1.2rem;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .product-action {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .add-to-cart {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .add-to-cart:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![screenshots-LAB6.1](../68030250_LAB-CSS/screenshots/LAB6.1.png)
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
@@ -1009,10 +1257,224 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <h1>แดชบอร์ด</h1>
+            <nav>
+                <button>โปรไฟล์</button>
+                <button>ออกจากระบบ</button>
+            </nav>
+        </header>
+
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li>หน้าแรก</li>
+                    <li>รายงาน</li>
+                    <li>การตั้งค่า</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>ยอดขายรวม</h3>
+                    <p>฿150,000</p>
+                </div>
+                <div class="stat-card">
+                    <h3>จำนวนออเดอร์</h3>
+                    <p>1,234</p>
+                </div>
+                <div class="stat-card">
+                    <h3>ลูกค้าใหม่</h3>
+                    <p>45</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart">
+                    <h3>กราฟแสดงยอดขาย</h3>
+                    <!-- เพิ่มกราฟตามต้องการ -->
+                </div>
+                <div class="chart">
+                    <h3>สัดส่วนสินค้าขายดี</h3>
+                    <!-- เพิ่มกราฟตามต้องการ -->
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main";
+    grid-template-columns: 260px 1fr;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e6ed;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.header nav button {
+    padding: 8px 16px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background: #4e73df; 
+    color: white;
+}
+
+.header nav button:last-child {
+    background: #e74a3b; 
+}
+
+.header nav button:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+
+.sidebar {
+    grid-area: sidebar;
+    background: #4e73df;
+    background: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+    color: white;
+    padding: 1.5rem 1rem;
+}
+
+.sidebar nav ul {
+    list-style: none; 
+}
+
+.sidebar nav ul li {
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar nav ul li:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.sidebar nav ul li:first-child {
+    background: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+.main-content {
+    grid-area: main;
+    padding: 2rem;
+    background: #f8f9fc;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+    border-left: 5px solid #4e73df; 
+    transition: transform 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card h3 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #4e73df;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.stat-card p {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #5a5c69;
+}
+
+.stat-card:first-child h3 { color: #1cc88a; }
+.stat-card:first-child { border-left-color: #1cc88a; }
+
+.chart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+.chart {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+    min-height: 300px;
+}
+
+.chart h3 {
+    color: #5a5c69;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e3e6f0;
+    padding-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-areas: 
+            "header"
+            "main";
+        grid-template-columns: 1fr;
+    }
+    .sidebar { display: none; }
+    .chart-container { grid-template-columns: 1fr; }
+}
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![screenshots-LAB6.2](../68030250_LAB-CSS/screenshots/LAB6.2.png)
 
