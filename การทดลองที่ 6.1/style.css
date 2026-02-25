@@ -1,0 +1,91 @@
+body {
+    background-color: #f4f4f9;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* 2. ปรับแต่ง Grid ให้สินค้าเล็กลง (เปลี่ยนจาก 250px เป็น 180px) */
+.product-grid {
+    display: grid;
+    /* auto-fill จะช่วยจัดจำนวนคอลัมน์ให้อัตโนมัติตามขนาดจอ */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* ปรับความสูงรูปภาพให้เล็กลงสัมพันธ์กับการ์ด */
+.product-image {
+    width: 100%;
+    height: 160px;
+    background-color: #ececec;
+    background-size: cover;
+    background-position: center;
+}
+
+.product-details {
+    padding: 12px;
+}
+
+.product-title {
+    font-size: 1rem;
+    margin: 0 0 8px 0;
+    color: #222;
+    /* ป้องกันข้อความยาวเกินจนเบี้ยว */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-price {
+    font-size: 1.1rem;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* ใช Flexbox จัดการส่วนปุ่มกด */
+.product-action {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.add-to-cart {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive สำหรับมือถือจิ๋ว */
+@media (max-width: 400px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* แสดง 2 คอลัมน์คู่กัน */
+        gap: 10px;
+    }
+}

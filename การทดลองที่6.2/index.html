@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบจัดการหลังบ้าน - Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&family=Kanit:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard">
+        <header class="header">
+            <div class="header-title">
+                <h2>แผงควบคุมสถิติ</h2>
+            </div>
+            <nav class="header-nav">
+                <button class="btn btn-outline">โปรไฟล์</button>
+                <button class="btn btn-danger">ออกจากระบบ</button>
+            </nav>
+        </header>
+
+        <aside class="sidebar">
+            <div class="sidebar-logo">MY ADMIN</div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">หน้าแรก</li>
+                    <li>รายงานยอดขาย</li>
+                    <li>จัดการสต็อก</li>
+                    <li>การตั้งค่า</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-icon">💰</span>
+                    <div class="stat-info">
+                        <h3>ยอดขายรวม</h3>
+                        <p class="value">฿150,000</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">📦</span>
+                    <div class="stat-info">
+                        <h3>จำนวนออเดอร์</h3>
+                        <p class="value">1,234</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">👥</span>
+                    <div class="stat-info">
+                        <h3>ลูกค้าใหม่</h3>
+                        <p class="value">45</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-box main-chart">
+                    <h3>แนวโน้มยอดขายรายเดือน</h3>
+                    <div class="placeholder-chart">กราฟแสดงที่นี่</div>
+                </div>
+                <div class="chart-box sub-chart">
+                    <h3>หมวดหมู่ยอดนิยม</h3>
+                    <div class="placeholder-chart">Pie Chart</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
