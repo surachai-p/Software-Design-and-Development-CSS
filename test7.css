@@ -31,9 +31,33 @@
 
 .sidebar {
   grid-area: sidebar;
-  background: #2c3e50;
+  background: #5692ce;
   color: white;
   padding: 1rem;
+}
+.sidebar nav{
+    margin-top: 0.5rem;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+}
+.sidebar nav ul {
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    
+}
+.sidebar nav ul li{
+    list-style: none;
+    padding: 0;
+    background-color: #f5f7fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+    padding: 1rem;
+    color: #333;
 }
 
 .main-content {
