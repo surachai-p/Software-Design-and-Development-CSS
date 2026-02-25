@@ -75,6 +75,8 @@ CSS สามารถใช้งานได้ 3 วิธี:
     cursor: pointer;
 }
 ```
+![lab1](imageslab/lab1.png)
+
 [](#การทดลองที่-2-selectors-ใน-CSS)
 ## การทดลองที่ 2: Selectors ใน CSS
 CSS Selector คือวิธีการระบุหรือเลือกองค์ประกอบ (elements) ที่เราต้องการจัดรูปแบบใน HTML โดยมีประเภทหลัก ๆ ดังนี้:
@@ -232,10 +234,152 @@ div > p {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
-```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>FORMULA 1 | Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header>
+    <div class="logo">FORMULA 1</div>
+    <nav>
+        <a href="home.html">หน้าหลัก</a>
+        <a href="shop.html" class="active">สินค้า</a>
+    </nav>
+</header>
+
+<section class="content">
+    <h2>OFFICIAL TEAM SHIRTS</h2>
+
+    <div class="product-grid">
+        <div class="card">
+            <div class="images"><img src="images/product1.png" alt="Mercedes Shirt"></div>
+            <h3>Mercedes-AMG Petronas Team Shirt</h3>
+            <p>
+            สัมผัสความสง่างามเหนือระดับจากทีมแชมป์โลก 
+            ดีไซน์สีดำตัดเขียวอันเป็นเอกลักษณ์ สื่อถึงพลัง ความแม่นยำ 
+            และเทคโนโลยีล้ำสมัย ผลิตจากผ้าเกรดพรีเมียมที่ให้ความรู้สึกหรูหรา 
+            เบาสบาย และระบายอากาศได้อย่างสมบูรณ์แบบ 
+            คือไอเท็มที่สะท้อนตัวตนของผู้ที่หลงใหลในความเป็นเลิศ
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="images"><img src="images/product2.png" alt="Ferrari Shirt"></div>
+            <h3>Scuderia Ferrari Team Shirt</h3>
+            <p>
+            นิยามแห่งความเร่าร้อนและประวัติศาสตร์แห่งชัยชนะ 
+            สีแดง Rosso Corsa อันทรงพลังสะกดทุกสายตา 
+            ตัดเย็บอย่างประณีตด้วยรายละเอียดที่สะท้อนความเป็นตำนานของ Ferrari 
+            ทุกการสวมใส่คือการประกาศความภาคภูมิใจในทีมม้าลำพอง 
+            หรูหรา คลาสสิก และทรงพลังเหนือกาลเวลา
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="images"><img src="images/product3.png" alt="Ferrari Shirt"></div>
+            <h3>Oracle Red Bull Racing Team Shirt</h3>
+            <p>
+            ความดุดันผสานความทันสมัยในดีไซน์ระดับแชมป์โลก 
+            โทนสีน้ำเงินเข้มตัดแดง-เหลืองโดดเด่นอย่างมีสไตล์ 
+            ถ่ายทอดจิตวิญญาณแห่งความเร็วและความกล้าท้าทายขีดจำกัด 
+            เนื้อผ้าคุณภาพสูงให้สัมผัสนุ่มลื่น หรูหรา และคล่องตัว 
+            เหมาะสำหรับผู้ที่ต้องการสะท้อนพลังและความมั่นใจในทุกย่างก้าว
+            </p>
+        </div>
+        <div class="card">
+            <div class="images"><img src="images/product4.png" alt="McLaren Shirt"></div>
+            <h3>McLaren Team Shirt</h3>
+            <p>
+        สัมผัสจิตวิญญาณแห่งความเร็วระดับตำนานกับดีไซน์สีส้ม Papaya 
+        อันเป็นเอกลักษณ์ของ McLaren ถ่ายทอดพลัง ความกล้า 
+        และความแม่นยำทางวิศวกรรมขั้นสูง เนื้อผ้าพรีเมียมเบาสบาย 
+        ระบายอากาศดีเยี่ยม พร้อมรายละเอียดที่สะท้อนความเป็นทีมแข่งระดับโลก 
+        สำหรับผู้ที่ต้องการความโดดเด่นอย่างเหนือชั้นในทุกมิติ
+            </p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Formula 1 Official Website</p>
+</footer>
+
+</body>
+</html>
+```
+``` css
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #111;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.container {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+}
+
+article {
+    flex: 3;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+.images {
+    display: flex;
+    justify-content: center;
+}
+
+aside {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #111;
+    color: white;
+    margin-top: 20px;
+}
+nav a.active {
+    background-color: red;
+    color: black;
+    font-weight: bold;
+}
+```
+![lab2](imageslab/lab2(1).png)
+![lab2](imageslab/lab2(2).png)
+![lab2](imageslab/lab2(3).png)
 
 [](#การทดลองที่-3-การจัดการสีและพื้นหลัง)
 ## การทดลองที่ 3: การจัดการสีและพื้นหลัง
@@ -338,9 +482,204 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>FORMULA 1 | Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">FORMULA 1</div>
+    <nav>
+        <a href="home.html">หน้าหลัก</a>
+        <a href="shop.html" class="active">สินค้า</a>
+    </nav>
+</header>
+
+<section class="content">
+    <h2>OFFICIAL TEAM SHIRTS</h2>
+
+    <div class="product-grid">
+        <div class="card">
+            <div class="images"><img src="images/product1.png" alt="Mercedes Shirt"></div>
+            <div class="info">
+            <h2 class="product-title">Mercedes-AMG Petronas Team Shirt</h2>
+            <p class="product-price">฿3,700</p>
+            <p class="product-description">
+            สัมผัสความสง่างามเหนือระดับจากทีมแชมป์โลก 
+            ดีไซน์สีดำตัดเขียวอันเป็นเอกลักษณ์ สื่อถึงพลัง ความแม่นยำ 
+            และเทคโนโลยีล้ำสมัย ผลิตจากผ้าเกรดพรีเมียมที่ให้ความรู้สึกหรูหรา 
+            เบาสบาย และระบายอากาศได้อย่างสมบูรณ์แบบ 
+            คือไอเท็มที่สะท้อนตัวตนของผู้ที่หลงใหลในความเป็นเลิศ
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="images"><img src="images/product2.png" alt="Ferrari Shirt"></div>
+            <div class="info">
+            <h2 class="product-title">Scuderia Ferrari Team Shirt</h2>
+            <p class="product-price">฿3,600</p>
+            <p class="product-description">
+            นิยามแห่งความเร่าร้อนและประวัติศาสตร์แห่งชัยชนะ 
+            สีแดง Rosso Corsa อันทรงพลังสะกดทุกสายตา 
+            ตัดเย็บอย่างประณีตด้วยรายละเอียดที่สะท้อนความเป็นตำนานของ Ferrari 
+            ทุกการสวมใส่คือการประกาศความภาคภูมิใจในทีมม้าลำพอง 
+            หรูหรา คลาสสิก และทรงพลังเหนือกาลเวลา
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="images"><img src="images/product3.png" alt="Red Bull Shirt"></div>
+            <div class="info">
+            <h2 class="product-title">Oracle Red Bull Racing Team Shirt</h2>
+            <p class="product-price">฿3,900</p>
+            <p class="product-description">
+            ความดุดันผสานความทันสมัยในดีไซน์ระดับแชมป์โลก 
+            โทนสีน้ำเงินเข้มตัดแดง-เหลืองโดดเด่นอย่างมีสไตล์ 
+            ถ่ายทอดจิตวิญญาณแห่งความเร็วและความกล้าท้าทายขีดจำกัด 
+            เนื้อผ้าคุณภาพสูงให้สัมผัสนุ่มลื่น หรูหรา และคล่องตัว 
+            เหมาะสำหรับผู้ที่ต้องการสะท้อนพลังและความมั่นใจในทุกย่างก้าว
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="images"><img src="images/product4.png" alt="McLaren Shirt"></div>
+            <div class="info">
+            <h2 class="product-title">McLaren Team Shirt</h2>
+            <p class="product-price">฿3,600</p>
+            <p class="product-description">
+        สัมผัสจิตวิญญาณแห่งความเร็วระดับตำนานกับดีไซน์สีส้ม Papaya 
+        อันเป็นเอกลักษณ์ของ McLaren ถ่ายทอดพลัง ความกล้า 
+        และความแม่นยำทางวิศวกรรมขั้นสูง เนื้อผ้าพรีเมียมเบาสบาย 
+        ระบายอากาศดีเยี่ยม พร้อมรายละเอียดที่สะท้อนความเป็นทีมแข่งระดับโลก 
+        สำหรับผู้ที่ต้องการความโดดเด่นอย่างเหนือชั้นในทุกมิติ
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Formula 1 Official Website</p>
+</footer>
+
+</body>
+</html>
+
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+``` css
+header {
+    background-color: #111;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+nav a.active {
+    background-color: red;
+    color: black;
+    font-weight: bold;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.card {
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: white;
+    text-align: center;
+}
+
+.images {
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+}
+
+.images img {
+    max-height: 350px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+
+.info {
+    padding: 15px;
+}
+
+.product-title {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: #007bff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.product-button {
+    display: block;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.product-button:hover {
+    background: linear-gradient(to right, #0056b3, #003980);
+}
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #111;
+    color: white;
+    margin-top: 20px;
+}
+```
+
+![lab3](imageslab/lab3.png)
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
@@ -436,12 +775,250 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>FORMULA 1 | Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">FORMULA 1</div>
+    <nav>
+        <a href="home.html">หน้าหลัก</a>
+        <a href="shop.html" class="active">สินค้า</a>
+    </nav>
+</header>
+<h2>OFFICIAL TEAM SHIRTS</h2>
+<section class="stats">
+    <div class="stats-container">
+        <div class="stat-box">
+            <div class="stat-number">20+</div>
+            <div class="stat-label">ทีมระดับโลก</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">บริการลูกค้า</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">สินค้าลิขสิทธิ์แท้</div>
+        </div>
+    </div>
+</section>
+
+<section class="product">
+
+    <div class="product-grid">
+        <div class="card">
+            <div class="images"><img src="images/product1.png" alt="Mercedes Shirt"></div>
+            <div class="info">
+            <h2 class="product-title">Mercedes-AMG Petronas Team Shirt</h2>
+            <p class="product-price">฿3,700</p>
+            <p class="product-description">
+            สัมผัสความสง่างามเหนือระดับจากทีมแชมป์โลก 
+            ดีไซน์สีดำตัดเขียวอันเป็นเอกลักษณ์ สื่อถึงพลัง ความแม่นยำ 
+            และเทคโนโลยีล้ำสมัย ผลิตจากผ้าเกรดพรีเมียมที่ให้ความรู้สึกหรูหรา 
+            เบาสบาย และระบายอากาศได้อย่างสมบูรณ์แบบ 
+            คือไอเท็มที่สะท้อนตัวตนของผู้ที่หลงใหลในความเป็นเลิศ
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="images"><img src="images/product2.png" alt="Ferrari Shirt"></div>
+            <div class="info">
+            <h2 class="product-title">Scuderia Ferrari Team Shirt</h2>
+            <p class="product-price">฿3,600</p>
+            <p class="product-description">
+            นิยามแห่งความเร่าร้อนและประวัติศาสตร์แห่งชัยชนะ 
+            สีแดง Rosso Corsa อันทรงพลังสะกดทุกสายตา 
+            ตัดเย็บอย่างประณีตด้วยรายละเอียดที่สะท้อนความเป็นตำนานของ Ferrari 
+            ทุกการสวมใส่คือการประกาศความภาคภูมิใจในทีมม้าลำพอง 
+            หรูหรา คลาสสิก และทรงพลังเหนือกาลเวลา
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="images"><img src="images/product3.png" alt="Red Bull Shirt"></div>
+            <div class="info">
+            <h2 class="product-title">Oracle Red Bull Racing Team Shirt</h2>
+            <p class="product-price">฿3,900</p>
+            <p class="product-description">
+            ความดุดันผสานความทันสมัยในดีไซน์ระดับแชมป์โลก 
+            โทนสีน้ำเงินเข้มตัดแดง-เหลืองโดดเด่นอย่างมีสไตล์ 
+            ถ่ายทอดจิตวิญญาณแห่งความเร็วและความกล้าท้าทายขีดจำกัด 
+            เนื้อผ้าคุณภาพสูงให้สัมผัสนุ่มลื่น หรูหรา และคล่องตัว 
+            เหมาะสำหรับผู้ที่ต้องการสะท้อนพลังและความมั่นใจในทุกย่างก้าว
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="images"><img src="images/product4.png" alt="McLaren Shirt"></div>
+            <div class="info">
+            <h2 class="product-title">McLaren Team Shirt</h2>
+            <p class="product-price">฿3,600</p>
+            <p class="product-description">
+        สัมผัสจิตวิญญาณแห่งความเร็วระดับตำนานกับดีไซน์สีส้ม Papaya 
+        อันเป็นเอกลักษณ์ของ McLaren ถ่ายทอดพลัง ความกล้า 
+        และความแม่นยำทางวิศวกรรมขั้นสูง เนื้อผ้าพรีเมียมเบาสบาย 
+        ระบายอากาศดีเยี่ยม พร้อมรายละเอียดที่สะท้อนความเป็นทีมแข่งระดับโลก 
+        สำหรับผู้ที่ต้องการความโดดเด่นอย่างเหนือชั้นในทุกมิติ
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Formula 1 Official Website</p>
+</footer>
+
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+header {
+    background-color: #111;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+nav a.active {
+    background-color: red;
+    color: black;
+    font-weight: bold;
+}
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.stat-box {
+    flex: 1;
+    margin: 0 15px;
+    padding: 2rem;
+    text-align: center;
+    background-color: red;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1.5rem;
+    color: #fffefe;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.card {
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: white;
+    text-align: center;
+}
+
+.images {
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+}
+
+.images img {
+    max-height: 350px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+
+.info {
+    padding: 15px;
+}
+
+.product-title {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.product-button {
+    display: block;
+    background: linear-gradient(to right, red, #ffffff);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.product-button:hover {
+    background: linear-gradient(to right, #990000, #670101);
+}
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #111;
+    color: white;
+    margin-top: 20px;
+}
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![lab4](imageslab/lab4.png)
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
@@ -554,12 +1131,104 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BLOG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <article class="blog-post">
+        <header class="post-header">
+            <h1 class="post-title">เบื้องหลังดีไซน์เสื้อทีม Formula 1</h1>
+            <div class="post-meta">โพสต์เมื่อ 25 กุมภาพันธ์ 2026 | โดย Wanitcha Jabprang</div>
+        </header>
+        
+        <div class="post-content">
+            <p>เสื้อทีม Formula 1 ไม่ได้เป็นเพียงเสื้อผ้าธรรมดา แต่เป็นสัญลักษณ์ของความภาคภูมิใจ 
+               ประวัติศาสตร์ และจิตวิญญาณของแต่ละทีมแข่งระดับโลก ทุกสี ทุกเส้นสาย 
+               และทุกรายละเอียดล้วนผ่านการออกแบบอย่างพิถีพิถัน</p>
+
+            <h2>1. สีประจำทีมที่มีความหมาย</h2>
+            <p>ตัวอย่างเช่น สีแดง Rosso Corsa ของ Ferrari สื่อถึงพลังและประวัติศาสตร์อันยาวนาน 
+               ขณะที่สีดำ-เขียวของ Mercedes-AMG สะท้อนความหรูหราและเทคโนโลยีล้ำสมัย</p>
+
+            <blockquote>
+                "เสื้อทีมไม่ใช่แค่เครื่องแต่งกาย แต่คือสัญลักษณ์ของความหลงใหลในความเร็ว"
+            </blockquote>
+
+            <h2>2. เทคโนโลยีผ้าที่ใช้ในการผลิต</h2>
+            <p> เสื้อทีม F1 ผลิตจากวัสดุคุณภาพสูงที่ระบายอากาศได้ดี น้ำหนักเบา และรองรับการเคลื่อนไหว 
+                เพื่อให้ทั้งนักแข่งและแฟน ๆ สวมใส่ได้อย่างสบายในทุกสถานการณ์</p>
+            
+            <h2>3. มากกว่าแฟชั่น คือไลฟ์สไตล์</h2>
+            <p> สำหรับแฟน Formula 1 การสวมเสื้อทีมคือการแสดงออกถึงตัวตน 
+                และการสนับสนุนทีมที่รัก ไม่ว่าจะในสนามแข่งหรือในชีวิตประจำวัน</p>
+        </div>
+    </article>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+
+.blog-post {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Sarabun', sans-serif;
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.post-title {
+    font-size: 2.5rem;
+    color: red;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.post-meta {
+    color: #003988;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.post-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.post-content p {
+    margin-bottom: 1rem;
+}
+
+.post-content h2 {
+    font-size: 1.8rem;
+    color: #930000;
+    margin: 2rem 0 1rem;
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 4px solid gold;
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .post-title {
+        font-size: 2rem;
+        }
+}
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![lab5](imageslab/lab5.png)
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
@@ -701,12 +1370,135 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product1.png')"></div>
+            <div class="product-details">
+                <h3 class="product-title">Mercedes-AMG Petronas Team Shirt</h3>
+                <div class="product-price">฿3,700</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product2.png')"></div>
+            <div class="product-details">
+                <h3 class="product-title">Scuderia Ferrari Team Shirt</h3>
+                <div class="product-price">฿3,600</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product3.png')"></div>
+            <div class="product-details">
+                <h3 class="product-title">Oracle Red Bull Racing Team Shirt</h3>
+                <div class="product-price">฿3,900</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product4.png')"></div>
+            <div class="product-details">
+                <h3 class="product-title">McLaren Team Shirt</h3>
+                <div class="product-price">฿3,600</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    background-color: #f5f5f5;
+    background-size: cover;
+    background-position: center;
+}
+
+.product-details {
+    padding: 15px;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    color: red;
+    font-weight: bold;
+}
+
+.product-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.add-to-cart {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #850000;
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+}
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![lab6(1)](imageslab/lab6(1).png)
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
@@ -854,10 +1646,323 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <h1>แดชบอร์ด</h1>
+            <nav>
+                <button>โปรไฟล์</button>
+                <button>ออกจากระบบ</button>
+            </nav>
+        </header>
+
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li>หน้าแรก</li>
+                    <li>รายงาน</li>
+                    <li>การตั้งค่า</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>ยอดขายรวม</h3>
+                    <p>฿150,000</p>
+                </div>
+                <div class="stat-card">
+                    <h3>จำนวนออเดอร์</h3>
+                    <p>1,234</p>
+                </div>
+                <div class="stat-card">
+                    <h3>ลูกค้าใหม่</h3>
+                    <p>45</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart bar-card">
+                    <h3>กราฟแสดงยอดขาย</h3>
+                    <div class="bar-chart">
+                        <div class="bar" style="--height: 60%">ม.ค.</div>
+                        <div class="bar" style="--height: 80%">ก.พ.</div>
+                        <div class="bar" style="--height: 45%">มี.ค.</div>
+                        <div class="bar" style="--height: 90%">เม.ย.</div>
+                        <div class="bar" style="--height: 70%">พ.ค.</div>
+                    </div>
+
+                </div>
+                <div class="chart donut-card">
+                    <h3>สัดส่วนสินค้าขายดี</h3>
+                    <div class="donut-wrapper">
+                        <div class="donut-chart"></div>
+                        <div class="donut-legend">
+                            <div><span class="color ferrari"></span> Ferrari 30%</div>
+                            <div><span class="color redbull"></span> Red Bull 30%</div>
+                            <div><span class="color mclaren"></span> McLaren 20%</div>
+                            <div><span class="color mercedes"></span> Mercedes 20%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+.dashboard {
+    display: grid;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background: linear-gradient(90deg, #c40000, #ff1a1a);
+    color: white;
+    padding: 1.2rem 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.header button {
+    background: white;
+    color: #c40000;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.header button:hover {
+    background: #ffe5e5;
+    transform: translateY(-2px);
+}
+
+
+.sidebar {
+    background: #111;
+    color: #ddd;
+    padding: 25px 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 12px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+}
+
+.sidebar li:hover {
+    background: #c40000;
+    color: white;
+    padding-left: 20px;
+}
+
+
+.main-content {
+    grid-area: main;
+    padding: 1rem;
+    background: #f5f7fa;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.stat-card h3 {
+    margin: 0;
+    color: black;
+    font-size: 14px;
+}
+
+.stat-card p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #c40000;
+}
+.bar-card {
+    padding: 1rem;        
+    max-width: 700px;    
+}
+.donut-card {
+    padding: 2rem;         
+    min-width: 420px;      
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.chart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+}
+
+.chart {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.bar-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    height: 180px;
+    padding: 20px;
+}
+
+.bar {
+    flex: 1;
+    background: green;
+    height: var(--height);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    border-radius: 6px 6px 0 0;
+    transition: 0.3s;
+}
+
+.bar:hover {
+    background: #ff1a1a;
+}
+.donut-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.donut-chart {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+  background: conic-gradient(
+    #DC0000 0% 30%,      
+    #1E41FF 30% 60%,    
+    #FF8700 55% 80%,    
+    #00D2BE 75% 100%     
+  );
+}
+
+.donut-chart::before {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.donut-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.legend div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.color {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+  border-radius: 3px;
+}
+
+.ferrari { background: #DC0000; }
+.redbull { background: #1E41FF; }
+.mclaren { background: #FF8700; }
+.mercedes { background: #00D2BE; }
+
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-areas: 
+            "header"
+            "main";
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .chart-container {
+        grid-template-columns: 1fr;
+    }
+}
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![lab6(2)](imageslab/lab6(2).png)
 
