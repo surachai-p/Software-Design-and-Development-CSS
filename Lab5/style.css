@@ -1,0 +1,81 @@
+/* การตั้งค่าพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    /* 2. ปรับแต่งฟอนต์หลัก */
+    font-family: 'Sarabun', sans-serif;
+    color: #2d3436; /* สีตัวอักษรเทาเข้มเพื่อให้อ่านง่าย */
+}
+
+.blog-post {
+    max-width: 750px; /* ปรับความกว้างให้อ่านง่ายขึ้นตามหลัก Typography */
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+/* 2. ปรับแต่งขนาดและสีของหัวข้อ */
+.post-title {
+    font-size: 3rem; /* ขยายขนาดหัวข้อใหญ่ */
+    color: #2d3436;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.post-meta {
+    color: #b2bec3; /* สีเทาอ่อนสำหรับข้อมูลรอง */
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+/* 2. ปรับแต่งส่วนเนื้อหา */
+.post-content {
+    font-size: 1.2rem; /* ขนาดฟอนต์เนื้อหาที่เหมาะสม */
+    line-height: 1.9; /* เพิ่มระยะบรรทัดให้อ่านสบายตา */
+    color: #444;
+}
+
+.post-content p {
+    margin-bottom: 1.8rem;
+}
+
+.post-content h2 {
+    font-size: 1.85rem;
+    color: #0984e3; /* เปลี่ยนสีหัวข้อย่อยเป็นสีน้ำเงิน */
+    margin: 2.5rem 0 1.2rem;
+    font-weight: 700;
+}
+
+/* 2. ปรับแต่งรูปแบบ Blockquote */
+blockquote {
+    font-style: italic;
+    border-left: 5px solid #0984e3; /* เส้นขอบหนาขึ้นและเปลี่ยนสี */
+    background-color: #f1f2f6; /* เพิ่มสีพื้นหลังเบาๆ */
+    margin: 2.5rem 0;
+    padding: 1.5rem 2rem;
+    color: #636e72;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .post-title {
+        font-size: 2.2rem;
+    }
+    
+    .post-content {
+        font-size: 1.1rem;
+    }
+}

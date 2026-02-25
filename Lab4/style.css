@@ -1,0 +1,70 @@
+/* การตั้งค่าพื้นฐานและฟอนต์ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* สำคัญมากสำหรับการคำนวณขนาด Box Model */
+    font-family: 'Inter', 'Sarabun', sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* 2. ปรับแต่งขนาดและระยะห่างของ Container */
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* ใช้ gap แทน margin ในการเว้นระยะห่างระหว่างลูก */
+    width: 100%;
+    max-width: 1000px;
+    padding: 40px 20px;
+}
+
+/* 2. ปรับแต่ง Box Model ของกล่องสถิติ */
+.stat-box {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 3rem 1.5rem; /* เพิ่ม Padding เพื่อให้กล่องดูโปร่งสบาย */
+    text-align: center;
+    border-radius: 16px; /* ปรับความโค้งให้ดูทันสมัย */
+    border: 1px solid #e2e8f0; /* เพิ่มเส้นขอบบางๆ */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px); /* เพิ่มลูกเล่นเมื่อเอาเมาส์วาง */
+}
+
+/* 2. ปรับแต่งขนาดและฟอนต์ตัวหนังสือ */
+.stat-number {
+    font-size: 3rem; /* ขยายขนาดตัวเลขให้ชัดเจน */
+    font-weight: 800;
+    color: #4f46e5; /* เปลี่ยนเป็นสี Indigo */
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+}
+
+/* Responsive Design สำหรับมือถือ */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .stat-box {
+        width: 100%;
+        max-width: 350px;
+    }
+}
