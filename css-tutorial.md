@@ -1646,10 +1646,323 @@ blockquote {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <h1>แดชบอร์ด</h1>
+            <nav>
+                <button>โปรไฟล์</button>
+                <button>ออกจากระบบ</button>
+            </nav>
+        </header>
+
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li>หน้าแรก</li>
+                    <li>รายงาน</li>
+                    <li>การตั้งค่า</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>ยอดขายรวม</h3>
+                    <p>฿150,000</p>
+                </div>
+                <div class="stat-card">
+                    <h3>จำนวนออเดอร์</h3>
+                    <p>1,234</p>
+                </div>
+                <div class="stat-card">
+                    <h3>ลูกค้าใหม่</h3>
+                    <p>45</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart bar-card">
+                    <h3>กราฟแสดงยอดขาย</h3>
+                    <div class="bar-chart">
+                        <div class="bar" style="--height: 60%">ม.ค.</div>
+                        <div class="bar" style="--height: 80%">ก.พ.</div>
+                        <div class="bar" style="--height: 45%">มี.ค.</div>
+                        <div class="bar" style="--height: 90%">เม.ย.</div>
+                        <div class="bar" style="--height: 70%">พ.ค.</div>
+                    </div>
+
+                </div>
+                <div class="chart donut-card">
+                    <h3>สัดส่วนสินค้าขายดี</h3>
+                    <div class="donut-wrapper">
+                        <div class="donut-chart"></div>
+                        <div class="donut-legend">
+                            <div><span class="color ferrari"></span> Ferrari 30%</div>
+                            <div><span class="color redbull"></span> Red Bull 30%</div>
+                            <div><span class="color mclaren"></span> McLaren 20%</div>
+                            <div><span class="color mercedes"></span> Mercedes 20%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+.dashboard {
+    display: grid;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background: linear-gradient(90deg, #c40000, #ff1a1a);
+    color: white;
+    padding: 1.2rem 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.header button {
+    background: white;
+    color: #c40000;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.header button:hover {
+    background: #ffe5e5;
+    transform: translateY(-2px);
+}
+
+
+.sidebar {
+    background: #111;
+    color: #ddd;
+    padding: 25px 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 12px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+}
+
+.sidebar li:hover {
+    background: #c40000;
+    color: white;
+    padding-left: 20px;
+}
+
+
+.main-content {
+    grid-area: main;
+    padding: 1rem;
+    background: #f5f7fa;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.stat-card h3 {
+    margin: 0;
+    color: black;
+    font-size: 14px;
+}
+
+.stat-card p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #c40000;
+}
+.bar-card {
+    padding: 1rem;        
+    max-width: 700px;    
+}
+.donut-card {
+    padding: 2rem;         
+    min-width: 420px;      
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.chart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+}
+
+.chart {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.bar-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    height: 180px;
+    padding: 20px;
+}
+
+.bar {
+    flex: 1;
+    background: green;
+    height: var(--height);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    border-radius: 6px 6px 0 0;
+    transition: 0.3s;
+}
+
+.bar:hover {
+    background: #ff1a1a;
+}
+.donut-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.donut-chart {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+  background: conic-gradient(
+    #DC0000 0% 30%,      
+    #1E41FF 30% 60%,    
+    #FF8700 55% 80%,    
+    #00D2BE 75% 100%     
+  );
+}
+
+.donut-chart::before {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.donut-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.legend div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.color {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+  border-radius: 3px;
+}
+
+.ferrari { background: #DC0000; }
+.redbull { background: #1E41FF; }
+.mclaren { background: #FF8700; }
+.mercedes { background: #00D2BE; }
+
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-areas: 
+            "header"
+            "main";
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .chart-container {
+        grid-template-columns: 1fr;
+    }
+}
 ```
 ![lab6(2)](imageslab/lab6(2).png)
 
