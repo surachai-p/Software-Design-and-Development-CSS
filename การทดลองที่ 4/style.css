@@ -1,0 +1,71 @@
+/* ตั้งค่าพื้นฐานและฟอนต์ */
+body {
+    background-color: #f8fafc; /* สีพื้นหลังโทนเย็นสบายตา */
+    font-family: 'Prompt', 'Tahoma', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* ใช้หน่วย vh เพื่อให้เนื้อหาอยู่กลางจอแนวตั้ง */
+}
+
+/* 2. ปรับแต่ง Box Model ของ Container */
+.stats-container {
+    display: flex;
+    justify-content: center;
+    max-width: 1100px;
+    width: 90%;          /* ใช้ % เพื่อให้ยืดหยุ่น */
+    margin: 2rem auto;   /* margin บน-ล่าง 2rem, ซ้าย-ขวา auto เพื่อจัดกลาง */
+    padding: 20px;       /* padding ภายใน container */
+    gap: 20px;           /* ใช้ gap แทนการตั้ง margin ที่ตัว box โดยตรง */
+}
+
+/* 2. ปรับแต่ง Box Model ของ Stat Box */
+.stat-box {
+    flex: 1;
+    padding: 3rem 1.5rem; /* ปรับ padding ให้สูงขึ้น (Box Model) */
+    text-align: center;
+    background: #ffffff;
+    border-radius: 15px;  /* มุมโค้งมนมากขึ้น */
+    border-bottom: 5px solid #6366f1; /* เพิ่ม border เฉพาะด้านล่าง */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* เงาฟุ้งๆ ดูทันสมัย */
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px); /* ขยับขึ้นเมื่อเมาส์ชี้ */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* 2. ปรับแต่งขนาดและสีของตัวเลข */
+.stat-number {
+    font-size: 3.2rem;    /* ปรับขนาดตัวเลขให้ใหญ่สะใจ */
+    font-weight: 800;
+    color: #1e1b4b;       /* สีน้ำเงินเข้มจัด */
+    margin-bottom: 0.2rem;
+    letter-spacing: -1px;
+}
+
+/* 2. ปรับแต่งขนาดและสีของ Label */
+.stat-label {
+    font-size: 0.9rem;
+    color: #64748b;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;  /* เพิ่มระยะห่างระหว่างตัวอักษร */
+}
+
+/* Responsive Design สำหรับมือถือ */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-box {
+        width: 100%;
+        max-width: 350px;
+        padding: 2rem; /* ลด padding ลงเมื่ออยู่บนมือถือ */
+    }
+}

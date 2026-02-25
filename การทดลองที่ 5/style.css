@@ -1,0 +1,82 @@
+/* การตั้งค่าเริ่มต้น */
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    /* ใช้ฟอนต์ Sarabun สำหรับเนื้อหาทั่วไป */
+    font-family: 'Sarabun', sans-serif;
+    color: #2d3436;
+}
+
+.blog-post {
+    max-width: 750px; /* ลดความกว้างลงเล็กน้อยเพื่อให้สายตาไม่ต้องกวาดไกล */
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 2rem;
+}
+
+/* ปรับแต่งหัวข้อบทความ */
+.post-title {
+    font-family: 'Kanit', sans-serif; /* ใช้ฟอนต์หัวข้อที่ดูเด่นขึ้น */
+    font-size: 3rem; 
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+/* ปรับแต่งส่วนรายละเอียดวันที่/ผู้เขียน */
+.post-meta {
+    color: #888;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ปรับแต่งเนื้อหาบทความ */
+.post-content {
+    font-size: 1.2rem;       /* ขนาดฟอนต์ที่กำลังดีสำหรับการอ่านบนจอ */
+    line-height: 1.9;        /* เพิ่มช่องว่างระหว่างบรรทัดให้อ่านง่ายขึ้น */
+    color: #333;
+    text-align: justify;     /* จัดข้อความให้เรียบเสมอกัน (เลือกได้ตามความชอบ) */
+}
+
+.post-content p {
+    margin-bottom: 1.8rem;
+}
+
+/* หัวข้อรองภายในบทความ */
+.post-content h2 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.8rem;
+    color: #007bff;          /* เปลี่ยนเป็นสีน้ำเงินเพื่อแบ่งสัดส่วน */
+    margin: 2.5rem 0 1rem;
+}
+
+/* ปรับแต่ง Blockquote */
+blockquote {
+    font-style: italic;
+    font-size: 1.3rem;
+    border-left: 5px solid #007bff;
+    margin: 2.5rem 0;
+    padding: 1rem 1.5rem;
+    background-color: #f8f9fa; /* เพิ่มสีพื้นหลังเบาๆ ให้คำคมเด่นขึ้น */
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive สำหรับมือถือ */
+@media (max-width: 768px) {
+    .post-title {
+        font-size: 2.2rem;
+    }
+    .post-content {
+        font-size: 1.1rem;
+    }
+}
