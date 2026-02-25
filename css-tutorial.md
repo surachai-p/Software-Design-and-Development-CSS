@@ -1,4 +1,4 @@
-# ใบงานการทดลอง: พื้นฐานการจัดการรูปแบบเว็บไซต์ด้วย CSS
+<img width="1919" height="980" alt="image" src="https://github.com/user-attachments/assets/89533118-284b-460a-ac5b-7838077deb92" /># ใบงานการทดลอง: พื้นฐานการจัดการรูปแบบเว็บไซต์ด้วย CSS
 [](#การทดลองที่-1-ทำความรู้จักกับ-css)
 ## การทดลองที่ 1: ทำความรู้จักกับ CSS
 
@@ -232,9 +232,68 @@ div > p {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>เมนูเว็บไซต์</title>
+    <link rel="stylesheet" href="css/bottom.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+
+```css
+nav {
+    background-color: #333; 
+    padding: 15px;
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+
+nav > ul > li {
+    margin: 0 10px;
+}
+
+
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+
+.menu-item:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+
+#active {
+    background-color: #007bff; 
+    border-radius: 4px;
+}
+```
+<img width="1919" height="1028" alt="image" src="https://github.com/user-attachments/assets/6733cd6e-e5dc-4136-b7c4-7190fe9eecc3" />
+
 
 
 [](#การทดลองที่-3-การจัดการสีและพื้นหลัง)
@@ -338,9 +397,156 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 3 - Balenciaga Collection</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h1 class="main-title">รายการสินค้า BALENCIAGA</h1>
+
+    <div class="container">
+        <div class="product-card">
+            <div class="product-image img-1"></div>
+            <div class="product-info">
+                <h2 class="product-title">BALENCIAGA </h2>
+                <div class="product-footer">
+                    <p class="product-price">฿23,000</p>
+                    <a href="#" class="product-button">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image img-2"></div>
+            <div class="product-info">
+                <h2 class="product-title">BALENCIAGA </h2>
+                <div class="product-footer">
+                    <p class="product-price">฿21,000</p>
+                    <a href="#" class="product-button">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image img-3"></div>
+            <div class="product-info">
+                <h2 class="product-title">BALENCIAGA </h2>
+                <div class="product-footer">
+                    <p class="product-price">฿23,500</p>
+                    <a href="#" class="product-button">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image img-4"></div>
+            <div class="product-info">
+                <h2 class="product-title">BALENCIAGA </h2>
+                <div class="product-footer">
+                    <p class="product-price">฿20,000</p>
+                    <a href="#" class="product-button">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+```css
+body {
+    background-color: #f0f0f0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* แสดง 2 คอลัมน์เหมือนในรูป */
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.product-image {
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    background-color: #f8f8f8;
+}
+
+/* ใส่รูปภาพตัวอย่าง */
+.img-1 { background-image: url('https://cdn.phototourl.com/uploads/2026-02-23-8eeae682-0859-492e-91e4-070a628c0a64.jpg'); }
+.img-2 { background-image: url('https://cdn.phototourl.com/uploads/2026-02-23-34f97e42-516b-43c2-b519-5f0cc3b95e5c.jpg'); }
+.img-3 { background-image: url('https://cdn.phototourl.com/uploads/2026-02-23-74fc5d0e-ed41-40f1-94d3-76ed174a3c8a.jpg'); }
+.img-4 { background-image: url('https://cdn.phototourl.com/uploads/2026-02-23-a00ac03e-5ae4-4dd0-adf2-7a54ebb3a2e9.jpg'); }
+
+.product-info {
+    padding: 15px;
+}
+
+.product-title {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-price {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+}
+
+.product-button {
+    background-color: #222;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.product-button:hover {
+    background-color: #444;
+}
+
+/* ปรับให้แสดง 1 คอลัมน์เมื่อดูในมือถือ */
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+```
+<img width="1912" height="974" alt="image" src="https://github.com/user-attachments/assets/188a7901-fb5b-4737-8980-0092e7d654c4" />
+
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
@@ -436,12 +642,169 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 3 - Balenciaga Collection</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="main-title">รายการสินค้า BALENCIAGA</h1>
+
+    <div class="container">
+        
+        <div class="product-card">
+            <div class="product-image img-1"></div>
+            <div class="product-info">
+                <h2 class="product-title">BALENCIAGA </h2>
+                <div class="product-footer">
+                    <p class="product-price">฿23,000</p>
+                    <a href="#" class="product-button">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image img-2"></div>
+            <div class="product-info">
+                <h2 class="product-title">BALENCIAGA </h2>
+                <div class="product-footer">
+                    <p class="product-price">฿21,000</p>
+                    <a href="#" class="product-button">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image img-3"></div>
+            <div class="product-info">
+                <h2 class="product-title">BALENCIAGA </h2>
+                <div class="product-footer">
+                    <p class="product-price">฿23,500</p>
+                    <a href="#" class="product-button">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image img-4"></div>
+            <div class="product-info">
+                <h2 class="product-title">BALENCIAGA </h2>
+                <div class="product-footer">
+                    <p class="product-price">฿20,000</p>
+                    <a href="#" class="product-button">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+
+body {
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.main-title {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 24px;
+}
+
+
+.container {
+    display: flex;            
+    justify-content: center;  
+    align-items: flex-start;  
+    gap: 30px;                
+    padding: 20px;
+    flex-wrap: wrap;          
+}
+
+.product-card {
+    background-color: white;
+    width: 280px;             
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-image {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-color: #f0f0f0;
+}
+
+/* ส่วนดึงรูปสินค้า */
+.img-1 { background-image: url('https://cdn.phototourl.com/uploads/2026-02-23-8eeae682-0859-492e-91e4-070a628c0a64.jpg'); }
+.img-2 { background-image: url('https://cdn.phototourl.com/uploads/2026-02-23-34f97e42-516b-43c2-b519-5f0cc3b95e5c.jpg'); }
+.img-3 { background-image: url('https://cdn.phototourl.com/uploads/2026-02-23-74fc5d0e-ed41-40f1-94d3-76ed174a3c8a.jpg'); }
+.img-4 { background-image: url('https://cdn.phototourl.com/uploads/2026-02-23-a00ac03e-5ae4-4dd0-adf2-7a54ebb3a2e9.jpg'); }
+
+.product-info {
+    padding: 20px;
+}
+
+.product-title {
+    font-size: 16px;
+    margin: 0 0 15px 0;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-top: 10px;
+}
+
+.product-price {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+}
+
+.product-button {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+/* ส่วน Menu (Nav) */
+nav { background-color: #333; padding: 15px; }
+nav ul { list-style: none; display: flex; justify-content: center; margin: 0; padding: 0; gap: 20px; }
+.menu-item { color: white; text-decoration: none; }
+#active { color: #007bff; font-weight: bold; }
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+<img width="1915" height="948" alt="image" src="https://github.com/user-attachments/assets/bff9d66f-9d84-4439-b483-a4cb9a38a71d" />
+
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
@@ -554,12 +917,180 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 3 - Balenciaga Collection</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="main-title">รายการสินค้า BALENCIAGA</h1>
+
+    <div class="container">
+        <div class="product-card">
+            <div class="product-image img-1"></div>
+            <div class="product-info">
+                <h2 class="product-title">BALENCIAGA L/S TEE</h2>
+                <div class="product-footer">
+                    <p class="product-price">฿23,000</p>
+                    <a href="#" class="product-button">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image img-2"></div>
+            <div class="product-info">
+                <h2 class="product-title">BALENCIAGA JERSEY</h2>
+                <div class="product-footer">
+                    <p class="product-price">฿21,000</p>
+                    <a href="#" class="product-button">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image img-3"></div>
+            <div class="product-info">
+                <h2 class="product-title">BALENCIAGA OVERSIZED</h2>
+                <div class="product-footer">
+                    <p class="product-price">฿23,500</p>
+                    <a href="#" class="product-button">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image img-4"></div>
+            <div class="product-info">
+                <h2 class="product-title">BALENCIAGA GRAFFITI</h2>
+                <div class="product-footer">
+                    <p class="product-price">฿20,000</p>
+                    <a href="#" class="product-button">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+nav {
+    background-color: #000000;
+    padding: 15px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0; 
+    padding: 0;
+    gap: 20px;
+}
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 8px 18px;
+    font-size: 18px;
+}
+#active {
+    background-color: #ff0000;
+    border-radius: 4px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    width: 320px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgb(0, 0, 0);
+}
+
+.product-image {
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.1);
+}
+
+.img-1 { background-image: url('https://cdn.phototourl.com/uploads/2026-02-23-8eeae682-0859-492e-91e4-070a628c0a64.jpg'); }
+.img-2 { background-image: url('https://cdn.phototourl.com/uploads/2026-02-23-34f97e42-516b-43c2-b519-5f0cc3b95e5c.jpg'); }
+.img-3 { background-image: url('https://cdn.phototourl.com/uploads/2026-02-23-74fc5d0e-ed41-40f1-94d3-76ed174a3c8a.jpg'); }
+.img-4 { background-image: url('https://cdn.phototourl.com/uploads/2026-02-23-a00ac03e-5ae4-4dd0-adf2-7a54ebb3a2e9.jpg'); }
+
+.product-info { 
+    padding: 20px; 
+}
+
+.product-title { 
+    font-size: 22px;
+    margin: 0 0 15px 0;
+    font-weight: bold;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.product-price { 
+    font-weight: bold; 
+    font-size: 24px;
+    color: #000000; 
+    margin: 0; 
+}
+
+.product-button {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.product-button:hover {
+    background-color: #444;
+}
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+<img width="1919" height="980" alt="image" src="https://github.com/user-attachments/assets/aaa0710e-481e-4a59-a9d4-0ae3ffbaf058" />
+
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
@@ -701,12 +1232,180 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 3 - Balenciaga Collection</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="main-title">รายการสินค้า BALENCIAGA</h1>
+
+    <div class="container">
+        <div class="product-card">
+            <div class="product-image img-1"></div>
+            <div class="product-info">
+                <h2 class="product-title">BALENCIAGA L/S TEE</h2>
+                <div class="product-footer">
+                    <p class="product-price">฿23,000</p>
+                    <a href="#" class="product-button">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image img-2"></div>
+            <div class="product-info">
+                <h2 class="product-title">BALENCIAGA JERSEY</h2>
+                <div class="product-footer">
+                    <p class="product-price">฿21,000</p>
+                    <a href="#" class="product-button">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image img-3"></div>
+            <div class="product-info">
+                <h2 class="product-title">BALENCIAGA OVERSIZED</h2>
+                <div class="product-footer">
+                    <p class="product-price">฿23,500</p>
+                    <a href="#" class="product-button">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image img-4"></div>
+            <div class="product-info">
+                <h2 class="product-title">BALENCIAGA GRAFFITI</h2>
+                <div class="product-footer">
+                    <p class="product-price">฿20,000</p>
+                    <a href="#" class="product-button">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+nav {
+    background-color: #000000;
+    padding: 15px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0; 
+    padding: 0;
+    gap: 20px;
+}
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 8px 18px;
+    font-size: 16px;
+}
+#active {
+    background-color: #ff0000;
+    border-radius: 4px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    width: 250px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    width: 100%;
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.img-1 { background-image: url('https://cdn.phototourl.com/uploads/2026-02-23-8eeae682-0859-492e-91e4-070a628c0a64.jpg'); }
+.img-2 { background-image: url('https://cdn.phototourl.com/uploads/2026-02-23-34f97e42-516b-43c2-b519-5f0cc3b95e5c.jpg'); }
+.img-3 { background-image: url('https://cdn.phototourl.com/uploads/2026-02-23-74fc5d0e-ed41-40f1-94d3-76ed174a3c8a.jpg'); }
+.img-4 { background-image: url('https://cdn.phototourl.com/uploads/2026-02-23-a00ac03e-5ae4-4dd0-adf2-7a54ebb3a2e9.jpg'); }
+
+.product-info { 
+    padding: 15px; 
+}
+
+.product-title { 
+    font-size: 18px;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.product-price { 
+    font-weight: bold; 
+    font-size: 18px;
+    color: #000000; 
+    margin: 0; 
+}
+
+.product-button {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.product-button:hover {
+    background-color: #444;
+}
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+<img width="1909" height="938" alt="image" src="https://github.com/user-attachments/assets/979b9cb4-bc0d-4eba-89a4-e7b3ea119524" />
+
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
@@ -854,10 +1553,171 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Dashboard - LAB 3</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <h1>Dashboard</h1>
+            <nav>
+                <button>โปรไฟล์</button>
+            </nav>
+        </header>
+
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li>หน้าแรก</li>
+                    <li>รายงาน</li>
+                    <li>สินค้า</li>
+                    <li>การตั้งค่า</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>ยอดขาย</h3>
+                    <p>฿1,250,000</p>
+                </div>
+                <div class="stat-card">
+                    <h3>ออเดอร์</h3>
+                    <p>30,250</p>
+                </div>
+                <div class="stat-card">
+                    <h3>ลูกค้า</h3>
+                    <p>75</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart">
+                    <h3>กราฟยอดขาย</h3>
+                    <div style="height: 100px; background: #eee; margin-top:10px;"></div>
+                </div>
+                <div class="chart">
+                    <h3>สัดส่วนสินค้า</h3>
+                    <div style="height: 100px; background: #eee; margin-top:10px;"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+
+body {
+    font-family: 'Arial', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+}
+
+
+.dashboard {
+    display: grid;
+
+    grid-template-areas: 
+        "header"
+        "sidebar"
+        "main";
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto auto 1fr;
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; 
+    top: 0;
+    z-index: 100;
+}
+
+
+.sidebar {
+    grid-area: sidebar;
+    background: #000000;
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    gap: 20px;
+    justify-content: center;
+}
+
+.sidebar li {
+    padding: 10px 15px;
+    border-bottom: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.sidebar li:hover {
+    background-color: #000000;
+    border-radius: 4px;
+}
+
+.main-content {
+    grid-area: main;
+    padding: 1.5rem;
+}
+
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.stat-card p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 5px;
+    color: #000000;
+}
+
+
+.chart-container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 1.5rem;
+}
+
+.chart {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+<img width="1909" height="941" alt="image" src="https://github.com/user-attachments/assets/3043bfb6-bf5d-4736-b5b2-28172493867b" />
+
 
