@@ -1,0 +1,54 @@
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f6f8;
+    margin:0;
+    text-align:center;
+}
+
+h1{
+    margin:40px 0;
+    color:#333;
+}
+
+/* Container */
+.stats-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:20px;
+    flex-wrap:wrap;
+}
+
+/* Box Model */
+.stat-box{
+    width:220px;
+    background:white;
+    padding:30px;           /* padding */
+    margin:10px;            /* margin */
+    border-radius:10px;
+    border:2px solid #007bff;  /* border */
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* ตัวเลข */
+.number{
+    font-size:36px;
+    font-weight:bold;
+    color:#007bff;
+    margin-bottom:10px;
+}
+
+/* ป้ายชื่อ */
+.label{
+    font-size:16px;
+    color:#555;
+    letter-spacing:1px;
+}
+
+/* Responsive */
+@media (max-width:768px){
+    .stats-container{
+        flex-direction:column;
+        align-items:center;
+    }
+}
