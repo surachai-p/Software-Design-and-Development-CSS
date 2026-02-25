@@ -1272,10 +1272,283 @@ nav {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vasin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <h1>แดชบอร์ด</h1>
+            <nav class="header-nav">
+                <button>โปรไฟล์</button>
+                <button>ออกจากระบบ</button>
+            </nav>
+        </header>
+
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li class="active">หน้าแรก</li>
+                    <li>รายงาน</li>
+                    <li>การตั้งค่า</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>ยอดขายรวม</h3>
+                    <p class="stat-value">฿150,000</p>
+                </div>
+                <div class="stat-card">
+                    <h3>จำนวนออเดอร์</h3>
+                    <p class="stat-value">1,234</p>
+                </div>
+                <div class="stat-card">
+                    <h3>ลูกค้าใหม่</h3>
+                    <p class="stat-value">45</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart">
+                    <h3>กราฟแสดงยอดขาย</h3>
+                    <div class="chart-placeholder">
+                        <span class="placeholder-text">พื้นที่แสดงกราฟ</span>
+                    </div>
+                </div>
+                <div class="chart">
+                    <h3>สัดส่วนสินค้าขายดี</h3>
+                    <div class="chart-placeholder">
+                        <span class="placeholder-text">พื้นที่แสดงกราฟ</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    background-attachment: fixed;
+    color: #333;
+    min-height: 100vh;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main";
+    grid-template-columns: 260px 1fr;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+    gap: 20px;
+    padding: 20px; 
+}
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.4); 
+    backdrop-filter: blur(16px) saturate(120%); 
+    -webkit-backdrop-filter: blur(16px) saturate(120%); 
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1); 
+    border-radius: 20px; 
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1d1d1f;
+}
+
+.header-nav button {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 30px; 
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header-nav button:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    grid-area: sidebar;
+    padding: 2rem 1rem;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    font-weight: 500;
+    color: #444;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sidebar li:hover {
+    background: rgba(255, 255, 255, 0.4);
+    color: #000;
+}
+
+.sidebar li.active {
+    background: rgba(255, 255, 255, 0.6);
+    color: #000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.main-content {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 1.8rem;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1d1d1f;
+}
+
+.chart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.chart {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 1.8rem;
+}
+
+.chart h3 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.chart-placeholder {
+    width: 100%;
+    height: 250px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    border: 1px dashed rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-text {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-areas: 
+            "header"
+            "main";
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .chart-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}]
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-
+![LAB7](<LAB7-Modern Dashboard/LAB7-result.png>)
