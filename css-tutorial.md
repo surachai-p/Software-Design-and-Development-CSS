@@ -1009,10 +1009,12 @@ blockquote {
   font-style: italic;
   border-left: 4px solid var(--accent);
   background: rgba(37,99,235,0.06);
-  margin: 1.25rem 0;
+  margin: 1.25rem auto; /* center horizontally */
   padding: 0.9rem 1rem;
   border-radius: 8px;
   color: #344156;
+  max-width: 720px; /* limit width so it centers nicely */
+  text-align: center; /* center the quote text */
 }
 
 /* Responsive */
@@ -1524,10 +1526,217 @@ blockquote {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ตัวอย่างหน้าเว็บ - เมนู, สินค้า และสถิติ</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="product card.css">
+  <link rel="stylesheet" href="stat.css">
+  <link rel="stylesheet" href="product-grid.css">
+</head>
+<body>
+  <header>
+    <nav aria-label="เมนูหลัก">
+      <ul>
+        <li><a href="#home" class="menu-item">หน้าแรก</a></li>
+        <li><a href="#products" class="menu-item active">สินค้า</a></li>
+        <li><a href="#about" class="menu-item">เกี่ยวกับเรา</a></li>
+        <li><a href="#contact" class="menu-item">ติดต่อ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="products" aria-labelledby="products-heading">
+      <h2 id="products-heading">สินค้าแนะนำ</h2>
+
+      <!-- New product grid -->
+      <div class="product-grid">
+        <div class="grid-product-card">
+          <div class="grid-product-image" style="background-image:url('https://i.pinimg.com/736x/1a/ad/db/1aaddb0f6426f64a728efdd5d7b377fc.jpg');" role="img" aria-label="รองเท้าแมรี่เจน สีดำ"></div>
+          <div class="grid-product-details">
+            <h3 class="grid-product-title">รองเท้าแมรี่เจน สีดำ</h3>
+            <div class="grid-product-price">฿559</div>
+            <div class="grid-product-action"><button class="grid-add-to-cart">เพิ่มลงตะกร้า</button></div>
+          </div>
+        </div>
+
+        <div class="grid-product-card">
+          <div class="grid-product-image" style="background-image:url('https://i.pinimg.com/1200x/6e/23/da/6e23da1aac2340539b5c89a3518c7fa6.jpg');" role="img" aria-label="รองเท้าแมรี่เจน สีขาว"></div>
+          <div class="grid-product-details">
+            <h3 class="grid-product-title">รองเท้าส้นสูง</h3>
+            <div class="grid-product-price">฿619</div>
+            <div class="grid-product-action"><button class="grid-add-to-cart">เพิ่มลงตะกร้า</button></div>
+          </div>
+        </div>
+
+        <div class="grid-product-card">
+          <div class="grid-product-image" style="background-image:url('https://i.pinimg.com/736x/a3/10/ce/a310ce796e7793be794da81894a25f38.jpg');" role="img" aria-label="รองเท้าส้นสูง สีแดง"></div>
+          <div class="grid-product-details">
+            <h3 class="grid-product-title">รองเท้าบูท</h3>
+            <div class="grid-product-price">฿899</div>
+            <div class="grid-product-action"><button class="grid-add-to-cart">เพิ่มลงตะกร้า</button></div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="stats" aria-labelledby="stats-heading">
+      <h2 id="stats-heading">สถิติ</h2>
+      <div class="stats-container">
+        <div class="stat-box" role="group" aria-labelledby="stat1-label">
+          <div class="stat-number" id="stat1-number">1,234</div>
+          <div class="stat-label" id="stat1-label">ผู้ใช้งาน</div>
+        </div>
+        <div class="stat-box" role="group" aria-labelledby="stat2-label">
+          <div class="stat-number" id="stat2-number">5.6K</div>
+          <div class="stat-label" id="stat2-label">ยอดขาย</div>
+        </div>
+        <div class="stat-box" role="group" aria-labelledby="stat3-label">
+          <div class="stat-number" id="stat3-number">98%</div>
+          <div class="stat-label" id="stat3-label">ความพึงพอใจ</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p style="text-align:center;padding:1rem 0;color:#666;">© 2026 ตัวอย่างเว็บไซต์</p>
+  </footer>
+</body>
+</html>
+
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ตัวอย่างบทความ</title>
+    <link rel="stylesheet" href="ex.css">
+</head>
+<body>
+    <article class="blog-post">
+        <header class="post-header">
+            <h1 class="post-title">ร้านขายรองเท้า FS Shop</h1>
+            <div class="post-meta">โพสต์เมื่อ 15 กุมภาพันธ์ 2026 | โดย นางสาวนภัสสร คำปัน</div>
+        </header>
+        
+        <div class="post-content">
+            <p>เหนื้อหาเกี่ยวกับรองเท้าในร้าน FS Shop ที่มีรองเท้าหลายแบบหลายสไตล์</p>
+
+            <h2>1.รองเท้าแมรี่เจน</h2>
+            <p>รองเท้าแมรี่เจนเป็นรองเท้าที่มีดีไซน์คลาสสิก มักทำจากหนังหรือวัสดุคุณภาพสูง มีความนุ่มสบายและเหมาะสำหรับการสวมใส่ในทุกโอกาส</p>
+
+            <blockquote>
+                "รองเท้าแมรี่เจนเป็นรองเท้าที่มีดีไซน์คลาสสิก"
+            </blockquote>
+
+            <h2>2.รองเท้าส้นสูง</h2>
+            <p>รองเท้าส้นสูงเป็นรองเท้าที่ช่วยเพิ่มความสูงให้กับผู้สวมใส่ มักทำจากวัสดุที่มีคุณภาพและออกแบบมาให้มีความสวยงาม</p>
+        </div>
+    </article>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;800&display=swap');
+
+:root{
+  --bg: #f6f9fb;
+  --card: #ffffff;
+  --primary: #1e40af;
+  --accent: #e11d48;
+  --muted: #6b7280;
+  --text: #0b1220; /* darker for better contrast */
+  --container: 1100px; /* wider container for fuller layout */
+}
+
+html{font-size:16px}
+body{line-height:1.65; font-size:1rem;}
+
+/* Improve paragraph and link readability */
+p{font-size:1rem;color:#16202b;margin:0 0 1rem}
+
+a{color:var(--primary);text-decoration:underline;}
+a:hover{text-decoration:none}
+a:focus{outline:3px solid rgba(30,64,175,0.18);outline-offset:2px}
+
+/* Headings */
+h1,h2,h3{color:var(--text);margin:0 0 .5rem}
+h1{font-size:2.25rem;line-height:1.05}
+h2{font-size:1.5rem}
+h3{font-size:1.125rem}
+
+/* Section heading bigger and spaced */
+section h2{font-size:1.6rem;margin:32px 0 18px;text-align:center;color:var(--text)}
+
+/* Container uses more of the screen on large displays */
+.container{max-width:var(--container);padding:0 20px}
+
+/* Make content appear fuller horizontally on wide screens */
+@media(min-width:1400px){:root{--container:1300px}}
+
+/* Global layout */
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: 'Sarabun', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:0 16px;
+}
+
+/* Header/navigation */
+header{background:linear-gradient(90deg,#0f172a, #1e293b);}
+nav{max-width:var(--container);margin:0 auto;padding:14px 16px}
+nav ul{display:flex;gap:12px;align-items:center;list-style:none;margin:0;padding:0}
+nav li{margin:0}
+.menu-item{color:#fff;text-decoration:none;padding:10px 14px;border-radius:6px;display:inline-block}
+.menu-item:hover{background:rgba(255,255,255,0.06)}
+.menu-item.active{background:var(--primary);box-shadow:0 4px 12px rgba(30,64,175,0.12)}
+
+/* Stats */
+#stats-heading{margin-top:28px}
+.stats-container{align-items:center}
+
+/* Blog/article */
+.blog-post{max-width:var(--container);margin:28px auto;padding:22px;background:var(--card);border-radius:12px;box-shadow:0 12px 30px rgba(2,6,23,0.06)}
+.post-header{text-align:center}
+.post-title{font-size:2rem;margin:0 0 8px}
+.post-meta{color:var(--muted);font-size:0.9rem}
+
+/* Footer */
+footer{padding:20px 0;background:transparent}
+footer p{color:#64748b;margin:0;text-align:center}
+
+/* Responsive tweaks */
+@media (max-width:900px){:root{--container:740px}} 
+@media (max-width:600px){
+  nav ul{flex-wrap:wrap}
+  section h2{font-size:1.1rem}
+  .product-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+}
+
+/* Improve readability for product cards and stats */
+.product-info,.grid-product-details{padding:16px}
+.product-title,.grid-product-title{font-size:1.15rem}
+.product-description{font-size:0.98rem;color:#334155}
+
+/* Ensure images scale cleanly */
+.grid-product-image, .product-image{background-size:cover;background-position:center}
+
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](<ภาพถ่ายหน้าจอ 2569-02-25 เวลา 19.12.31.png>)]
 
