@@ -250,7 +250,7 @@ div > p {
 </body>
 </html>
 ```
-![LAB2-screenshots](../68030250_LAB-CSS/screenshots/LAB2.png)
+![LAB2-screenshots](/68030250_LAB-CSS/screenshots/LAB2.png)
 
 
 [](#การทดลองที่-3-การจัดการสีและพื้นหลัง)
@@ -495,7 +495,7 @@ background-size: cover;
         }
 ```
 
-![screenshots-LAB3](../68030250_LAB-CSS/screenshots/LAB3.png)
+![screenshots-LAB3](/68030250_LAB-CSS/screenshots/LAB3.png)
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
@@ -659,7 +659,7 @@ border: 1px solid black;
             }
         }
 ```
-![screenshots-LAB4](../68030250_LAB-CSS/screenshots/LAB4.png)
+![screenshots-LAB4](/68030250_LAB-CSS/screenshots/LAB4.png)
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
@@ -858,7 +858,7 @@ font-weight: bold;
             }
         }
 ```
-![screenshots-LAB5](../68030250_LAB-CSS/screenshots/LAB5.png)
+![screenshots-LAB5](/68030250_LAB-CSS/screenshots/LAB5.png)
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
@@ -1109,7 +1109,7 @@ font-weight: bold;
             }
         }
 ```
-![screenshots-LAB6.1](../68030250_LAB-CSS/screenshots/LAB6.1.png)
+![screenshots-LAB6.1](/68030250_LAB-CSS/screenshots/LAB6.1.png)
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
@@ -1476,5 +1476,5 @@ font-weight: bold;
     .chart-container { grid-template-columns: 1fr; }
 }
 ```
-![screenshots-LAB6.2](../68030250_LAB-CSS/screenshots/LAB6.2.png)
+![screenshots-LAB6.2](/68030250_LAB-CSS/screenshots/LAB6.2.png)
 
