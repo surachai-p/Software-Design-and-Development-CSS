@@ -1,0 +1,108 @@
+/* --- 1. Global Reset & Box Model Setup --- */
+* {
+    margin: 0;
+    padding: 0;
+    /* หัวใจสำคัญของ Box Model: ทำให้ padding ไม่ไปเพิ่มความกว้างของกล่อง */
+    box-sizing: border-box; 
+    font-family: 'Sarabun', sans-serif;
+}
+
+:root {
+    --bg-color: #f1f5f9;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --primary: #6366f1;
+    --border-color: #e2e8f0;
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* --- 2. Container Layout --- */
+.stats-container {
+    display: flex;
+    flex-wrap: wrap; /* รองรับการตัดบรรทัดบนมือถือ */
+    justify-content: center;
+    gap: 24px; /* ระยะห่างระหว่างกล่อง (Modern Spacing) */
+    width: 100%;
+    max-width: 1100px;
+}
+
+/* --- 3. Stat Box (The Box Model Lab) --- */
+.stat-box {
+    flex: 1;
+    min-width: 280px; /* ป้องกันกล่องบีบจนเล็กเกินไป */
+    background-color: var(--card-bg);
+    
+    /* Box Model Properties */
+    padding: 40px 24px;    /* ภายใน: เว้นระยะจากขอบเข้ามา */
+    border-radius: 20px;  /* ความโค้งของมุมขอบ */
+    border: 1px solid var(--border-color); /* เส้นขอบ */
+    
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.stat-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary);
+}
+
+/* --- 4. Typography & Elements inside Box --- */
+.stat-icon {
+    font-size: 2rem;
+    margin-bottom: 16px; /* Spacing ด้านล่างไอคอน */
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background: #f8fafc;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin: 8px 0 16px 0; /* Margin: บน 8px, ล่าง 16px */
+    font-weight: 400;
+}
+
+.stat-trend {
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    background: #f1f5f9;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.trend-up {
+    color: #10b981;
+    background: #ecfdf5;
+}
+
+/* --- 5. Responsive Adjustment --- */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+    }
+    .stat-box {
+        width: 100%;
+    }
+}

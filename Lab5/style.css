@@ -1,0 +1,132 @@
+/* --- 1. Typography Core Setup --- */
+:root {
+    --text-dark: #1a1a1a;
+    --text-body: #4a4a4a;
+    --text-muted: #888888;
+    --accent-color: #3498db;
+    --bg-paper: #ffffff;
+    --line-height-body: 1.8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fcfcfc;
+    font-family: 'Sarabun', sans-serif;
+    color: var(--text-body);
+    -webkit-font-smoothing: antialiased; /* ทำให้ตัวอักษรดูคมชัดขึ้นบน Mac */
+}
+
+/* --- 2. Article Container --- */
+.blog-post {
+    max-width: 800px; /* ความกว้างที่เหมาะสมที่สุดสำหรับการอ่าน (Optimal Reading Width) */
+    margin: 6rem auto;
+    padding: 0 2rem;
+    background: var(--bg-paper);
+}
+
+/* --- 3. Header Styling --- */
+.post-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.post-category {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.post-title {
+    font-size: 3.5rem; /* ขนาดใหญ่พิเศษเพื่อให้ดูน่าสนใจ */
+    color: var(--text-dark);
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.post-meta {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.separator {
+    margin: 0 10px;
+}
+
+/* --- 4. Body Typography --- */
+.post-content {
+    font-size: 1.15rem;
+    line-height: var(--line-height-body);
+}
+
+/* ย่อหน้านำ (Lead Paragraph) */
+.lead {
+    font-size: 1.4rem;
+    color: var(--text-dark);
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    border-left: 4px solid var(--accent-color);
+    padding-left: 1.5rem;
+}
+
+.post-content p {
+    margin-bottom: 2rem;
+}
+
+.post-content h2 {
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin: 3rem 0 1.5rem 0;
+    font-weight: 600;
+}
+
+/* Quote Styling */
+blockquote {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: var(--text-dark);
+    margin: 3.5rem 0;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+}
+
+blockquote::before {
+    content: '"';
+    font-size: 5rem;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    color: #e9ecef;
+    font-family: serif;
+}
+
+/* Footer Section */
+.post-footer {
+    margin-top: 5rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .post-title {
+        font-size: 2.5rem;
+    }
+    .blog-post {
+        margin: 3rem auto;
+    }
+}
