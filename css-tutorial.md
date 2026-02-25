@@ -931,14 +931,14 @@ nav a.active {
 }
 
 .stat-number {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
     color: white;
     margin-bottom: 0.5rem;
 }
 
 .stat-label {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #fffefe;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -1131,12 +1131,104 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BLOG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <article class="blog-post">
+        <header class="post-header">
+            <h1 class="post-title">เบื้องหลังดีไซน์เสื้อทีม Formula 1</h1>
+            <div class="post-meta">โพสต์เมื่อ 25 กุมภาพันธ์ 2026 | โดย Wanitcha Jabprang</div>
+        </header>
+        
+        <div class="post-content">
+            <p>เสื้อทีม Formula 1 ไม่ได้เป็นเพียงเสื้อผ้าธรรมดา แต่เป็นสัญลักษณ์ของความภาคภูมิใจ 
+               ประวัติศาสตร์ และจิตวิญญาณของแต่ละทีมแข่งระดับโลก ทุกสี ทุกเส้นสาย 
+               และทุกรายละเอียดล้วนผ่านการออกแบบอย่างพิถีพิถัน</p>
+
+            <h2>1. สีประจำทีมที่มีความหมาย</h2>
+            <p>ตัวอย่างเช่น สีแดง Rosso Corsa ของ Ferrari สื่อถึงพลังและประวัติศาสตร์อันยาวนาน 
+               ขณะที่สีดำ-เขียวของ Mercedes-AMG สะท้อนความหรูหราและเทคโนโลยีล้ำสมัย</p>
+
+            <blockquote>
+                "เสื้อทีมไม่ใช่แค่เครื่องแต่งกาย แต่คือสัญลักษณ์ของความหลงใหลในความเร็ว"
+            </blockquote>
+
+            <h2>2. เทคโนโลยีผ้าที่ใช้ในการผลิต</h2>
+            <p> เสื้อทีม F1 ผลิตจากวัสดุคุณภาพสูงที่ระบายอากาศได้ดี น้ำหนักเบา และรองรับการเคลื่อนไหว 
+                เพื่อให้ทั้งนักแข่งและแฟน ๆ สวมใส่ได้อย่างสบายในทุกสถานการณ์</p>
+            
+            <h2>3. มากกว่าแฟชั่น คือไลฟ์สไตล์</h2>
+            <p> สำหรับแฟน Formula 1 การสวมเสื้อทีมคือการแสดงออกถึงตัวตน 
+                และการสนับสนุนทีมที่รัก ไม่ว่าจะในสนามแข่งหรือในชีวิตประจำวัน</p>
+        </div>
+    </article>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+
+.blog-post {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Sarabun', sans-serif;
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.post-title {
+    font-size: 2.5rem;
+    color: red;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.post-meta {
+    color: #003988;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.post-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.post-content p {
+    margin-bottom: 1rem;
+}
+
+.post-content h2 {
+    font-size: 1.8rem;
+    color: #930000;
+    margin: 2rem 0 1rem;
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 4px solid gold;
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .post-title {
+        font-size: 2rem;
+        }
+}
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![lab5](imageslab/lab5.png)
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
