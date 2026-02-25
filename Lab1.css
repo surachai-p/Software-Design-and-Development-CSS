@@ -1,0 +1,38 @@
+body{
+ font-family: Arial, sans-serif;
+ text-align:center;
+ margin-top:50px;
+}
+
+button{
+ margin:10px;
+ font-size:16px;
+ cursor:pointer;
+}
+
+/* ปุ่มแดง */
+.btn-inline{
+ background:#dc3545;
+ color:white;
+ padding:10px 20px;
+ border:none;
+ border-radius:5px;
+}
+
+/* ปุ่มน้ำเงิน */
+.btn-primary{
+ background:#007bff;
+ color:white;
+ padding:10px 20px;
+ border:none;
+ border-radius:5px;
+}
+
+/* ปุ่มเขียว */
+.btn-success{
+ background:#28a745;
+ color:white;
+ padding:10px 20px;
+ border:none;
+ border-radius:5px;
+}
