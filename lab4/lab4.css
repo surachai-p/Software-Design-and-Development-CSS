@@ -1,0 +1,69 @@
+/* style.css */
+
+/* General Body Styling */
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    /* Adjusted Max-width */
+    margin: 3rem auto;
+    /* Adjusted Margin */
+    padding: 0 2rem;
+}
+
+.stat-box {
+    flex: 1;
+    margin: 0 20px;
+    /* Box Model: Margin */
+    padding: 2.5rem 1rem;
+    /* Box Model: Padding */
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 15px;
+    /* Rounded corners */
+    border: 2px solid #e0e0e0;
+    /* Box Model: Border */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 3rem;
+    /* Adjusted Font size */
+    font-weight: 800;
+    color: #2c3e50;
+    /* Changed Color */
+    margin-bottom: 0.2rem;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    /* Adjusted Font size */
+    color: #3498db;
+    /* Changed Color to Blue */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* Increased Spacing */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+    }
+
+    .stat-box {
+        margin: 1rem 0;
+    }
+}
