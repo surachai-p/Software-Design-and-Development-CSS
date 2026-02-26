@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>แดชบอร์ด</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="dashboard">
+    <header class="header">
+      <div class="header-left">
+        <h1 class="header-title">📊 แดชบอร์ด</h1>
+      </div>
+      <nav class="header-nav">
+        <button class="nav-button">👤 โปรไฟล์</button>
+        <button class="nav-button logout-btn">🚪 ออกจากระบบ</button>
+      </nav>
+    </header>
+
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <h2>MyStore</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="#" class="sidebar-link active">🏠 หน้าแรก</a></li>
+          <li><a href="#" class="sidebar-link">📈 รายงาน</a></li>
+          <li><a href="#" class="sidebar-link">⚙️ การตั้งค่า</a></li>
+          <li><a href="#" class="sidebar-link">👥 ลูกค้า</a></li>
+          <li><a href="#" class="sidebar-link">📦 สินค้า</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <section class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">💰</div>
+          <div class="stat-info">
+            <h3 class="stat-title">ยอดขายรวม</h3>
+            <p class="stat-value">฿150,000</p>
+            <p class="stat-change">📈 +12% จากเดือนที่แล้ว</p>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">📋</div>
+          <div class="stat-info">
+            <h3 class="stat-title">จำนวนออเดอร์</h3>
+            <p class="stat-value">1,234</p>
+            <p class="stat-change">📊 +8% จากเดือนที่แล้ว</p>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">👤</div>
+          <div class="stat-info">
+            <h3 class="stat-title">ลูกค้าใหม่</h3>
+            <p class="stat-value">45</p>
+            <p class="stat-change">📍 สัปดาห์นี้</p>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">⭐</div>
+          <div class="stat-info">
+            <h3 class="stat-title">ความพึงพอใจ</h3>
+            <p class="stat-value">4.8/5</p>
+            <p class="stat-change">⬆️ +0.3 จากเดือนที่แล้ว</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="chart-section">
+        <h2 class="section-title">วิเคราะห์ผลขาย</h2>
+        
+        <div class="chart-container">
+          <div class="chart-card">
+            <h3 class="chart-title">กราฟแสดงยอดขาย</h3>
+            <div class="chart-placeholder">
+              <div class="chart-bar" style="height: 60%; background: #007bff;"></div>
+              <div class="chart-bar" style="height: 75%; background: #28a745;"></div>
+              <div class="chart-bar" style="height: 55%; background: #ffc107;"></div>
+              <div class="chart-bar" style="height: 80%; background: #17a2b8;"></div>
+              <div class="chart-bar" style="height: 70%; background: #007bff;"></div>
+              <div class="chart-bar" style="height: 85%; background: #28a745;"></div>
+            </div>
+            <p class="chart-footer">มกราคม - มิถุนายน 2026</p>
+          </div>
+
+          <div class="chart-card">
+            <h3 class="chart-title">สัดส่วนสินค้าขายดี</h3>
+            <div class="pie-chart">
+              <div class="pie-segment" style="background: #007bff; width: 40%; border-radius: 999px 0 0 999px;">35%</div>
+              <div class="pie-segment" style="background: #28a745;">30%</div>
+              <div class="pie-segment" style="background: #ffc107;">20%</div>
+              <div class="pie-segment" style="background: #ff6b6b; border-radius: 0 999px 999px 0;">15%</div>
+            </div>
+            <div class="pie-legend">
+              <div class="legend-item"><span class="legend-color" style="background: #007bff;"></span>ปืนเล็ก (35%)</div>
+              <div class="legend-item"><span class="legend-color" style="background: #28a745;"></span>ปืนกล (30%)</div>
+              <div class="legend-item"><span class="legend-color" style="background: #ffc107;"></span>ปืนพก (20%)</div>
+              <div class="legend-item"><span class="legend-color" style="background: #ff6b6b;"></span>อื่นๆ (15%)</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="recent-orders">
+        <h2 class="section-title">ออเดอร์ล่าสุด</h2>
+        <div class="orders-table">
+          <div class="table-header">
+            <div class="table-cell">สั่งซื้อ ID</div>
+            <div class="table-cell">ลูกค้า</div>
+            <div class="table-cell">ยอด</div>
+            <div class="table-cell">สถานะ</div>
+          </div>
+          <div class="table-row">
+            <div class="table-cell">#ORD-001</div>
+            <div class="table-cell">สมชาย จันทร์</div>
+            <div class="table-cell">฿3,500</div>
+            <div class="table-cell"><span class="badge successful">✓ สำเร็จ</span></div>
+          </div>
+          <div class="table-row">
+            <div class="table-cell">#ORD-002</div>
+            <div class="table-cell">ศิริวรรณ ดำรงค์</div>
+            <div class="table-cell">฿2,800</div>
+            <div class="table-cell"><span class="badge pending">⏳ รอดำเนิน</span></div>
+          </div>
+          <div class="table-row">
+            <div class="table-cell">#ORD-003</div>
+            <div class="table-cell">อมร สุขสวัสดิ์</div>
+            <div class="table-cell">฿4,200</div>
+            <div class="table-cell"><span class="badge successful">✓ สำเร็จ</span></div>
+          </div>
+          <div class="table-row">
+            <div class="table-cell">#ORD-004</div>
+            <div class="table-cell">สาธิต บุญญะ</div>
+            <div class="table-cell">฿1,950</div>
+            <div class="table-cell"><span class="badge pending">⏳ รอดำเนิน</span></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
