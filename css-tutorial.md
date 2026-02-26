@@ -232,9 +232,25 @@ div > p {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+[!<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab2</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+</body>
+</html>]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image-1.png)]
 
 
 [](#การทดลองที่-3-การจัดการสีและพื้นหลัง)
@@ -338,9 +354,72 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab3</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <div class="product-container">
+        
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('../images/BN2V006101.jpg');"></div>
+            <div class="product-info">
+                <h2 class="product-title">สินค้าชิ้นที่ 1</h2>
+                <p class="product-price">฿1,999</p>
+                <p class="product-description">รายละเอียดสินค้าชิ้นที่ 1 ที่น่าสนใจและน่าใช้งาน</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('../images/BN21424781.jpg');"></div>
+            <div class="product-info">
+                <h2 class="product-title">สินค้าชิ้นที่ 2</h2>
+                <p class="product-price">฿2,590</p>
+                <p class="product-description">รายละเอียดสินค้าชิ้นที่ 2 ที่น่าสนใจและน่าใช้งาน</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('../images/images (1).jpg');"></div>
+            <div class="product-info">
+                <h2 class="product-title">สินค้าชิ้นที่ 3</h2>
+                <p class="product-price">฿890</p>
+                <p class="product-description">รายละเอียดสินค้าชิ้นที่ 3 ที่น่าสนใจและน่าใช้งาน</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('../images/images (2).jpg');"></div>
+            <div class="product-info">
+                <h2 class="product-title">สินค้าชิ้นที่ 4</h2>
+                <p class="product-price">฿4,150</p>
+                <p class="product-description">รายละเอียดสินค้าชิ้นที่ 4 ที่น่าสนใจและน่าใช้งาน</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image-2.png)]
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
@@ -554,12 +633,197 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab5 - Text and Font Management</title>
+    <link rel="stylesheet" href="style5.css">
+</head>
+<body>
+    <article class="blog-post">
+        <header class="post-header">
+            <h1 class="post-title">วิธีการเขียนบทความที่น่าสนใจ</h1>
+            <div class="post-meta">โพสต์เมื่อ 19 ก.พ. 2026 | โดย กันติชา ย๋องชา</div>
+        </header>
+        
+        <div class="post-content">
+            <p>เนื้อหาบทความที่ดีควรมีความน่าสนใจและเป็นประโยชน์ต่อผู้อ่าน การเขียนบทความให้น่าอ่านนั้นมีหลักการสำคัญหลายประการ</p>
+
+            <h2>1. การเลือกหัวข้อที่น่าสนใจ</h2>
+            <p>หัวข้อที่ดีควรตรงกับความสนใจของกลุ่มเป้าหมาย และมีประโยชน์ต่อผู้อ่าน</p>
+
+            <blockquote>
+                "การเขียนที่ดีไม่ได้เกิดจากพรสวรรค์เพียงอย่างเดียว แต่เกิดจากการฝึกฝนอย่างสม่ำเสมอ"
+            </blockquote>
+
+            <h2>2. การจัดโครงสร้างเนื้อหา</h2>
+            <p>เนื้อหาที่ดีควรมีการจัดลำดับที่เป็นระบบ เข้าใจง่าย และมีความต่อเนื่อง</p>
+        </div>
+    </article>
+</body>
+</html>
+]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sarabun', 'Noto Sans Thai', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #f4f7fb 0%, #eef2ff 100%);
+    color: #222;
+    line-height: 1.75;
+    min-height: 100vh;
+    padding: 48px 20px;
+    font-size: 16px;
+}
+
+.blog-post {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.post-header {
+    background: linear-gradient(90deg, #0b5ed7 0%, #4a4ddf 100%);
+    color: white;
+    padding: 56px 40px;
+    text-align: center;
+}
+
+.post-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    line-height: 1.12;
+    letter-spacing: -0.6px;
+}
+
+.post-meta {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.post-content {
+    padding: 48px 40px;
+}
+
+.post-content p {
+    font-size: 1.125rem; /* ~18px */
+    margin-bottom: 20px;
+    color: #444;
+    line-height: 1.85;
+    text-align: justify;
+}
+
+.post-content h2 {
+    font-size: 2.1rem;
+    color: #0b5ed7;
+    margin: 40px 0 18px 0;
+    font-weight: 700;
+    border-bottom: 3px solid #4a4ddf;
+    padding-bottom: 8px;
+}
+
+blockquote {
+    font-style: italic;
+    font-size: 1.15rem;
+    border-left: 6px solid #0b5ed7;
+    margin: 28px 0;
+    padding: 18px 0 18px 26px;
+    color: #4a4a4a;
+    background: #fbfeff;
+    border-radius: 4px;
+    line-height: 1.8;
+}
+
+blockquote::before {
+    content: '"';
+    font-size: 3rem;
+    color: #667eea;
+    opacity: 0.3;
+    margin-right: 10px;
+    vertical-align: -10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-post {
+        border-radius: 8px;
+    }
+
+    .post-header {
+        padding: 30px 20px;
+    }
+
+    .post-title {
+        font-size: 2rem;
+    }
+
+    .post-content {
+        padding: 30px 20px;
+    }
+
+    .post-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .post-content h2 {
+        font-size: 1.6rem;
+        margin: 30px 0 15px 0;
+    }
+
+    blockquote {
+        font-size: 1rem;
+        padding: 15px 0 15px 20px;
+        border-left-width: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .post-header {
+        padding: 20px 15px;
+    }
+
+    .post-title {
+        font-size: 1.7rem;
+    }
+
+    .post-meta {
+        font-size: 0.85rem;
+    }
+
+    .post-content {
+        padding: 20px 15px;
+    }
+
+    .post-content p {
+        font-size: 0.95rem;
+        text-align: left;
+    }
+
+    .post-content h2 {
+        font-size: 1.4rem;
+    }
+}
+]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image-6.png)]
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
@@ -701,12 +965,196 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab3</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="product-grid.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <div class="product-container">
+        
+        <div class="product-card">
+            <img class="product-image" src="../product/thgoods_00_482303_3x4.avif" alt="สินค้าชิ้นที่ 1">
+            <div class="product-info">
+                <h2 class="product-title">สินค้าชิ้นที่ 1</h2>
+                <p class="product-price">฿1,999</p>
+                <p class="product-description">รายละเอียดสินค้าชิ้นที่ 1 ที่น่าสนใจและน่าใช้งาน</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="../product/thgoods_00_482305_3x4.avif" alt="สินค้าชิ้นที่ 2">
+            <div class="product-info">
+                <h2 class="product-title">สินค้าชิ้นที่ 2</h2>
+                <p class="product-price">฿2,590</p>
+                <p class="product-description">รายละเอียดสินค้าชิ้นที่ 2 ที่น่าสนใจและน่าใช้งาน</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="../product/thgoods_09_483972_3x4.avif" alt="สินค้าชิ้นที่ 3">
+            <div class="product-info">
+                <h2 class="product-title">สินค้าชิ้นที่ 3</h2>
+                <p class="product-price">฿890</p>
+                <p class="product-description">รายละเอียดสินค้าชิ้นที่ 3 ที่น่าสนใจและน่าใช้งาน</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="../product/thgoods_11_475367_3x4.avif" alt="สินค้าชิ้นที่ 4">
+            <div class="product-info">
+                <h2 class="product-title">สินค้าชิ้นที่ 4</h2>
+                <p class="product-price">฿4,150</p>
+                <p class="product-description">รายละเอียดสินค้าชิ้นที่ 4 ที่น่าสนใจและน่าใช้งาน</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="../product/thgoods_57_475367001_3x4.avif" alt="สินค้าชิ้นที่ 5">
+            <div class="product-info">
+                <h2 class="product-title">สินค้าชิ้นที่ 5</h2>
+                <p class="product-price">฿1,250</p>
+                <p class="product-description">รายละเอียดสินค้าชิ้นที่ 5 (ตัวอย่าง) พร้อมคำอธิบายสั้น ๆ</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; 
+}
+
+nav {
+    background-color: #701f65;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+}
+
+nav > ul > li {
+    margin: 0 10px;
+}
+
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+}
+
+.menu-item:hover {
+    background-color: #831032;
+    border-radius: 3px;
+}
+
+#active {
+    background-color: #4a2c50;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+
+.product-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 40px 20px; 
+    justify-content: center;
+}
+
+.product-card {
+    width: 250px; 
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    background-color: white;
+    transition: transform 0.3s; 
+}
+
+.product-card:hover {
+    transform: translateY(-5px); 
+}
+
+.product-image {
+    width: 100%;
+    height: 180px;
+    background-color: #e0e0e0;
+    background-size: cover;
+    background-position: center;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-title {
+    color: #e67dc6;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: #e73c3c; 
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product-description {
+    color: #b98fa9;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.product-button {
+    display: block;
+    background: linear-gradient(to right, #c072a9, #a01662); 
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    margin-top: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.product-button:hover {
+    background: linear-gradient(to right, #a01666, #660e44);
+}]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image-7.png)]
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
@@ -854,10 +1302,201 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab4 - Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <h1>แดชบอร์ด</h1>
+            <nav>
+                <button>โปรไฟล์</button>
+                <button>ออกจากระบบ</button>
+            </nav>
+        </header>
+
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li>หน้าแรก</li>
+                    <li>รายงาน</li>
+                    <li>การตั้งค่า</li>
+                    <li>ผู้ใช้งาน</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>ยอดขายรวม</h3>
+                    <p>฿150,000</p>
+                </div>
+                <div class="stat-card">
+                    <h3>จำนวนออเดอร์</h3>
+                    <p>1,234</p>
+                </div>
+                <div class="stat-card">
+                    <h3>ลูกค้าใหม่</h3>
+                    <p>45</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                    <div class="chart">
+                        <h3>กราฟแสดงยอดขาย</h3>
+                        <canvas id="salesChart" aria-label="กราฟยอดขาย" role="img"></canvas>
+                        <p style="color:var(--muted)">(ข้อมูลตัวอย่างรายเดือน)</p>
+                    </div>
+                    <div class="chart">
+                        <h3>สัดส่วนสินค้าขายดี</h3>
+                        <canvas id="productChart" aria-label="สัดส่วนสินค้าขายดี" role="img"></canvas>
+                        <p style="color:var(--muted)">(ข้อมูลตัวอย่างแบ่งตามสินค้า)</p>
+                    </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Sales line chart
+    (function(){
+        const ctx = document.getElementById('salesChart');
+        if(!ctx) return;
+        new Chart(ctx.getContext('2d'), {
+            type: 'line',
+            data: {
+                labels: ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.'],
+                datasets: [{
+                    label: 'ยอดขาย (฿)',
+                    data: [12000,15000,14000,18000,21000,20000,23000],
+                    borderColor: '#2563eb',
+                    backgroundColor: 'rgba(37,99,235,0.12)',
+                    tension: 0.3,
+                    fill: true,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+    })();
+
+    // Product share doughnut chart
+    (function(){
+        const ctx = document.getElementById('productChart');
+        if(!ctx) return;
+        new Chart(ctx.getContext('2d'), {
+            type: 'doughnut',
+            data: {
+                labels: ['สินค้า A','สินค้า B','สินค้า C'],
+                datasets: [{
+                    data: [45,30,25],
+                    backgroundColor: ['#2563eb','#10b981','#f59e0b'],
+                    hoverOffset: 6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+            }
+        });
+    })();
+</script>
+]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[body {
+    margin: 0;
+    padding: 30px;
+    font-family: 'Sarabun', Arial, sans-serif;
+    background: linear-gradient(135deg, #ea66d4 0%, #a24b9e 100%);
+    min-height: 100vh;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    width: 280px;
+    padding: 30px;
+    margin: 15px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 3px solid #ea66b3;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    border-color: #a24b85;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #ea66cd;
+    margin: 0 0 15px 0;
+    letter-spacing: 2px;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #764ba2;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        gap: 15px;
+        margin: 20px auto;
+        padding: 20px 10px;
+    }
+
+    .stat-box {
+        width: 100%;
+        padding: 25px;
+        margin: 0;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .stat-label {
+        font-size: 1rem;
+    }
+}
+]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image-8.png)]
 

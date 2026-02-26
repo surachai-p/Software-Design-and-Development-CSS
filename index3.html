@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab4 - Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <h1>แดชบอร์ด</h1>
+            <nav>
+                <button>โปรไฟล์</button>
+                <button>ออกจากระบบ</button>
+            </nav>
+        </header>
+
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li>หน้าแรก</li>
+                    <li>รายงาน</li>
+                    <li>การตั้งค่า</li>
+                    <li>ผู้ใช้งาน</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>ยอดขายรวม</h3>
+                    <p>฿150,000</p>
+                </div>
+                <div class="stat-card">
+                    <h3>จำนวนออเดอร์</h3>
+                    <p>1,234</p>
+                </div>
+                <div class="stat-card">
+                    <h3>ลูกค้าใหม่</h3>
+                    <p>45</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                    <div class="chart">
+                        <h3>กราฟแสดงยอดขาย</h3>
+                        <canvas id="salesChart" aria-label="กราฟยอดขาย" role="img"></canvas>
+                        <p style="color:var(--muted)">(ข้อมูลตัวอย่างรายเดือน)</p>
+                    </div>
+                    <div class="chart">
+                        <h3>สัดส่วนสินค้าขายดี</h3>
+                        <canvas id="productChart" aria-label="สัดส่วนสินค้าขายดี" role="img"></canvas>
+                        <p style="color:var(--muted)">(ข้อมูลตัวอย่างแบ่งตามสินค้า)</p>
+                    </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Sales line chart
+    (function(){
+        const ctx = document.getElementById('salesChart');
+        if(!ctx) return;
+        new Chart(ctx.getContext('2d'), {
+            type: 'line',
+            data: {
+                labels: ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.'],
+                datasets: [{
+                    label: 'ยอดขาย (฿)',
+                    data: [12000,15000,14000,18000,21000,20000,23000],
+                    borderColor: '#2563eb',
+                    backgroundColor: 'rgba(37,99,235,0.12)',
+                    tension: 0.3,
+                    fill: true,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+    })();
+
+    // Product share doughnut chart
+    (function(){
+        const ctx = document.getElementById('productChart');
+        if(!ctx) return;
+        new Chart(ctx.getContext('2d'), {
+            type: 'doughnut',
+            data: {
+                labels: ['สินค้า A','สินค้า B','สินค้า C'],
+                datasets: [{
+                    data: [45,30,25],
+                    backgroundColor: ['#2563eb','#10b981','#f59e0b'],
+                    hoverOffset: 6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+            }
+        });
+    })();
+</script>

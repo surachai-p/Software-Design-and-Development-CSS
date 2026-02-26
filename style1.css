@@ -1,0 +1,35 @@
+nav {
+    background-color: #dd90d3; 
+    padding: 15px;
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+
+nav > ul > li {
+    margin: 0 10px;
+}
+
+
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.menu-item:hover {
+    background-color: #34495e; 
+    border-radius: 3px;
+}
+
+
+#active {
+    background-color: #e74c3c; 
+    border-radius: 3px;
+}

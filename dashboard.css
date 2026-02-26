@@ -1,0 +1,59 @@
+:root{
+  --bg:#f4f7fb;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#2563eb;
+  --sidebar:#0f1724;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  background:var(--bg);
+  color:#0f1724;
+}
+.dashboard{
+  display:grid;
+  grid-template-areas: "sidebar header" "sidebar main";
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: auto 1fr;
+  min-height:100vh;
+}
+.header{
+  grid-area:header;
+  background:linear-gradient(90deg, rgba(255,255,255,0.9), rgba(255,255,255,0.8));
+  padding:18px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  box-shadow:0 1px 0 rgba(15,23,36,0.04);
+}
+.header h1{margin:0;font-size:1.1rem;color:#0b1220}
+.header nav button{background:transparent;border:1px solid rgba(11,18,32,0.06);padding:8px 10px;border-radius:8px;cursor:pointer;margin-left:8px}
+.sidebar{
+  grid-area:sidebar;
+  background:var(--sidebar);
+  color:#fff;
+  padding:24px 18px;
+}
+.sidebar ul{list-style:none;padding:0;margin:12px 0 0 0}
+.sidebar li{padding:10px 8px;border-radius:6px;cursor:pointer;color:#d1d5db}
+.sidebar li:hover{background:rgba(255,255,255,0.04);color:#fff}
+.main-content{grid-area:main;padding:24px}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:20px}
+.stat-card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 20px rgba(2,6,23,0.06);}
+.stat-card h3{margin:0;font-size:0.88rem;color:var(--muted)}
+.stat-card p{margin-top:8px;font-size:1.35rem;font-weight:700}
+.chart-container{display:grid;grid-template-columns:2fr 1fr;gap:16px}
+.chart{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 20px rgba(2,6,23,0.06)}
+
+/* small screens */
+@media (max-width: 880px){
+  .dashboard{grid-template-areas:"header" "main";grid-template-columns:1fr}
+  .sidebar{display:none}
+  .chart-container{grid-template-columns:1fr}
+}
+
+/* canvas sizing for charts */
+.chart canvas{width:100% !important; height:260px !important; display:block}
+
