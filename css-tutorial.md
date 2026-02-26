@@ -232,9 +232,59 @@ div > p {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navigation Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+
+```css
+nav {
+    background-color: #172737; 
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav > ul > li {
+    margin: 0 10px;
+}
+
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.menu-item:hover {
+    background-color: #555;
+    border-radius: 3px;
+}
+
+#active {
+    background-color: #e74c3c;
+    border-radius: 3px;
+}
+```
+[![alt text](<ภาพถ่ายหน้าจอ 2569-02-19 เวลา 15.14.21.png>)]
 
 
 [](#การทดลองที่-3-การจัดการสีและพื้นหลัง)
@@ -338,9 +388,97 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product Card</title>
+    <link rel="stylesheet" href="product card.css">
+</head>
+<body>
+    <div class="product-card">
+        <div class="product-image"></div>
+        <div class="product-info">
+            <h2 class="product-title">สินค้าตัวอย่าง</h2>
+            <p class="product-price">฿1,999</p>
+            <p class="product-description">
+                รายละเอียดสินค้าตัวอย่าง ที่มีความน่าสนใจและน่าใช้งาน
+            </p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+</body>
+</html>
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+
+```css
+.product-card {
+            width: 100%; max-width: 300px;
+            margin: 0 auto; /* center the card horizontally */
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background-image: url('https://i.pinimg.com/736x/1a/ad/db/1aaddb0f6426f64a728efdd5d7b377fc.jpg');
+            background-size: contain; /* show the whole image */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #f3f4f6; /* neutral backdrop for letterboxing */
+        }
+
+        .product-info {
+            padding: 15px;
+            text-align: center; /* center product text/content */
+        }
+
+        .product-title {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            color: #3e6d9f;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .product-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .product-button {
+            display: inline-block; /* allow button to be centered and sized to content */
+            background: linear-gradient(to right, #3e6d9f, #274260);
+            color: white;
+            text-align: center;
+            padding: 10px 18px;
+            text-decoration: none;
+            margin: 15px auto 0; /* center the button */
+            border-radius: 4px;
+        }
+
+        .product-button:hover {
+            background: linear-gradient(to right, #3e6d9f, #274260);
+        }
+
+        /* Center the section heading for products */
+        #products-heading {
+          text-align: center;
+          font-size: 1.25rem; /* ~20px */
+          margin: 0 0 1rem;
+          color: #333;
+        }
+```
+[![alt text](<ภาพถ่ายหน้าจอ 2569-02-19 เวลา 16.01.29 1.png>)]
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
@@ -436,12 +574,165 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ตัวอย่างหน้าเว็บ - เมนู, สินค้า และสถิติ</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="product card.css">
+  <link rel="stylesheet" href="stat.css">
+</head>
+<body>
+  <header>
+    <nav aria-label="เมนูหลัก">
+      <ul>
+        <li><a href="#home" class="menu-item">หน้าแรก</a></li>
+        <li><a href="#products" class="menu-item active">สินค้า</a></li>
+        <li><a href="#about" class="menu-item">เกี่ยวกับเรา</a></li>
+        <li><a href="#contact" class="menu-item">ติดต่อ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="products" aria-labelledby="products-heading">
+      <h2 id="products-heading">สินค้าแนะนำ</h2>
+      <div class="product-card">
+        <div class="product-image" role="img" aria-label="รองเท้าแมรี่เจน"></div>
+        <div class="product-info">
+          <h3 class="product-title">รองเท้าแมรี่เจน</h3>
+          <p class="product-price">฿559</p>
+          <p class="product-description">รองเท้าแมรี่เจนสไตล์คลาสสิกที่มาพร้อมกับดีไซน์ที่น่ารักและความสะดวกสบาย เหมาะสำหรับทุกโอกาส ไม่ว่าจะเป็นการเดินเล่นในสวนหรือการออกงาน</p>
+          <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats" aria-labelledby="stats-heading">
+      <h2 id="stats-heading">สถิติ</h2>
+      <div class="stats-container">
+        <div class="stat-box" role="group" aria-labelledby="stat1-label">
+          <div class="stat-number" id="stat1-number">1,234</div>
+          <div class="stat-label" id="stat1-label">ผู้ใช้งาน</div>
+        </div>
+        <div class="stat-box" role="group" aria-labelledby="stat2-label">
+          <div class="stat-number" id="stat2-number">5.6K</div>
+          <div class="stat-label" id="stat2-label">ยอดขาย</div>
+        </div>
+        <div class="stat-box" role="group" aria-labelledby="stat3-label">
+          <div class="stat-number" id="stat3-number">98%</div>
+          <div class="stat-label" id="stat3-label">ความพึงพอใจ</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p style="text-align:center;padding:1rem 0;color:#666;">© 2026 ตัวอย่างเว็บไซต์</p>
+  </footer>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+:root{
+  --page-bg: #f3f6fb;
+  --card-bg: #ffffff;
+  --primary: #1d4ed8; /* blue */
+  --muted: #6b7280; /* gray */
+  --accent: #0f172a; /* dark */
+  --gap: 1rem;
+}
+
+body{
+  background: var(--page-bg);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--accent);
+}
+
+/* Center the visible heading for the stats section */
+#stats-heading {
+  text-align: center;
+  font-size: 1.25rem;
+  margin: 0 0 1rem;
+  color: var(--accent);
+}
+
+.stats-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center; /* center the whole group */
+  flex-wrap: wrap; /* allow boxes to wrap on smaller screens */
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+  align-items: stretch;
+}
+
+.stat-box {
+  flex: 0 1 220px; /* don't stretch; each box is at most 220px but can shrink */
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(15,23,42,0.06);
+  transition: transform .14s ease, box-shadow .14s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-box:hover,
+.stat-box:focus-within{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(15,23,42,0.12);
+}
+
+.stat-number {
+  font-size: 2.5rem; /* ~40px */
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Smaller emphasis text (optional) */
+.stat-subtext{
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-top: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px){
+  .stats-container{ max-width: 920px; }
+  .stat-number{ font-size: 2.25rem; }
+}
+
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0 0.75rem;
+  }
+  .stat-box {
+    padding: 1rem 1rem;
+  }
+  .stat-number { font-size: 1.75rem; }
+  .stat-label { font-size: 0.85rem; }
+}
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](<ภาพถ่ายหน้าจอ 2569-02-19 เวลา 16.25.56.png>)]
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
@@ -554,12 +845,189 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ตัวอย่างหน้าเว็บ - เมนู, สินค้า และสถิติ</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="product card.css">
+  <link rel="stylesheet" href="stat.css">
+</head>
+<body>
+  <header>
+    <nav aria-label="เมนูหลัก">
+      <ul>
+        <li><a href="#home" class="menu-item">หน้าแรก</a></li>
+        <li><a href="#products" class="menu-item active">สินค้า</a></li>
+        <li><a href="#about" class="menu-item">เกี่ยวกับเรา</a></li>
+        <li><a href="#contact" class="menu-item">ติดต่อ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="products" aria-labelledby="products-heading">
+      <h2 id="products-heading">สินค้าแนะนำ</h2>
+      <div class="product-card">
+        <div class="product-image" role="img" aria-label="รองเท้าแมรี่เจน"></div>
+        <div class="product-info">
+          <h3 class="product-title">รองเท้าแมรี่เจน</h3>
+          <p class="product-price">฿559</p>
+          <p class="product-description">รองเท้าแมรี่เจนสไตล์คลาสสิกที่มาพร้อมกับดีไซน์ที่น่ารักและความสะดวกสบาย เหมาะสำหรับทุกโอกาส ไม่ว่าจะเป็นการเดินเล่นในสวนหรือการออกงาน</p>
+          <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats" aria-labelledby="stats-heading">
+      <h2 id="stats-heading">สถิติ</h2>
+      <div class="stats-container">
+        <div class="stat-box" role="group" aria-labelledby="stat1-label">
+          <div class="stat-number" id="stat1-number">1,234</div>
+          <div class="stat-label" id="stat1-label">ผู้ใช้งาน</div>
+        </div>
+        <div class="stat-box" role="group" aria-labelledby="stat2-label">
+          <div class="stat-number" id="stat2-number">5.6K</div>
+          <div class="stat-label" id="stat2-label">ยอดขาย</div>
+        </div>
+        <div class="stat-box" role="group" aria-labelledby="stat3-label">
+          <div class="stat-number" id="stat3-number">98%</div>
+          <div class="stat-label" id="stat3-label">ความพึงพอใจ</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p style="text-align:center;padding:1rem 0;color:#666;">© 2026 ตัวอย่างเว็บไซต์</p>
+  </footer>
+</body>
+</html>
+
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ตัวอย่างบทความ</title>
+    <link rel="stylesheet" href="ex.css">
+</head>
+<body>
+    <article class="blog-post">
+        <header class="post-header">
+            <h1 class="post-title">ร้านขายรองเท้า FS Shop</h1>
+            <div class="post-meta">โพสต์เมื่อ 15 กุมภาพันธ์ 2026 | โดย นางสาวนภัสสร คำปัน</div>
+        </header>
+        
+        <div class="post-content">
+            <p>เหนื้อหาเกี่ยวกับรองเท้าในร้าน FS Shop ที่มีรองเท้าหลายแบบหลายสไตล์</p>
+
+            <h2>1.รองเท้าแมรี่เจน</h2>
+            <p>รองเท้าแมรี่เจนเป็นรองเท้าที่มีดีไซน์คลาสสิก มักทำจากหนังหรือวัสดุคุณภาพสูง มีความนุ่มสบายและเหมาะสำหรับการสวมใส่ในทุกโอกาส</p>
+
+            <blockquote>
+                "รองเท้าแมรี่เจนเป็นรองเท้าที่มีดีไซน์คลาสสิก"
+            </blockquote>
+
+            <h2>2.รองเท้าส้นสูง</h2>
+            <p>รองเท้าส้นสูงเป็นรองเท้าที่ช่วยเพิ่มความสูงให้กับผู้สวมใส่ มักทำจากวัสดุที่มีคุณภาพและออกแบบมาให้มีความสวยงาม</p>
+        </div>
+    </article>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;800&display=swap');
+
+:root{
+  --page-bg: #f4f7fb; /* softer background */
+  --card-bg: #ffffff;
+  --title: #071032; /* darker heading */
+  --muted: #475569; /* muted text */
+  --accent: #2563eb; /* brighter accent */
+}
+
+/* Page */
+body{
+  margin: 0;
+  padding: 2rem;
+  background: var(--page-bg);
+  font-family: 'Sarabun', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--title);
+  font-size: 16px; /* base font size for easier scaling */
+}
+
+/* Article */
+.blog-post {
+  max-width: 920px; /* slightly wider */
+  margin: 2.5rem auto;
+  padding: 2rem; /* more breathing room */
+  background: var(--card-bg);
+  border-radius: 14px;
+  box-shadow: 0 14px 36px rgba(7,16,50,0.06);
+}
+
+.post-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.post-title {
+  font-size: 2.5rem; /* larger title */
+  color: var(--title);
+  margin: 0 0 0.5rem;
+  line-height: 1.08;
+  font-weight: 800;
+}
+
+.post-meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.post-content {
+  font-size: 1.125rem; /* comfortable reading size (~18px) */
+  line-height: 1.85;
+  color: #222b36;
+}
+
+.post-content p {
+  margin-bottom: 1.25rem;
+}
+
+.post-content h2 {
+  font-size: 1.5rem; /* more visible subsection */
+  color: var(--title);
+  margin: 2rem 0 0.75rem;
+}
+
+blockquote {
+  font-style: italic;
+  border-left: 4px solid var(--accent);
+  background: rgba(37,99,235,0.06);
+  margin: 1.25rem auto; /* center horizontally */
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  color: #344156;
+  max-width: 720px; /* limit width so it centers nicely */
+  text-align: center; /* center the quote text */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body{ padding: 1rem; }
+  .blog-post{ padding: 1rem; }
+  .post-title { font-size: 1.8rem; }
+  .post-content { font-size: 1rem; line-height: 1.7; }
+  .post-content h2 { font-size: 1.125rem; }
+}
+
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](<ภาพถ่ายหน้าจอ 2569-02-19 เวลา 16.40.40.png>)]
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
@@ -701,12 +1169,216 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ตัวอย่างหน้าเว็บ - เมนู, สินค้า และสถิติ</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="product card.css">
+  <link rel="stylesheet" href="stat.css">
+  <link rel="stylesheet" href="product-grid.css">
+</head>
+<body>
+  <header>
+    <nav aria-label="เมนูหลัก">
+      <ul>
+        <li><a href="#home" class="menu-item">หน้าแรก</a></li>
+        <li><a href="#products" class="menu-item active">สินค้า</a></li>
+        <li><a href="#about" class="menu-item">เกี่ยวกับเรา</a></li>
+        <li><a href="#contact" class="menu-item">ติดต่อ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="products" aria-labelledby="products-heading">
+      <h2 id="products-heading">สินค้าแนะนำ</h2>
+
+      <!-- New product grid -->
+      <div class="product-grid">
+        <div class="grid-product-card">
+          <div class="grid-product-image" style="background-image:url('https://i.pinimg.com/736x/1a/ad/db/1aaddb0f6426f64a728efdd5d7b377fc.jpg');" role="img" aria-label="รองเท้าแมรี่เจน สีดำ"></div>
+          <div class="grid-product-details">
+            <h3 class="grid-product-title">รองเท้าแมรี่เจน สีดำ</h3>
+            <div class="grid-product-price">฿559</div>
+            <div class="grid-product-action"><button class="grid-add-to-cart">เพิ่มลงตะกร้า</button></div>
+          </div>
+        </div>
+
+        <div class="grid-product-card">
+          <div class="grid-product-image" style="background-image:url('https://i.pinimg.com/1200x/6e/23/da/6e23da1aac2340539b5c89a3518c7fa6.jpg');" role="img" aria-label="รองเท้าแมรี่เจน สีขาว"></div>
+          <div class="grid-product-details">
+            <h3 class="grid-product-title">รองเท้าส้นสูง</h3>
+            <div class="grid-product-price">฿619</div>
+            <div class="grid-product-action"><button class="grid-add-to-cart">เพิ่มลงตะกร้า</button></div>
+          </div>
+        </div>
+
+        <div class="grid-product-card">
+          <div class="grid-product-image" style="background-image:url('https://i.pinimg.com/736x/a3/10/ce/a310ce796e7793be794da81894a25f38.jpg');" role="img" aria-label="รองเท้าส้นสูง สีแดง"></div>
+          <div class="grid-product-details">
+            <h3 class="grid-product-title">รองเท้าบูท</h3>
+            <div class="grid-product-price">฿899</div>
+            <div class="grid-product-action"><button class="grid-add-to-cart">เพิ่มลงตะกร้า</button></div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="stats" aria-labelledby="stats-heading">
+      <h2 id="stats-heading">สถิติ</h2>
+      <div class="stats-container">
+        <div class="stat-box" role="group" aria-labelledby="stat1-label">
+          <div class="stat-number" id="stat1-number">1,234</div>
+          <div class="stat-label" id="stat1-label">ผู้ใช้งาน</div>
+        </div>
+        <div class="stat-box" role="group" aria-labelledby="stat2-label">
+          <div class="stat-number" id="stat2-number">5.6K</div>
+          <div class="stat-label" id="stat2-label">ยอดขาย</div>
+        </div>
+        <div class="stat-box" role="group" aria-labelledby="stat3-label">
+          <div class="stat-number" id="stat3-number">98%</div>
+          <div class="stat-label" id="stat3-label">ความพึงพอใจ</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p style="text-align:center;padding:1rem 0;color:#666;">© 2026 ตัวอย่างเว็บไซต์</p>
+  </footer>
+</body>
+</html>
+
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ตัวอย่างบทความ</title>
+    <link rel="stylesheet" href="ex.css">
+</head>
+<body>
+    <article class="blog-post">
+        <header class="post-header">
+            <h1 class="post-title">ร้านขายรองเท้า FS Shop</h1>
+            <div class="post-meta">โพสต์เมื่อ 15 กุมภาพันธ์ 2026 | โดย นางสาวนภัสสร คำปัน</div>
+        </header>
+        
+        <div class="post-content">
+            <p>เหนื้อหาเกี่ยวกับรองเท้าในร้าน FS Shop ที่มีรองเท้าหลายแบบหลายสไตล์</p>
+
+            <h2>1.รองเท้าแมรี่เจน</h2>
+            <p>รองเท้าแมรี่เจนเป็นรองเท้าที่มีดีไซน์คลาสสิก มักทำจากหนังหรือวัสดุคุณภาพสูง มีความนุ่มสบายและเหมาะสำหรับการสวมใส่ในทุกโอกาส</p>
+
+            <blockquote>
+                "รองเท้าแมรี่เจนเป็นรองเท้าที่มีดีไซน์คลาสสิก"
+            </blockquote>
+
+            <h2>2.รองเท้าส้นสูง</h2>
+            <p>รองเท้าส้นสูงเป็นรองเท้าที่ช่วยเพิ่มความสูงให้กับผู้สวมใส่ มักทำจากวัสดุที่มีคุณภาพและออกแบบมาให้มีความสวยงาม</p>
+        </div>
+    </article>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+/* Product grid styles (externalized) */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* larger items */
+  gap: 20px;
+  padding: 16px;
+  max-width: 920px; /* match blog post width for horizontal alignment */
+  margin: 0 auto;
+  justify-content: center; /* center the whole grid */
+  justify-items: center; /* center items inside each grid cell */
+}
+
+.grid-product-card {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(7,16,50,0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center content */
+  width: 100%;
+  max-width: 320px; /* limit card width for clearer layout */
+}
+
+.grid-product-image {
+  width: 100%;
+  height: 220px; /* larger, clearer image */
+  background-color: #f5f7fb;
+  background-size: cover; /* cover to fill and keep sharp */
+  background-position: center center;
+}
+
+.grid-product-details {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center; /* center text and button */
+  text-align: center;
+}
+
+.grid-product-title {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.grid-product-price {
+  font-size: 1.25rem; /* slightly larger price */
+  color: #1e40af;
+  font-weight: 800;
+}
+
+.grid-product-action {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center; /* center button */
+  width: 100%;
+}
+
+.grid-add-to-cart {
+  background-color: #1e40af;
+  color: white;
+  border: none;
+  padding: 8px 14px; /* slightly larger tap target */
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.98rem;
+}
+
+/* Ensure blog post title is centered so it lines up with the grid */
+.post-title {
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .product-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+  .grid-product-image{ height: 200px; }
+}
+
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+  }
+  .grid-product-image{ height: 140px; }
+}
+
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](<ภาพถ่ายหน้าจอ 2569-02-19 เวลา 16.55.03.png>)]
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
@@ -854,10 +1526,217 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ตัวอย่างหน้าเว็บ - เมนู, สินค้า และสถิติ</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="product card.css">
+  <link rel="stylesheet" href="stat.css">
+  <link rel="stylesheet" href="product-grid.css">
+</head>
+<body>
+  <header>
+    <nav aria-label="เมนูหลัก">
+      <ul>
+        <li><a href="#home" class="menu-item">หน้าแรก</a></li>
+        <li><a href="#products" class="menu-item active">สินค้า</a></li>
+        <li><a href="#about" class="menu-item">เกี่ยวกับเรา</a></li>
+        <li><a href="#contact" class="menu-item">ติดต่อ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="products" aria-labelledby="products-heading">
+      <h2 id="products-heading">สินค้าแนะนำ</h2>
+
+      <!-- New product grid -->
+      <div class="product-grid">
+        <div class="grid-product-card">
+          <div class="grid-product-image" style="background-image:url('https://i.pinimg.com/736x/1a/ad/db/1aaddb0f6426f64a728efdd5d7b377fc.jpg');" role="img" aria-label="รองเท้าแมรี่เจน สีดำ"></div>
+          <div class="grid-product-details">
+            <h3 class="grid-product-title">รองเท้าแมรี่เจน สีดำ</h3>
+            <div class="grid-product-price">฿559</div>
+            <div class="grid-product-action"><button class="grid-add-to-cart">เพิ่มลงตะกร้า</button></div>
+          </div>
+        </div>
+
+        <div class="grid-product-card">
+          <div class="grid-product-image" style="background-image:url('https://i.pinimg.com/1200x/6e/23/da/6e23da1aac2340539b5c89a3518c7fa6.jpg');" role="img" aria-label="รองเท้าแมรี่เจน สีขาว"></div>
+          <div class="grid-product-details">
+            <h3 class="grid-product-title">รองเท้าส้นสูง</h3>
+            <div class="grid-product-price">฿619</div>
+            <div class="grid-product-action"><button class="grid-add-to-cart">เพิ่มลงตะกร้า</button></div>
+          </div>
+        </div>
+
+        <div class="grid-product-card">
+          <div class="grid-product-image" style="background-image:url('https://i.pinimg.com/736x/a3/10/ce/a310ce796e7793be794da81894a25f38.jpg');" role="img" aria-label="รองเท้าส้นสูง สีแดง"></div>
+          <div class="grid-product-details">
+            <h3 class="grid-product-title">รองเท้าบูท</h3>
+            <div class="grid-product-price">฿899</div>
+            <div class="grid-product-action"><button class="grid-add-to-cart">เพิ่มลงตะกร้า</button></div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="stats" aria-labelledby="stats-heading">
+      <h2 id="stats-heading">สถิติ</h2>
+      <div class="stats-container">
+        <div class="stat-box" role="group" aria-labelledby="stat1-label">
+          <div class="stat-number" id="stat1-number">1,234</div>
+          <div class="stat-label" id="stat1-label">ผู้ใช้งาน</div>
+        </div>
+        <div class="stat-box" role="group" aria-labelledby="stat2-label">
+          <div class="stat-number" id="stat2-number">5.6K</div>
+          <div class="stat-label" id="stat2-label">ยอดขาย</div>
+        </div>
+        <div class="stat-box" role="group" aria-labelledby="stat3-label">
+          <div class="stat-number" id="stat3-number">98%</div>
+          <div class="stat-label" id="stat3-label">ความพึงพอใจ</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p style="text-align:center;padding:1rem 0;color:#666;">© 2026 ตัวอย่างเว็บไซต์</p>
+  </footer>
+</body>
+</html>
+
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ตัวอย่างบทความ</title>
+    <link rel="stylesheet" href="ex.css">
+</head>
+<body>
+    <article class="blog-post">
+        <header class="post-header">
+            <h1 class="post-title">ร้านขายรองเท้า FS Shop</h1>
+            <div class="post-meta">โพสต์เมื่อ 15 กุมภาพันธ์ 2026 | โดย นางสาวนภัสสร คำปัน</div>
+        </header>
+        
+        <div class="post-content">
+            <p>เหนื้อหาเกี่ยวกับรองเท้าในร้าน FS Shop ที่มีรองเท้าหลายแบบหลายสไตล์</p>
+
+            <h2>1.รองเท้าแมรี่เจน</h2>
+            <p>รองเท้าแมรี่เจนเป็นรองเท้าที่มีดีไซน์คลาสสิก มักทำจากหนังหรือวัสดุคุณภาพสูง มีความนุ่มสบายและเหมาะสำหรับการสวมใส่ในทุกโอกาส</p>
+
+            <blockquote>
+                "รองเท้าแมรี่เจนเป็นรองเท้าที่มีดีไซน์คลาสสิก"
+            </blockquote>
+
+            <h2>2.รองเท้าส้นสูง</h2>
+            <p>รองเท้าส้นสูงเป็นรองเท้าที่ช่วยเพิ่มความสูงให้กับผู้สวมใส่ มักทำจากวัสดุที่มีคุณภาพและออกแบบมาให้มีความสวยงาม</p>
+        </div>
+    </article>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;800&display=swap');
+
+:root{
+  --bg: #f6f9fb;
+  --card: #ffffff;
+  --primary: #1e40af;
+  --accent: #e11d48;
+  --muted: #6b7280;
+  --text: #0b1220; /* darker for better contrast */
+  --container: 1100px; /* wider container for fuller layout */
+}
+
+html{font-size:16px}
+body{line-height:1.65; font-size:1rem;}
+
+/* Improve paragraph and link readability */
+p{font-size:1rem;color:#16202b;margin:0 0 1rem}
+
+a{color:var(--primary);text-decoration:underline;}
+a:hover{text-decoration:none}
+a:focus{outline:3px solid rgba(30,64,175,0.18);outline-offset:2px}
+
+/* Headings */
+h1,h2,h3{color:var(--text);margin:0 0 .5rem}
+h1{font-size:2.25rem;line-height:1.05}
+h2{font-size:1.5rem}
+h3{font-size:1.125rem}
+
+/* Section heading bigger and spaced */
+section h2{font-size:1.6rem;margin:32px 0 18px;text-align:center;color:var(--text)}
+
+/* Container uses more of the screen on large displays */
+.container{max-width:var(--container);padding:0 20px}
+
+/* Make content appear fuller horizontally on wide screens */
+@media(min-width:1400px){:root{--container:1300px}}
+
+/* Global layout */
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: 'Sarabun', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:0 16px;
+}
+
+/* Header/navigation */
+header{background:linear-gradient(90deg,#0f172a, #1e293b);}
+nav{max-width:var(--container);margin:0 auto;padding:14px 16px}
+nav ul{display:flex;gap:12px;align-items:center;list-style:none;margin:0;padding:0}
+nav li{margin:0}
+.menu-item{color:#fff;text-decoration:none;padding:10px 14px;border-radius:6px;display:inline-block}
+.menu-item:hover{background:rgba(255,255,255,0.06)}
+.menu-item.active{background:var(--primary);box-shadow:0 4px 12px rgba(30,64,175,0.12)}
+
+/* Stats */
+#stats-heading{margin-top:28px}
+.stats-container{align-items:center}
+
+/* Blog/article */
+.blog-post{max-width:var(--container);margin:28px auto;padding:22px;background:var(--card);border-radius:12px;box-shadow:0 12px 30px rgba(2,6,23,0.06)}
+.post-header{text-align:center}
+.post-title{font-size:2rem;margin:0 0 8px}
+.post-meta{color:var(--muted);font-size:0.9rem}
+
+/* Footer */
+footer{padding:20px 0;background:transparent}
+footer p{color:#64748b;margin:0;text-align:center}
+
+/* Responsive tweaks */
+@media (max-width:900px){:root{--container:740px}} 
+@media (max-width:600px){
+  nav ul{flex-wrap:wrap}
+  section h2{font-size:1.1rem}
+  .product-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+}
+
+/* Improve readability for product cards and stats */
+.product-info,.grid-product-details{padding:16px}
+.product-title,.grid-product-title{font-size:1.15rem}
+.product-description{font-size:0.98rem;color:#334155}
+
+/* Ensure images scale cleanly */
+.grid-product-image, .product-image{background-size:cover;background-position:center}
+
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](<ภาพถ่ายหน้าจอ 2569-02-25 เวลา 19.12.31.png>)]
 
