@@ -1,0 +1,24 @@
+/* Element Selector */
+p {
+    color: blue;
+}
+
+/* Class Selector */
+.highlight {
+    background-color: yellow;
+}
+
+/* ID Selector */
+#header {
+    font-size: 24px;
+}
+
+/* Descendant Selector */
+div p {
+    margin: 10px;
+}
+
+/* Child Selector */
+div > p {
+    padding: 5px;
+}

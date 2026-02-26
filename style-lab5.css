@@ -1,0 +1,31 @@
+.blog-post {
+    max-width: 700px;
+    margin: 4rem auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    font-family: 'Sarabun', sans-serif;
+}
+
+.post-title {
+    font-size: 2.8rem;
+    color: #1a1a1a;
+    text-align: left;
+    border-bottom: 4px solid #ff4757; /* เพิ่มเส้นใต้หัวข้อ */
+    padding-bottom: 10px;
+}
+
+.post-content p {
+    line-height: 2; /* ปรับระยะบรรทัด */
+    color: #2f3542;
+    font-size: 1.15rem;
+}
+
+blockquote {
+    background: #f1f2f6;
+    border-left: 8px solid #ff4757;
+    padding: 20px;
+    font-size: 1.3rem;
+    color: #57606f;
+}

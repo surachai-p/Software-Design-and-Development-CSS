@@ -12,7 +12,8 @@ CSS สามารถใช้งานได้ 3 วิธี:
 
 2. **Internal CSS**:
 ```html
-<head>
+<head>.
+    
     <style>
         p {
             color: blue;
@@ -232,10 +233,63 @@ div > p {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* การใช้ Element Selector */
+        nav {
+            background-color: #b03d3d;
+            padding: 15px;
+        }
+
+        /* การใช้ Descendant Selector */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* การใช้ Child Selector */
+        nav > ul > li {
+            margin: 0 10px;
+        }
+
+        /* การใช้ Class Selector */
+        .menu-item {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        /* การใช้ Pseudo-class */
+        .menu-item:hover {
+            background-color: #555;
+            border-radius: 3px;
+        }
+
+        /* การใช้ ID Selector */
+        #active {
+            background-color: #007bff;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-
+![alt text](../image.png)
 
 [](#การทดลองที่-3-การจัดการสีและพื้นหลัง)
 ## การทดลองที่ 3: การจัดการสีและพื้นหลัง
@@ -338,9 +392,124 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .product-card {
+            width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background-image: url('product.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-title {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            color: #007bff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .product-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .product-button {
+            display: block;
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+
+        .product-button:hover {
+            background: linear-gradient(to right, #0056b3, #003980);
+        }
+
+        .product-container {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" href="product-styles.css">
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product1.png');"></div>
+            <div class="product-info">
+                <h2 class="product-title">T-34-57</h2>
+                <p class="product-price">฿80,000</p>
+                <p class="product-description">
+                    USSR  Medium tank
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product2.png');"></div>
+            <div class="product-info">
+                <h2 class="product-title">KV-1</h2>
+                <p class="product-price">฿180,000</p>
+                <p class="product-description">
+                    USSR Heavy tank
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product3.png');"></div>
+            <div class="product-info">
+                <h2 class="product-title">T-34-85</h2>
+                <p class="product-price">฿130,000</p>
+                <p class="product-description">
+                    USSR  Medium tank
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/product4.png');"></div>
+            <div class="product-info">
+                <h2 class="product-title">IS-1</h2>
+                <p class="product-price">฿250,000</p>
+                <p class="product-description">
+                    USSR Heavy tank
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](images/2.png)
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
@@ -436,12 +605,77 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Stats Dashboard</title>
+    <link rel="stylesheet" href="style-lab4.css">
+</head>
+<body>
+    <div class="stats-container">
+        <div class="stat-box">
+            <div class="stat-number">1,234</div>
+            <div class="stat-label">ผู้ใช้งาน</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">5.6K</div>
+            <div class="stat-label">ยอดขาย</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">ความพึงพอใจ</div>
+        </div>
+    </div>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px;
+}
+
+.stat-box {
+    flex: 1;
+    margin: 0 10px;
+    padding: 3rem 1rem; /* ปรับ Box Model */
+    text-align: center;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #d1d1d1, -10px -10px 20px #ffffff;
+    border: 2px solid #007bff; /* เพิ่ม Border */
+}
+
+.stat-number {
+    font-size: 3.5rem; /* ขยายขนาดตัวเลข */
+    font-weight: 800;
+    color: #007bff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #444;
+    font-weight: 600;
+    margin-top: 10px;
+}
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](images/4.png)
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
@@ -554,12 +788,84 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px;
+}
+
+.stat-box {
+    flex: 1;
+    margin: 0 10px;
+    padding: 3rem 1rem; /* ปรับ Box Model */
+    text-align: center;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #d1d1d1, -10px -10px 20px #ffffff;
+    border: 2px solid #007bff; /* เพิ่ม Border */
+}
+
+.stat-number {
+    font-size: 3.5rem; /* ขยายขนาดตัวเลข */
+    font-weight: 800;
+    color: #007bff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #444;
+    font-weight: 600;
+    margin-top: 10px;
+}
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+.blog-post {
+    max-width: 700px;
+    margin: 4rem auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    font-family: 'Sarabun', sans-serif;
+}
+
+.post-title {
+    font-size: 2.8rem;
+    color: #1a1a1a;
+    text-align: left;
+    border-bottom: 4px solid #ff4757; /* เพิ่มเส้นใต้หัวข้อ */
+    padding-bottom: 10px;
+}
+
+.post-content p {
+    line-height: 2; /* ปรับระยะบรรทัด */
+    color: #2f3542;
+    font-size: 1.15rem;
+}
+
+blockquote {
+    background: #f1f2f6;
+    border-left: 8px solid #ff4757;
+    padding: 20px;
+    font-size: 1.3rem;
+    color: #57606f;
+}
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![alt text](images/5.png)
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
@@ -701,13 +1007,91 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style-lab6.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">KooHU Admin</div>
+            <nav>
+                <div class="nav-item">Dashboard</div>
+                <div class="nav-item active">Products</div>
+                <div class="nav-item">Settings</div>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <h2>รายการสินค้า (Tanks Store)</h2>
+                <div class="user-profile">Jittipat L.</div>
+            </header>
+            <div class="stats-grid">
+                <div class="stat-card"><h3>T-34</h3><p>Stock: 5</p></div>
+                <div class="stat-card"><h3>KV-1</h3><p>Stock: 2</p></div>
+                <div class="stat-card"><h3>IS-1</h3><p>Stock: 1</p></div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+/* style-lab6.css */
+.dashboard {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background: #2f3542;
+    color: #fff;
+    padding: 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    color: #70a1ff;
+}
+
+.nav-item {
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-item.active, .nav-item:hover {
+    background: #57606f;
+}
+
+.main-content {
+    background: #f1f2f6;
+    padding: 2rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 5px solid #1e90ff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-
+![alt text](images/6.png)
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
 
@@ -854,10 +1238,85 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Dashboard - KooHU Project</title>
+    <link rel="stylesheet" href="dashboard-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <div class="header-title">
+                <h1>แดชบอร์ดระบบ</h1>
+                <p>ยินดีต้อนรับกลับ, Jittipat</p>
+            </div>
+            <nav class="header-nav">
+                <button class="btn btn-outline">โปรไฟล์</button>
+                <button class="btn btn-danger">ออกจากระบบ</button>
+            </nav>
+        </header>
+
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <h2>KooHU</h2>
+            </div>
+            <nav class="sidebar-menu">
+                <ul>
+                    <li class="active"><a href="#">หน้าแรก</a></li>
+                    <li><a href="#">รายงานยอดขาย</a></li>
+                    <li><a href="#">จัดการสินค้า</a></li>
+                    <li><a href="#">การตั้งค่า</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-icon">💰</span>
+                    <h3>ยอดขายรวม</h3>
+                    <p class="stat-value">฿150,000</p>
+                    <span class="stat-trend positive">+12% จากเดือนที่แล้ว</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">📦</span>
+                    <h3>จำนวนออเดอร์</h3>
+                    <p class="stat-value">1,234</p>
+                    <span class="stat-trend positive">+5% จากเดือนที่แล้ว</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">👥</span>
+                    <h3>ลูกค้าใหม่</h3>
+                    <p class="stat-value">45</p>
+                    <span class="stat-trend">คงที่</span>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="card chart-main">
+                    <h3>กราฟแสดงยอดขายรายสัปดาห์</h3>
+                    <div class="chart-placeholder">
+                        [ส่วนแสดงผลกราฟเชิงเทคนิค]
+                    </div>
+                </div>
+                <div class="card chart-sub">
+                    <h3>สัดส่วนสินค้าขายดี</h3>
+                    <div class="chart-placeholder circle">
+                        [Pie Chart]
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
 ```
 ```css
 [วางโค้ด CSS ที่นี่]
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-
+![alt text](images/last.png)
