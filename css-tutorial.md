@@ -232,9 +232,57 @@ div > p {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+[<!DOCTYPE html>
+<html>
+<head>
+    <title>เมนูนำทาง</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
+(style.css)
+nav {
+    background-color: #333;
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav > ul > li {
+    margin: 0 10px;
+}
+
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.menu-item:hover {
+    background-color: #555;
+    border-radius: 3px;
+}
+
+#active {
+    background-color: #007bff;
+    border-radius: 3px;
+}]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image.png)]
 
 
 [](#การทดลองที่-3-การจัดการสีและพื้นหลัง)
@@ -338,9 +386,134 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+[<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Cards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="product-card">
+        <div class="product-image img1"></div>
+        <div class="product-info">
+            <h2 class="product-title">สินค้า 1</h2>
+            <p class="product-price">฿699</p>
+            <p class="product-description">รายละเอียดสินค้าใบที่ 1</p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image img2"></div>
+        <div class="product-info">
+            <h2 class="product-title">สินค้า 2</h2>
+            <p class="product-price">฿599</p>
+            <p class="product-description">รายละเอียดสินค้าใบที่ 2</p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image img3"></div>
+        <div class="product-info">
+            <h2 class="product-title">สินค้า 3</h2>
+            <p class="product-price">฿899</p>
+            <p class="product-description">รายละเอียดสินค้าใบที่ 3</p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image img4"></div>
+        <div class="product-info">
+            <h2 class="product-title">สินค้า 4</h2>
+            <p class="product-price">฿499</p>
+            <p class="product-description">รายละเอียดสินค้าใบที่ 4</p>
+            <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+(style.css)
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    gap: 20px;
+}
+
+.product-card {
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: white;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-title {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: #007bff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.product-button {
+    display: block;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.product-button:hover {
+    background: linear-gradient(to right, #0056b3, #003980);
+}
+
+/* รูปสินค้าแต่ละใบ */
+.img1 { background-image: url('images/product1.jpg'); }
+.img2 { background-image: url('images/product2.jpg'); }
+.img3 { background-image: url('images/product3.jpg'); }
+.img4 { background-image: url('images/product4.jpg'); }]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image-1.png)]
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
@@ -436,12 +609,86 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Statistics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="stats-container">
+    <div class="stat-box">
+        <div class="stat-number">1,234</div>
+        <div class="stat-label">ผู้ใช้งาน</div>
+    </div>
+    <div class="stat-box">
+        <div class="stat-number">5.6K</div>
+        <div class="stat-label">ยอดขาย</div>
+    </div>
+    <div class="stat-box">
+        <div class="stat-number">98%</div>
+        <div class="stat-label">ความพึงพอใจ</div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="style1.css">
+</body>
+</html>]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.stats-container {
+    display: flex;
+    gap: 20px;
+    width: 80%;
+    max-width: 900px;
+}
+
+.stat-box {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    transition: 0.2s;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #ff6600;
+}
+
+.stat-label {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+    }
+}]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image-2.png)]
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
@@ -554,12 +801,89 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Post</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<article class="blog-post">
+    <header class="post-header">
+        <h1 class="post-title">การออกแบบหน้าเว็บด้วย CSS</h1>
+        <div class="post-meta">โพสต์เมื่อ 24 กุมภาพันธ์ 2026 | โดย ภูบดินทร์ สัญโญ </div>
+    </header>
+    
+    <div class="post-content">
+        <p>CSS (Cascading Style Sheets) เป็นเทคโนโลยีสำคัญที่ใช้ในการควบคุมรูปแบบและการแสดงผลของหน้าเว็บไซต์ โดยช่วยให้เราสามารถกำหนดสี ขนาด ระยะห่าง รวมถึงการจัดวางองค์ประกอบต่าง ๆ ได้อย่างยืดหยุ่นและมีประสิทธิภาพ การใช้ CSS อย่างเหมาะสมจะช่วยให้เว็บไซต์มีความสวยงาม เป็นระเบียบ และใช้งานได้ง่ายมากยิ่งขึ้น
+
+ในการพัฒนาเว็บไซต์สมัยใหม่ CSS มีบทบาทอย่างมากในการสร้างประสบการณ์ที่ดีให้กับผู้ใช้งาน (User Experience) ไม่ว่าจะเป็นการออกแบบ Layout การกำหนด Typography หรือการทำ Responsive Design เพื่อรองรับอุปกรณ์ที่หลากหลาย</p>
+
+        <h2>การจัดการระยะห่างและขนาด</h2>
+        <p>การกำหนดระยะห่างและขนาดขององค์ประกอบถือเป็นพื้นฐานที่สำคัญในการออกแบบหน้าเว็บ โดย CSS มีเครื่องมือที่ช่วยควบคุมส่วนนี้ เช่น margin, padding และ border ซึ่งรวมเรียกว่า Box Model การเข้าใจ Box Model จะช่วยให้เราสามารถจัดวางองค์ประกอบได้อย่างแม่นยำ และลดปัญหาการจัด Layout ที่ผิดพลาด
+
+นอกจากนี้ CSS ยังมีหน่วยวัดที่หลากหลาย เช่น px, %, rem และ vh ซึ่งแต่ละหน่วยมีการใช้งานที่แตกต่างกัน การเลือกใช้หน่วยวัดที่เหมาะสมจะช่วยให้เว็บไซต์สามารถปรับขนาดได้ดีในหน้าจอที่แตกต่างกัน</p>
+
+        <blockquote>
+            "การออกแบบที่ดีช่วยให้ผู้ใช้งานเข้าใจข้อมูลได้ง่ายขึ้น และสร้างประสบการณ์การใช้งานที่น่าประทับใจ"
+        </blockquote>
+    </div>
+</article>
+<link rel="stylesheet" href="style1.css">
+</body>
+</html>]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    display: flex;
+    justify-content: center;
+}
+
+.blog-post {
+    max-width: 800px;
+    margin: 2rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.post-header {
+    text-align: center;
+}
+
+.post-title {
+    font-size: 2rem;
+    color: #222;
+}
+
+.post-meta {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.post-content {
+    line-height: 1.8;
+    color: #444;
+}
+
+.post-content h2 {
+    color: #ff6600;
+}
+
+blockquote {
+    border-left: 4px solid #ff6600;
+    padding-left: 1rem;
+    color: #555;
+    background: #fff4ec;
+}]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image-3.png)]
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
@@ -701,12 +1025,121 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Grid</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="product-grid">
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/product1.jpg" alt="สินค้า 1">
+            </div>
+            <div class="product-details">
+                <h3 class="product-title">สินค้าตัวอย่างที่ 1</h3>
+                <div class="product-price">฿1,299</div>
+                <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/product2.jpg" alt="สินค้า 2">
+            </div>
+            <div class="product-details">
+                <h3 class="product-title">สินค้าตัวอย่างที่ 2</h3>
+                <div class="product-price">฿1,499</div>
+                <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/product3.jpg" alt="สินค้า 3">
+            </div>
+            <div class="product-details">
+                <h3 class="product-title">สินค้าตัวอย่างที่ 3</h3>
+                <div class="product-price">฿999</div>
+                <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* เล็กลง */
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+}
+
+.product-image img {
+    width: 100%;
+    height: 140px;   /* เล็กลง */
+    object-fit: cover;
+}
+
+.product-details {
+    padding: 10px;
+}
+
+.product-title {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.product-price {
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.add-to-cart {
+    width: 100%;
+    border: none;
+    padding: 6px;
+    background: #007bff;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.add-to-cart:hover {
+    background: #0056b3;
+}]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image-4.png)]
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
@@ -854,10 +1287,213 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Modern Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="dashboard">
+
+    <header class="header">
+        <h1>แดชบอร์ด</h1>
+        <nav>
+            <button>โปรไฟล์</button>
+            <button class="logout">ออกจากระบบ</button>
+        </nav>
+    </header>
+
+    <aside class="sidebar">
+        <h2>เมนู</h2>
+        <ul>
+            <li class="active">หน้าแรก</li>
+            <li>รายงาน</li>
+            <li>การตั้งค่า</li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>ยอดขายรวม</h3>
+                <p>฿150,000</p>
+            </div>
+            <div class="stat-card">
+                <h3>จำนวนออเดอร์</h3>
+                <p>1,234</p>
+            </div>
+            <div class="stat-card">
+                <h3>ลูกค้าใหม่</h3>
+                <p>45</p>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart">
+                <h3>กราฟแสดงยอดขาย</h3>
+                <canvas id="salesChart"></canvas>
+            </div>
+            <div class="chart">
+                <h3>สัดส่วนสินค้าขายดี</h3>
+                <canvas id="productChart"></canvas>
+            </div>
+        </div>
+
+    </main>
+
+</div>
+
+<script>
+/* ===== กราฟยอดขาย ===== */
+const salesCtx = document.getElementById('salesChart');
+
+new Chart(salesCtx, {
+    type: 'line',
+    data: {
+        labels: ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.'],
+        datasets: [{
+            label: 'ยอดขาย (บาท)',
+            data: [12000, 19000, 15000, 22000, 18000, 25000],
+            tension: 0.3
+        }]
+    }
+});
+
+/* ===== กราฟสินค้าขายดี ===== */
+const productCtx = document.getElementById('productChart');
+
+new Chart(productCtx, {
+    type: 'pie',
+    data: {
+        labels: ['สินค้า A', 'สินค้า B', 'สินค้า C'],
+        datasets: [{
+            data: [45, 30, 25]
+        }]
+    }
+});
+</script>
+
+</body>
+</html>]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main";
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 70px 1fr;
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.header button {
+    border: none;
+    background: #007bff;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 8px;
+    font-size: 13px;
+}
+
+.header .logout { background: #dc3545; }
+
+.sidebar {
+    grid-area: sidebar;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar ul { list-style: none; padding: 0; }
+
+.sidebar li {
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.sidebar .active { background: #007bff; }
+
+.main-content { grid-area: main; padding: 20px; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.stat-card p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.chart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+}
+
+.chart {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+canvas {
+    margin-top: 10px;
+    max-height: 200px;
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-areas:
+            "header"
+            "main";
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar { display: none; }
+    .chart-container { grid-template-columns: 1fr; }
+}]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image-5.png)]
 
