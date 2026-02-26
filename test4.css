@@ -1,0 +1,43 @@
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  
+}
+
+.stat-box {
+  flex: 1;
+  margin: 0 15px;
+  padding: 3rem;
+  text-align: center;
+  background-color: rgb(255, 253, 253);
+  border-radius: 16px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 670;
+  color: rgb(82, 25, 25);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #348bdd;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+  }
+
+  .stat-box {
+    margin: 1rem 0;
+  }
+}
