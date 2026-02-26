@@ -232,9 +232,24 @@ div > p {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](<Screenshot 2026-02-24 224345.png>)]
 
 
 [](#การทดลองที่-3-การจัดการสีและพื้นหลัง)
@@ -338,9 +353,62 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>รายการสินค้า</title>
+</head>
+<body>
+
+    <div class="product-container">
+        
+        <div class="product-card">
+            <div class="product-image img-1"></div>
+            <div class="product-info">
+                <h2 class="product-title">Winsor & Newton Professional</h2>
+                <p class="product-price">฿2,450</p>
+                <p class="product-description">ชุดสีน้ำเกรดศิลปินจากอังกฤษ เม็ดสีบริสุทธิ์ ให้ความโปร่งแสงและความทนทานต่อแสงสูงสุด</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image img-2"></div>
+            <div class="product-info">
+                <h2 class="product-title">Raphaël Kolinsky Sable</h2>
+                <p class="product-price">฿1,200</p>
+                <p class="product-description">พู่กันขนสัตว์แท้ (Kolinsky) เบอร์ 6 งานทำมือจากฝรั่งเศส สปริงตัวดีเยี่ยมและอุ้มสีได้ดีที่สุด</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image img-3"></div>
+            <div class="product-info">
+                <h2 class="product-title">Arches Aquarelle Paper</h2>
+                <p class="product-price">฿1,850</p>
+                <p class="product-description">กระดาษสีน้ำ Cotton 100% หนา 300 แกรม แบบ Rough ทำด้วยแม่พิมพ์โบราณ คุณภาพสูงสุด</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image img-4"></div>
+            <div class="product-info">
+                <h2 class="product-title">Faber-Castell Polychromos</h2>
+                <p class="product-price">฿3,600</p>
+                <p class="product-description">ชุดดินสอสีไม้ 60 สี ไส้สีสูตรน้ำมัน กันน้ำ ติดทน ระบายลื่น และสีไม่ซีดจางเมื่อเวลาผ่านไป</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image.png)]
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
@@ -436,12 +504,77 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <link rel="stylesheet" href="stats-style.css">
+</head>
+<body>
+    <div class="stats-container">
+        <div class="stat-box">
+            <div class="stat-number">120+</div>
+            <div class="stat-label">สีน้ำ Winsor</div>
+        </div>
+
+        <div class="stat-box">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Cotton Arches</div>
+        </div>
+
+        <div class="stat-box">
+            <div class="stat-number">60</div>
+            <div class="stat-label">เฉดสี Faber</div>
+        </div>
+    </div>
+
+</body>
+</html>]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[.stats-container {
+    display: flex;
+    gap: 40px;            
+    max-width: 1200px;
+    margin: 50px auto;    
+}
+
+.stat-box {
+    flex: 1;
+    margin: 10px; 
+    padding: 50px 20px;            
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(121, 110, 110, 0.05);
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 3.5rem;    
+    font-weight: 800;
+    color: #4985c5;       
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.stat-label {
+    font-size: 1.1rem;    
+    color: #9f6868;          
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Responsive: สำหรับมือถือ */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+    }
+    
+    .stat-box {
+        width: 80%;
+    }
+}]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image-1.png)]
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
@@ -554,12 +687,96 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <link rel="stylesheet" href="lab5.css">
+</head>
+<body>
+    <article class="blog-post">
+        <header class="post-header">
+            <h1 class="post-title">เจาะลึกความลับของสีน้ำ Winsor & Newton</h1>
+        </header>
+        
+        <div class="post-content">
+            <p>หากพูดถึงสีน้ำระดับโลกที่ศิลปินเลือกใช้ ชื่อของ Winsor & Newton มักจะขึ้นมาเป็นอันดับต้นๆ เสมอ ด้วยประวัติศาสตร์ที่ยาวนานและความเข้มข้นของเม็ดสีที่ไม่เหมือนใคร</p>
+
+            <h2>ทำไมต้องเกรด Professional?</h2>
+            <p>ความแตกต่างที่ชัดเจนที่สุดคือความทนทานต่อแสง (Lightfastness) ซึ่งหมายความว่าผลงานของคุณจะยังคงสีสันสดใสไปอีกนับร้อยปีโดยไม่ซีดจาง</p>
+
+            <blockquote>
+                "หัวใจสำคัญของภาพวาดสีน้ำ คือการปล่อยให้เม็ดสีทำงานร่วมกับน้ำและกระดาษอย่างเป็นอิสระ"
+            </blockquote>
+
+            <h2>การเลือกใช้พู่กันที่เหมาะสม</h2>
+            <p>การใช้สีระดับพรีเมียมคู่กับพู่กันขนสัตว์แท้ เช่น Raphael จะช่วยให้การควบคุมน้ำหนักมือและการกระจายตัวของสีทำได้สมบูรณ์แบบที่สุด</p>
+        </div>
+    </article>
+</body>
+</html>]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[.blog-post {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    font-family: 'Sarabun'
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.post-title {
+    font-size: 2.8rem;
+    color: #004a99; 
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    font-weight: bold;
+}
+
+.post-meta {
+    color: #888;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.post-content {
+    font-size: 1.25rem; 
+    line-height: 1.8;
+    color: #333;
+}
+
+.post-content h2 {
+    font-size: 1.8rem;
+    color: #0056b3;
+    margin: 2.5rem 0 1rem;
+    border-bottom: 2px solid #f0f4f8;
+    padding-bottom: 10px;
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 5px solid #0056b3;
+    margin: 2rem 0;
+    padding: 1rem 1.5rem;
+    background-color: #f9fbff;
+    color: #444;
+}
+
+/* Responsive: สำหรับหน้าจอมือถือ */
+@media (max-width: 768px) {
+    .post-title {
+        font-size: 2rem;
+    }
+    .post-content {
+        font-size: 1.1rem;
+    }
+}]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image-2.png)]
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
@@ -701,12 +918,140 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <link rel="stylesheet" href="lab6.css">
+</head>
+<body>
+
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/winsor.jpg.jpg')"></div>
+            <div class="product-details">
+                <h3 class="product-title">สีน้ำ Winsor & Newton</h3>
+                <div class="product-price">฿2,450</div>
+                <div class="product-action">
+                    <button class="add-to-cart">ซื้อเลย</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/brush.jpg.jpg')"></div>
+            <div class="product-details">
+                <h3 class="product-title">พู่กัน Raphael</h3>
+                <div class="product-price">฿1,200</div>
+                <div class="product-action">
+                    <button class="add-to-cart">ซื้อเลย</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/paper.jpg.jpg')"></div>
+            <div class="product-details">
+                <h3 class="product-title">กระดาษ Arches</h3>
+                <div class="product-price">฿1,850</div>
+                <div class="product-action">
+                    <button class="add-to-cart">ซื้อเลย</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/woodcolor.jpg.jpg')"></div>
+            <div class="product-details">
+                <h3 class="product-title">Faber-Castell</h3>
+                <div class="product-price">฿3,600</div>
+                <div class="product-action">
+                    <button class="add-to-cart">ซื้อเลย</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ปรับแต่ง Card สินค้า */
+.product-card {
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.product-image {
+    width: 100%;
+    height: 150px;
+    background-color: #f5f5f5;
+    background-size: cover;
+    background-position: center;
+}
+
+.product-details {
+    padding: 12px;
+}
+
+.product-title {
+    font-size: 0.95rem; 
+    margin: 0 0 8px 0;
+    color: #333;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.product-price {
+    font-size: 1.1rem;
+    color: #0056b3; 
+    font-weight: bold;
+}
+
+.product-action {
+    display: flex;
+    justify-content: center; 
+}
+
+.add-to-cart {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.add-to-cart:hover {
+    background-color: #003d7a;
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image-3.png)]
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
@@ -854,10 +1199,205 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lab6.2.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <h1>แดชบอร์ด</h1>
+            <nav class="nav-buttons">
+                <button>โปรไฟล์</button>
+                <button>ออกจากระบบ</button>
+            </nav>
+        </header>
+
+        <aside class="sidebar">
+            <h2>เมนูหลัก</h2>
+            <nav>
+                <ul>
+                    <li> ภาพรวมสถิติ</li>
+                    <li> จัดการสินค้าอุปกรณ์</li>
+                    <li> ออเดอร์ลูกค้า</li>
+                    <li> การตั้งค่าระบบ</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card" style="border-left-color: #3498db;">
+                    <h3>ยอดจำหน่ายอุปกรณ์ศิลปะ</h3>
+                    <p>฿150,000</p>
+                </div>
+                <div class="stat-card" style="border-left-color: #3498db;">
+                    <h3>คำสั่งอุปกรณ์ศิลปะ</h3>
+                    <p>1,234</p>
+                </div>
+                <div class="stat-card" style="border-left-color: #3498db;">
+                    <h3>ลูกค้าใหม่</h3>
+                    <p>45</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart">
+                    <h3>แนวโน้มยอดขาย</h3>
+                    <div style="height: 200px; background: #f9f9f9; border: 2px dashed #eee; display: flex; align-items: center; justify-content: center; color: #ccc; margin-top: 1rem;">
+                        พื้นที่แสดงกราฟเส้น
+                    </div>
+                </div>
+                <div class="chart">
+                    <h3>สินค้าที่เติมสต็อกบ่อย</h3>
+                    <div style="height: 200px; background: #f9f9f9; border: 2px dashed #eee; display: flex; align-items: center; justify-content: center; color: #ccc; margin-top: 1rem;">
+                        พื้นที่แสดงกราฟวงกลม
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>]
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[.dashboard {
+    display: grid;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main";
+    grid-template-columns: 260px 1fr;
+    grid-template-rows: 70px 1fr;
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background: #ffffff;
+    padding: 0 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+.nav-buttons button {
+    background: #f8f9fa;
+    border: 1px solid #2145b3;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.nav-buttons button:hover {
+    background: #9ecaf9;
+    color: white;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #152d44; 
+    color: #ecf0f1;
+    padding: 2rem 1.5rem;
+}
+
+.sidebar h2 {
+    font-size: 1.2rem;
+    color: #7bafd7;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 12px 15px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar li:hover {
+    background: #34495e;
+    color: #3498db;
+}
+
+.main-content {
+    grid-area: main;
+    padding: 2rem;
+}
+
+/* การ์ดสถิติ */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    border-left: 5px solid #0056b3; 
+}
+
+.stat-card h3 {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #677b7c;
+    text-transform: uppercase;
+}
+
+.stat-card p {
+    margin: 10px 0 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* ส่วนแสดงกราฟ/ตาราง */
+.chart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+.chart {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    min-height: 300px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .dashboard {
+        grid-template-areas: 
+            "header"
+            "main";
+        grid-template-columns: 1fr;
+    }
+    .sidebar { display: none; }
+    .chart-container { grid-template-columns: 1fr; }
+}]
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![alt text](image-4.png)]
 
