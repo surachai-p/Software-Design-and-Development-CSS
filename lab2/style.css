@@ -1,0 +1,37 @@
+/* เปลี่ยนสีพื้นหลังของเมนูทั้งหมด */
+nav {
+    background-color: #222;   /* เปลี่ยนสีพื้นหลัง */
+    padding: 15px;
+}
+
+/* จัดการ ul */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* จัดระยะห่าง li */
+nav > ul > li {
+    margin: 0 10px;
+}
+
+/* เมนูปกติ */
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+}
+
+/* เมื่อเอาเมาส์ไปชี้ */
+.menu-item:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* เมนูที่ถูกเลือก (สินค้า) */
+.active {
+    background-color: orange;
+    border-radius: 5px;
+}

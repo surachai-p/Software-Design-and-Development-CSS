@@ -1,0 +1,87 @@
+/* ตั้งค่าพื้นฐาน */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+}
+
+/* หัวข้อ */
+.page-title {
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* Grid Layout */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* เล็กลง */
+    gap: 15px;   /* ลดระยะห่าง */
+    padding: 20px;
+    max-width: 1000px;  /* ลดความกว้าง */
+    margin: 0 auto;
+}
+
+/* Card */
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* รูปภาพ */
+.product-image {
+    width: 100%;
+    height: 160px;   /* ลดขนาดรูป */
+    object-fit: cover;
+}
+
+/* รายละเอียด */
+.product-details {
+    padding: 10px;   /* ลด padding */
+}
+
+.product-title {
+    font-size: 1rem;   /* ลดขนาดตัวหนังสือ */
+    margin: 0 0 8px;
+    color: #333;
+}
+
+.product-price {
+    font-size: 1.1rem;
+    color: #e74a3b;
+    font-weight: bold;
+}
+
+/* ปุ่ม */
+.product-action {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.add-to-cart {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 12px;   /* ลดขนาดปุ่ม */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+}
