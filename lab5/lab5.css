@@ -1,0 +1,66 @@
+.blog-post {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.post-title {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.post-meta {
+    color: #666;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.post-content {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #222;
+}
+
+.post-content p {
+    margin-bottom: 1.5rem;
+}
+
+.post-content h2 {
+    font-size: 2rem;
+    color: #333;
+    margin: 2rem 0 1rem;
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 4px solid #007bff;
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .post-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* การจัดการข้อความ */
+.custom-text {
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1.5;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
